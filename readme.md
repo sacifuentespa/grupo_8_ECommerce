@@ -6,7 +6,7 @@
 
 - **Mónica García Moreno:** Vel quibusdam quia culpa aut aliquam ratione officiis. Inventore cumque doloribus quam optio molestiae et. Rerum tenetur architecto sequi itaque aspernatur. Necessitatibus voluptas est aut. Corporis minima amet velit sed.
 
-- **Miguel Ángel Mosquera Grisales:** Autodidacta aposionado por la informatica, desarrollador web full stack en progreso. Enfoque principal en el desarrollo backend y la intelegencia artificial.W
+- **Miguel Ángel Mosquera Grisales:** Autodidacta apasionado por la informatica, desarrollador web full stack en progreso. Enfoque principal en el desarrollo backend y la intelegencia artificial.W
 
 ---
 ## **Tematica:**
