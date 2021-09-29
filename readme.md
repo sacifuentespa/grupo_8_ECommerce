@@ -1,8 +1,7 @@
 # **Ecommerce Grupo 8**
 
 ## Equipo de trabajo:
-- **Santiago Cifuentes:** Necessitatibus ab earum. Laudantium qui sit modi totam dolor. Nam consectetur et qui blanditiis non soluta fuga perspiciatis. Qui quibusdam voluptatum aperiam ut incidunt quos.
-
+- **Santiago Cifuentes:** Con formación profesional como ingeniero civil, Santiago decidió incursionar en el mundo de la tecnología. En proceso de certificarse como Desarrollador web Full Stack, con interes variados como la ciencia de datos, inteligencia artificial, educación, física, matemáticas y la música.
 
 - **Mónica García Moreno:** Vel quibusdam quia culpa aut aliquam ratione officiis. Inventore cumque doloribus quam optio molestiae et. Rerum tenetur architecto sequi itaque aspernatur. Necessitatibus voluptas est aut. Corporis minima amet velit sed.
 
