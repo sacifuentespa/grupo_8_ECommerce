@@ -3,7 +3,7 @@
 ## Equipo de trabajo:
 - **Santiago Cifuentes:** Con formación profesional como ingeniero civil, Santiago decidió incursionar en el mundo de la tecnología. En proceso de certificarse como Desarrollador web Full Stack, con interes variados como la ciencia de datos, inteligencia artificial, educación, física, matemáticas y la música.
 
-- **Mónica García Moreno:** Vel quibusdam quia culpa aut aliquam ratione officiis. Inventore cumque doloribus quam optio molestiae et. Rerum tenetur architecto sequi itaque aspernatur. Necessitatibus voluptas est aut. Corporis minima amet velit sed.
+- **Mónica García Moreno:** Economista de profesión, con interés en el mundo de la tecnología y la programación. Actualmente en formación como desarrolladora web full stack.
 
 - **Miguel Ángel Mosquera Grisales:** Autodidacta apasionado por la informatica, desarrollador web full stack en progreso. Enfoque principal en el desarrollo backend y la intelegencia artificial.W
 
