@@ -8,22 +8,43 @@
 - **Miguel Ángel Mosquera Grisales:** Autodidacta apasionado por la informatica, desarrollador web full stack en progreso. Enfoque principal en el desarrollo backend y la intelegencia artificial.W
 
 ---
-## **Tematica:**
-Pariatur eum ipsa eaque accusamus enim excepturi officiis architecto dolor. Natus laboriosam quibusdam recusandae. Debitis officia sed quaerat. Consectetur illo voluptates quibusdam quisquam facilis aut rerum magnam nisi. Dolores et nihil beatae labore aliquam voluptate. Perferendis ex molestiae minus.
+## **TEMÁTICA DEL SITIO:**
 
-### **Publico objetivo:** 
-Sit quod voluptas reiciendis ex quia et beatae quam. Architecto sunt maxime et aperiam et. Aut vitae rerum illum. Alias dolorem aperiam eveniet culpa accusantium qui. Quas eligendi reiciendis et delectus totam sit.
 
-### **Paginas referentes:**
-- **www.temporaidnon.com:** Doloremque perspiciatis culpa odit.
+### **¿Qué productos o servicios brindará nuestro sitio?** 
+El sitio web se encargará de facilitar el intercambio de bienes y/o servicios a través de trueque o el pago parcial o total de los mismos. Estos se definirán por categoría de la siguiente manera:
 
-- **www.nesciuntomnistempora.com:** In ut voluptatibus enim odio culpa. Ut consequatur est dolorem ratione. Consequatur nam voluptatibus qui. Non voluptatem id maiores. Voluptatem soluta in excepturi quasi id molestiae. Nobis in aliquam excepturi cupiditate.
+-Vehículos y motos.
+-Hogar y muebles.
+-Electrodomésticos.
+-Inmobiliaria.
+-Computadoras, celulares y otros.
+-Ropa y accesorios.
+-Deportes.
+-Libros, revistas y comics.
+-Empleos y servicios.
 
-- **www.rerumetut.com:** Ipsam et accusantium esse non unde. Eius mollitia in ad praesentium laboriosam. Qui dolorum at distinctio quia. Similique aspernatur sunt delectus repellendus illum. Et voluptas earum quia.
 
-- **www.quoquivoluptas.com:** Totam sunt similique illo in dolore deserunt.
+### **¿Quién será nuestra audiencia objetivo?**  
+La audiencia objetivo será la población colombiana mayor de 18 años. 
 
-- **www.dolorexcepturirerum.com:** Reprehenderit recusandae repellendus ut itaque voluptate.
+
+### **¿Cómo ajustaremos nuestra oferta a ese público?**
+El sitio web será un espacio de encuentro entre potenciales vendedores y/o compradores de bienes y/o servicios, por lo tanto, la oferta y demanda se ajustará a las dinámicas y necesidades de la audiencia objetivo. 
+
+
+### **LISTADO DE 5 REFERENTES Y LAS RAZONES DE INTERÉS:**
+
+
+- **MI TRUQUE: https://www.mitrueque.com.co** Por la estética que presenta, las funcionalidades implementadas y los productos y/o servicios que ofrece.
+
+- **MERCADO LIBRE: https://www.mercadolibre.com.co** Por la estética que presenta, las funcionalidades implementadas y los clientes a los que apunta.
+
+- **AMAZON: https://www.amazon.com** Por la estética que presenta y los productos y/o servicios que ofrece.
+
+- **TRUEQUE.WEB: https://www.truequeweb.com** Por los productos y/o servicios que ofrece.
+
+- **OLX: https://www.olx.com.co** Por los productos y/o servicios que ofrece
 
 ~~~
 Notas:
