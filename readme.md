@@ -5,7 +5,7 @@
 
 - **Mónica García Moreno:** Economista de profesión, con interés en el mundo de la tecnología y la programación. Actualmente en formación como desarrolladora web full stack.
 
-- **Miguel Ángel Mosquera Grisales:** Autodidacta apasionado por la informatica, desarrollador web full stack en progreso. Enfoque principal en el desarrollo backend y la intelegencia artificial.W
+- **Miguel Ángel Mosquera Grisales:** Autodidacta apasionado por la informatica, desarrollador web full stack en progreso. Enfoque principal en el desarrollo backend y la intelegencia artificial.
 
 ---
 ## **TEMÁTICA DEL SITIO:**
