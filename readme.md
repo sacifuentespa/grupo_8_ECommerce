@@ -30,7 +30,7 @@ La audiencia objetivo será la población colombiana mayor de 18 años.
 
 
 ### **¿Cómo ajustaremos nuestra oferta a ese público?**
-El sitio web será un espacio de encuentro entre potenciales vendedores y/o compradores de bienes y/o servicios, por lo tanto, la oferta y demanda se ajustará a las dinámicas y necesidades de la audiencia objetivo. 
+El sitio web será un espacio de encuentro entre potenciales vendedores y/o compradores de bienes y/o servicios, por lo tanto, la oferta y demanda se ajustarán a las dinámicas y necesidades de la audiencia objetivo. 
 
 
 ### **LISTADO DE 5 REFERENTES Y LAS RAZONES DE INTERÉS:**
