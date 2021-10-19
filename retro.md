@@ -15,22 +15,22 @@ Las cinco cosas a tratar son las siguientes:
 ## **Resultados:**
 
 - **Continuar haciendo:**
-	-Comunicación asertiva
-	-Encuentros virtuales
-	-Socialización de ideas
-	-Seguir siendo especificos con los commits en github
-	-Seguir informando cada vez que se realice un cambio en el repositorio de gitHub
+	- Comunicación asertiva
+	- Encuentros virtuales
+	- Socialización de ideas
+	- Seguir siendo especificos con los commits en github
+	- Seguir informando cada vez que se realice un cambio en el repositorio de gitHub
 
 - **Menos de:**
-	-No encontramos practicas que debamos dejar de usar
+	- No encontramos practicas que debamos dejar de usar
 
 - **Mas de:**
-    -Minimo un encuentro virtual semanal
+	- Minimo un encuentro virtual semanal
 
 - **Dejar de hacerlo:**
-    -Cambio en plataforma de encuentros virtuales(Dejar de usar meet)
+	- Cambio en plataforma de encuentros virtuales(Dejar de usar meet)
 
 - **Comenzar a hacerlo:**
-	-Asiganción de tareas en el tablero posterior a encuentros virtuales
-	-Encuentros virtuales por discord
+	- Asiganción de tareas en el tablero posterior a encuentros virtuales
+	- Encuentros virtuales por discord
 
