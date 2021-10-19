@@ -1,0 +1,28 @@
+{
+  "name": "truequeOnline",
+  "version": "0.1.0",
+  "description": " ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "node src/app.js nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sacifuentespa/grupo_8_ECommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "bugs": {
+    "url": "https://github.com/sacifuentespa/grupo_8_ECommerce/issues"
+  },
+  "homepage": "https://github.com/sacifuentespa/grupo_8_ECommerce#readme"
+}
