@@ -49,4 +49,5 @@ El sitio web será un espacio de encuentro entre potenciales vendedores y/o comp
 ~~~
 Notas:
     - Los wireframes se encuentran en la carpeta con el respectivo nombre
+    -Tablero de trabajo(Trello): https://trello.com/b/MtXctl2n/tablero-ecommerce
 ~~~
