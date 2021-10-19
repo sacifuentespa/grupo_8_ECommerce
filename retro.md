@@ -2,35 +2,34 @@
 
 ## Método:
 
-Hemos utilizado para la retroalimentación del sprint 1, el método estrella de mar, el cual consiste en: se basa en usar un diagrama con forma de estrella de mar que permite (ver la figura de abajo) crear cinco áreas de cosas a tratar, evitando así centrarse solo en lo bueno y lo malo.
-Las cinco cosas a tratar son las siguientes:
+Hemos utilizado para realizar la retrospectiva del sprint 1 el "método estrella de mar", el cual consiste en usar un diagrama con forma de estrella de mar que permite analizar las siguientes áreas:
 
-- **Continuar haciéndolo:** Cosas buenas que han gustado. Momento para pensar en lo que perderíamos de no hacer una práctica en particular.
-- **Menos de:** Prácticas que no están ayudando tanto como se esperaba, o que simplemente no son útiles en las circunstancias actuales.
-- **Más de:** Practicas que se desean probar más o que no se están necesariamente aprovechando al máximo.
-- **Dejar de hacerlo:** Obviamente para cosas que no son útiles o no agregar valor.
-- **Comenzar a hacerlo:** Sugerir cosas nuevas a probar.
+- **Continuar haciendo:** Prácticas que han gustado y que se desean mantener.
+- **Menos de:** Prácticas que no son útiles en las circunstancias actuales.
+- **Más de:** Practicas que no se están aprovechando al máximo.
+- **Dejar de hacer:** Prácticas que no agregan valor.
+- **Comenzar a hacer:** Prácticas nuevas que se desean probar.
 
 ---
 ## **Resultados:**
 
 - **Continuar haciendo:**
-	- Comunicación asertiva
-	- Encuentros virtuales
-	- Socialización de ideas
-	- Seguir siendo especificos con los commits en github
-	- Seguir informando cada vez que se realice un cambio en el repositorio de gitHub
+	-Comunicación asertiva.
+	-Encuentros virtuales.
+	-Socialización de ideas.
+	-Seguir siendo especificos con los commits en github.
+	-Seguir informando cada vez que se realice un cambio en el repositorio de gitHub.
 
 - **Menos de:**
-	- No encontramos practicas que debamos dejar de usar
+	-No encontramos practicas que debamos dejar de usar por el momento. 
 
 - **Mas de:**
-	- Minimo un encuentro virtual semanal
+        -Mínimo un encuentro virtual semanal.
 
-- **Dejar de hacerlo:**
-	- Cambio en plataforma de encuentros virtuales(Dejar de usar meet)
+- **Dejar de hacer:**
+        - Dejar de usar meet ya que no ha sido eficiente.
 
-- **Comenzar a hacerlo:**
-	- Asiganción de tareas en el tablero posterior a encuentros virtuales
-	- Encuentros virtuales por discord
+- **Comenzar a hacer:**
+	-Dejar constancia de las tareas asignadas 
+	-Realizar los encuentros virtuales por discord.
 
