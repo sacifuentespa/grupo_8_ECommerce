@@ -232,6 +232,45 @@ main.mainProduct section{
     justify-content: center;
 }
 
+main.mainProduct section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    justify-content: center;
+}
+
+main.mainProduct section article i:hover{
+    transform: rotate(-90deg);
+    transition:all 0.4s;
+}
+
+main.mainProduct section.carouselProduct{
+    margin-top: 25px;
+}
+
+main.mainProduct section.carouselProduct article:hover{
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+main.mainProduct section.productButtons { 
+    display: flex;
+    justify-content: space-around;
+}
+
+main.mainProduct section.productButtons button{ 
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    background-color: white;
+    border-radius: 15%;
+}
+
+main.mainProduct section.productButtons button:hover{ 
+    background-color: beige;
+    color: blue;
+}
+
+
 main.mainProduct section.optionsProducts{
     display: flex;
     flex-wrap: wrap;
@@ -247,6 +286,21 @@ main.mainProduct section.optionsProducts article{
     padding-bottom: 1%;
     flex-direction: column;
     justify-content: center;
+}
+
+
+main.mainProduct section.optionsProducts article p{
+    display: none;
+}
+
+main.mainProduct section.optionsProducts article:active p{
+    display: block;
+    width: 95%;
+    justify-self: center;
+    text-align: justify;
+    margin-left: 35px;
+    font-family: 'Open Sans';
+    font-size: 14px;
 }
 
 
@@ -292,6 +346,10 @@ main.mainProduct section article h4{
     font-size: 16px;
     margin:0px;
     padding-top: 1%;
+}
+
+main.mainProduct section.carouselSimilarProducts article:hover{
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
 
 
