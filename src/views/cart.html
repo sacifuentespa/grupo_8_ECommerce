@@ -1,96 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Trueque Libre</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/img/favIcon.png">
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/5d64a4e77d.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
-            <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
-            <form action="#">
-                <input type="search" name="qu" placeholder="Buscar productos">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-            <div class="iconNav">
-                <i class="fas fa-shopping-cart"></i>
-                <a href="#"><i class="far fa-user-circle"></i></a>
-                <a href="#"></a><i class="fas fa-bars"></i></a>
-            </div>
-            <nav>
-                <!-- <ul class="header-user">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trueque Libre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favIcon.png">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/5d64a4e77d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
+        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
+        <form action="#">
+            <input type="search" name="qu" placeholder="Buscar productos">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="iconNav">
+            <i class="fas fa-shopping-cart"></i>
+            <a href="#"><i class="far fa-user-circle"></i></a>
+            <a href="#"></a><i class="fas fa-bars"></i></a>
+        </div>
+        <nav>
+            <!-- <ul class="header-user">
                 </ul> -->
-            </nav>
-        </header>
-        <section class="img-home-banner">
-            <img src="/img/img-home-banner.jpg" alt="Banner de ofertas">
+        </nav>
+    </header>
+    <section class="img-home-banner">
+        <img src="/img/img-home-banner.jpg" alt="Banner de ofertas">
+    </section>
+
+    <main class="mainCart">
+        <section class="cartArticles">
+            <article>
+                <img src="/img/img-cafetera-moulinex.jpg" alt="Cafetera" class="product_img">
+                <div class="text-card-product">
+                    <h4>Cafetera Moulinex</h4>
+                    <p class="quantityCart">20</p>
+                    <p class="priceCart">$25</p>
+                    <p class="totalPriceCart">$500</p>
+                </div>
+            </article>
+            <article>
+                <img src="/img/img-macbook-pro-2019.jpg" alt="MacBook" class="product_img">
+                <div class="text-card-product">
+                    <h4>Macbook pro 2019</h4>
+                    <p class="quantityCart">20</p>
+                    <p class="priceCart">$25</p>
+                    <p class="totalPriceCart">$500</p>
+                </div>
+            </article>
+            <article>
+                <img src="/img/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
+                <div class="text-card-product">
+                    <h4>Samsung galaxy s10</h4>
+                    <p class="quantityCart">20</p>
+                    <p class="priceCart">$25</p>
+                    <p class="totalPriceCart">$500</p>
+                 </div>
+            </article>
+            <article>
+                <img src="/img/img-tv-samsung-smart.jpg" alt="SmartTv Samsung" class="product_img">
+                <div class="text-card-product">
+                    <h4>TV Samsung Smart</h4>
+                    <p class="quantityCart">20</p>
+                    <p class="priceCart">$25</p>
+                    <p class="totalPriceCart">$500</p>
+                </div>
+            </article>
+
         </section>
 
-        <section class = "img-home-banner">
-            <img src="/img/img-home-banner.jpg" alt="Banner de ofertas">
+        <section class="productButtons">
+            <button class="cancelCart" name="cancelCart">Cancelar</button>
+            <button class="checkoutCart" name="checkoutCart">Comprar</button>
         </section>
 
-        <main class="mainCart">
+    </main>
+    <footer>
+        <section>
+            <i class="fas fa-credit-card"></i>
+            <h4>Pagá con tarjeta o en efectivo</h4>
+            <p>
+                Con MercadoLiebreCash tenés cuotas sin
+                interes con tarjeta o efectivo en puntos de
+                pago. ¡Y siempre es seguro!
+            </p>
+        </section>
+        <section>
+            <i class="fas fa-gift"></i>
+            <h4>Envío gratis desde los $ 2.500</h4>
+            <p>
+                Sólo por estar registrad@ en MercadoLiebre
+                tenés envíos gratis en miles de productos. Es
+                un beneficio de MercadoPuntos
+            </p>
+        </section>
+        <section>
+            <i class="fas fa-user-shield"></i>
+            <h4>Seguridad de principio a fin</h4>
+            <p>
+                ¿No te gusta? ¡Devolvelo! En MercadoLiebre
+                no hay nada de que no puedes hacer porque
+                estás siempre protegid@
+            </p>
+        </section>
+    </footer>
+</body>
 
-            <section class="cartArticles">
-
-                <article>
-
-                </article>
-
-                <article>
-                    
-                </article>
-
-                <article>
-                    
-                </article>
-
-            </section>
-
-            <section class="productButtons">
-                <button class="cancelCart" name="cancelCart">Cancelar</button>
-                <button class="checkoutCart" name="checkoutCart">Comprar</button>
-            </section>
-
-        </main>
-        <footer>
-            <section>
-                <i class="fas fa-credit-card"></i>
-                <h4>Pagá con tarjeta o en efectivo</h4>
-                <p>
-                    Con MercadoLiebreCash tenés cuotas sin 
-                    interes con tarjeta o efectivo en puntos de
-                    pago. ¡Y siempre es seguro!
-                </p>
-            </section>
-            <section>
-                <i class="fas fa-gift"></i>
-                <h4>Envío gratis desde los $ 2.500</h4>
-                <p>
-                    Sólo por estar registrad@ en MercadoLiebre
-                    tenés envíos gratis en miles de productos. Es
-                    un beneficio de MercadoPuntos
-                </p>
-            </section>
-            <section>
-                <i class="fas fa-user-shield"></i>
-                <h4>Seguridad de principio a fin</h4>
-                <p>
-                    ¿No te gusta? ¡Devolvelo! En MercadoLiebre
-                    no hay nada de que no puedes hacer porque
-                    estás siempre protegid@
-                </p>
-            </section>
-        </footer>
-    </body>
 </html>

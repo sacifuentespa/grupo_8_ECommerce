@@ -356,6 +356,61 @@ main.mainProduct section.carouselSimilarProducts article:hover{
 /* main.mainProduct FINAL */
 /* Product Final */
 
+/* PRODUCT */
+/* MAIN */
+
+main.mainCart{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main.mainCart section.cartArticles article {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+main.mainCart section.cartArticles img{
+    width: 100px;
+    height: 100px;
+}
+
+main.mainCart section.cartArticles article div{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+main.mainCart section.cartArticles article div h4{
+    display: block;
+    margin: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-content: center;
+}
+
+main.mainCart section.cartArticles article div p{
+    display: block;
+    margin: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+
+/* main.mainCart FINAL */
+/* Cart Final */
+
 /* Media Queries */
 
 /* Phone */
