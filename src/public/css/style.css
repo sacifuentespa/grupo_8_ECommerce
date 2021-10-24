@@ -263,6 +263,9 @@ main.mainProduct section.productButtons button{
     width: 35%;
     background-color: white;
     border-radius: 15%;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 main.mainProduct section.productButtons button:hover{ 
@@ -293,7 +296,7 @@ main.mainProduct section.optionsProducts article p{
     display: none;
 }
 
-main.mainProduct section.optionsProducts article:active p{
+main.mainProduct section.optionsProducts article:hover p{
     display: block;
     width: 95%;
     justify-self: center;
@@ -326,23 +329,8 @@ main.mainProduct section article img{
     width: 80%;
 }
 
-main.mainProduct section article i{
-    display: block ;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    color: #39b54a;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
 main.mainProduct section article h4{
-    visibility: hidden;
+
     font-size: 16px;
     margin:0px;
     padding-top: 1%;
@@ -361,55 +349,132 @@ main.mainProduct section.carouselSimilarProducts article:hover{
 
 main.mainCart{
     width: 90vw;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+main.mainCart section.cartArticles{
+    width: 100%;
 }
 
 main.mainCart section.cartArticles article {
     display: flex;
-    width: 90%;
+    width: 105%;
     flex-wrap: wrap;
+    border: 1px solid black;
+    margin-top: 15px;
+    box-sizing: border-box;
 }
 
 main.mainCart section.cartArticles img{
-    width: 100px;
-    height: 100px;
+    width:10%;
 }
 
 main.mainCart section.cartArticles article div{
     display: flex;
     width: 90%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
-    align-content: center;
+    align-content: space-around;
+ 
 }
 
 main.mainCart section.cartArticles article div h4{
     display: block;
-    margin: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin: 10px;
+    padding: 15px;
     border: 1px solid black;
     justify-content: space-around;
     align-content: center;
+    position: relative;
+    left: 15px;
+    background-color: white;
+    
 }
 
 main.mainCart section.cartArticles article div p{
     display: block;
-    margin: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    margin: 10px;
+    padding: 15px;
     border: 1px solid black;
     justify-content: space-around;
     align-content: center;
+    background-color: white;
 }
+
+main.mainCart section.cartArticles article div p.moreLessCart {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin-left:0px;
+    margin-right:0px;
+    padding: 0px;
+    border: 0px;
+}
+
+main.mainCart section.cartArticles article div p.moreLessCart button{
+    width: 95%;
+    height: 49%;
+    align-self: center;
+    background-color: white;
+}
+
+main.mainCart section.cartArticles article div p.moreLessCart button:hover{
+    background-color: beige;
+    color:blue;
+}
+
+main.mainCart section.cartArticles article div p.cancelProductCart {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-content: center;
+    justify-content: center;
+    border: 0px;
+    background-color: #ebebeb;
+}
+
+main.mainCart section.cartArticles article div p.cancelProductCart button{
+    background-color: white;
+}
+
+main.mainCart section.cartArticles article div p.cancelProductCart button:hover{
+    background-color: beige;
+    color:blue;
+}
+
+main.mainCart section.buyCancelButtonsCart{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+main.mainCart section.buyCancelButtonsCart button{
+    width: 35%;
+    background-color: white;
+    font-weight: bold;
+}
+
+main.mainCart section.buyCancelButtonsCart button:hover{
+    background-color: beige;
+    color: blue;
+}
+
+
 
 
 
 /* main.mainCart FINAL */
 /* Cart Final */
+
 
 /* Media Queries */
 
@@ -492,6 +557,16 @@ main.mainCart section.cartArticles article div p{
     }
     /* MAIN FINAL */
     /* Home Final */
+
+    /* CART */
+    /* main.maincart */
+
+    main.mainCart section.cartArticles img{
+        display: none
+    }
+
+    /* main.maincart */
+    /* CART Final */
 }
 
 /* Tablets and larger phones */
@@ -503,4 +578,43 @@ main.mainCart section.cartArticles article div p{
     main.mainHome section article{
         width: 25%;
     }
+
+       /* CART */
+    /* main.maincart */
+
+    main.mainCart section.cartArticles img{
+        display: none
+    }
+
+    /* main.maincart */
+    /* CART Final */
 }
+
+@media (min-width: 769px ) {
+
+    main.mainCart section.cartArticles article div h4{
+        display: block;
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        justify-content: space-around;
+        align-content: center;
+        position: relative;
+        left: 15px;
+        background-color: white;
+        height: 45%;
+        
+    }
+    
+    main.mainCart section.cartArticles article div p{
+        display: block;
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        justify-content: space-around;
+        align-content: center;
+        background-color: white;
+        height: 45%;
+    }
+}
+
