@@ -215,6 +215,89 @@ main.mainHome section article i:hover{
 /* main.mainHome FINAL */
 /* Home Final */
 
+/* PRODUCT */
+/* MAIN */
+
+main.mainProduct{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main.mainProduct section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    justify-content: center;
+}
+
+main.mainProduct section.optionsProducts{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main.mainProduct section.optionsProducts article{
+    display: block;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding-bottom: 1%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+main.mainProduct h3{
+    font-size: 24px;
+    padding: 2%;
+    color: #666;
+}
+
+main.mainProduct section article{
+    width: 20%;
+    margin-bottom: 3%;
+    background-color: white;
+    border-radius:5%;
+    margin-left: 3%;
+    margin-right: 2%;
+}
+
+main.mainProduct section article img{
+    display:block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+main.mainProduct section article i{
+    display: block ;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main.mainProduct section article h4{
+    visibility: hidden;
+    font-size: 16px;
+    margin:0px;
+    padding-top: 1%;
+}
+
+
+/* main.mainProduct FINAL */
+/* Product Final */
+
 /* Media Queries */
 
 /* Phone */
