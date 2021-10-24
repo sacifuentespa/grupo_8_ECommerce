@@ -298,7 +298,7 @@ main.mainProduct section.optionsProducts article p{
 
 main.mainProduct section.optionsProducts article:hover p{
     display: block;
-    width: 95%;
+    width: 85%;
     justify-self: center;
     text-align: justify;
     margin-left: 35px;
