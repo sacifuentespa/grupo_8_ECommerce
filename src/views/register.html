@@ -33,22 +33,34 @@
             </ul> -->
         </nav>
     </header>
-
     <main class="main-section">
-        <section class="sectionLogin">
+        <section class="sectionRegister">
             <form action="" method="">
-                <h1>Iniciar sesión</h1>
+                <h1>Crear cuenta</h1>
+                <div>
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre">
+                </div>
                 <div>
                     <label>Nombre de usuario:</label>
-                    <input type="text" name="nombreUsuario"> 
-                </div> 
+                    <input type="text" name="nombreUsuario">
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="emailUsuario">
+                </div>
                 <div>
                     <label>Contraseña:</label>
-                    <input type="password" name="passwordUsuario"> 
-                </div>  
+                    <input type="password" name="passwordUsuario">
+                </div>
+                <div>
+                    <label>Confirmar contraseña:</label>
+                    <input type="password" name="confirmarPasswordUsuario">
+                </div>
                 <button type="submit">Continuar</button>
             </form>
         </section>
-    </main> 
+    </main>
 </body>
+
 </html>
