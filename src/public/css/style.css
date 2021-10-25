@@ -307,6 +307,267 @@ main.mainHome section article i:hover{
 /* main.mainHome FINAL */
 /* Home Final */
 
+/* PRODUCT */
+/* MAIN */
+
+main.mainProduct{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main.mainProduct section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    justify-content: center;
+}
+
+main.mainProduct section{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    justify-content: center;
+}
+
+main.mainProduct section article i:hover{
+    transform: rotate(-90deg);
+    transition:all 0.4s;
+}
+
+main.mainProduct section.carouselProduct{
+    margin-top: 25px;
+}
+
+main.mainProduct section.carouselProduct article:hover{
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+main.mainProduct section.productButtons { 
+    display: flex;
+    justify-content: space-around;
+}
+
+main.mainProduct section.productButtons button{ 
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    background-color: white;
+    border-radius: 15%;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main.mainProduct section.productButtons button:hover{ 
+    background-color: beige;
+    color: blue;
+}
+
+
+main.mainProduct section.optionsProducts{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main.mainProduct section.optionsProducts article{
+    display: block;
+    width: 100%;
+    flex-wrap: nowrap;
+    padding-bottom: 1%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+main.mainProduct section.optionsProducts article p{
+    display: none;
+}
+
+main.mainProduct section.optionsProducts article:hover p{
+    display: block;
+    width: 85%;
+    justify-self: center;
+    text-align: justify;
+    margin-left: 35px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+
+
+main.mainProduct h3{
+    font-size: 24px;
+    padding: 2%;
+    color: #666;
+}
+
+main.mainProduct section article{
+    width: 20%;
+    margin-bottom: 3%;
+    background-color: white;
+    border-radius:5%;
+    margin-left: 3%;
+    margin-right: 2%;
+}
+
+main.mainProduct section article img{
+    display:block;
+    margin: 0 auto;
+    width: 80%;
+}
+
+main.mainProduct section article h4{
+
+    font-size: 16px;
+    margin:0px;
+    padding-top: 1%;
+}
+
+main.mainProduct section.carouselSimilarProducts article:hover{
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+
+/* main.mainProduct FINAL */
+/* Product Final */
+
+/* PRODUCT */
+/* MAIN */
+
+main.mainCart{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+main.mainCart section.cartArticles{
+    width: 100%;
+}
+
+main.mainCart section.cartArticles article {
+    display: flex;
+    width: 105%;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+main.mainCart section.cartArticles img{
+    width:10%;
+}
+
+main.mainCart section.cartArticles article div{
+    display: flex;
+    width: 90%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+ 
+}
+
+main.mainCart section.cartArticles article div h4{
+    display: block;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    left: 15px;
+    background-color: white;
+    
+}
+
+main.mainCart section.cartArticles article div p{
+    display: block;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-content: center;
+    background-color: white;
+}
+
+main.mainCart section.cartArticles article div p.moreLessCart {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin-left:0px;
+    margin-right:0px;
+    padding: 0px;
+    border: 0px;
+}
+
+main.mainCart section.cartArticles article div p.moreLessCart button{
+    width: 95%;
+    height: 49%;
+    align-self: center;
+    background-color: white;
+}
+
+main.mainCart section.cartArticles article div p.moreLessCart button:hover{
+    background-color: beige;
+    color:blue;
+}
+
+main.mainCart section.cartArticles article div p.cancelProductCart {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin-left:0px;
+    margin-right:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    align-content: center;
+    justify-content: center;
+    border: 0px;
+    background-color: #ebebeb;
+}
+
+main.mainCart section.cartArticles article div p.cancelProductCart button{
+    background-color: white;
+}
+
+main.mainCart section.cartArticles article div p.cancelProductCart button:hover{
+    background-color: beige;
+    color:blue;
+}
+
+main.mainCart section.buyCancelButtonsCart{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+main.mainCart section.buyCancelButtonsCart button{
+    width: 35%;
+    background-color: white;
+    font-weight: bold;
+}
+
+main.mainCart section.buyCancelButtonsCart button:hover{
+    background-color: beige;
+    color: blue;
+}
+
+
+
+
+
+/* main.mainCart FINAL */
+/* Cart Final */
+
+
 /* Media Queries */
 
 /* Phone */
@@ -392,6 +653,16 @@ main.mainHome section article i:hover{
     }
     /* MAIN FINAL */
     /* Home Final */
+
+    /* CART */
+    /* main.maincart */
+
+    main.mainCart section.cartArticles img{
+        display: none
+    }
+
+    /* main.maincart */
+    /* CART Final */
 }
 
 /* Tablets and larger phones */
@@ -403,4 +674,43 @@ main.mainHome section article i:hover{
     main.mainHome section article{
         width: 25%;
     }
+
+       /* CART */
+    /* main.maincart */
+
+    main.mainCart section.cartArticles img{
+        display: none
+    }
+
+    /* main.maincart */
+    /* CART Final */
 }
+
+@media (min-width: 769px ) {
+
+    main.mainCart section.cartArticles article div h4{
+        display: block;
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        justify-content: space-around;
+        align-content: center;
+        position: relative;
+        left: 15px;
+        background-color: white;
+        height: 45%;
+        
+    }
+    
+    main.mainCart section.cartArticles article div p{
+        display: block;
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid black;
+        justify-content: space-around;
+        align-content: center;
+        background-color: white;
+        height: 45%;
+    }
+}
+
