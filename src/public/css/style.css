@@ -344,6 +344,10 @@ main.mainProduct section.carouselProduct article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
 
+main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
+    display: none;
+}
+
 main.mainProduct section.productButtons { 
     display: flex;
     justify-content: space-around;
@@ -687,6 +691,32 @@ main.mainCart section.buyCancelButtonsCart button:hover{
 }
 
 @media (min-width: 769px ) {
+    main.mainProduct{
+        display: flex;
+        width:90vw;
+        flex-direction: row;
+    }
+    main.mainProduct section.productImages {
+        display: flex;
+        width:30%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    main.mainProduct section.productImages section.carouselProduct {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main.mainProduct section.productImages section.carouselProduct article {
+        width: 40%;
+    }
+
+    
+
+
+    main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
+        display: block;
+    }
 
     main.mainCart section.cartArticles article div h4{
         display: block;
