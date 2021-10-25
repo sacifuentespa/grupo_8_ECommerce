@@ -18,21 +18,31 @@
 <body>
     <header>
         <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
-        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
+        <a href="/"><img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre"></a>
         <form action="#">
-            <input type="search" name="qu" placeholder="Buscar productos">
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <input type="search" name="qu" placeholder="Buscar prodcutos">
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
         </form>
-        <div class="iconNav">
-            <i class="fas fa-shopping-cart"></i>
-            <a href="#"><i class="far fa-user-circle"></i></a>
-            <a href="#"></a><i class="fas fa-bars"></i></a>
-        </div>
-        <nav>
-            <!-- <ul class="header-user">
-            </ul> -->
-        </nav>
-    </header>
+        <nav class="iconNav">
+            <a href="/cart" class="cartHeader"><i class="fas fa-shopping-cart"></i></a>
+            <button class="dropdownUser">
+                <i class="far fa-user-circle"></i>
+            </button>
+            <button class="dropdownBurguer">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="modalNavUser">
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <hr>
+                <li><a href="/registers">Crear Cuenta</a></li>
+            </ul>
+            <ul class="modalNavBurguer">
+                <li><a href="#">Mis compras</a></li>
+                <li><a href="#">Mis ventas</a></li>
+                <li><a href="#"<!DOCTYPE html></a>
+                </header>
     <section class="img-home-banner">
         <img src="/img/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
@@ -74,7 +84,7 @@
                 <option>Ropa y accesorios</option>
                 <option>Deportes</option>
                 <option>Libros, revistas y comics</option>
-                <option>Servicios</option>
+                <option></option>
             </select>
         </section>
         </section>
