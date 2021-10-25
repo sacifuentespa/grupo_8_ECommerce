@@ -554,6 +554,47 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     color: blue;
 }
 
+/*Register Y Login*/
+
+
+#sectionForm{
+background: white;
+height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#sectionForm form {
+height: 70%;
+background-color: rgb(238, 234, 234);
+width:40%;
+padding: 1px;
+}
+
+#sectionForm form h1{
+    text-align: center;
+}
+
+#sectionForm form label {
+  font-size: 15px;
+  padding: 1px;
+  display: block;
+  margin: 5px;
+}
+
+#sectionForm form button {
+    display: block;
+    margin: auto;
+    font-size: 15px;
+}
+
+
+#sectionForm form div {
+   margin-bottom: 10px;
+   padding: 5px;
+
+}
 
 
 
