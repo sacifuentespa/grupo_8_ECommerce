@@ -20,7 +20,7 @@ header {
     background:#11aea9;
     color:black;
     height: 10vh;
-    padding: 2% 2%;
+    padding: 2%;
 }
 
 header img.logoPc{
@@ -62,55 +62,147 @@ header form button{
     width:25vw;
     flex-grow: 0.5;
     text-align: center;
+    position: relative;
 }
 
-.iconNav i{
+nav.iconNav i{
     width: 2rem;
     font-size: 2rem;
-    color: rgba(251, 251, 251, 0.87);
+    color: rgba(251, 251, 251, 0.75);
     margin: 0 3%;
 }
 
-header nav{
-    display: none;
+.iconNav button{
+    background-color: rgb(0,0,0,0);
+    border: none;
+    cursor:pointer;
+    padding: 3%;
 }
+
+header nav ul{
+    list-style-type: none
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: rgba(22, 20, 20, 0.721);
+    font-size: 1.3em;
+}
+
+header nav ul li{
+    padding: 1.2em;
+}
+
+header .modalNavUser{
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 8vh;
+    left: 10vw;
+    background:#9de2e0;
+    min-width: 40%;               /* modificable */ 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+header nav .modalNavBurguer{
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 8vh;
+    left: 10vw;
+    background:#9de2e0;
+    min-width: 40%;               /* modificable */ 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.iconNav button:hover .modalNavUser{
+    display: block;
+}
+
+.dropdownBurguer:hover .modalNavBurguer{
+    display: block;
+}
+
+.iconNav button:hover i{
+    color: rgb(251, 251, 251);
+}
+
+header nav ul li:hover{
+    background:#11aea982;
+}
+
 /* HEADER FINAL */
 
 /* FOOTER */
 footer{
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1% 1%;
-    color: #666;
+    align-items: center;
 }
 
-footer section{
+
+footer .btnMoreInfo{
+    background-color:#11aea9;
+    border: none;
+    width: 10%;
+    font-size: 1.1em;
     text-align: center;
-    width: 30%;
-    padding-bottom: 5%;
+    color: #FFF;
+    padding: 1%;
+    cursor: pointer;
 }
 
-footer i{
-    color: blue;
-    font-size: 2em;
-    margin-bottom: 5%;
-    margin-top: 10%;
+.btnMoreInfo i{
+    font-size: 1.1em;
+    color: #fff;
+    margin: 1%;
+    margin-left:5%;
+}
+
+footer section.footerContent{
+    display: flex;
+    visibility: hidden;
+    text-align: center;
+    justify-content:space-around;
+    width: 100%;
+    background-color: #11aea9;
+    padding-top: 1%;
+}
+
+section.footerContent article{
+    width: 30%;
+}
+
+section.footerContent article ul li{
+    margin: 1%;
+}
+
+footer section.footerContent ul{
+    list-style-type: none;
+    margin: 5%;
+}
+
+footer section.footerContent ul a{
+    text-decoration: none;
+    outline:none;
+    color:#fff;
 }
 
 footer h4{
-    font-size: 16px;
+    font-size: 1.4em;
     font-weight: bold;
+    color:#fff;
 }
 
-footer p{
-    padding: 0px;
-    margin: 0px;
+button.btnMoreInfo:active .footerContent{
+    visibility: visible;
 }
 
-footer section i:hover{
-    color: #02145b;
+button.btnMoreInfo:active i{
+    transform: rotate(180deg);
+    transition: all 0.5s;
 }
 /* FOOTER FINAL */
 
@@ -245,6 +337,10 @@ main.mainHome section article i:hover{
 
     header .iconNav{
         width:15vw;
+    }
+
+    .cartHeader{
+        display: none;
     }
 
     header form button{
