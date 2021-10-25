@@ -331,11 +331,6 @@ main.mainProduct section{
     justify-content: center;
 }
 
-main.mainProduct section article i:hover{
-    transform: rotate(-90deg);
-    transition:all 0.4s;
-}
-
 main.mainProduct section.carouselProduct{
     margin-top: 25px;
 }
@@ -392,15 +387,6 @@ main.mainProduct section.optionsProducts article p{
     display: none;
 }
 
-main.mainProduct section.optionsProducts article:hover p{
-    display: block;
-    width: 85%;
-    justify-self: center;
-    text-align: justify;
-    margin-left: 35px;
-    font-family: 'Open Sans';
-    font-size: 14px;
-}
 
 
 
@@ -432,9 +418,13 @@ main.mainProduct section article h4{
     padding-top: 1%;
 }
 
+
+
+    
 main.mainProduct section.carouselSimilarProducts article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
+
 
 
 /* main.mainProduct FINAL */
@@ -658,6 +648,21 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     /* MAIN FINAL */
     /* Home Final */
 
+    main.mainProduct section.currentProduct{
+        display: none;
+    }
+
+    main.mainProduct section.optionsProducts article:hover p{
+        display: block;
+        width: 85%;
+        justify-self: center;
+        text-align: justify;
+        margin-left: 35px;
+        font-family: 'Open Sans';
+        font-size: 14px;
+    }
+    
+
     /* CART */
     /* main.maincart */
 
@@ -679,18 +684,37 @@ main.mainCart section.buyCancelButtonsCart button:hover{
         width: 25%;
     }
 
+    main.mainProduct section.currentProduct{
+        display: none;
+    }
+
+    main.mainProduct section.optionsProducts article:hover p{
+        display: block;
+        width: 85%;
+        justify-self: center;
+        text-align: justify;
+        margin-left: 35px;
+        font-family: 'Open Sans';
+        font-size: 14px;
+    }
+    
+
        /* CART */
     /* main.maincart */
 
     main.mainCart section.cartArticles img{
         display: none
     }
+    
 
     /* main.maincart */
     /* CART Final */
 }
 
 @media (min-width: 769px ) {
+
+    /* Product */
+    /* main.mainProduct Desktop */
     main.mainProduct{
         display: flex;
         width:90vw;
@@ -698,9 +722,61 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     }
     main.mainProduct section.productImages {
         display: flex;
-        width:30%;
+        width:20%;
+        height: 80%;
         flex-wrap: wrap;
         flex-direction: column;
+        margin-top: 55px;
+        margin-right: 15px;
+    }
+
+    main.mainProduct section.productImages h4{
+        display: none;
+        
+    }
+
+    main.mainProduct section.currentProduct{
+        display:flex;
+        width: 60%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main.mainProduct section.currentProduct h2{
+        font-size: 24px;
+        margin-bottom: 0px;
+        color: #666;
+    }
+
+
+    main.mainProduct section.productButtonsDesktop{ 
+        display: flex;
+        width: 85%;
+        border-radius: 5px;
+        height: 45px;
+        font-size: 14px;
+        font-weight: bold;
+
+        }
+
+    main.mainProduct section.productButtonsDesktop button{ 
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    background-color: white;
+    border-radius: 5px;
+    height: auto;
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+    main.mainProduct section.productButtonsDesktop button:hover{ 
+        background-color: beige;
+        color: blue;
+    }
+
+    main.mainProduct section.productButtons{
+        display: none;
     }
 
     main.mainProduct section.productImages section.carouselProduct {
@@ -708,16 +784,56 @@ main.mainCart section.buyCancelButtonsCart button:hover{
         flex-wrap: wrap;
     }
     main.mainProduct section.productImages section.carouselProduct article {
-        width: 40%;
+        width: 45%;
     }
 
     main.mainProduct section.optionsProducts{
-        display: none;
+        width: 45%;
     }
+    
+    main.mainProduct section.optionsProducts article{
+        width: 95%;
+    }
+    
+    main.mainProduct section.optionsProducts article p.priceProduct{
+        display: block;
+        position: relative;
+        left: 35px;
+        font-size: large;
+    }
+
+    main.mainProduct section.optionsProducts article:hover p{
+        display: block;
+    }
+
+
 
     main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
         display: block;
     }
+
+    main.mainProduct .carouselSimilarProducts{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 20%;
+        margin-left: 15px;
+        position:relative;
+        left:15px
+    }
+
+    main.mainProduct .carouselSimilarProducts section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    main.mainProduct .carouselSimilarProducts section article{
+        width: 75%;
+    }
+
+    /* Product */
+    /* FINAL main.mainProduct Desktop */
 
     main.mainCart section.cartArticles article div h4{
         display: block;
