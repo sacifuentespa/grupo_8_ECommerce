@@ -18,19 +18,34 @@
 <body>
     <header>
         <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
-        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
+        <a href="/"><img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre"></a>
         <form action="#">
             <input type="search" name="qu" placeholder="Buscar productos">
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
         </form>
-        <div class="iconNav">
-            <i class="fas fa-shopping-cart"></i>
-            <a href="#"><i class="far fa-user-circle"></i></a>
-            <a href="#"></a><i class="fas fa-bars"></i></a>
-        </div>
-        <nav>
-            <!-- <ul class="header-user">
-                </ul> -->
+        <nav class="iconNav">
+            <a href="/cart" class="cartHeader"><i class="fas fa-shopping-cart"></i></a>
+            <button class="dropdownUser">
+                <i class="far fa-user-circle"></i>
+            </button>
+            <button class="dropdownBurguer">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="modalNavUser">
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <hr>
+                <li><a href="/registers">Crear Cuenta</a></li>
+            </ul>
+            <ul class="modalNavBurguer">
+                <li><a href="#">Mis compras</a></li>
+                <li><a href="#">Mis ventas</a></li>
+                <li><a href=>Favoritos</a></li>
+                <hr>
+                <li><a href="#">Notificaciones</a></li>
+                <li><a href="#">Mensajes</a></li>
+            </ul>
         </nav>
     </header>
     <section class="img-home-banner">
@@ -113,33 +128,32 @@
 
     </main>
     <footer>
-        <section>
-            <i class="fas fa-credit-card"></i>
-            <h4>Pagá con tarjeta o en efectivo</h4>
-            <p>
-                Con MercadoLiebreCash tenés cuotas sin
-                interes con tarjeta o efectivo en puntos de
-                pago. ¡Y siempre es seguro!
-            </p>
+        <button class="btnMoreInfo">Más información<i class="fas fa-chevron-up"></i></button>
+        <section class="footerContent">
+            <article class="contactUs">
+                <h4>Contáctenos</h4>
+                <ul>
+                    <li><a href="#">Redes</a></li>
+                    <li><a href="#">Equipo de trabajo</a></li>
+                    <li><a href="#">Trabaje con nosotros</a></li>
+                </ul>
+            </article>
+            <article class="legalContent">
+                <h4>Politica</h4>
+                <ul>
+                    <li><a href="#">Contenido legal</a></li>
+                    <li><a href="#">Normas de la comunidad</a></li>
+                </ul>
+            </article>
+            <article class="helpContent">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </article>
         </section>
-        <section>
-            <i class="fas fa-gift"></i>
-            <h4>Envío gratis desde los $ 2.500</h4>
-            <p>
-                Sólo por estar registrad@ en MercadoLiebre
-                tenés envíos gratis en miles de productos. Es
-                un beneficio de MercadoPuntos
-            </p>
-        </section>
-        <section>
-            <i class="fas fa-user-shield"></i>
-            <h4>Seguridad de principio a fin</h4>
-            <p>
-                ¿No te gusta? ¡Devolvelo! En MercadoLiebre
-                no hay nada de que no puedes hacer porque
-                estás siempre protegid@
-            </p>
-        </section>
+        <!-- <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4> -->
     </footer>
 </body>
 

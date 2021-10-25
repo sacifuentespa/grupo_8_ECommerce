@@ -711,8 +711,9 @@ main.mainCart section.buyCancelButtonsCart button:hover{
         width: 40%;
     }
 
-    
-
+    main.mainProduct section.optionsProducts{
+        display: none;
+    }
 
     main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
         display: block;
