@@ -262,7 +262,7 @@ main.mainProduct section.productButtons button{
     justify-content: space-around;
     width: 35%;
     background-color: white;
-    border-radius: 15%;
+    border-radius: 5px;
     height: 25px;
     font-size: 14px;
     font-weight: bold;
