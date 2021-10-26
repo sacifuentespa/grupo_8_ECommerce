@@ -387,9 +387,6 @@ main.mainProduct section.optionsProducts article p{
     display: none;
 }
 
-
-
-
 main.mainProduct h3{
     font-size: 24px;
     padding: 2%;
@@ -417,15 +414,10 @@ main.mainProduct section article h4{
     margin:0px;
     padding-top: 1%;
 }
-
-
-
     
 main.mainProduct section.carouselSimilarProducts article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
-
-
 
 /* main.mainProduct FINAL */
 /* Product Final */
@@ -566,7 +558,7 @@ align-items: center;
 
 #sectionForm form {
 width: 60%;    
-height: 90%;
+height: 80%;
 background-color: rgb(238, 234, 234);
 margin: 20px;
 padding: 8px;
@@ -593,14 +585,16 @@ border-radius: 10px;
 #sectionForm form label {  
   font-size: 13px;
   display: block;
-  margin: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+
 }
 
 #sectionForm form input {  
     font-size: 13px;
     display: block;
-    margin: 5px;
-    width: 100%;
+    margin: auto;
+    width: 80%;
   }
   
 #sectionForm form button {
@@ -613,6 +607,7 @@ border-radius: 10px;
     color: white;
     border: 2px solid;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #sectionForm form button:hover {
@@ -620,14 +615,15 @@ border-radius: 10px;
 }
 
 #sectionForm form div {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 5px;
  }
-
  
- #sectionForm form label .tyc {
-     display: block;
-     margin: auto;
+ #sectionForm form p{
+     text-align: center;
+     font-size: 12px;
+     font-weight: bold;
+     margin-bottom: 5px;
  } 
 
 
@@ -935,3 +931,33 @@ border-radius: 10px;
 }
 
 
+/* Register_larger desktops and monitors */
+
+@media (min-width: 1000px ) {
+        
+    #sectionForm form {
+        width: 100%;    
+            }  
+
+    .contenedor1{
+        display: inline-block;
+        width: 42vw;
+        margin-left: 40px;
+            }
+    
+    .contenedor2{
+        display: inline-block;
+        width: 42vw;
+                }
+    
+    .contenedor3{
+        display:block;
+        width: 50vw;
+        margin: auto;
+                }
+             
+    .contenedor3 label {
+        text-align: center;
+    }  
+    }
+    
