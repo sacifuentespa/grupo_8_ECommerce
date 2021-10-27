@@ -901,5 +901,36 @@ padding: 1px;
         background-color: white;
         height: 45%;
     }
+<<<<<<< HEAD
 }
 
+=======
+
+    /* Media queries para registro */
+        
+    #sectionForm form {
+            width: 100%;    
+                }  
+    
+    .contenedor1{
+            display: inline-block;
+            width: 42vw;
+            margin-left: 40px;
+                }
+        
+    .contenedor2{
+            display: inline-block;
+            width: 42vw;
+                    }
+        
+    .contenedor3{
+            display:block;
+            width: 50vw;
+            margin: auto;
+                    }
+                 
+    .contenedor3 label {
+            text-align: center;
+     }      
+}
+>>>>>>> b0e6b8cddc9f5e1289d5e7e0f4fd3f0004dba5d7
