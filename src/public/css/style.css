@@ -133,6 +133,8 @@ header nav ul li:hover{
 
 /* HEADER FINAL */
 
+
+
 /* FOOTER */
 footer{
     width: 100%;
@@ -163,7 +165,6 @@ footer .btnMoreInfo{
 
 footer section.footerContent{
     display: flex;
-    visibility: hidden;
     text-align: center;
     justify-content:space-around;
     width: 100%;
@@ -387,6 +388,9 @@ main.mainProduct section.optionsProducts article p{
     display: none;
 }
 
+
+
+
 main.mainProduct h3{
     font-size: 24px;
     padding: 2%;
@@ -414,10 +418,15 @@ main.mainProduct section article h4{
     margin:0px;
     padding-top: 1%;
 }
+
+
+
     
 main.mainProduct section.carouselSimilarProducts article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
+
+
 
 /* main.mainProduct FINAL */
 /* Product Final */
@@ -548,6 +557,7 @@ main.mainCart section.buyCancelButtonsCart button:hover{
 
 /*Register Y Login*/
 
+
 #sectionForm{
 background: white;
 height: 600px;
@@ -557,74 +567,37 @@ align-items: center;
 }
 
 #sectionForm form {
-width: 60%;    
-height: 80%;
+height: 70%;
 background-color: rgb(238, 234, 234);
-margin: 20px;
-padding: 8px;
-border-radius: 10px;
+width:40%;
+padding: 1px;
 }
 
 #sectionForm form h1{
     text-align: center;
-    font-size: 20px;
 }
 
-#sectionForm form h2{
-   margin-top: 100px;
-   margin-left: 10px;
-   text-align: center;
-}
-
-#sectionForm form h3{
-    margin-left: 10px;
-    margin-top: 10px;
-    text-align: center;
- }
-
-#sectionForm form label {  
-  font-size: 13px;
+#sectionForm form label {
+  font-size: 15px;
+  padding: 1px;
   display: block;
-  text-align: center;
-  margin-bottom: 5px;
-
+  margin: 5px;
 }
 
-#sectionForm form input {  
-    font-size: 13px;
+#sectionForm form button {
     display: block;
     margin: auto;
-    width: 80%;
-  }
-  
-#sectionForm form button {
-    display: flex;
-    margin: auto;
     font-size: 15px;
-    padding: 7px;
-    background-color: #3483FA;
-    border-radius: 5px;
-    color: white;
-    border: 2px solid;
-    cursor: pointer;
-    font-weight: bold;
 }
 
-#sectionForm form button:hover {
-    background: blue;
-}
 
 #sectionForm form div {
-    margin-bottom: 5px;
-    padding: 5px;
- }
- 
- #sectionForm form p{
-     text-align: center;
-     font-size: 12px;
-     font-weight: bold;
-     margin-bottom: 5px;
- } 
+   margin-bottom: 10px;
+   padding: 5px;
+
+}
+
+
 
 
 /* main.mainCart FINAL */
@@ -930,34 +903,3 @@ border-radius: 10px;
     }
 }
 
-
-/* Register_larger desktops and monitors */
-
-@media (min-width: 1000px ) {
-        
-    #sectionForm form {
-        width: 100%;    
-            }  
-
-    .contenedor1{
-        display: inline-block;
-        width: 42vw;
-        margin-left: 40px;
-            }
-    
-    .contenedor2{
-        display: inline-block;
-        width: 42vw;
-                }
-    
-    .contenedor3{
-        display:block;
-        width: 50vw;
-        margin: auto;
-                }
-             
-    .contenedor3 label {
-        text-align: center;
-    }  
-    }
-    
