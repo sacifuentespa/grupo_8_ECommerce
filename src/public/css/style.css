@@ -134,7 +134,6 @@ header nav ul li:hover{
 /* HEADER FINAL */
 
 
-
 /* FOOTER */
 footer{
     width: 100%;
@@ -143,7 +142,6 @@ footer{
     flex-wrap: wrap;
     align-items: center;
 }
-
 
 footer .btnMoreInfo{
     background-color:#11aea9;
@@ -206,7 +204,6 @@ button.btnMoreInfo:active i{
     transition: all 0.5s;
 }
 /* FOOTER FINAL */
-
 
 /* Sessions */
 
@@ -365,7 +362,6 @@ main.mainProduct section.productButtons button:hover{
     color: blue;
 }
 
-
 main.mainProduct section.optionsProducts{
     display: flex;
     flex-wrap: wrap;
@@ -383,11 +379,9 @@ main.mainProduct section.optionsProducts article{
     justify-content: center;
 }
 
-
 main.mainProduct section.optionsProducts article p{
     display: none;
 }
-
 
 
 
@@ -420,12 +414,10 @@ main.mainProduct section article h4{
 }
 
 
-
     
 main.mainProduct section.carouselSimilarProducts article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
-
 
 
 /* main.mainProduct FINAL */
@@ -557,7 +549,6 @@ main.mainCart section.buyCancelButtonsCart button:hover{
 
 /*Register Y Login*/
 
-
 #sectionForm{
 background: white;
 height: 600px;
@@ -567,42 +558,79 @@ align-items: center;
 }
 
 #sectionForm form {
-height: 70%;
+width: 60%;    
+height: 80%;
 background-color: rgb(238, 234, 234);
-width:40%;
-padding: 1px;
+margin: 20px;
+padding: 8px;
+border-radius: 10px;
 }
 
 #sectionForm form h1{
     text-align: center;
+    font-size: 20px;
 }
+
+#sectionForm form h2{
+   margin-top: 100px;
+   margin-left: 10px;
+   text-align: center;
+}
+
+#sectionForm form h3{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+ }
 
 #sectionForm form label {
-  font-size: 15px;
-  padding: 1px;
+  font-size: 13px;
   display: block;
-  margin: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+  
 }
 
-#sectionForm form button {
+#sectionForm form input {  
+    font-size: 13px;
     display: block;
     margin: auto;
+    width: 80%;
+  }
+
+#sectionForm form button {
+    display: flex;
+    margin: auto;
     font-size: 15px;
+    padding: 7px;
+    background-color: #3483FA;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+#sectionForm form button:hover {
+    background: blue;
+}
 
 #sectionForm form div {
-   margin-bottom: 10px;
-   padding: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
 
 }
 
-
+#sectionForm form p{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+} 
 
 
 /* main.mainCart FINAL */
 /* Cart Final */
-
 
 /* Media Queries */
 
@@ -790,7 +818,6 @@ padding: 1px;
         color: #666;
     }
 
-
     main.mainProduct section.productButtonsDesktop{ 
         display: flex;
         width: 85%;
@@ -849,7 +876,6 @@ padding: 1px;
     }
 
 
-
     main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
         display: block;
     }
@@ -901,36 +927,30 @@ padding: 1px;
         background-color: white;
         height: 45%;
     }
-<<<<<<< HEAD
-}
 
-=======
-
-    /* Media queries para registro */
-        
+    /* Registro */
     #sectionForm form {
-            width: 100%;    
-                }  
-    
+        width: 100%;    
+            }  
+
     .contenedor1{
-            display: inline-block;
-            width: 42vw;
-            margin-left: 40px;
-                }
-        
+        display: inline-block;
+        width: 42vw;
+        margin-left: 40px;
+            }
+    
     .contenedor2{
-            display: inline-block;
-            width: 42vw;
-                    }
-        
+        display: inline-block;
+        width: 42vw;
+                }
+    
     .contenedor3{
-            display:block;
-            width: 50vw;
-            margin: auto;
-                    }
-                 
+        display:block;
+        width: 50vw;
+        margin: auto;
+                }
+             
     .contenedor3 label {
-            text-align: center;
-     }      
+        text-align: center;
+    }  
 }
->>>>>>> b0e6b8cddc9f5e1289d5e7e0f4fd3f0004dba5d7
