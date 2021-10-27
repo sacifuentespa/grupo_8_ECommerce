@@ -928,36 +928,31 @@ border-radius: 10px;
         background-color: white;
         height: 45%;
     }
-}
 
-
-/* Register_larger desktops and monitors */
-
-@media (min-width: 1000px ) {
+    /* Media queries para registro */
         
     #sectionForm form {
-        width: 100%;    
-            }  
-
+            width: 100%;    
+                }  
+    
     .contenedor1{
-        display: inline-block;
-        width: 42vw;
-        margin-left: 40px;
-            }
-    
+            display: inline-block;
+            width: 42vw;
+            margin-left: 40px;
+                }
+        
     .contenedor2{
-        display: inline-block;
-        width: 42vw;
-                }
-    
+            display: inline-block;
+            width: 42vw;
+                    }
+        
     .contenedor3{
-        display:block;
-        width: 50vw;
-        margin: auto;
-                }
-             
+            display:block;
+            width: 50vw;
+            margin: auto;
+                    }
+                 
     .contenedor3 label {
-        text-align: center;
-    }  
-    }
-    
+            text-align: center;
+     }      
+}
