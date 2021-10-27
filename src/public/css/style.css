@@ -813,21 +813,29 @@ border-radius: 10px;
         flex-direction: row;
         flex-wrap: wrap;
     }
+    
+    main.mainProduct section.currentProduct section.productSectionImageAndButtons section{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 
     main.mainProduct section.currentProduct h2{
         font-size: 24px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         color: #666;
     }
 
-    main.mainProduct section.productButtonsDesktop{ 
+
+    main.mainProduct section.currentProduct section.productSectionImageAndButtons section.productButtonsDesktop{ 
         display: flex;
+        flex-direction: row;
         width: 85%;
         border-radius: 5px;
         height: 45px;
         font-size: 14px;
         font-weight: bold;
-
+        justify-content: space-around;
         }
 
     main.mainProduct section.productButtonsDesktop button{ 
@@ -839,6 +847,7 @@ border-radius: 10px;
     height: auto;
     font-size: 14px;
     font-weight: bold;
+    margin-left: 15%;
     }
 
     main.mainProduct section.productButtonsDesktop button:hover{ 
