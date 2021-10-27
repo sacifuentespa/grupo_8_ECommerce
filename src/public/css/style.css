@@ -152,6 +152,7 @@ footer .btnMoreInfo{
     color: #FFF;
     padding: 1%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .btnMoreInfo i{
