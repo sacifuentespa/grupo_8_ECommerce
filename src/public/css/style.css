@@ -340,6 +340,11 @@ main.mainProduct section.carouselProduct article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
 
+main.mainProduct section.productImages section.carouselProduct article img{
+    height: 85%;
+    margin-top: 5px;
+}
+
 main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
     display: none;
 }
@@ -391,6 +396,8 @@ main.mainProduct section.optionsProducts article p{
 
 
 
+
+
 main.mainProduct h3{
     font-size: 24px;
     padding: 2%;
@@ -425,6 +432,7 @@ main.mainProduct section article h4{
 main.mainProduct section.carouselSimilarProducts article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
+
 
 
 
@@ -829,6 +837,11 @@ padding: 1px;
         width: 45%;
     }
 
+    main.mainProduct section.productImages section.carouselProduct article img{
+        height: 85%;
+        margin-top: 5px;
+    }
+
     main.mainProduct section.optionsProducts{
         width: 45%;
     }
@@ -901,11 +914,9 @@ padding: 1px;
         background-color: white;
         height: 45%;
     }
-<<<<<<< HEAD
 }
 
-=======
-
+@media (min-width: 1000px ) {
     /* Media queries para registro */
         
     #sectionForm form {
@@ -933,4 +944,3 @@ padding: 1px;
             text-align: center;
      }      
 }
->>>>>>> b0e6b8cddc9f5e1289d5e7e0f4fd3f0004dba5d7
