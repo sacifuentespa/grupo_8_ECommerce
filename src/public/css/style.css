@@ -566,7 +566,7 @@ align-items: center;
 
 #sectionForm form {
 width: 60%;    
-height: 80%;
+height: 85%;
 background-color: rgb(238, 234, 234);
 margin: 20px;
 padding: 8px;
@@ -579,8 +579,8 @@ border-radius: 10px;
 }
 
 #sectionForm form h2{
-   margin-top: 100px;
-   margin-left: 10px;
+   margin-top: 15px;
+   margin-left: 15px;
    text-align: center;
 }
 
@@ -635,6 +635,17 @@ border-radius: 10px;
     margin-bottom: 5px;
 } 
 
+#sectionForm form .volver{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+} 
+
+#sectionForm form .volverlogin{
+    text-align: center;
+    margin-top:70px;
+    font-weight: bold;
+} 
 
 /* main.mainCart FINAL */
 /* Cart Final */
