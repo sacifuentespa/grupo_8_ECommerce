@@ -65,7 +65,7 @@ header form button{
     position: relative;
 }
 
-nav.iconNav i{
+.iconNav i{
     width: 2rem;
     font-size: 2rem;
     color: rgba(251, 251, 251, 0.75);
@@ -93,37 +93,37 @@ header nav ul li{
     padding: 1.2em;
 }
 
-header .modalNavUser{
-    display: none;
+header nav .modalNavUser{
+    display: block;
     text-align: left;
     position: absolute;
-    top: 8vh;
-    left: 10vw;
+    top: 10%;
+    left: 85%;
     background:#9de2e0;
-    min-width: 40%;               /* modificable */ 
+    min-width: 10%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 header nav .modalNavBurguer{
-    display: none;
+    display: block;
     text-align: left;
     position: absolute;
-    top: 8vh;
-    left: 10vw;
+    top: 10%;
+    left: 88%;
     background:#9de2e0;
-    min-width: 40%;               /* modificable */ 
+    min-width: 10%;               /* modificable */ 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.iconNav button:hover .modalNavUser{
+.iconNav button.dropdownUser:hover .modalNavUser{
     display: block;
 }
 
-.dropdownBurguer:hover .modalNavBurguer{
+.iconNav button.dropdownBurguer:hover .modalNavBurguer{
     display: block;
 }
 
-.iconNav button:hover i{
+.iconNav i:hover{
     color: rgb(251, 251, 251);
 }
 
@@ -163,7 +163,6 @@ footer .btnMoreInfo{
 
 footer section.footerContent{
     display: flex;
-    visibility: hidden;
     text-align: center;
     justify-content:space-around;
     width: 100%;
@@ -191,16 +190,20 @@ footer section.footerContent ul a{
 }
 
 footer h4{
+    width: 100%;
     font-size: 1.4em;
     font-weight: bold;
     color:#fff;
+    text-align: center;
+    background-color: #11aea9;
+    padding: 0% 1%;
 }
 
-button.btnMoreInfo:active .footerContent{
-    visibility: visible;
+button.btnMoreInfo:hover .footerContent{
+    display: flex;
 }
 
-button.btnMoreInfo:active i{
+button.btnMoreInfo:hover i{
     transform: rotate(180deg);
     transition: all 0.5s;
 }
