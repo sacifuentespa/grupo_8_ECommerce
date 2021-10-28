@@ -141,6 +141,9 @@ footer{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    background: white;
+    margin-top: 3%;
+    border: none;
 }
 
 footer .btnMoreInfo{
@@ -173,6 +176,7 @@ footer section.footerContent{
 
 section.footerContent article{
     width: 30%;
+    border: none;
 }
 
 section.footerContent article ul li{
@@ -198,11 +202,12 @@ footer h4{
     text-align: center;
     background-color: #11aea9;
     padding: 0% 1%;
+    border: none;
 }
 
-button.btnMoreInfo:hover .footerContent{
+/* button.btnMoreInfo:hover .footerContent{
     display: flex;
-}
+} */
 
 button.btnMoreInfo:hover i{
     transform: rotate(180deg);
@@ -306,6 +311,30 @@ main.mainHome section article:hover{
 main.mainHome section article i:hover{
     transform: rotate(-90deg);
     transition:all 0.4s;
+}
+
+main.mainHome .categories{
+    margin: 2%;
+    margin-left: 5%;
+}
+
+main.mainHome .labelCategories{
+    font-size: 2em;
+}
+
+main.mainHome .formCategories{
+    height: 4vh;
+    width: 10%;    
+    border-radius: 5px;
+    border: none;
+    background: #11aea9;
+    color: white;
+}
+
+.formCategories option{
+    background: white;
+    color: black;
+    font-size: 1.1em;
 }
 
 /* main.mainHome FINAL */
@@ -713,13 +742,25 @@ border-radius: 10px;
         margin-right: 10%;
     }
 
-    header form input:active{
-        border: none;
+    header nav .modalNavUser{
+        display: none;    
     }
-
+    
+    header nav .modalNavBurguer{
+        display: none;
+    }
+    
     footer{
         flex-direction: column;
         align-items: center;
+    }
+
+    footer .btnMoreInfo{
+        width: 50%;
+    }
+
+    footer .btnMoreInfo:active .footerContent{
+        display: none;
     }
 
     footer section{
@@ -737,6 +778,11 @@ border-radius: 10px;
         box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
         width: 100%;
     }
+
+    main.mainHome .formCategories{
+        width: 30%;    
+    }
+
     /* MAIN FINAL */
     /* Home Final */
 
