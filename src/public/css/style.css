@@ -133,6 +133,7 @@ header nav ul li:hover{
 
 /* HEADER FINAL */
 
+
 /* FOOTER */
 footer{
     width: 100%;
@@ -141,7 +142,6 @@ footer{
     flex-wrap: wrap;
     align-items: center;
 }
-
 
 footer .btnMoreInfo{
     background-color:#11aea9;
@@ -152,6 +152,7 @@ footer .btnMoreInfo{
     color: #FFF;
     padding: 1%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .btnMoreInfo i{
@@ -209,7 +210,6 @@ button.btnMoreInfo:hover i{
 }
 /* FOOTER FINAL */
 
-
 /* Sessions */
 
 /* Home */
@@ -251,6 +251,7 @@ main.mainHome section article img{
     display:block;
     margin: 0 auto;
     width: 80%;
+    height:65%;
 }
 
 main.mainHome section article i{
@@ -334,9 +335,9 @@ main.mainProduct section{
     justify-content: center;
 }
 
-main.mainProduct section article i:hover{
-    transform: rotate(-90deg);
-    transition:all 0.4s;
+main.mainProduct section.productImages img{
+    height: 80%;
+    margin-top: 10px;
 }
 
 main.mainProduct section.carouselProduct{
@@ -345,6 +346,10 @@ main.mainProduct section.carouselProduct{
 
 main.mainProduct section.carouselProduct article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
+    display: none;
 }
 
 main.mainProduct section.productButtons { 
@@ -357,7 +362,7 @@ main.mainProduct section.productButtons button{
     justify-content: space-around;
     width: 35%;
     background-color: white;
-    border-radius: 15%;
+    border-radius: 5px;
     height: 25px;
     font-size: 14px;
     font-weight: bold;
@@ -367,7 +372,6 @@ main.mainProduct section.productButtons button:hover{
     background-color: beige;
     color: blue;
 }
-
 
 main.mainProduct section.optionsProducts{
     display: flex;
@@ -386,19 +390,8 @@ main.mainProduct section.optionsProducts article{
     justify-content: center;
 }
 
-
 main.mainProduct section.optionsProducts article p{
     display: none;
-}
-
-main.mainProduct section.optionsProducts article:hover p{
-    display: block;
-    width: 85%;
-    justify-self: center;
-    text-align: justify;
-    margin-left: 35px;
-    font-family: 'Open Sans';
-    font-size: 14px;
 }
 
 
@@ -431,6 +424,8 @@ main.mainProduct section article h4{
     padding-top: 1%;
 }
 
+
+    
 main.mainProduct section.carouselSimilarProducts article:hover{
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
 }
@@ -563,13 +558,101 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     color: blue;
 }
 
+/*Register Y Login*/
 
+#sectionForm{
+background: white;
+height: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
+#sectionForm form {
+width: 60%;    
+height: 85%;
+background-color: rgb(238, 234, 234);
+margin: 20px;
+padding: 8px;
+border-radius: 10px;
+}
 
+#sectionForm form h1{
+    text-align: center;
+    font-size: 20px;
+}
+
+#sectionForm form h2{
+   margin-top: 15px;
+   margin-left: 15px;
+   text-align: center;
+}
+
+#sectionForm form h3{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+ }
+
+#sectionForm form label {
+  font-size: 13px;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  
+}
+
+#sectionForm form input {  
+    font-size: 13px;
+    display: block;
+    margin: auto;
+    width: 80%;
+  }
+
+#sectionForm form button {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    padding: 7px;
+    background-color: #3483FA;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sectionForm form button:hover {
+    background: blue;
+}
+
+#sectionForm form div {
+    margin-bottom: 5px;
+    padding: 5px;
+
+}
+
+#sectionForm form p{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+} 
+
+#sectionForm form .volver{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+} 
+
+#sectionForm form .volverlogin{
+    text-align: center;
+    margin-top:70px;
+    font-weight: bold;
+} 
 
 /* main.mainCart FINAL */
 /* Cart Final */
-
 
 /* Media Queries */
 
@@ -657,6 +740,21 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     /* MAIN FINAL */
     /* Home Final */
 
+    main.mainProduct section.currentProduct{
+        display: none;
+    }
+
+    main.mainProduct section.optionsProducts article:hover p{
+        display: block;
+        width: 85%;
+        justify-self: center;
+        text-align: justify;
+        margin-left: 35px;
+        font-family: 'Open Sans';
+        font-size: 14px;
+    }
+    
+
     /* CART */
     /* main.maincart */
 
@@ -678,18 +776,159 @@ main.mainCart section.buyCancelButtonsCart button:hover{
         width: 25%;
     }
 
+    main.mainProduct section.currentProduct{
+        display: none;
+    }
+
+    main.mainProduct section.optionsProducts article:hover p{
+        display: block;
+        width: 85%;
+        justify-self: center;
+        text-align: justify;
+        margin-left: 35px;
+        font-family: 'Open Sans';
+        font-size: 14px;
+    }
+    
+
        /* CART */
     /* main.maincart */
 
     main.mainCart section.cartArticles img{
         display: none
     }
+    
 
     /* main.maincart */
     /* CART Final */
 }
 
 @media (min-width: 769px ) {
+
+    /* Product */
+    /* main.mainProduct Desktop */
+    main.mainProduct{
+        display: flex;
+        width:90vw;
+        flex-direction: row;
+    }
+    main.mainProduct section.productImages {
+        display: flex;
+        width:20%;
+        height: 80%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 55px;
+        margin-right: 15px;
+    }
+
+
+    main.mainProduct section.currentProduct{
+        display:flex;
+        width: 60%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    main.mainProduct section.currentProduct section.productSectionImageAndButtons section{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    main.mainProduct section.currentProduct h2{
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+
+    main.mainProduct section.currentProduct section.productSectionImageAndButtons section.productButtonsDesktop{ 
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        border-radius: 5px;
+        height: 45px;
+        font-size: 14px;
+        font-weight: bold;
+        justify-content: space-around;
+        }
+
+    main.mainProduct section.productButtonsDesktop button{ 
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    background-color: white;
+    border-radius: 5px;
+    height: auto;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 15%;
+    }
+
+    main.mainProduct section.productButtonsDesktop button:hover{ 
+        background-color: beige;
+        color: blue;
+    }
+
+    main.mainProduct section.productButtons{
+        display: none;
+    }
+
+    main.mainProduct section.productImages section.carouselProduct {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main.mainProduct section.productImages section.carouselProduct article {
+        width: 45%;
+    }
+
+    main.mainProduct section.optionsProducts{
+        width: 45%;
+    }
+    
+    main.mainProduct section.optionsProducts article{
+        width: 95%;
+    }
+    
+    main.mainProduct section.optionsProducts article p.priceProduct{
+        display: block;
+        position: relative;
+        left: 35px;
+        font-size: large;
+    }
+
+    main.mainProduct section.optionsProducts article:hover p{
+        display: block;
+    }
+
+
+    main.mainProduct .carouselProduct section.listSectionCategoriesProduct {
+        display: block;
+    }
+
+    main.mainProduct .carouselSimilarProducts{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 20%;
+        margin-left: 15px;
+        position:relative;
+        left:15px
+    }
+
+    main.mainProduct .carouselSimilarProducts section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    main.mainProduct .carouselSimilarProducts section article{
+        width: 75%;
+    }
+
+    /* Product */
+    /* FINAL main.mainProduct Desktop */
 
     main.mainCart section.cartArticles article div h4{
         display: block;
@@ -715,5 +954,30 @@ main.mainCart section.buyCancelButtonsCart button:hover{
         background-color: white;
         height: 45%;
     }
-}
 
+    /* Registro */
+    #sectionForm form {
+        width: 100%;    
+            }  
+
+    .contenedor1{
+        display: inline-block;
+        width: 42vw;
+        margin-left: 40px;
+            }
+    
+    .contenedor2{
+        display: inline-block;
+        width: 42vw;
+                }
+    
+    .contenedor3{
+        display:block;
+        width: 50vw;
+        margin: auto;
+                }
+             
+    .contenedor3 label {
+        text-align: center;
+    }  
+}

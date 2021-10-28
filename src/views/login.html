@@ -17,27 +17,15 @@
 
 <body>
     <header>
-        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
-        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
+        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de Trueque Online">
+        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de Trueque Online">
         <form action="#">
             <input type="search" name="qu" placeholder="Buscar productos">
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
-        <div class="iconNav">
-            <i class="fas fa-shopping-cart"></i>
-            <a href="#"><i class="far fa-user-circle"></i></a>
-            <a href="#"></a><i class="fas fa-bars"></i></a>
-        </div>
-        <nav>
-            <ul class="right-navbar">
-                <li> <a href="/register.html">Crea tu cuenta</a></li>
-                <li><a href="/login.html">Ingresa</a></li>
-            </ul>
-        </nav>
     </header>
-
-    <main class="main-section">
-        <section class="sectionLogin">
+    <main>
+        <section id="sectionForm">
             <form action="" method="">
                 <h1>Iniciar sesión</h1>
                 <div>
@@ -48,10 +36,46 @@
                     <label>Contraseña:</label>
                     <input type="password" name="passwordUsuario">
                 </div>
-                <button type="submit">Continuar</button>
+                <button class="buttoncontinuar" type="submit">Continuar</button>
+                <a href="/register">
+                    <h2>Registro</h2>
+                </a>
+                <a href="#">
+                    <h2>¿Has olvidado tu contraseña?</h2>
+                </a>
+                <div class="volverlogin">
+                    <a href="/">Volver</a>
+                </div>
             </form>
         </section>
     </main>
+    <footer>
+        <button class="btnMoreInfo">Más información<i class="fas fa-chevron-up"></i></button>
+        <section class="footerContent">
+            <article class="contactUs">
+                <h4>Contáctenos</h4>
+                <ul>
+                    <li><a href="#">Redes</a></li>
+                    <li><a href="#">Equipo de trabajo</a></li>
+                    <li><a href="#">Trabaje con nosotros</a></li>
+                </ul>
+            </article>
+            <article class="legalContent">
+                <h4>Politica</h4>
+                <ul>
+                    <li><a href="#">Contenido legal</a></li>
+                    <li><a href="#">Normas de la comunidad</a></li>
+                </ul>
+            </article>
+            <article class="helpContent">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </article>
+        </section>
+    </footer>
 </body>
 
 </html>
