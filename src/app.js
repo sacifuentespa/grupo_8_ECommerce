@@ -7,27 +7,27 @@ app.use(express.static(path.resolve(__dirname, './public')));
 
 //home
 app.get('/', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/products/index.html'));
+    res.sendFile(path.resolve(__dirname, './views/index.html'));
 });
 
 //login
 app.get('/login', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/users/login.html'));
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
 //register
 app.get('/register', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/users/register.html'));
+    res.sendFile(path.resolve(__dirname, './views/register.html'));
 });
 
 //productPage
 app.get('/product', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/products/product.html'));
+    res.sendFile(path.resolve(__dirname, './views/product.html'));
 });
 
 //cart
 app.get('/cart', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/products/cart.html'));
+    res.sendFile(path.resolve(__dirname, './views/cart.html'));
 });
 
 app.listen(port, ()=>{
