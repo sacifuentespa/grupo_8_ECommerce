@@ -23,7 +23,7 @@
             <input type="search" name="qu" placeholder="Buscar productos">
             <button type="submit">
                 <i class="fas fa-search"></i>
-            </button><s></s>
+            </button>
         </form>
         <div class="iconNav">
             <a href="/cart" class="cartHeader"><i class="fas fa-shopping-cart"></i></a>
@@ -50,12 +50,20 @@
             </ul>
         </nav>
     </header>
-    <section class="img-home-banner">
-        <img src="/img/bannerTrueque.jpg" alt="Banner de ofertas">
-    </section>
     <main class="mainHome">
-        <h3>Basado en tu última visita</h3>
+        <img src="/img/bannerTrueque.jpg" alt="Banner de ofertas" class="img-home-banner">
         <section>
+            <h3>Basado en tu última visita</h3>
+            <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
+            <article>
+                <img src="/img/iphone13img.webp" alt="Cafetera" class="product_img">
+                <div class="text-card-product">
+                    <i class="fas fa-truck"></i>
+                    <p class="price">$666.77</p>
+                    <p class="discount">40% off</p>
+                    <h4>iPhone 13</h4>
+                </div>
+            </article>
             <article>
                 <img src="/img/iphone13img.webp" alt="Cafetera" class="product_img">
                 <div class="text-card-product">
@@ -83,6 +91,7 @@
                     <h4>Teléfono móvil Samsung Galaxy S10</h4>
                 </div>
             </article>
+            <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
         </section>
         <div class="categories">
             <label class="labelCategories" for="categories">Categorías: </label>
