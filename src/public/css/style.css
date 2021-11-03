@@ -8,7 +8,7 @@
 
 body{
     width:100%;
-    background: #ebebeb;
+    background: rgb(238, 236, 236);
 }
 
 /* HEADER */
@@ -612,7 +612,7 @@ align-items: center;
 #sectionForm form {
 width: 60%;    
 height: 85%;
-background-color: rgb(238, 234, 234);
+background-color: rgb(238, 236, 236);
 margin: 20px;
 padding: 8px;
 border-radius: 10px;
@@ -701,6 +701,15 @@ border-radius: 10px;
     justify-content: center;
 }
 
+.bodylogin {
+    background: white;
+}
+
+.bodyregister {
+    background: white;
+}
+
+
 #sectionForm .formlogin {
 width: 60%;    
 height: 60%;
@@ -709,6 +718,7 @@ margin: 20px;
 padding: 8px;
 border-radius: 10px;
 }
+
 
 /* main.mainCart FINAL */
 /* Cart Final */
