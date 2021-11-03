@@ -599,7 +599,7 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     color: blue;
 }
 
-/*Register Y Login*/
+/*Register y login*/
 
 #sectionForm{
 background: white;
@@ -635,7 +635,7 @@ border-radius: 10px;
     text-align: center;
  }
 
-#sectionForm form label {
+#sectionForm form label{
   font-size: 13px;
   display: block;
   text-align: center;
@@ -643,14 +643,14 @@ border-radius: 10px;
   
 }
 
-#sectionForm form input {  
+#sectionForm form input{  
     font-size: 13px;
     display: block;
     margin: auto;
     width: 80%;
 }
 
-#sectionForm form button {
+#sectionForm form button{
     display: flex;
     margin: auto;
     font-size: 15px;
@@ -663,11 +663,11 @@ border-radius: 10px;
     font-weight: bold;
 }
 
-#sectionForm form button:hover {
+#sectionForm form button:hover{
     background: blue;
 }
 
-#sectionForm form div {
+#sectionForm form div{
     margin-bottom: 5px;
     padding: 5px;
 }
@@ -699,6 +699,15 @@ border-radius: 10px;
 .headerregister {
     display: flex;
     justify-content: center;
+}
+
+#sectionForm .formlogin {
+width: 60%;    
+height: 60%;
+background-color: rgb(238, 234, 234);
+margin: 20px;
+padding: 8px;
+border-radius: 10px;
 }
 
 /* main.mainCart FINAL */
