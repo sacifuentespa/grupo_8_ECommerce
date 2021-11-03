@@ -648,7 +648,7 @@ border-radius: 10px;
     display: block;
     margin: auto;
     width: 80%;
-  }
+}
 
 #sectionForm form button {
     display: flex;
@@ -670,7 +670,6 @@ border-radius: 10px;
 #sectionForm form div {
     margin-bottom: 5px;
     padding: 5px;
-
 }
 
 #sectionForm form p{
@@ -691,6 +690,16 @@ border-radius: 10px;
     margin-top:70px;
     font-weight: bold;
 } 
+
+.headerlogin {
+    display: flex;
+    justify-content: center;
+}
+
+.headerregister {
+    display: flex;
+    justify-content: center;
+}
 
 /* main.mainCart FINAL */
 /* Cart Final */
