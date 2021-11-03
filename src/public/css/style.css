@@ -683,6 +683,33 @@ border-radius: 10px;
 /* main.mainCart FINAL */
 /* Cart Final */
 
+main.mainProductUpload {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main.mainProductUpload form{
+    display:flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+main.mainProductUpload form div{
+    margin:10px;
+}
+
+
+
+/* main.mainProductUpload */
+/* mainProductUpload start */
+
+
+
+/* main.mainProductUpload FINAL*/
+/* mainProductUpload FINAL */
+
+
 /* Media Queries */
 
 /* Phone */
