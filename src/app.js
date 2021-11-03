@@ -30,6 +30,11 @@ app.get('/cart', (req,res)=>{
     res.sendFile(path.resolve(__dirname, './views/products/cart.html'));
 });
 
+//productUpload
+app.get('/productUpload', (req,res)=>{
+    res.sendFile(path.resolve(__dirname, './views/products/productUpload.html'));
+});
+
 app.listen(port, ()=>{
     console.log('Servidor funcionando');
 });
