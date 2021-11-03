@@ -50,31 +50,71 @@
             </ul>
         </nav>
     </header>
-    
+
     <section class="img-home-banner">
         <img src="/img/bannerTrueque.jpg" alt="Banner de ofertas">
     </section>
-    
+
     <main class="mainProductUpload">
 
         <form action="productUpload" method="POST">
-            <label>Nombre del producto</label>
-            <input type="text" name="productName" placeholder="Nombre del producto"required>
-            <select name="listCategoriesProduct" class="listCategoriesProductUpload">
-                <option value="vehiculos">Vehiculos</option>
-                <option value="hogar">Hogar y muebles</option>
-                <option value="electrodomesticos">Electrodomésticos</option>
-                <option value="inmobiliaria">Inmobiliaria</option>
-                <option value="electronica">Electrónica</option>
-                <option value="ropa"> Ropa y accesorios</option>
-                <option value="deportes">Deportes</option>
-                <option value="libros">Libros, revistas y comics</option>
-                
-            </select>
+
+            <div class="productNameUpload">
+                <label>Nombre del producto</label>
+                <input type="text" name="productName" placeholder="Nombre del producto" required>
+            </div>
+
+            <div class="productPriceUpload">
+                <label>Precio del producto</label>
+                <input type="text" name="productPrice" placeholder="Precio" required>
+            </div>
+
+            <div class="listCategoriesProductUpload">
+                <label>Categoría del producto</label>
+                <select name="listCategoriesProduct">
+                    <option value="vehiculos">Vehiculos</option>
+                    <option value="hogar">Hogar y muebles</option>
+                    <option value="electrodomesticos">Electrodomésticos</option>
+                    <option value="inmobiliaria">Inmobiliaria</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="ropa"> Ropa y accesorios</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="libros">Libros, revistas y comics</option>
+                </select>
+            </div>
+
+            <div class="productDescriptionUpload">
+                <label>Descripición del producto</label>
+                <textarea name="productDescriptionUpload" required>
+                </textarea>
+            </div>
+
+            <div class="mainImageUpload">
+                <label>Imagen principal</label>
+                <input type="file" name="mainImageUpload" required>
+            </div>
+
+            <div class="imagesUpload">
+                <label>Imagenes del producto</label>
+                <input type="file" name="imagesUpload" multiple>
+            </div>
+
+            <div class="aimUpload">
+                <label>¿Qué quieres hacer con el producto?</label>
+
+                <label><input type="checkbox" name="aimUpload">Vender</label>
+                <label><input type="checkbox" name="aimUpload">Cambiar</label>
+            </div>
+
+            <div class="buttonsUpload">
+                <button type="submit">Subir</button>
+                <button type="reset">Cancelar</button>
+            </div>
 
         </form>
-       
+
     </main>
+
     <footer>
         <button class="btnMoreInfo">Más información<i class="fas fa-chevron-up"></i></button>
         <section class="footerContent">
