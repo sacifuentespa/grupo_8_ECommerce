@@ -15,39 +15,54 @@
     <script src="https://kit.fontawesome.com/5d64a4e77d.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de Trueque Online">
-        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de Trueque Online">
-        <form action="#">
-            <input type="search" name="qu" placeholder="Buscar productos">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
+<body class="bodyregister">
+    <header class="headerregister">
+        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
+        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
     </header>
     <main>
         <section id="sectionForm">
-            <form action="" method="">
-                <h1>Iniciar sesión</h1>
-                <div>
-                    <label>Nombre de usuario:</label>
-                    <input type="text" name="nombreUsuario">
+            <form>
+                <h1>Crear cuenta</h1>
+                <div class="contenedor1">
+                    <div class>
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre">
+                    </div>
+                    <div>
+                        <label>Nombre de usuario:</label>
+                        <input type="text" name="nombreUsuario">
+                    </div>
+                </div>
+                <div class="contenedor2">
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" name="emailUsuario">
+                    </div>
+                    <div class>
+                        <label>Contraseña:</label>
+                        <input type="password" name="passwordUsuario">
+                    </div>
+                </div>
+                <div class="contenedor3">
+                    <div class="datos">
+                        <label>Confirmar contraseña:</label>
+                        <input type="password" name="confirmarPasswordUsuario">
+                    </div>
                 </div>
                 <div>
-                    <label>Contraseña:</label>
-                    <input type="password" name="passwordUsuario">
+                    <p>Acepto términos y condiciones</p>
+                    <input type="checkbox" name="terminos">
                 </div>
-                <button class="buttoncontinuar" type="submit">Continuar</button>
-                <a href="/register">
-                    <h2>Registro</h2>
-                </a>
-                <a href="#">
-                    <h3>¿Has olvidado tu contraseña?</h3>
-                </a>
+                </div>
+                <button type="submit">Continuar</button>
+                <div class="volver">
+                    <a href="/">Volver</a>
+                </div>
             </form>
         </section>
     </main>
     <footer>
-        <button class="btnMoreInfo">Más información<i class="fas fa-chevron-up"></i></button>
         <section class="footerContent">
             <article class="contactUs">
                 <h4>Contáctenos</h4>
@@ -72,6 +87,7 @@
                 </ul>
             </article>
         </section>
+        <h4>Copyright © 1999-2020 TruequeOnline</h4>
     </footer>
 </body>
 

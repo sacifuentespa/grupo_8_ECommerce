@@ -8,7 +8,7 @@
 
 body{
     width:100%;
-    background: #ebebeb;
+    background: rgb(238, 236, 236);
 }
 
 /* HEADER */
@@ -65,7 +65,7 @@ header form button{
     position: relative;
 }
 
-nav.iconNav i{
+.iconNav i{
     width: 2rem;
     font-size: 2rem;
     color: rgba(251, 251, 251, 0.75);
@@ -93,37 +93,37 @@ header nav ul li{
     padding: 1.2em;
 }
 
-header .modalNavUser{
-    display: none;
+header nav .modalNavUser{
+    display: block;
     text-align: left;
     position: absolute;
-    top: 8vh;
-    left: 10vw;
+    top: 10%;
+    left: 85%;
     background:#9de2e0;
-    min-width: 40%;               /* modificable */ 
+    min-width: 10%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 header nav .modalNavBurguer{
-    display: none;
+    display: block;
     text-align: left;
     position: absolute;
-    top: 8vh;
-    left: 10vw;
+    top: 10%;
+    left: 88%;
     background:#9de2e0;
-    min-width: 40%;               /* modificable */ 
+    min-width: 10%;               /* modificable */ 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.iconNav button:hover .modalNavUser{
+.iconNav button.dropdownUser:hover .modalNavUser{
     display: block;
 }
 
-.dropdownBurguer:hover .modalNavBurguer{
+.iconNav button.dropdownBurguer:hover .modalNavBurguer{
     display: block;
 }
 
-.iconNav button:hover i{
+.iconNav i:hover{
     color: rgb(251, 251, 251);
 }
 
@@ -141,6 +141,9 @@ footer{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    background: white;
+    margin-top: 3%;
+    border: none;
 }
 
 footer .btnMoreInfo{
@@ -173,6 +176,7 @@ footer section.footerContent{
 
 section.footerContent article{
     width: 30%;
+    border: none;
 }
 
 section.footerContent article ul li{
@@ -191,16 +195,21 @@ footer section.footerContent ul a{
 }
 
 footer h4{
+    width: 100%;
     font-size: 1.4em;
     font-weight: bold;
     color:#fff;
+    text-align: center;
+    background-color: #11aea9;
+    padding: 0% 1%;
+    border: none;
 }
 
-button.btnMoreInfo:active .footerContent{
-    visibility: visible;
-}
+/* button.btnMoreInfo:hover .footerContent{
+    display: flex;
+} */
 
-button.btnMoreInfo:active i{
+button.btnMoreInfo:hover i{
     transform: rotate(180deg);
     transition: all 0.5s;
 }
@@ -210,28 +219,40 @@ button.btnMoreInfo:active i{
 
 /* Home */
 /* MAIN */
-section img{
-    width:100%;
-}
-
 main.mainHome{
-    width: 90vw;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+main.mainHome .img-home-banner{
+    width:100%;
 }
 
 main.mainHome section{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 1%;
-    justify-content: center;
+    padding: 2%;
+    margin: 2%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 main.mainHome h3{
-    font-size: 24px;
-    padding: 2%;
+    font-size: 2.5rem;
+    padding-bottom: 2%;
     color: #666;
+    width: 100%;
+}
+
+main.mainHome section .carruselBtn{
+    width: 3%;
+    height: 5vh;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.741);
+    color: #11aea9;
+    border-radius: 50%;
+    border-style:double;
 }
 
 main.mainHome section article{
@@ -239,8 +260,8 @@ main.mainHome section article{
     margin-bottom: 3%;
     background-color: white;
     border-radius:5%;
-    margin-left: 3%;
-    margin-right: 2%;
+    border:#11aea9 5px;
+
 }
 
 main.mainHome section article img{
@@ -302,6 +323,30 @@ main.mainHome section article:hover{
 main.mainHome section article i:hover{
     transform: rotate(-90deg);
     transition:all 0.4s;
+}
+
+main.mainHome .categories{
+    margin: 2%;
+    margin-left: 5%;
+}
+
+main.mainHome .labelCategories{
+    font-size: 2em;
+}
+
+main.mainHome .formCategories{
+    height: 4vh;
+    width: 10%;    
+    border-radius: 5px;
+    border: none;
+    background: #11aea9;
+    color: white;
+}
+
+.formCategories option{
+    background: white;
+    color: black;
+    font-size: 1.1em;
 }
 
 /* main.mainHome FINAL */
@@ -554,7 +599,7 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     color: blue;
 }
 
-/*Register Y Login*/
+/*Register y login*/
 
 #sectionForm{
 background: white;
@@ -566,8 +611,8 @@ align-items: center;
 
 #sectionForm form {
 width: 60%;    
-height: 80%;
-background-color: rgb(238, 234, 234);
+height: 85%;
+background-color: rgb(238, 236, 236);
 margin: 20px;
 padding: 8px;
 border-radius: 10px;
@@ -579,8 +624,8 @@ border-radius: 10px;
 }
 
 #sectionForm form h2{
-   margin-top: 100px;
-   margin-left: 10px;
+   margin-top: 15px;
+   margin-left: 15px;
    text-align: center;
 }
 
@@ -590,7 +635,7 @@ border-radius: 10px;
     text-align: center;
  }
 
-#sectionForm form label {
+#sectionForm form label{
   font-size: 13px;
   display: block;
   text-align: center;
@@ -598,14 +643,14 @@ border-radius: 10px;
   
 }
 
-#sectionForm form input {  
+#sectionForm form input{  
     font-size: 13px;
     display: block;
     margin: auto;
     width: 80%;
-  }
+}
 
-#sectionForm form button {
+#sectionForm form button{
     display: flex;
     margin: auto;
     font-size: 15px;
@@ -618,14 +663,13 @@ border-radius: 10px;
     font-weight: bold;
 }
 
-#sectionForm form button:hover {
+#sectionForm form button:hover{
     background: blue;
 }
 
-#sectionForm form div {
+#sectionForm form div{
     margin-bottom: 5px;
     padding: 5px;
-
 }
 
 #sectionForm form p{
@@ -634,6 +678,46 @@ border-radius: 10px;
     font-weight: bold;
     margin-bottom: 5px;
 } 
+
+#sectionForm form .volver{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+} 
+
+#sectionForm form .volverlogin{
+    text-align: center;
+    margin-top:70px;
+    font-weight: bold;
+} 
+
+.headerlogin {
+    display: flex;
+    justify-content: center;
+}
+
+.headerregister {
+    display: flex;
+    justify-content: center;
+}
+
+.bodylogin {
+    background: white;
+}
+
+.bodyregister {
+    background: white;
+}
+
+
+#sectionForm .formlogin {
+width: 60%;    
+height: 60%;
+background-color: rgb(238, 234, 234);
+margin: 20px;
+padding: 8px;
+border-radius: 10px;
+}
 
 
 /* main.mainCart FINAL */
@@ -698,13 +782,25 @@ border-radius: 10px;
         margin-right: 10%;
     }
 
-    header form input:active{
-        border: none;
+    header nav .modalNavUser{
+        display: none;    
     }
-
+    
+    header nav .modalNavBurguer{
+        display: none;
+    }
+    
     footer{
         flex-direction: column;
         align-items: center;
+    }
+
+    footer .btnMoreInfo{
+        width: 50%;
+    }
+
+    footer .btnMoreInfo:active .footerContent{
+        display: none;
     }
 
     footer section{
@@ -722,6 +818,11 @@ border-radius: 10px;
         box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
         width: 100%;
     }
+
+    main.mainHome .formCategories{
+        width: 30%;    
+    }
+
     /* MAIN FINAL */
     /* Home Final */
 
