@@ -683,6 +683,10 @@ border-radius: 10px;
 /* main.mainCart FINAL */
 /* Cart Final */
 
+/* main.mainProductUpload */
+/* mainProductUpload start */
+
+
 main.mainProductUpload {
     display: flex;
     flex-direction: column;
@@ -699,11 +703,31 @@ main.mainProductUpload form div{
     margin:10px;
 }
 
+main.mainProductUpload select{
+    height: 4vh;
+    width: 10%;    
+    border-radius: 5px;
+    border: none;
+    background: #11aea9;
+    color: white;
+}
 
+main.mainProductUpload form button {
+    display: flex;
+    margin: auto;
+    font-size: 15px;
+    padding: 7px;
+    background-color: #11aea9;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-/* main.mainProductUpload */
-/* mainProductUpload start */
-
+main.mainProductUpload form button:hover {
+    background: blue;
+}
 
 
 /* main.mainProductUpload FINAL*/
