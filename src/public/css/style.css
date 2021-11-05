@@ -8,7 +8,7 @@
 
 body{
     width:100%;
-    background: #ebebeb;
+    background: rgb(238, 236, 236);
 }
 
 /* HEADER */
@@ -144,6 +144,7 @@ footer{
     background: white;
     margin-top: 3%;
     border: none;
+    background-color: #ebebeb;
 }
 
 footer .btnMoreInfo{
@@ -230,11 +231,21 @@ main.mainHome{
     flex-direction: column;
 }
 
+.img-home-banner{
+     width:100%;
+}
+
 main.mainHome section{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 1%;
-    justify-content: center;
+    padding: 1% 2%;
+    margin: 2%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main.mainHome section .allProducts{
+    display: none;
 }
 
 main.mainHome h3{
@@ -245,18 +256,19 @@ main.mainHome h3{
 
 main.mainHome section article{
     width: 20%;
-    margin-bottom: 3%;
+    height: 40vh;
     background-color: white;
-    border-radius:5%;
-    margin-left: 3%;
-    margin-right: 2%;
+    border-radius: 10px;
+    border-top: #11aea9 2px solid;
+    border-left: #11aea9 3px solid;
 }
 
 main.mainHome section article img{
     display:block;
     margin: 0 auto;
-    width: 80%;
-    height:65%;
+    width: 90%;
+    height: 75%;
+    padding: 1%;    
 }
 
 main.mainHome section article i{
@@ -265,7 +277,7 @@ main.mainHome section article i{
     padding: 5px;
     width: 30px;
     height: 30px;
-    color: #39b54a;
+    color: #11aea9;
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
@@ -275,23 +287,17 @@ main.mainHome section article i{
 }
 
 main.mainHome section article h4{
-    visibility: hidden;
-    font-size: 16px;
-    margin:0px;
+    font-size: 1.3em;
     padding-top: 1%;
 }
 
 .price{
-    font-size: 18px;
-    margin: 0px;
-    padding: 0px;
+    font-size: 1.35em;
 }
 
 .discount{
-    font-size: 16px;
-    color: #39b54a;
-    margin: 0px;
-    padding: 0px;
+    font-size: 1.3em;
+    color: #5ad069;
 }
 
 .text-card-product{
@@ -300,22 +306,14 @@ main.mainHome section article h4{
     position: relative;
 }
 
-main.mainHome section article:hover h4{
-    visibility: visible;
-}
-
 main.mainHome section article:hover{
-    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
-}
-
-main.mainHome section article i:hover{
-    transform: rotate(-90deg);
-    transition:all 0.4s;
+    box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
 }
 
 main.mainHome .categories{
     margin: 2%;
     margin-left: 5%;
+    width: 100%;
 }
 
 main.mainHome .labelCategories{
@@ -587,28 +585,7 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     color: blue;
 }
 
-main.mainCart section.titlesCart article {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-main.mainCart section.titlesCart article {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-main.mainCart section.titlesCart article div{
-    display: flex;
-    width: 90%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-/*Register Y Login*/
+/*Register y login*/
 
 #sectionForm{
 background: white;
@@ -621,7 +598,7 @@ align-items: center;
 #sectionForm form {
 width: 60%;    
 height: 85%;
-background-color: rgb(238, 234, 234);
+background-color: rgb(238, 236, 236);
 margin: 20px;
 padding: 8px;
 border-radius: 10px;
@@ -644,7 +621,7 @@ border-radius: 10px;
     text-align: center;
  }
 
-#sectionForm form label {
+#sectionForm form label{
   font-size: 13px;
   display: block;
   text-align: center;
@@ -652,14 +629,14 @@ border-radius: 10px;
   
 }
 
-#sectionForm form input {  
+#sectionForm form input{  
     font-size: 13px;
     display: block;
     margin: auto;
     width: 80%;
-  }
+}
 
-#sectionForm form button {
+#sectionForm form button{
     display: flex;
     margin: auto;
     font-size: 15px;
@@ -672,14 +649,13 @@ border-radius: 10px;
     font-weight: bold;
 }
 
-#sectionForm form button:hover {
+#sectionForm form button:hover{
     background: blue;
 }
 
-#sectionForm form div {
+#sectionForm form div{
     margin-bottom: 5px;
     padding: 5px;
-
 }
 
 #sectionForm form p{
@@ -700,6 +676,35 @@ border-radius: 10px;
     margin-top:70px;
     font-weight: bold;
 } 
+
+.headerlogin {
+    display: flex;
+    justify-content: center;
+}
+
+.headerregister {
+    display: flex;
+    justify-content: center;
+}
+
+.bodylogin {
+    background: white;
+}
+
+.bodyregister {
+    background: white;
+}
+
+
+#sectionForm .formlogin {
+width: 60%;    
+height: 60%;
+background-color: rgb(238, 234, 234);
+margin: 20px;
+padding: 8px;
+border-radius: 10px;
+}
+
 
 /* main.mainCart FINAL */
 /* Cart Final */
@@ -848,13 +853,65 @@ main.mainProductUpload form textarea {
 
     /* Home */
     /* MAIN */
-    main.mainHome section article h4{
-        visibility: visible;
+    main.mainHome section{
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    main.mainHome section .allProducts{
+        width: 100%;
+        color: #014bf7;
+        display: flex;
+        justify-content: space-between;
+        padding: 2%;
+        border: none;
+        background-color: rgba(0,0,0,0);
+    }
+
+    .allProducts p{
+        font-size: 1.4em;
+    }
+
+    .allProducts i{
+        font-size: 1.4em;
+        
     }
 
     main.mainHome section article{
-        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid #11aea9;
         width: 100%;
+        margin: 0;
+        padding-left: 0%;
+        display: flex;
+        height: 15vh;
+        justify-content: flex-start;
+    }
+
+    main.mainHome section .carruselBtn{
+        display: none;
+    }
+
+    main.mainHome section article img{
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 2%;
+    }
+
+    main.mainHome section article i{
+        display: none;
+    }
+
+
+    .text-card-product{
+        display: inline-block;
+        border-top: none;
+        width: 50%;
     }
 
     main.mainHome .formCategories{
@@ -864,6 +921,8 @@ main.mainProductUpload form textarea {
     /* MAIN FINAL */
     /* Home Final */
 
+    /* product */
+    /* main */
     main.mainProduct section.currentProduct{
         display: none;
     }
@@ -877,7 +936,8 @@ main.mainProductUpload form textarea {
         font-family: 'Open Sans';
         font-size: 14px;
     }
-    
+    /* main final */
+    /* product final */
 
     /* CART */
     /* main.maincart */
