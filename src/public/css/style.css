@@ -587,6 +587,27 @@ main.mainCart section.buyCancelButtonsCart button:hover{
     color: blue;
 }
 
+main.mainCart section.titlesCart article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+main.mainCart section.titlesCart article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main.mainCart section.titlesCart article div{
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 /*Register Y Login*/
 
 #sectionForm{
@@ -729,6 +750,12 @@ main.mainProductUpload form button:hover {
     background: blue;
 }
 
+main.mainProductUpload form textarea {
+    width: 40%;
+    height: 40px;
+    resize: none;
+}
+
 
 /* main.mainProductUpload FINAL*/
 /* mainProductUpload FINAL */
@@ -858,6 +885,10 @@ main.mainProductUpload form button:hover {
     main.mainCart section.cartArticles img{
         display: none
     }
+    
+    main.mainCart section.titlesCart article div.imageCartTitle{
+        display: none;
+    }
 
     /* main.maincart */
     /* CART Final */
@@ -895,6 +926,10 @@ main.mainProductUpload form button:hover {
         display: none
     }
     
+    main.mainCart section.titlesCart article div.imageCartTitle{
+        display: none;
+    }
+
 
     /* main.maincart */
     /* CART Final */
