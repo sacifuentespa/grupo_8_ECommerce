@@ -226,7 +226,7 @@ main.mainHome{
     flex-direction: column;
 }
 
-main.mainHome .img-home-banner{
+.img-home-banner{
      width:100%;
 }
 
