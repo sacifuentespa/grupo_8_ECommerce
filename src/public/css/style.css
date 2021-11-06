@@ -518,12 +518,65 @@ main.mainCart section.cartArticles{
     width: 100%;
 }
 
-main.mainCart section.cartArticles article {
+main.mainCart section.titlesCart{
+    width: 100%;
+}
+
+main.mainCart section.titlesCart article {
     display: flex;
     width: 105%;
     flex-wrap: wrap;
     border-radius: 5px;
     margin-top: 33px;
+    box-sizing: border-box;
+    border: 1px solid #11aea982 ;
+}
+
+main.mainCart section.titlesCart div.imageCartTitle{
+    width:10%;
+    border: 2px solid #11aea982;
+    border-radius: 5px;
+    background-color: white;
+}
+
+main.mainCart section.titlesCart article div.noImageTitles{
+    display: flex;
+    width: 90%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+main.mainCart section.titlesCart article div.noImageTitles h4{
+    border: 2px solid #11aea982;
+    border-radius: 5px;
+}
+
+main.mainCart section.titlesCart article div h4{
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    left: 15px;
+    background-color: white;  
+    left:5%;
+}
+
+main.mainCart section.titlesCart article div.noImageTitles h4.lastTitle{
+    position: relative;
+    background-color: white;  
+    right:15px;
+}
+
+
+main.mainCart section.cartArticles article {
+    display: flex;
+    width: 105%;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin-top: 25px;
     margin-bottom: 33px;
     box-sizing: border-box;
     border: 1px solid #11aea982 ;
@@ -541,18 +594,11 @@ main.mainCart section.cartArticles article div{
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: space-around;
+    position: relative;
 }
 
-main.mainCart section.cartArticles article div h4{
-    display: block;
-    margin: 10px;
-    padding: 5px;
-    justify-content: space-around;
-    align-content: center;
-    position: relative;
-    left: 15px;
-    background-color: white;  
-}
+
+
 
 main.mainCart section.cartArticles article div p{
     display: block;
@@ -580,7 +626,7 @@ main.mainCart section.cartArticles article div p.moreLessCart button{
     width: 95%;
     height: 49%;
     align-self: center;
-    background-color:#11aea9;
+    background-color:#3483FA;
     border-radius: 5px;
     color: white;
     border: 0px solid;
@@ -592,6 +638,7 @@ main.mainCart section.cartArticles article div p.moreLessCart button{
 
 main.mainCart section.cartArticles article div p.moreLessCart button:hover{
     box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
+    background-color: blue;
 }
 
 main.mainCart section.cartArticles article div p.cancelProductCart {
@@ -609,7 +656,7 @@ main.mainCart section.cartArticles article div p.cancelProductCart {
 }
 
 main.mainCart section.cartArticles article div p.cancelProductCart button{
-    background-color:#11aea9;
+    background-color:#3483FA;
     border-radius: 5px;
     color: white;
     border: 0px solid;
@@ -622,6 +669,7 @@ main.mainCart section.cartArticles article div p.cancelProductCart button{
 
 main.mainCart section.cartArticles article div p.cancelProductCart button:hover{
     box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
+    background-color: blue;
 }
 
 main.mainCart section.buyCancelButtonsCart{
@@ -652,6 +700,7 @@ main.mainCart section.buyCancelButtonsCart button:hover{
 section.cartArticles div.text-card-product h4{
     border-radius: 5px;
     text-align: center;
+    background-color: white;
 }
 
 /*Register y login*/
