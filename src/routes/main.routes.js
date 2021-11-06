@@ -9,7 +9,7 @@ router.get("/", controller.getIndex);
 router.get("/product", controller.getProduct);
 
 //productPageUpload
-router.get("productPage", controller.getNewProduct);
+router.get("/productUpload", controller.getNewProduct);
 
 //cart
 router.get("/cart", controller.getCart);

@@ -16,7 +16,7 @@ const controller = {
   getLogin: (req, res) => {
     res.render("users/login");
   },
-  getRegister: () => {
+  getRegister: (req, res) => {
     res.render("users/register");
   },
 };
