@@ -8,6 +8,9 @@ router.get("/", controller.getIndex);
 //productPage
 router.get("/product", controller.getProduct);
 
+//productPageUpload
+router.get("productPage", controller.getNewProduct);
+
 //cart
 router.get("/cart", controller.getCart);
 

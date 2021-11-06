@@ -7,6 +7,9 @@ const controller = {
   getProduct: (req, res) => {
     res.render("products/product");
   },
+  getNewProduct: (req, res) => {
+    res.render("products/productUpload");
+  },
   getCart: (req, res) => {
     res.render("products/cart");
   },
