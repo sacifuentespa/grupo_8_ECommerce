@@ -709,11 +709,11 @@ border-radius: 10px;
     display: flex;
     margin: auto;
     font-size: 15px;
-    padding: 7px;
+    padding: 5px;
     background-color: #3483FA;
     border-radius: 5px;
     color: white;
-    border: 2px solid;
+    border: none;
     cursor: pointer;
     font-weight: bold;
 }
