@@ -1,35 +1,15 @@
-const express = require('express');
-const path = require("path")
+const express = require("express");
+const path = require("path");
 const app = express();
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
+const routes = require("./routes/main.routes");
 
-app.use(express.static(path.resolve(__dirname, './public')));
+//configuration
+app.use(express.static(path.resolve(__dirname, "./public")));
+app.set("views", path.resolve(__dirname, "./views"));
+app.set("view engine", "ejs");
+app.use("/", routes);
 
-//home
-app.get('/', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/products/index.html'));
-});
-
-//login
-app.get('/login', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/users/login.html'));
-});
-
-//register
-app.get('/register', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/users/register.html'));
-});
-
-//productPage
-app.get('/product', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/products/product.html'));
-});
-
-//cart
-app.get('/cart', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/products/cart.html'));
-});
-
-app.listen(port, ()=>{
-    console.log('Servidor funcionando');
+app.listen(port, () => {
+  console.log("Servidor funcionando");
 });
