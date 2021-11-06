@@ -541,7 +541,6 @@ main.mainCart section.cartArticles article div{
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: space-around;
- 
 }
 
 main.mainCart section.cartArticles article div h4{
@@ -552,8 +551,7 @@ main.mainCart section.cartArticles article div h4{
     align-content: center;
     position: relative;
     left: 15px;
-    background-color: white;
-    
+    background-color: white;  
 }
 
 main.mainCart section.cartArticles article div p{
@@ -582,7 +580,7 @@ main.mainCart section.cartArticles article div p.moreLessCart button{
     width: 95%;
     height: 49%;
     align-self: center;
-    background-color:#3483FA;
+    background-color:#11aea9;
     border-radius: 5px;
     color: white;
     border: 0px solid;
@@ -593,7 +591,7 @@ main.mainCart section.cartArticles article div p.moreLessCart button{
 }
 
 main.mainCart section.cartArticles article div p.moreLessCart button:hover{
-    background: blue;
+    box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
 }
 
 main.mainCart section.cartArticles article div p.cancelProductCart {
@@ -611,7 +609,7 @@ main.mainCart section.cartArticles article div p.cancelProductCart {
 }
 
 main.mainCart section.cartArticles article div p.cancelProductCart button{
-    background-color:#3483FA;
+    background-color:#11aea9;
     border-radius: 5px;
     color: white;
     border: 0px solid;
@@ -623,7 +621,7 @@ main.mainCart section.cartArticles article div p.cancelProductCart button{
 }
 
 main.mainCart section.cartArticles article div p.cancelProductCart button:hover{
-    background: blue;
+    box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
 }
 
 main.mainCart section.buyCancelButtonsCart{
@@ -637,10 +635,10 @@ main.mainCart section.buyCancelButtonsCart button{
     width: 35%;
     font-size: 13px;
     padding: 5px;
-    background-color: #11aea982;
+    background-color: #3483FA;
     border-radius: 5px;
     color: white;
-    border: 0px solid #11aea982;
+    border: 0px solid #3483FA;
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 33px;
@@ -648,14 +646,13 @@ main.mainCart section.buyCancelButtonsCart button{
 }
 
 main.mainCart section.buyCancelButtonsCart button:hover{
-    background-color: #11aea9;
+    background-color: blue;
 }
 
 section.cartArticles div.text-card-product h4{
     border-radius: 5px;
     text-align: center;
 }
-
 
 /*Register y login*/
 
