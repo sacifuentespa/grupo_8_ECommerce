@@ -2,63 +2,38 @@
 <html>
 <!-- head -->
 <%- include('../partials/head') %>
-<body class="bodylogin">
-    <header class="headerlogin">
-        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de Trueque Online">
-        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de Trueque Online">
-    </header>
-    <main>
-        <section id="sectionForm">
-            <form class="formlogin">
-                <h1>Iniciar sesión</h1>
-                <div>
-                    <label>Nombre de usuario:</label>
-                    <input type="text" name="nombreUsuario">
-                </div>
-                <div>
-                    <label>Contraseña:</label>
-                    <input type="password" name="passwordUsuario">
-                </div>
-                <button class="buttoncontinuar" type="submit">Continuar</button>
-                <a href="/register">
-                    <h2>Registro</h2>
-                </a>
-                <a href="#">
-                    <h2>¿Has olvidado tu contraseña?</h2>
-                </a>
-                <div class="volverlogin">
-                    <a href="/">Volver</a>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <section class="footerContent">
-            <article class="contactUs">
-                <h4>Contáctenos</h4>
-                <ul>
-                    <li><a href="#">Redes</a></li>
-                    <li><a href="#">Equipo de trabajo</a></li>
-                    <li><a href="#">Trabaje con nosotros</a></li>
-                </ul>
-            </article>
-            <article class="legalContent">
-                <h4>Politica</h4>
-                <ul>
-                    <li><a href="#">Contenido legal</a></li>
-                    <li><a href="#">Normas de la comunidad</a></li>
-                </ul>
-            </article>
-            <article class="helpContent">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#">Soporte</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                </ul>
-            </article>
-        </section>
-        <h4>Copyright © 1999-2020 TruequeOnline</h4>
-    </footer>
-</body>
+
+    <body class="bodylogin">
+        <!-- header -->
+        <%- include('../partials/partialsUsers/headerUsers') %>
+            <main>
+                <section id="sectionForm">
+                    <form class="formlogin">
+                        <h1>Iniciar sesión</h1>
+                        <div>
+                            <label>Nombre de usuario:</label>
+                            <input type="text" name="nombreUsuario">
+                        </div>
+                        <div>
+                            <label>Contraseña:</label>
+                            <input type="password" name="passwordUsuario">
+                        </div>
+                        <button class="buttoncontinuar" type="submit">Continuar</button>
+                        <a href="/register">
+                            <h2>Registro</h2>
+                        </a>
+                        <a href="#">
+                            <h2>¿Has olvidado tu contraseña?</h2>
+                        </a>
+                        <div class="volverlogin">
+                            <a href="/">Volver</a>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            <!-- footer -->
+            <%- include('../partials/partialsUsers/footerUsers') %>
+
+    </body>
 
 </html>

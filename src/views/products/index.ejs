@@ -2,172 +2,116 @@
 <html>
 <!-- head -->
 <%- include('../partials/head') %>
-<body>
-    <header>
-        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de Trueque Online">
-        <a href="/"><img class="logoPhone" src="/img/iconWhite.png" alt="Logo de Trueque Online"></a>
-        <form action="#">
-            <input type="search" name="qu" placeholder="Buscar productos">
-            <button type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-        <div class="iconNav">
-            <a href="/cart" class="cartHeader"><i class="fas fa-shopping-cart"></i></a>
-            <button class="dropdownUser">
-                <i class="far fa-user-circle"></i>
-            </button>
-            <button class="dropdownBurguer">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <nav class="navbar">
-            <ul class="modalNavUser">
-                <li><a href="/login">Iniciar Sesión</a></li>
-                <hr>
-                <li><a href="/register">Crear Cuenta</a></li>
-            </ul>
-            <ul class="modalNavBurguer">
-                <li><a href="#">Mis compras</a></li>
-                <li><a href="#">Mis ventas</a></li>
-                <li><a href="#">Favoritos</a></li>
-                <hr>
-                <li><a href="#">Notificaciones</a></li>
-                <li><a href="#">Mensajes</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <img src="/img/bannerTrueque.jpg" alt="Banner de ofertas" class="img-home-banner">
-    </section>
-    <main class="mainHome">
-        <section>
-            <h3>Ofertas</h3>
-            <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
-            <article>
-                <img src="/img/sillas.jpg" alt="Silla Gamer" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$666.77</p>
-                    <p class="discount">40% off</p>
-                    <h4>Silla Gamer Ultimate Racing.</h4>
-                </div>
-            </article>
-            <article>
-                <img src="/img/motos.jpg" alt="Motos" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$666.77</p>
-                    <p class="discount">40% off</p>
-                    <h4>Moto Yamaha-XT-660.</h4>
-                </div>
-            </article>
-            <article>
-                <img src="/img/celulares.jpg" alt="Celulares" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$230.00</p>
-                    <p class="discount">20% off</p>
-                    <h4>Celular Samsung Galaxy A12.</h4>
-                </div>
-            </article>
-            <article>
-                <img src="/img/neveras.jpg" alt="Neveras" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$70.50</p>
-                    <p class="discount">10% off</p>
-                    <h4>Nevera Mabe 250 litros.</h4>
-                </div>
-            </article>
-            <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
-            <button class="allProducts">
-                <p>Ver todas</p>
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </section>
-        <section>
-            <div class="categories">
-                <label class="labelCategories" for="categories">Categorías: </label>
-                <select name="categories" id="categories" class="formCategories">
-                    <option value="">Hogar</option>
-                    <option value="">Electrodomesticos</option>
-                    <option value="">Deportes</option>
-                </select>
-            </div>
-            <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
-            <article>
-                <img src="/img/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$70.50</p>
-                    <p class="discount">10% off</p>
-                    <h4>Teléfono móvil Samsung Galaxy S10</h4>
-                </div>
-            </article>
-            <article>
-                <img src="/img/bicicletas.jpg" alt="Bicicletas" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$666.77</p>
-                    <p class="discount">40% off</p>
-                    <h4>Bicicleta de montaña GW Arrow.</h4>
-                </div>
-            </article>
-            <article>
-                <img src="/img/ropa.jpg" alt="Buzo" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$270.50</p>
-                    <p class="discount">10% off</p>
-                    <h4>Buzo hoodie sin estampar.</h4>
-                </div>
-            </article>
-            <article>
-                <img src="/img/escritorios.jpg" alt="Escritorios" class="product_img">
-                <div class="text-card-product">
-                    <i class="fas fa-truck"></i>
-                    <p class="price">$23.20</p>
-                    <p class="discount">5% off</p>
-                    <h4>Escritorio para PC Lannister.</h4>
-                </div>
-            </article>
-            <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
-            <button class="allProducts">
-                <p>Ver todas</p>
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </section>
 
-    </main>
-    <footer>
-        <button class="btnMoreInfo">Más información<i class="fas fa-chevron-up"></i></button>
-        <section class="footerContent">
-            <article class="contactUs">
-                <h4>Contáctenos</h4>
-                <ul>
-                    <li><a href="#">Redes</a></li>
-                    <li><a href="#">Equipo de trabajo</a></li>
-                    <li><a href="#">Trabaje con nosotros</a></li>
-                </ul>
-            </article>
-            <article class="legalContent">
-                <h4>Politica</h4>
-                <ul>
-                    <li><a href="#">Contenido legal</a></li>
-                    <li><a href="#">Normas de la comunidad</a></li>
-                </ul>
-            </article>
-            <article class="helpContent">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#">Soporte</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                </ul>
-            </article>
-        </section>
-        <h4>Copyright © 1999-2020 TruequeOnline</h4>
-    </footer>
-</body>
+    <body>
+        <!-- header -->
+        <%- include('../partials/partialsProducts/headerProducts') %>
+            <section>
+                <img src="/img/bannerTrueque.jpg" alt="Banner de ofertas" class="img-home-banner">
+            </section>
+            <main class="mainHome">
+                <section>
+                    <h3>Ofertas</h3>
+                    <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
+                    <article>
+                        <img src="/img/sillas.jpg" alt="Silla Gamer" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$666.77</p>
+                            <p class="discount">40% off</p>
+                            <h4>Silla Gamer Ultimate Racing.</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/motos.jpg" alt="Motos" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$666.77</p>
+                            <p class="discount">40% off</p>
+                            <h4>Moto Yamaha-XT-660.</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/celulares.jpg" alt="Celulares" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$230.00</p>
+                            <p class="discount">20% off</p>
+                            <h4>Celular Samsung Galaxy A12.</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/neveras.jpg" alt="Neveras" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$70.50</p>
+                            <p class="discount">10% off</p>
+                            <h4>Nevera Mabe 250 litros.</h4>
+                        </div>
+                    </article>
+                    <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="allProducts">
+                        <p>Ver todas</p>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </section>
+                <section>
+                    <div class="categories">
+                        <label class="labelCategories" for="categories">Categorías: </label>
+                        <select name="categories" id="categories" class="formCategories">
+                            <option value="">Hogar</option>
+                            <option value="">Electrodomesticos</option>
+                            <option value="">Deportes</option>
+                        </select>
+                    </div>
+                    <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
+                    <article>
+                        <img src="/img/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy"
+                            class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$70.50</p>
+                            <p class="discount">10% off</p>
+                            <h4>Teléfono móvil Samsung Galaxy S10</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/bicicletas.jpg" alt="Bicicletas" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$666.77</p>
+                            <p class="discount">40% off</p>
+                            <h4>Bicicleta de montaña GW Arrow.</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/ropa.jpg" alt="Buzo" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$270.50</p>
+                            <p class="discount">10% off</p>
+                            <h4>Buzo hoodie sin estampar.</h4>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/escritorios.jpg" alt="Escritorios" class="product_img">
+                        <div class="text-card-product">
+                            <i class="fas fa-truck"></i>
+                            <p class="price">$23.20</p>
+                            <p class="discount">5% off</p>
+                            <h4>Escritorio para PC Lannister.</h4>
+                        </div>
+                    </article>
+                    <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="allProducts">
+                        <p>Ver todas</p>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </section>
+
+            </main>
+            <!-- footer -->
+            <%- include('../partials/partialsProducts/footerProducts') %>
+    </body>
 
 </html>

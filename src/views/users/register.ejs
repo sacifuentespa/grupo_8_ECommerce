@@ -2,80 +2,54 @@
 <html>
 <!-- head -->
 <%- include('../partials/head') %>
-<body class="bodyregister">
-    <header class="headerregister">
-        <img class="logoPc" src="/img/logoWhite.png" alt="Logo de MercadoLiebre">
-        <img class="logoPhone" src="/img/iconWhite.png" alt="Logo de MercadoLiebre">
-    </header>
-    <main>
-        <section id="sectionForm">
-            <form>
-                <h1>Crear cuenta</h1>
-                <div class="contenedor1">
-                    <div class>
-                        <label>Nombre:</label>
-                        <input type="text" name="nombre">
-                    </div>
-                    <div>
-                        <label>Nombre de usuario:</label>
-                        <input type="text" name="nombreUsuario">
-                    </div>
-                </div>
-                <div class="contenedor2">
-                    <div>
-                        <label>Email:</label>
-                        <input type="email" name="emailUsuario">
-                    </div>
-                    <div class>
-                        <label>Contraseña:</label>
-                        <input type="password" name="passwordUsuario">
-                    </div>
-                </div>
-                <div class="contenedor3">
-                    <div class="datos">
-                        <label>Confirmar contraseña:</label>
-                        <input type="password" name="confirmarPasswordUsuario">
-                    </div>
-                </div>
-                <div>
-                    <p>Acepto términos y condiciones</p>
-                    <input type="checkbox" name="terminos">
-                </div>
-                </div>
-                <button type="submit">Continuar</button>
-                <div class="volver">
-                    <a href="/">Volver</a>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <section class="footerContent">
-            <article class="contactUs">
-                <h4>Contáctenos</h4>
-                <ul>
-                    <li><a href="#">Redes</a></li>
-                    <li><a href="#">Equipo de trabajo</a></li>
-                    <li><a href="#">Trabaje con nosotros</a></li>
-                </ul>
-            </article>
-            <article class="legalContent">
-                <h4>Politica</h4>
-                <ul>
-                    <li><a href="#">Contenido legal</a></li>
-                    <li><a href="#">Normas de la comunidad</a></li>
-                </ul>
-            </article>
-            <article class="helpContent">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#">Soporte</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                </ul>
-            </article>
-        </section>
-        <h4>Copyright © 1999-2020 TruequeOnline</h4>
-    </footer>
-</body>
+
+    <body class="bodyregister">
+        <!-- header -->
+        <%- include('../partials/partialsUsers/headerUsers') %>
+            <main>
+                <section id="sectionForm">
+                    <form>
+                        <h1>Crear cuenta</h1>
+                        <div class="contenedor1">
+                            <div class>
+                                <label>Nombre:</label>
+                                <input type="text" name="nombre">
+                            </div>
+                            <div>
+                                <label>Nombre de usuario:</label>
+                                <input type="text" name="nombreUsuario">
+                            </div>
+                        </div>
+                        <div class="contenedor2">
+                            <div>
+                                <label>Email:</label>
+                                <input type="email" name="emailUsuario">
+                            </div>
+                            <div class>
+                                <label>Contraseña:</label>
+                                <input type="password" name="passwordUsuario">
+                            </div>
+                        </div>
+                        <div class="contenedor3">
+                            <div class="datos">
+                                <label>Confirmar contraseña:</label>
+                                <input type="password" name="confirmarPasswordUsuario">
+                            </div>
+                        </div>
+                        <div>
+                            <p>Acepto términos y condiciones</p>
+                            <input type="checkbox" name="terminos">
+                        </div>
+                        </div>
+                        <button type="submit">Continuar</button>
+                        <div class="volver">
+                            <a href="/">Volver</a>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            <!-- footer -->
+            <%- include('../partials/partialsUsers/footerUsers') %>
+    </body>
 
 </html>
