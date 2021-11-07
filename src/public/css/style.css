@@ -7,7 +7,7 @@
 }
 
 body{
-    width:100vw;
+    width:100%;
     background: #ebebeb;
 }
 
@@ -222,7 +222,7 @@ main.mainHome{
     flex-direction: column;
 }
 
-main.mainHome .img-home-banner{
+.img-home-banner{
     width:100%;
 }
 
