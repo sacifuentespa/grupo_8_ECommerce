@@ -2,22 +2,22 @@
 
 const controller = {
   getIndex: (req, res) => {
-    res.render("products/index");
+    res.render("products/index", {tittle: "Trueque Online"});
   },
   getProduct: (req, res) => {
-    res.render("products/product");
+    res.render("products/product", {tittle: "nameProduct"});
   },
   getNewProduct: (req, res) => {
-    res.render("products/productUpload");
+    res.render("products/productUpload", {tittle: "Publicar Producto"});
   },
   getCart: (req, res) => {
-    res.render("products/cart");
+    res.render("products/cart", {tittle: "Mi Carrito"});
   },
   getLogin: (req, res) => {
-    res.render("users/login");
+    res.render("users/login", {tittle: "Iniciar Sesión"});
   },
   getRegister: (req, res) => {
-    res.render("users/register");
+    res.render("users/register", {tittle: "Crear Usuario"});
   },
 };
 
