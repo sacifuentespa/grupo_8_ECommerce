@@ -263,6 +263,7 @@ main.mainHome section article{
     border-radius: 10px;
     border-top: #11aea9 2px solid;
     border-left: #11aea9 3px solid;
+    padding: 1%;
 }
 
 main.mainHome section article img{
@@ -291,6 +292,7 @@ main.mainHome section article i{
 main.mainHome section article h4{
     font-size: 1.3em;
     padding-top: 1%;
+    overflow: hidden;
 }
 
 .price{
