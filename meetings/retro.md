@@ -60,3 +60,24 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 	-Hacer un demo del proyecto dos días antes de la entrega.
 	-Realizar una reunión tipo Dayli al menos una vez por semana.
 
+## **Sprit 3:**
+
+## **Resultados:**
+
+- **Continuar haciendo:**
+	-Comunicación asertiva.
+	-Usar Discord y Whatsapp como canales de comunicación.
+	.Reunirnos al menos una vez por semana (reunión tipo Dayli).
+	-Reunirnos una vez por semana (Weekly).
+
+- **Menos de:**
+	-No encontramos prácticas que debamos hacer menos por el momento. 
+
+- **Mas de:**
+    -Reportar avances o dificultades por medio de Discord.
+
+- **Dejar de hacer:**
+    -No encontramos prácticas que debamos dejar de usar por el momento. 
+
+- **Comenzar a hacer:**
+	-No encontramos prácticas que debamos empezar a implementar por el momento. 
