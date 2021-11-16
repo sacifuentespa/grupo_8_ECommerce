@@ -16,11 +16,7 @@ app.use(express.json());
 
 //error 404
 app.use((req, res, next) => {
-<<<<<<< HEAD
   res.status(404).send('404');
-=======
-  res.status(404).render('404', {tittle: "Crear Usuario"});
->>>>>>> 1ebe173ca4538a1da17cfb9854f666ad7f456258
 })
 
 app.listen(port, () => {
