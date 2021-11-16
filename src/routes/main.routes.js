@@ -10,8 +10,8 @@ router.get("/", mainController.getIndex);
 router.get("/product/:id", productsController.getProduct);
 
 //productPageUpload
-router.get("/productUpload", mainController.getNewProduct);
-router.post("/productUpload", productsController.submitProduct)
+router.get("/productUpload", controller.getNewProduct);
+router.post("/productUpload", controller.storeNewProduct);
 
 //cart
 router.get("/cart", mainController.getCart);
