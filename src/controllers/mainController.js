@@ -30,8 +30,6 @@ const controller = {
   },
   storeNewProduct: 
   (req,res) => {
-
-    console.log(products)
     let product = {
       id: newId(),
       productName: req.body.productName,
@@ -49,8 +47,7 @@ const controller = {
 		let jsonProducts = JSON.stringify(products, null, 4);
 		fs.writeFileSync(productsFilePath, jsonProducts);
 
-    res.redirect('/products/index')
-
+    res.redirect('products/index')
   },
   getCart: (req, res) => {
     res.render("products/cart", {tittle: "Mi Carrito"});

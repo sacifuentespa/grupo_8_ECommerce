@@ -10,7 +10,7 @@ router.get("/product", controller.getProduct);
 
 //productPageUpload
 router.get("/productUpload", controller.getNewProduct);
-router.post("/", controller.storeNewProduct);
+router.post("/productUpload", controller.storeNewProduct);
 
 //cart
 router.get("/cart", controller.getCart);
