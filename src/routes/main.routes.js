@@ -1,23 +1,28 @@
 const express = require("express");
 const router = express.Router();
-const controller = require("../controllers/mainController");
+const mainController = require("../controllers/mainController");
+const productsController = require("../controllers/productsController");
 
 //home
-router.get("/", controller.getIndex);
+router.get("/", mainController.getIndex);
 
 //productPage
-router.get("/product", controller.getProduct);
+router.get("/product/:id", productsController.getProduct);
 
 //productPageUpload
-router.get("/productUpload", controller.getNewProduct);
+router.get("/productUpload", mainController.getNewProduct);
+router.post("/productUpload", productsController.submitProduct)
 
 //cart
-router.get("/cart", controller.getCart);
+router.get("/cart", mainController.getCart);
 
 //login
-router.get("/login", controller.getLogin);
+router.get("/login", mainController.getLogin);
 
 //register
-router.get("/register", controller.getRegister);
+router.get("/register", mainController.getRegister);
+
+//list all products
+router.get("/listProducts", productsController.getProducts)
 
 module.exports = router;
