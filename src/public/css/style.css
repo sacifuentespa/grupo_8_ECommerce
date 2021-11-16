@@ -264,6 +264,7 @@ main.mainHome section article{
     border-top: #11aea9 2px solid;
     border-left: #11aea9 3px solid;
     padding: 1%;
+    cursor: pointer;
 }
 
 main.mainHome section article img{
