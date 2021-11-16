@@ -360,6 +360,22 @@ main.mainProduct section{
     justify-content: center;
 }
 
+main.mainProduct section h2{
+ text-align: center;
+ margin-top: 2%;
+ margin-right: 10%;
+}
+
+main.mainProduct section h4{
+    text-align: center
+   }
+
+main.mainProduct section h3.similarProducts{
+    margin-right: 20%;
+    text-align: center;
+   }
+
+
 main.mainProduct section.currentProduct div.currentProductImage img{
     border-radius: 5px;
     border-top: #11aea9 1px solid;
@@ -381,10 +397,13 @@ main.mainProduct section.currentProduct section.productButtonsDesktop{
     font-weight: bold;
     font-size: 10px;
     font-size: 13px;
+    padding-top: 4.5%;
+    margin-left: 10%;
    }
 
 main.mainProduct section.currentProduct section.productButtonsDesktop button.addToCartButton:hover{
     background: blue;
+    font-weight: bold;
    }
 
    main.mainProduct section.currentProduct section.productButtonsDesktop button.offerExchangeButton{
@@ -396,10 +415,13 @@ main.mainProduct section.currentProduct section.productButtonsDesktop button.add
     font-weight: bold;
     font-size: 10px;
     font-size: 13px;
+    padding-top: 4.5%;
+    margin-right: 4.5%;
    }
 
 main.mainProduct section.currentProduct section.productButtonsDesktop button.offerExchangeButton:hover{
     background: blue;
+    font-weight: bold;
    }
 
 main.mainProduct section.productImages img{
