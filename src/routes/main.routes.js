@@ -1,17 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const mainController = require("../controllers/mainController");
-//const productsController = require("../controllers/productsController");
+const productsController = require("../controllers/productsController.js");
 
 //home
 router.get("/", mainController.getIndex);
 
 //productPage
-router.get("/product/:id", productsController.getProduct);
+router.get("/product", productsController.getProduct);
 
 //productPageUpload
-router.get("/productUpload", controller.getNewProduct);
-router.post("/productUpload", controller.storeNewProduct);
+router.get("/productUpload", productsController.getNewProduct);
+router.post("/productUpload", productsController.storeNewProduct);
 
 //cart
 router.get("/cart", mainController.getCart);
@@ -23,6 +23,6 @@ router.get("/login", mainController.getLogin);
 router.get("/register", mainController.getRegister);
 
 //list all products
-router.get("/listProducts", productsController.getProducts)
+//router.get("/listProducts", productsController.getProducts)
 
 module.exports = router;
