@@ -1,16 +1,16 @@
 const controller = {
   getIndex: (req, res) => {
-    res.render("products/index", {tittle: "Trueque Online"});
+    res.render("products/index", {title: "Trueque Online"});
   },
 
   getLogin: (req, res) => {
-    res.render("users/login", {tittle: "Iniciar Sesión"});
+    res.render("users/login", {title: "Iniciar Sesión"});
   },
   getRegister: (req, res) => {
-    res.render("users/register", {tittle: "Crear Usuario"});
+    res.render("users/register", {title: "Crear Usuario"});
   },
   getCart: (req, res) => {
-    res.render("products/cart", {tittle: "Mi Carrito"});
+    res.render("products/cart", {title: "Mi Carrito"});
   }
 };
 

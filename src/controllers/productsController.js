@@ -1,10 +1,10 @@
 const controller = {
 
     getNewProduct: (req, res) => {
-      res.render("products/productUpload", {tittle: "Publicar Producto"});
+      res.render("products/productUpload", {title: "Publicar Producto"});
     },
     getProduct: (req, res) => {
-        res.render("products/product", {tittle: "nameProduct"});
+        res.render("products/product", {title: "nameProduct"});
       },
     storeNewProduct: 
     (req,res) => {
