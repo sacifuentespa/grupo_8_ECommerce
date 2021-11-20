@@ -1,3 +1,19 @@
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.resolve(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const newId = () => {
+	let ultimo = 0;
+	products.forEach(product => {
+		if (product.id > ultimo) {
+			ultimo = product.id;
+		}
+	});
+	return ultimo + 1;
+}
+
 const controller = {
 
     getNewProduct: (req, res) => {
@@ -8,6 +24,8 @@ const controller = {
       },
     storeNewProduct: 
     (req,res) => {
+      console.log(req.body)
+
       let product = {
         id: newId(),
         productName: req.body.productName,
@@ -25,7 +43,7 @@ const controller = {
           let jsonProducts = JSON.stringify(products, null, 4);
           fs.writeFileSync(productsFilePath, jsonProducts);
   
-      res.redirect('products/index')
+      res.redirect('/')
     }
   };
   
