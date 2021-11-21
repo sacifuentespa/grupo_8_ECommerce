@@ -745,7 +745,7 @@ section.cartArticles div.text-card-product h4{
     background-color: white;
 }
 
-/*Register y login*/
+/*REGISTER Y LOGIN*/
 
 #sectionForm{
 background: white;
@@ -800,17 +800,17 @@ border-radius: 10px;
     display: flex;
     margin: auto;
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
     background-color: #3483FA;
     border-radius: 5px;
     color: white;
     border: none;
     cursor: pointer;
-    font-weight: bold;
 }
 
 #sectionForm form button:hover{
     background: blue;
+    font-weight: bold;
 }
 
 #sectionForm form div{
@@ -855,7 +855,6 @@ border-radius: 10px;
     background: white;
 }
 
-
 #sectionForm .formlogin {
 width: 60%;    
 height: 60%;
@@ -865,7 +864,22 @@ padding: 8px;
 border-radius: 10px;
 }
 
+.botonregistro {
+    text-decoration: none;
+}
 
+.botonrecuperarcontraseña {
+text-decoration: none;
+}
+
+.botonvolverregistro {
+    text-decoration: none;
+}
+
+
+.botonvolverregister {
+    text-decoration: none;
+}
 /* main.mainCart FINAL */
 /* Cart Final */
 
@@ -924,6 +938,49 @@ main.mainProductUpload form textarea {
 
 /* main.mainProductUpload FINAL*/
 /* mainProductUpload FINAL */
+
+/* ERROR 404 */
+
+#bodyError404 {
+    background:#11aea9;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+
+}
+
+#bodyError404 .container-404 {
+    text-align: center;
+    width: 60%;
+    background: #ebebeb;
+    padding: 20px;
+    box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
+    border-radius: 5px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+#bodyError404 .container-404 p {
+    font-size: 14px;
+}
+
+.botonvolvererror {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #3483FA;
+    color: white;
+    padding: 10px;
+    border-radius: 5px
+}
+
+.botonvolvererror:hover {
+ background: blue;
+ font-weight: bold;
+}
 
 
 /* Media Queries */
@@ -1120,6 +1177,7 @@ main.mainProductUpload form textarea {
     /* main.maincart */
     /* CART Final */
 }
+
 
 /* Tablets and larger phones */
 @media (min-width: 481px ) and (max-width:768px) {
