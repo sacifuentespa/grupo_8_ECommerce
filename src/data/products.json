@@ -488,5 +488,25 @@
             "cambiar"
         ],
         "categoryExchange": "vehiculos"
+    },
+    {
+        "id": 45,
+        "productName": "Skateboard Arce Canadiense",
+        "productPrice": "412",
+        "listCategoriesProduct": "deportes",
+        "productDescriptionUpload": "Ruedas 100% poliuretano 52mm dureza 99A. Ruedas agradables tanto en skatepark como en la calle. Suficientemente duras para powerslides y suficientemente blandas para no notar demasiado las vibraciones provocadas por las asperezas del suelo.El COMPLETE100 está equipado con rodamientos ABEC7. Los rodamientos deben ceder al principio, serán óptimos al cabo de unas sesiones.\r\nEsta tabla es para principiantes, la toma de velocidad es menor en comparación con el COMPLETE500.",
+        "mainImageUpload": {
+            "fieldname": "mainImageUpload",
+            "originalname": "skate01.jpg",
+            "encoding": "7bit",
+            "mimetype": "image/jpeg",
+            "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoECommerce\\src\\public\\img",
+            "filename": "skate01.jpg1637469447677_img_.jpg",
+            "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoECommerce\\src\\public\\img\\skate01.jpg1637469447677_img_.jpg",
+            "size": 52419
+        },
+        "imagesUpload": "default-image.png",
+        "aimUpload": "vender",
+        "categoryExchange": "deportes"
     }
 ]

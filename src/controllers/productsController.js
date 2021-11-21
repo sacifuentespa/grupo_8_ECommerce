@@ -32,7 +32,7 @@ const controller = {
         productPrice: req.body.productPrice,
         listCategoriesProduct: req.body.listCategoriesProduct,
         productDescriptionUpload: req.body.productDescriptionUpload,
-        mainImageUpload: 'default-image.png',
+        mainImageUpload: req.file,
         imagesUpload: 'default-image.png',
         aimUpload: req.body.aimUpload,
         categoryExchange: req.body.categoryExchange,
