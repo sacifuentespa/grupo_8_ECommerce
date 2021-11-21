@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage})
 
-//const cpUpload = uploadFile.fields([{ name: 'mainImageUpload', maxCount: 1 }, { name: 'imagesUpload', maxCount: 8 }])
+const cpUpload = uploadFile.fields([{ name: 'mainImageUpload', maxCount: 1 }, { name: 'imagesUpload', maxCount: 8 }])
 //home
 router.get("/", mainController.getIndex);
 
@@ -26,7 +26,7 @@ router.get("/product", productsController.getProduct);
 
 //productPageUpload
 router.get("/productUpload", productsController.getNewProduct);
-router.post("/productUpload", uploadFile.single('mainImageUpload'),productsController.storeNewProduct);
+router.post("/productUpload", cpUpload,productsController.storeNewProduct);
 
 //cart
 router.get("/cart", mainController.getCart);

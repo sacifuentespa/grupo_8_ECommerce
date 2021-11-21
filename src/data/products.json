@@ -441,72 +441,75 @@
     },
     {
         "id": 41,
-        "productName": "hola",
-        "productPrice": "83",
-        "listCategoriesProduct": "ropa",
-        "productDescriptionUpload": "                abefnbaen",
-        "mainImageUpload": "default-image.png",
-        "imagesUpload": "default-image.png",
-        "aimUpload": "on",
-        "categoryExchange": "vehiculos"
-    },
-    {
-        "id": 42,
-        "productName": "Por Fin",
-        "productPrice": "4913",
-        "listCategoriesProduct": "deportes",
-        "productDescriptionUpload": "Se pudo guardar",
-        "mainImageUpload": "default-image.png",
-        "imagesUpload": "default-image.png",
-        "aimUpload": "on",
-        "categoryExchange": "vehiculos"
-    },
-    {
-        "id": 43,
-        "productName": "Ya se pudo",
-        "productPrice": "155",
-        "listCategoriesProduct": "libros",
-        "productDescriptionUpload": "#SePuedeGuardar",
-        "mainImageUpload": "default-image.png",
-        "imagesUpload": "default-image.png",
-        "aimUpload": [
-            "on",
-            "on"
-        ],
-        "categoryExchange": "vehiculos"
-    },
-    {
-        "id": 44,
-        "productName": "hola",
-        "productPrice": "155",
-        "listCategoriesProduct": "inmobiliaria",
-        "productDescriptionUpload": "Por fin se pudo guardar",
-        "mainImageUpload": "default-image.png",
-        "imagesUpload": "default-image.png",
-        "aimUpload": [
-            "vender",
-            "cambiar"
-        ],
-        "categoryExchange": "vehiculos"
-    },
-    {
-        "id": 45,
         "productName": "Skateboard Arce Canadiense",
-        "productPrice": "412",
+        "productPrice": "341",
         "listCategoriesProduct": "deportes",
-        "productDescriptionUpload": "Ruedas 100% poliuretano 52mm dureza 99A. Ruedas agradables tanto en skatepark como en la calle. Suficientemente duras para powerslides y suficientemente blandas para no notar demasiado las vibraciones provocadas por las asperezas del suelo.El COMPLETE100 está equipado con rodamientos ABEC7. Los rodamientos deben ceder al principio, serán óptimos al cabo de unas sesiones.\r\nEsta tabla es para principiantes, la toma de velocidad es menor en comparación con el COMPLETE500.",
-        "mainImageUpload": {
-            "fieldname": "mainImageUpload",
-            "originalname": "skate01.jpg",
-            "encoding": "7bit",
-            "mimetype": "image/jpeg",
-            "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoECommerce\\src\\public\\img",
-            "filename": "skate01.jpg1637469447677_img_.jpg",
-            "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoECommerce\\src\\public\\img\\skate01.jpg1637469447677_img_.jpg",
-            "size": 52419
-        },
-        "imagesUpload": "default-image.png",
-        "aimUpload": "vender",
-        "categoryExchange": "deportes"
+        "productDescriptionUpload": "  Tabla 100% arce canadiense muy resistente y de larga duración. El arce canadiense es la madera más adecuada para el diseño de skates: duro, denso y ligero",
+        "mainImageUpload": [
+            {
+                "fieldname": "mainImageUpload",
+                "originalname": "skate01.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
+                "filename": "skate01.jpg1637530792704_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate01.jpg1637530792704_img_.jpg",
+                "size": 52419
+            }
+        ],
+        "imagesUpload": [
+            {
+                "fieldname": "imagesUpload",
+                "originalname": "skate0101.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
+                "filename": "skate0101.jpg1637530792705_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0101.jpg1637530792705_img_.jpg",
+                "size": 25665
+            },
+            {
+                "fieldname": "imagesUpload",
+                "originalname": "skate0102.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
+                "filename": "skate0102.jpg1637530792707_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0102.jpg1637530792707_img_.jpg",
+                "size": 14011
+            },
+            {
+                "fieldname": "imagesUpload",
+                "originalname": "skate0103.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
+                "filename": "skate0103.jpg1637530792708_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0103.jpg1637530792708_img_.jpg",
+                "size": 53423
+            },
+            {
+                "fieldname": "imagesUpload",
+                "originalname": "skate0104.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
+                "filename": "skate0104.jpg1637530792709_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0104.jpg1637530792709_img_.jpg",
+                "size": 40734
+            },
+            {
+                "fieldname": "imagesUpload",
+                "originalname": "skate0105.jpg",
+                "encoding": "7bit",
+                "mimetype": "image/jpeg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
+                "filename": "skate0105.jpg1637530792710_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0105.jpg1637530792710_img_.jpg",
+                "size": 19440
+            }
+        ],
+        "aimUpload": "cambiar",
+        "categoryExchange": "vehiculos"
     }
 ]

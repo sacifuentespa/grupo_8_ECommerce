@@ -24,16 +24,16 @@ const controller = {
       },
     storeNewProduct: 
     (req,res) => {
-      console.log(req.body)
-
+      
       let product = {
+        
         id: newId(),
         productName: req.body.productName,
         productPrice: req.body.productPrice,
         listCategoriesProduct: req.body.listCategoriesProduct,
         productDescriptionUpload: req.body.productDescriptionUpload,
-        mainImageUpload: req.file,
-        imagesUpload: 'default-image.png',
+        mainImageUpload: req.files['mainImageUpload'],
+        imagesUpload: req.files['imagesUpload'],
         aimUpload: req.body.aimUpload,
         categoryExchange: req.body.categoryExchange,
       }
