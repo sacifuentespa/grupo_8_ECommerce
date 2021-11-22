@@ -442,71 +442,19 @@
     {
         "id": 41,
         "productName": "Skateboard Arce Canadiense",
-        "productPrice": "341",
-        "listCategoriesProduct": "deportes",
-        "productDescriptionUpload": "  Tabla 100% arce canadiense muy resistente y de larga duración. El arce canadiense es la madera más adecuada para el diseño de skates: duro, denso y ligero",
+        "productPrice": "25",
+        "listCategoriesProduct": "vehiculos",
+        "productDescriptionUpload": "                aewrbea",
         "mainImageUpload": [
             {
                 "fieldname": "mainImageUpload",
                 "originalname": "skate01.jpg",
                 "encoding": "7bit",
                 "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
-                "filename": "skate01.jpg1637530792704_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate01.jpg1637530792704_img_.jpg",
+                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoECommerce\\src\\public\\img\\imgProducts",
+                "filename": "skate01.jpg1637623770368_img_.jpg",
+                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoECommerce\\src\\public\\img\\imgProducts\\skate01.jpg1637623770368_img_.jpg",
                 "size": 52419
-            }
-        ],
-        "imagesUpload": [
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0101.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
-                "filename": "skate0101.jpg1637530792705_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0101.jpg1637530792705_img_.jpg",
-                "size": 25665
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0102.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
-                "filename": "skate0102.jpg1637530792707_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0102.jpg1637530792707_img_.jpg",
-                "size": 14011
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0103.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
-                "filename": "skate0103.jpg1637530792708_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0103.jpg1637530792708_img_.jpg",
-                "size": 53423
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0104.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
-                "filename": "skate0104.jpg1637530792709_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0104.jpg1637530792709_img_.jpg",
-                "size": 40734
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0105.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img",
-                "filename": "skate0105.jpg1637530792710_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\Aprendizaje\\Programacion\\Javascript\\proyectoecommerce\\src\\public\\img\\skate0105.jpg1637530792710_img_.jpg",
-                "size": 19440
             }
         ],
         "aimUpload": "cambiar",

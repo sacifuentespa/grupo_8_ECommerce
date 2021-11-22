@@ -8,7 +8,7 @@ const productsController = require("../controllers/productsController.js");
 //multer config
 const storage = multer.diskStorage({
     destination: function (req, file, cb){
-        cb(null, path.resolve(__dirname,'../public/img'))
+        cb(null, path.resolve(__dirname,'../public/img/imgProducts'))
     },
     filename: function(req, file, cb){
         cb(null, file.originalname + `${Date.now()}_img_${path.extname(file.originalname)}`)
@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage})
 
 const cpUpload = uploadFile.fields([{ name: 'mainImageUpload', maxCount: 1 }, { name: 'imagesUpload', maxCount: 8 }])
+
 //home
 router.get("/", mainController.getIndex);
 
