@@ -991,11 +991,6 @@ height: 50%;
 /* Media Queries */
 /* Phone */
 @media (max-width: 480px) {
-
-    .error_404 {
-        width: 90%;
-        height: 90%;
-        }
     
     header{
         justify-content: space-between;
