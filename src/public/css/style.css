@@ -948,13 +948,11 @@ main.mainProductUpload form textarea {
     display: flex;
     justify-content: center;
     align-items:center;
-
-
 }
 
 #bodyError404 .container-404 {
     text-align: center;
-    width: 60%;
+    width: 40%;
     background: #ebebeb;
     padding: 20px;
     box-shadow : 0px 0px 10px rgba(103, 223, 241, 0.646);
@@ -964,6 +962,10 @@ main.mainProductUpload form textarea {
 }
 
 #bodyError404 .container-404 p {
+    font-size: 14px;
+}
+
+#bodyError404 .container-404 a {
     font-size: 14px;
 }
 
@@ -982,11 +984,18 @@ main.mainProductUpload form textarea {
  font-weight: bold;
 }
 
-
+.error_404 {
+width: 50%;
+height: 50%;
+}
 /* Media Queries */
-
 /* Phone */
 @media (max-width: 480px) {
+
+    .error_404 {
+        width: 90%;
+        height: 90%;
+        }
     
     header{
         justify-content: space-between;
@@ -1173,7 +1182,6 @@ main.mainProductUpload form textarea {
         left:8%;
     }
     
-
     /* main.maincart */
     /* CART Final */
 }
