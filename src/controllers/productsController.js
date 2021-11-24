@@ -22,21 +22,31 @@ const controller = {
     getProduct: (req, res) => {
         res.render("products/product", {title: "nameProduct"});
       },
+
+    getProductWithId: (req, res) => {
+        let idProduct = req.params.id
+        let product = products.find((item)=>{
+          return item.id == idProduct
+      })
+      console.log(product.imagesUpload[0])
+        res.render("products/productId", {title: "nameProduct", product});
+      },
+
+
     storeNewProduct: 
     (req,res) => {
       
+
       let product = {
-        
         id: newId(),
-        productName: req.body.productName,
-        productPrice: req.body.productPrice,
-        listCategoriesProduct: req.body.listCategoriesProduct,
-        productDescriptionUpload: req.body.productDescriptionUpload,
+        ...req.body,
         mainImageUpload: req.files['mainImageUpload'],
         imagesUpload: req.files['imagesUpload'],
-        aimUpload: req.body.aimUpload,
-        categoryExchange: req.body.categoryExchange,
       }
+      if (product.imagesUpload==undefined){
+        product.imagesUpload = []      
+    }
+
   
       products.push(product);
   

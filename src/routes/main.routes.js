@@ -25,6 +25,9 @@ router.get("/", mainController.getIndex);
 //productPage
 router.get("/product", productsController.getProduct);
 
+
+router.get("/product/:id", productsController.getProductWithId);
+
 //productPageUpload
 router.get("/productUpload", productsController.getNewProduct);
 router.post("/productUpload", cpUpload,productsController.storeNewProduct);
