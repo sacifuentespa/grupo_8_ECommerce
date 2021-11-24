@@ -7,12 +7,12 @@ const methodOverride = require('method-override');
 
 //configuration
 app.use(express.static(path.resolve(__dirname, "./public")));
-app.set("views", path.resolve(__dirname, "./views"));
-app.set("view engine", "ejs");
-app.use("/", routes);
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.set("views", path.resolve(__dirname, "./views"));
+app.set("view engine", "ejs");
+app.use("/", routes);
 
 //error 404
 app.use((req, res, next) => {
