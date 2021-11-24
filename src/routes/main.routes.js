@@ -1,42 +1,29 @@
 const express = require("express");
 const router = express.Router();
-const multer = require('multer')
-const path = require('path')
 const mainController = require("../controllers/mainController");
-const productsController = require("../controllers/productsController.js");
-
-//multer config
-const storage = multer.diskStorage({
-    destination: function (req, file, cb){
-        cb(null, path.resolve(__dirname,'../public/img/imgProducts'))
-    },
-    filename: function(req, file, cb){
-        cb(null, file.originalname + `${Date.now()}_img_${path.extname(file.originalname)}`)
-    }
-})
-
-const uploadFile = multer({storage})
-
-const cpUpload = uploadFile.fields([{ name: 'mainImageUpload', maxCount: 1 }, { name: 'imagesUpload', maxCount: 8 }])
+const productsController = require("../controllers/productsController");
+const usersController = require("../controllers/userController");
+const cpUploadProduct = require("../middleware/uploadFileProduct")
 
 //home
 router.get("/", mainController.getIndex);
 
 //productPage
-router.get("/product", productsController.getProduct);
+router.get("/product/:id", productsController.getProduct);
 
 //productPageUpload
 router.get("/productUpload", productsController.getNewProduct);
-router.post("/productUpload", cpUpload,productsController.storeNewProduct);
+router.post("/productUpload", cpUploadProduct,productsController.uploadNewProduct);
 
 //cart
 router.get("/cart", mainController.getCart);
 
 //login
-router.get("/login", mainController.getLogin);
+router.get("/login", usersController.getLogin);
 
 //register
-router.get("/register", mainController.getRegister);
+router.get("/register", usersController.getRegister);
+router.post("/register", usersController.uploadNewUser);
 
 //list all products
 //router.get("/listProducts", productsController.getProducts)
