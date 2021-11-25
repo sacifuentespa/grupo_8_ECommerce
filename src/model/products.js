@@ -4,11 +4,12 @@ const path = require("path");
 
 //db
 const productsFilePath = path.resolve(__dirname, "./products.json");
-let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+const dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const newId = () => {
     let last = 0;
-    dbProducts.forEach(product => {
+    let db = dbProducts;
+    db.forEach(product => {
       last = product.id > last ? product.id : last;
     });
 
@@ -40,22 +41,24 @@ const productsModel = {
       aimUpload: product.aimUpload,
       categoryExchange: product.categoryExchange,
     };
-
-    dbProducts.push(newProduct)
-    dbProducts = JSON.stringify(dbProducts, null, 4);
-    fs.writeFileSync(productsFilePath, dbProducts)
+    let db = dbProducts;
+    db.push(newProduct)
+    db = JSON.stringify(db, null, 4);
+    fs.writeFileSync(productsFilePath, db)
 
     return newProduct
   },
   searchProduct: (id) => {
-    let searchProduct = dbProducts.filter(product => {
+    let db = dbProducts;
+    let searchProduct = db.filter(product => {
       return  product.id == id;
     });
     
     return searchProduct[0];
   },
   updateProduct: (product) => {
-    dbProducts = dbProducts.filter(productUpdate => {
+    let db = dbProducts;
+    db = db.filter(productUpdate => {
       return productUpdate.id != product.id;
     })
 
@@ -71,14 +74,18 @@ const productsModel = {
       categoryExchange: product.categoryExchange,
     };
 
-    this.addProductDb(newProduct)
+    db.push(newProduct)
+    db = JSON.stringify(db, null, 4);
+    fs.writeFileSync(productsFilePath, db)
   },
   deleteProduct: (id) => {
-    let products = dbProducts.filter(product => {
+    let db = dbProducts;
+    db = db.filter(product => {
       return product.id != id;
     })
 
-    this.updateDb(products)
+    db = JSON.stringify(db, null, 4);
+    fs.writeFileSync(productsFilePath, db)
   }
 };
 
