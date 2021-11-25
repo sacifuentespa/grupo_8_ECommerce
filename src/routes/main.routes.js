@@ -32,6 +32,11 @@ router.get("/product/:id", productsController.getProductWithId);
 router.get("/productUpload", productsController.getNewProduct);
 router.post("/productUpload", cpUpload,productsController.storeNewProduct);
 
+//productEdition
+router.get("/productEdit/:id", productsController.getProductEdition);
+//router.post("/productUpload", cpUpload,productsController.storeNewProduct);
+
+
 //cart
 router.get("/cart", mainController.getCart);
 

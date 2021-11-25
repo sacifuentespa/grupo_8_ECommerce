@@ -28,15 +28,16 @@ const controller = {
         let product = products.find((item)=>{
           return item.id == idProduct
       })
-      console.log(product.imagesUpload[0])
-        res.render("products/productId", {title: "nameProduct", product});
+      if(product){
+        res.render("products/productId", {title: product.productName, product});
+      }else{
+        res.status(404).render('notFound', {tittle: "Error 404"});
+      }        
       },
 
 
     storeNewProduct: 
     (req,res) => {
-      
-
       let product = {
         id: newId(),
         ...req.body,
@@ -46,7 +47,6 @@ const controller = {
       if (product.imagesUpload==undefined){
         product.imagesUpload = []      
     }
-
   
       products.push(product);
   
@@ -54,7 +54,20 @@ const controller = {
           fs.writeFileSync(productsFilePath, jsonProducts);
   
       res.redirect('/')
-    }
+    },
+    getProductEdition: (req, res) => {
+      let idProduct = req.params.id
+      let productToEdit = products.find((item)=>{
+        return item.id == idProduct
+    })
+      res.render("products/productEdit", {title: "Editar Producto", productToEdit: productToEdit});
+    },
+
+    editProduct: (req, res) => {
+
+
+    res.redirect('/')
+    },    
   };
   
   module.exports = controller;
