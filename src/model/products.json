@@ -54,5 +54,33 @@
         ],
         "aimUpload": "vender",
         "categoryExchange": "hogar"
+    },
+    {
+        "id": 5,
+        "productName": "Moto Honda Pcx 150",
+        "productPrice": "7995000",
+        "listCategoriesProduct": "vehiculos",
+        "productDescriptionUpload": " Moto Honda Pcx 150 modelo 2017 4 tiempos 26400 km",
+        "mainImageUpload": "img1637823197436_Moto01.webp",
+        "imagesUpload": [
+            "img1637823197438_Moto0101.webp",
+            "img1637823197439_Moto0102.webp"
+        ],
+        "aimUpload": "vender",
+        "categoryExchange": "vehiculos"
+    },
+    {
+        "id": 6,
+        "productName": "Celular Apple iPhone 13",
+        "productPrice": "4000000",
+        "listCategoriesProduct": "electronica",
+        "productDescriptionUpload": "Pantalla: 6.1\", 1170 x 2532 pixels\r\nProcesador: Apple A15 Bionic\r\nAlmacenamiento: 128GB/256GB/512GB\r\nExpansión: sin microSD\r\nCámara: Dual, 12MP+12MP\r\nOS: iOS 15\r\nPerfil: 7.7 mm\r\nPeso: 174 g",
+        "mainImageUpload": "img1637823245942_iphone1301.webp",
+        "imagesUpload": [
+            "img1637823245942_iphone130101.webp",
+            "img1637823245943_iphone130102.webp"
+        ],
+        "aimUpload": "cambiar",
+        "categoryExchange": "vehiculos"
     }
 ]
