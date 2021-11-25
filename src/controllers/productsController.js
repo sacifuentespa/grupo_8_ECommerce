@@ -6,7 +6,11 @@ const controller = {
   },
   getProduct: (req, res) => {
     let product = productsModel.searchProduct(req.params.id);
-    res.render("products/product", {title: product.productName, product: product});
+    if(product){
+      res.render("products/product", {title: product.productName, product});
+    }else{
+      res.status(404).render('notFound', {tittle: "Error 404"});
+    } 
   },
   getProducts: (req, res) => {
     let products = productsModel.getProducts();
@@ -31,4 +35,5 @@ const controller = {
   }
 }
 
-module.exports = controller;
+  module.exports = controller;
+  

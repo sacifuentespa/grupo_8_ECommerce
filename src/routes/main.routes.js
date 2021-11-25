@@ -11,9 +11,17 @@ router.get("/", mainController.getIndex);
 //productPage
 router.get("/product/:id", productsController.getProduct);
 
+
+router.get("/product/:id", productsController.getProductWithId);
+
 //productPageUpload
 router.get("/productUpload", productsController.getNewProduct);
 router.post("/productUpload", cpUploadProduct,productsController.uploadNewProduct);
+
+//productEdition
+router.get("/productEdit/:id", productsController.getProductEdition);
+//router.post("/productUpload", cpUpload,productsController.storeNewProduct);
+
 
 //cart
 router.get("/cart", mainController.getCart);

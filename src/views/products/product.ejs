@@ -10,18 +10,20 @@
             <main class="mainProduct">
                 <section class="productImages">
                     <section class="carouselProduct">
-                        <article>
-                            <img src="/img/iphone13img.webp" alt="Cafetera" class="product_img">
+
+                        <% for(let i = 0; i<4; i++){ %>
+
+                        <% if(locals.product.imagesUpload[i] !=undefined){ %>
+                            <article>
+                                <img src="/img/imgProducts/<%= product.imagesUpload[i].filename %>" alt="Imagen" class="product_img">
+                            </article>
+                        <%} else {%>
+                            <article>
+                            <img src="/img/imgProducts/default-image.png" alt="Imagen" " class="product_img">
                         </article>
-                        <article>
-                            <img src="/img/iPhone13Camera.jpeg" alt="MacBook" class="product_img">
-                        </article>
-                        <article>
-                            <img src="/img/iphone13photo.jpg" alt="Teléfono Móvil Samsung Galaxy" class="product_img">
-                        </article>
-                        <article>
-                            <img src="/img/appleipad9.jfif" alt="SmartTv Samsung" class="product_img">
-                        </article>
+                            <%}%>
+                        <%}%>
+                        
                     </section>
                     <section class="listSectionCategoriesProduct">
                         <h4>Imágenes del producto</h4>
@@ -31,9 +33,9 @@
                 <section class="currentProduct">
                     <section class="productSectionImageAndButtons">
                         <section>
-                            <h2>iPhone 13</h2>
+                            <h2><%= product.productName %></h2>
                             <div class="currentProductImage">
-                                <img src="/img/iphone13img.webp" alt="Cafetera" class="product_img">
+                                <img src="/img/imgProducts/<%= product.mainImageUpload[0].filename %>" alt="<%= product.productName %>" class="product_img">
                             </div>
                             <section class="productButtonsDesktop">
                                 <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>
@@ -44,6 +46,7 @@
                 </section>
 
                 </section>
+                
 
                 <section class="productButtons">
                     <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>
@@ -53,26 +56,14 @@
                 <section class="optionsProducts">
                     <article class="priceProduct">
                         <h3>Precio</h3>
-                        <p class="priceProduct"> $25
+                        <p class="priceProduct"> <%= product.productPrice %>
                         </p>
                     </article>
                     <article class="productDescription">
 
                         <h3>Descripción</h3>
                         <p class="descriptionParagraph">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem culpa harum quasi,
-                            beatae
-                            ratione quia iusto, modi commodi cum aspernatur? Soluta, nesciunt atque. Voluptates error
-                            repellendus consectetur suscipit sapiente.
-                            Accusantium ab quod quaerat? Et, fuga voluptatibus veritatis amet officiis dignissimos
-                            voluptatem
-                            beatae similique odit ipsum porro soluta ipsa ea autem. Aliquam cupiditate nemo unde aut
-                            quae, quam
-                            in voluptatem.
-                            Sint ab laborum, corporis fugiat quidem tenetur repudiandae perferendis quaerat, ex repellat
-                            voluptatibus atque quo maiores soluta amet totam? Molestias fuga at provident, excepturi
-                            quisquam
-                            nulla obcaecati? Quis, sed porro!
+                            <%= product.productDescriptionUpload %>
                         </p>
                     </article>
                     <article class="returnPolicy">

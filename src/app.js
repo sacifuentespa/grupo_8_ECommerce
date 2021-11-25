@@ -15,6 +15,7 @@ app.set("view engine", "ejs");
 app.use("/", routes);
 
 //error 404
+
 app.use((req, res, next) => {
   res.status(404).render('notFound', {tittle: "Error 404"});
 })
