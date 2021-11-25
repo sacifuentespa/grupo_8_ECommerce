@@ -23,7 +23,6 @@ const controller = {
   },
   getUpdateProduct: (req, res) => {
     let product = productsModel.searchProduct(req.params.id);
-    console.log(product)
     if(product){
       res.render("products/productEdit", {title: "Actualizar producto", product: product})
     }else{
@@ -31,9 +30,12 @@ const controller = {
     } 
   },
   uploadUpdateProduct: (req, res) => {
-    productsModel.updateProduct(req.body)
+
+    productsModel.updateProduct(req.body, req.files)
+    
     res.redirect(`product/${req.body.id}`);
   },
+  
   deleteProduct: (req, res) => {
     productsModel.deleteProduct(req.body.id)
     res.redirect("/")

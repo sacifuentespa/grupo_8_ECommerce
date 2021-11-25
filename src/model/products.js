@@ -48,33 +48,54 @@ const productsModel = {
 
     return newProduct
   },
-  searchProduct: (id) => {
+  searchProduct: function(id){
     let db = dbProducts;
+    
+
     let searchProduct = db.filter(product => {
       return  product.id == id;
     });
     
     return searchProduct[0];
   },
-  updateProduct: (product) => {
+  updateProduct: (product, files) => {
     let db = dbProducts;
-    db = db.filter(productUpdate => {
-      return productUpdate.id != product.id;
+    let idProduct = product.id
+
+    let productToEdit = db.find((item)=>{
+      return item.id == idProduct
     })
 
-    let newProduct = {
-      id: product.id,
+    db = db.filter(productUpdate => {
+      return productUpdate.id != idProduct;
+    })
+
+    let mainImage = productToEdit.mainImageUpload 
+    let images = productToEdit.imagesUpload
+
+    if(files["mainImageUpload"]){
+      mainImage = files["mainImageUpload"][0].filename
+    }
+
+    if(files["imagesUpload"]){
+      images = files["imagesUpload"].map((image) => {
+        return image.filename;
+      })
+    } 
+
+    let updatedProduct = {
+      id: idProduct,
       productName: product.productName,
       productPrice: product.productPrice,
       listCategoriesProduct: product.listCategoriesProduct,
       productDescriptionUpload: product.productDescriptionUpload,
-      mainImageUpload: product.mainImageUpload,
-      imagesUpload: product.imagesUpload,
+      mainImageUpload: mainImage,
+      imagesUpload: images,
       aimUpload: product.aimUpload,
       categoryExchange: product.categoryExchange,
     };
 
-    db.push(newProduct)
+    db.push(updatedProduct)
     db = JSON.stringify(db, null, 4);
     fs.writeFileSync(productsFilePath, db)
   },

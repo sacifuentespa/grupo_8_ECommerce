@@ -18,7 +18,7 @@ router.post("/productUpload", cpUploadProduct,productsController.uploadNewProduc
 
 //productEdition
 router.get("/productEdit/:id", productsController.getUpdateProduct);
-//router.post("/productUpload", cpUpload,productsController.storeNewProduct);
+router.put("/productEdit", cpUploadProduct,productsController.uploadUpdateProduct);
 
 
 //cart
