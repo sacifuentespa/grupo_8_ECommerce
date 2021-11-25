@@ -26,6 +26,6 @@ router.get("/register", usersController.getRegister);
 router.post("/register", usersController.uploadNewUser);
 
 //list all products
-//router.get("/listProducts", productsController.getProducts)
+router.get("/listProducts", productsController.getProducts)
 
 module.exports = router;

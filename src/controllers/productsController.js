@@ -9,12 +9,13 @@ const controller = {
     res.render("products/product", {title: product.productName, product: product});
   },
   getProducts: (req, res) => {
-    let products = productsModel.getProducts;
+    let products = productsModel.getProducts();
     res.render("products/listProducts", {title: "Productos", products: products})
   },
   uploadNewProduct: (req, res) => {
     let product = productsModel.newProduct(req.body, req.files)
     res.render("products/product", {title: product.productName, product: product});
+    // res.redirect(`product/${req.body.id}`);
   },
   getUpdateProduct: (req, res) => {
     let product = productsModel.searchProduct(req.params.id);
