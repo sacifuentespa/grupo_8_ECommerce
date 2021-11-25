@@ -7,7 +7,7 @@ const controller = {
   getProduct: (req, res) => {
     let product = productsModel.searchProduct(req.params.id);
     if(product){
-      res.render("products/product", {title: product.productName, product});
+      res.render("products/product", {title: product.productName, product:product});
     }else{
       res.status(404).render('notFound', {tittle: "Error 404"});
     } 
@@ -23,7 +23,12 @@ const controller = {
   },
   getUpdateProduct: (req, res) => {
     let product = productsModel.searchProduct(req.params.id);
-    res.render("products/productUpload", {title: "Actualizar producto", product: product})
+    console.log(product)
+    if(product){
+      res.render("products/productEdit", {title: "Actualizar producto", product: product})
+    }else{
+      res.status(404).render('notFound', {tittle: "Error 404"});
+    } 
   },
   uploadUpdateProduct: (req, res) => {
     productsModel.updateProduct(req.body)

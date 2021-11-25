@@ -13,9 +13,9 @@
 
                         <% for(let i = 0; i<4; i++){ %>
 
-                        <% if(locals.product.imagesUpload[i] !=undefined){ %>
+                        <% if(product.imagesUpload[i] !=undefined){ %>
                             <article>
-                                <img src="/img/imgProducts/<%= product.imagesUpload[i].filename %>" alt="Imagen" class="product_img">
+                                <img src="/img/imgProducts/<%= product.imagesUpload[i] %>" alt="Imagen" class="product_img">
                             </article>
                         <%} else {%>
                             <article>
@@ -35,7 +35,7 @@
                         <section>
                             <h2><%= product.productName %></h2>
                             <div class="currentProductImage">
-                                <img src="/img/imgProducts/<%= product.mainImageUpload[0].filename %>" alt="<%= product.productName %>" class="product_img">
+                                <img src="/img/imgProducts/<%= product.mainImageUpload %>" alt="<%= product.productName %>" class="product_img">
                             </div>
                             <section class="productButtonsDesktop">
                                 <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>

@@ -12,14 +12,12 @@ router.get("/", mainController.getIndex);
 router.get("/product/:id", productsController.getProduct);
 
 
-router.get("/product/:id", productsController.getProductWithId);
-
 //productPageUpload
 router.get("/productUpload", productsController.getNewProduct);
 router.post("/productUpload", cpUploadProduct,productsController.uploadNewProduct);
 
 //productEdition
-router.get("/productEdit/:id", productsController.getProductEdition);
+router.get("/productEdit/:id", productsController.getUpdateProduct);
 //router.post("/productUpload", cpUpload,productsController.storeNewProduct);
 
 
