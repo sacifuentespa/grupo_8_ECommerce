@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
         cb(null, path.resolve(__dirname,'../public/img/imgProducts'))
     },
     filename: function(req, file, cb){
-        cb(null, `img${productsController.id}_${path.basename(file.originalname)}`)
+        cb(null, `img${Date.now()}_${path.basename(file.originalname)}`)
     }
 })
 
