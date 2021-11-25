@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('./partials/head') %>
+<body>
+    <!-- header -->
+    <%- include('./partials/partialsUsers/headerUsers') %>
+    <main class="mainAdmin">
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Producto</td>
+                    <td>Categoria</td>
+                    <td>Precio</td>
+                    <td>Acciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(product => { %>
+                    <tr>
+                        <td><%= product.id %></td>
+                        <td><%=product.productName %></td>
+                        <td><%=product.productPrice %></td>
+                        <td><%=product.listCategoriesProduct %></td>
+                        <td>
+                            <form action="/productEdit/<%= product.id %>" method="get">
+                                <input type="hidden" name="id" value="<%= product.id %>">
+                                <button type="submit"><i class="fas fa-edit"></i></i></button>
+                            </form>
+                            <form method="post" action="/deleteProduct/<%= product.id %>?_method=DELETE">
+                                <button type="submit"><i class="far fa-trash-alt"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+    <!-- footer -->
+    <%- include('./partials/partialsUsers/footerUsers') %>
+</body>
+</html>
