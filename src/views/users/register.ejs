@@ -6,45 +6,24 @@
     <body class="bodyregister">
         <!-- header -->
         <%- include('../partials/partialsUsers/headerUsers') %>
-            <main>
-                <section id="sectionForm">
-                    <form>
-                        <h1>Crear cuenta</h1>
-                        <div class="contenedor1">
-                            <div class>
-                                <label>Nombre:</label>
-                                <input type="text" name="nombre">
-                            </div>
-                            <div>
-                                <label>Apellido:</label>
-                                <input type="text" name="nombreUsuario">
-                            </div>
+            <main class="mainLogin">
+                <section>
+                    <h1>Crear cuenta</h1>
+                    <form class="formLogin" action="/register" method="post">
+                        <div class="contentForm">
+                            <input type="text" name="name" placeholder="Nombres" class="inputMed">
+                            <input type="text" name="lastName" placeholder="Apellidos" class="inputMed"> 
                         </div>
-                        <div class="contenedor2">
-                            <div>
-                                <label>Email:</label>
-                                <input type="email" name="emailUsuario">
-                            </div>
-                            <div class>
-                                <label>Contraseña:</label>
-                                <input type="password" name="passwordUsuario">
-                            </div>
-                        </div>
-                        <div class="contenedor3">
-                            <div class="datos">
-                                <label>Confirmar contraseña:</label>
-                                <input type="password" name="confirmarPasswordUsuario">
-                            </div>
+                        <input type="email" name="email" placeholder="Correo electronico">
+                        <div class="contentForm">
+                            <input type="password" name="password" placeholder="Contraseña" class="inputMed">
+                            <input type="password" name="password" placeholder="Confirmar contraseña" class="inputMed">
                         </div>
                         <div>
-                            <p>Acepto términos y condiciones</p>
-                            <input type="checkbox" name="terminos">
+                            <input type="checkbox" name="terminos" id="accept" class="remind">
+                            <label for="accept">Acepto términos y condiciones</label>   
                         </div>
-                        </div>
-                        <button type="submit">Continuar</button>
-                        <div class="volver">
-                            <a href="/" class="botonvolverregister">Volver al inicio</a>
-                        </div>
+                        <button type="submit">Crear Usuario</button>
                     </form>
                 </section>
             </main>
