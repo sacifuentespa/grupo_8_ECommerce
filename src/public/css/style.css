@@ -255,7 +255,7 @@ main.mainHome section .carruselBtn {
   border-style: double;
 }
 
-main.mainHome section article {
+.articleProduct {
   width: 20%;
   height: 40vh;
   background-color: white;
@@ -266,7 +266,7 @@ main.mainHome section article {
   cursor: pointer;
 }
 
-main.mainHome section article img {
+.articleProduct img {
   display: block;
   margin: 0 auto;
   width: 90%;
@@ -274,7 +274,7 @@ main.mainHome section article img {
   padding: 1%;
 }
 
-main.mainHome section article i {
+.articleProduct i {
   display: block;
   font-size: 16px;
   padding: 5px;
@@ -289,7 +289,7 @@ main.mainHome section article i {
   top: -15px;
 }
 
-main.mainHome section article h4 {
+.articleProduct h4 {
   font-size: 1.3em;
   padding-top: 1%;
   overflow: hidden;
@@ -310,7 +310,7 @@ main.mainHome section article h4 {
   position: relative;
 }
 
-main.mainHome section article:hover {
+.articleProduct:hover {
   box-shadow: 0px 0px 10px rgba(103, 223, 241, 0.646);
 }
 
@@ -994,13 +994,39 @@ main.mainProductUpload form textarea {
 /* Final 404 */
 
 /* LIST PRODUCTS */
-.mainLogin{
+main.mainListProducts{
     width: 100%;
     display: flex;
     margin: 2%;
-    justify-content: flex-start;
+    flex-wrap: wrap;
 }
+
+.mainListProducts .articleProduct{
+  margin: 2%;
+}
+
 /* FINAL LIST PRODUCTS */
+
+/* admin table */
+main.mainAdmin{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 60vh;
+  margin-top: 3%;
+}
+
+.mainAdmin table{
+  width: 90%;
+  background-color: #11aea960;
+}
+
+.mainAdmin table thead{
+  background-color: #11aea9;
+}
+
+/* final admin table */
 
 /* Media Queries */
 /* Phone */
@@ -1112,7 +1138,7 @@ main.mainProductUpload form textarea {
     font-size: 1.4em;
   }
 
-  main.mainHome section article {
+  .articleProduct {
     border: none;
     border-radius: 0px;
     border-bottom: 1px solid #11aea9;
@@ -1128,7 +1154,7 @@ main.mainProductUpload form textarea {
     display: none;
   }
 
-  main.mainHome section article img {
+  .articleProduct img {
     display: inline-block;
     width: 50%;
     height: 100%;
@@ -1136,7 +1162,7 @@ main.mainProductUpload form textarea {
     padding: 2%;
   }
 
-  main.mainHome section article i {
+  .articleProduct i {
     display: none;
   }
 

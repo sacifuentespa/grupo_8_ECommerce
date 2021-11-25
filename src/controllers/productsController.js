@@ -9,7 +9,7 @@ const controller = {
     if(product){
       res.render("products/product", {title: product.productName, product:product});
     }else{
-      res.status(404).render('notFound', {tittle: "Error 404"});
+      res.render('notFound', {tittle: "Error 404"});
     } 
   },
   getProducts: (req, res) => {
@@ -30,15 +30,13 @@ const controller = {
     } 
   },
   uploadUpdateProduct: (req, res) => {
-
     productsModel.updateProduct(req.body, req.files)
-    
     res.redirect(`product/${req.body.id}`);
   },
   
   deleteProduct: (req, res) => {
-    productsModel.deleteProduct(req.body.id)
-    res.redirect("/")
+    productsModel.deleteProduct(req.params.id)
+    res.redirect("/admin/products/314")
   }
 }
 

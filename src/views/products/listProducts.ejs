@@ -8,8 +8,8 @@
         <%- include('../partials/partialsProducts/headerProducts') %>
         <main class="mainListProducts">
             <% products.forEach((product) => { %>
-                <article>
-                    <img src="<%= product.mainImageUpload %>" alt="<%= product.productName %>" class="product_img">
+                <article class="articleProduct">
+                    <img src="/img/imgProducts/<%= product.mainImageUpload %>" alt="<%= product.productName %>" class="product_img">
                     <div class="text-card-product">
                         <i class="fas fa-truck"></i>
                         <p class="price">$<%= product.productPrice %></p>

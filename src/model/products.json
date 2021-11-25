@@ -68,19 +68,5 @@
         ],
         "aimUpload": "vender",
         "categoryExchange": "vehiculos"
-    },
-    {
-        "id": "6",
-        "productName": "Celular Apple iPhone 13",
-        "productPrice": "4000000",
-        "listCategoriesProduct": "electronica",
-        "productDescriptionUpload": "Pantalla Super Retina XDR\r\nPantalla OLED de 6,1 pulgadas (diagonal) sin marco\r\nResolución de 2532 x 1170 pixeles a 460 ppi",
-        "mainImageUpload": "img1637866028342_iphone1301.webp",
-        "imagesUpload": [
-            "img1637866028343_iphone130101.webp",
-            "img1637866028344_iphone130102.webp"
-        ],
-        "aimUpload": "vender",
-        "categoryExchange": "vehiculos"
     }
 ]
