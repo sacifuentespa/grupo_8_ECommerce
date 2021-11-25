@@ -52,7 +52,7 @@ const productsModel = {
       return  product.id == id;
     });
     
-    return searchProduct;
+    return searchProduct[0];
   },
   updateProduct: (product) => {
     dbProducts = dbProducts.filter(productUpdate => {

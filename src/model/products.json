@@ -1,150 +1,28 @@
 [
     {
-        "id": 3,
+        "id": 6,
         "productName": "Skateboard Arce Canadiense",
-        "productPrice": "341",
+        "productPrice": "3000000",
         "listCategoriesProduct": "deportes",
-        "productDescriptionUpload": "Dimensiones: 8 x 31,6, Concavidad media, nose (parte delantera) y tail (parte trasera) anchas y bien inclinadas para tricks.\r\nTabla 100% arce canadiense muy resistente y de larga duración. El arce canadiense es la madera más adecuada para el diseño de skates: duro, denso y ligero.",
-        "mainImageUpload": [
-            {
-                "fieldname": "mainImageUpload",
-                "originalname": "skate01.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "skate01.jpg1637733924588_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\skate01.jpg1637733924588_img_.jpg",
-                "size": 52419
-            }
-        ],
+        "productDescriptionUpload": "Prueba",
+        "mainImageUpload": "img1637815926056_skate0105.jpg",
         "imagesUpload": [
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0101.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "skate0101.jpg1637733924592_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\skate0101.jpg1637733924592_img_.jpg",
-                "size": 25665
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0102.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "skate0102.jpg1637733924596_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\skate0102.jpg1637733924596_img_.jpg",
-                "size": 14011
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0103.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "skate0103.jpg1637733924599_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\skate0103.jpg1637733924599_img_.jpg",
-                "size": 53423
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0104.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "skate0104.jpg1637733924602_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\skate0104.jpg1637733924602_img_.jpg",
-                "size": 40734
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "skate0105.jpg",
-                "encoding": "7bit",
-                "mimetype": "image/jpeg",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "skate0105.jpg1637733924604_img_.jpg",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\skate0105.jpg1637733924604_img_.jpg",
-                "size": 19440
-            }
+            "img1637815926060_skate0102.jpg"
         ],
         "aimUpload": "vender",
         "categoryExchange": "deportes"
     },
     {
-        "id": 4,
-        "productName": "Dron Professional E58",
-        "productPrice": "269000",
-        "listCategoriesProduct": "electronica",
-        "productDescriptionUpload": "1 potencia directa de 2.4GHz, operación más precisa, más sensible, distancia de control remoto, puede simultáneamente controlar múltiples aviones en el mismo lugar sin interferencia mutua.\r\n2 El exclusivo modo de control dual, equipado con un modo de nivel de entrada adecuado para jugadores novatos y un modo de nivel técnico para jugadores profesionales. Realice una máquina multipropósito, el modelo se puede operar en interiores y exteriores, ¡adecuado para una amplia gama de jugadores!",
-        "mainImageUpload": [
-            {
-                "fieldname": "mainImageUpload",
-                "originalname": "Dron01.webp",
-                "encoding": "7bit",
-                "mimetype": "image/webp",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "Dron01.webp1637738948900_img_.webp",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\Dron01.webp1637738948900_img_.webp",
-                "size": 11430
-            }
-        ],
-        "imagesUpload": [
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "Dron0101.webp",
-                "encoding": "7bit",
-                "mimetype": "image/webp",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "Dron0101.webp1637738948901_img_.webp",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\Dron0101.webp1637738948901_img_.webp",
-                "size": 8344
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "Dron0102.webp",
-                "encoding": "7bit",
-                "mimetype": "image/webp",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "Dron0102.webp1637738948902_img_.webp",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\Dron0102.webp1637738948902_img_.webp",
-                "size": 8044
-            },
-            {
-                "fieldname": "imagesUpload",
-                "originalname": "Dron0103.webp",
-                "encoding": "7bit",
-                "mimetype": "image/webp",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "Dron0103.webp1637738948903_img_.webp",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\Dron0103.webp1637738948903_img_.webp",
-                "size": 35842
-            }
-        ],
-        "aimUpload": "vender",
-        "categoryExchange": "electronica"
-    },
-    {
-        "id": 5,
-        "productName": "PS5",
+        "id": 7,
+        "productName": "Skateboard Arce Canadiense",
         "productPrice": "3000000",
-        "listCategoriesProduct": "electronica",
-        "productDescriptionUpload": "SSD de velocidad ultrarrápida\r\nTrazado de rayos\r\nTransmisión de entretenimiento en 4K\r\nHasta 120 fps con salida de 120 Hz\r\nTecnología HDR\r\nCompatibilidad con 8K\r\nBlu-ray 4K Ultra HD\r\nCapacidad: 825 GB",
-        "aimUpload": "vender",
-        "categoryExchange": "vehiculos",
-        "mainImageUpload": [
-            {
-                "fieldname": "mainImageUpload",
-                "originalname": "Play501.webp",
-                "encoding": "7bit",
-                "mimetype": "image/webp",
-                "destination": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts",
-                "filename": "Play501.webp1637740616394_img_.webp",
-                "path": "C:\\Users\\PC\\Documents\\aprendizaje\\programacion\\javascript\\proyectoEcommerce\\src\\public\\img\\imgProducts\\Play501.webp1637740616394_img_.webp",
-                "size": 5932
-            }
+        "listCategoriesProduct": "vehiculos",
+        "productDescriptionUpload": "Prueba",
+        "mainImageUpload": "img1637816079992_skate0105.jpg",
+        "imagesUpload": [
+            "img1637816080000_skate0102.jpg"
         ],
-        "imagesUpload": []
+        "aimUpload": "vender",
+        "categoryExchange": "vehiculos"
     }
 ]
