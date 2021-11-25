@@ -65,7 +65,6 @@ const controller = {
 
     editProduct: (req, res) => {
 
-
     res.redirect('/')
     },    
   };
