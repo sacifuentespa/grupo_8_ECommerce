@@ -21,7 +21,7 @@ const productsModel = {
     return dbProducts;
   },
   newProduct: (product, files) => {
-    let images = undefined;
+    let images = [];
 
     if(files["imagesUpload"]){
       images = files["imagesUpload"].map((image) => {
