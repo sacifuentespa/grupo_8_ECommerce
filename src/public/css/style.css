@@ -956,7 +956,7 @@ main.mainProductUpload form textarea {
 #bodyError404 .container-404 {
   text-align: center;
   width: 40%;
-  background: #ebebeb;
+  background: white;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(103, 223, 241, 0.646);
   border-radius: 5px;
