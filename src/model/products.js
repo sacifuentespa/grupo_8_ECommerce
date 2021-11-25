@@ -7,12 +7,13 @@ const productsFilePath = path.resolve(__dirname, "./products.json");
 let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const newId = () => {
-    let last = 0;
-    dbProducts.forEach(product => {
-      last = product.id > last ? product.id : last;
-    });
-
-    return last + 1;
+	let ultimo = 0;
+	dbProducts.forEach(product => {
+		if (product.id > ultimo) {
+			ultimo = product.id;
+		}
+	});
+	return ultimo + 1;
 }
 
 const productsModel = {
