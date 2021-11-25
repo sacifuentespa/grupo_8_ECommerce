@@ -129,5 +129,32 @@
         "imagesUpload": [],
         "aimUpload": "vender",
         "categoryExchange": "libros"
+    },
+    {
+        "id": 11,
+        "productName": "Raqueta Wilson",
+        "productPrice": 140000,
+        "listCategoriesProduct": "deportes",
+        "productDescriptionUpload": "Grip 4 y 3/8 pulgadas.\r\nMaterial: Nano titanium\r\nTamano cabeza: 723 cm2\r\nPeso: 9.7 onzas (274 g)\r\nLargo: 69cm",
+        "mainImageUpload": "img1637878041479_Raqueta01.webp",
+        "imagesUpload": [
+            "img1637878041481_Raqueta0101.webp"
+        ],
+        "aimUpload": "vender",
+        "categoryExchange": "deportes"
+    },
+    {
+        "id": 12,
+        "productName": "Microondas KALLEY 0.7 K-MW07N Negro",
+        "productPrice": 255000,
+        "listCategoriesProduct": "electrodomesticos",
+        "productDescriptionUpload": "El Horno Microondas Kalley K-MW07N cuenta con una potencia de 700W que permite cocinar tus alimentos en menor tiempo. Sus niveles de potencia son de 0 a 10, ajustable y 6 opciones preprogramadas para que elijas de acuerdo con lo que quieras cocinar\r\nSu capacidad es de 20L, practico y con el tamaño ideal para que prepares, cocines o calientes tus preparaciones favoritas.\r\nSu material interno es refractario para facilitar la limpieza y la puerta en acabado de microperforado dan elegancia a tu cocina.",
+        "mainImageUpload": "img1637878096099_Microondas01.jfif",
+        "imagesUpload": [
+            "img1637878096101_Microondas0101.jfif",
+            "img1637878096107_Microondas0102.jfif"
+        ],
+        "aimUpload": "vender",
+        "categoryExchange": "vehiculos"
     }
 ]
