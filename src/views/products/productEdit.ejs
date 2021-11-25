@@ -19,7 +19,7 @@
 
                     <div class="productPriceUpload">
                         <label>Precio del producto</label>
-                        <input type="text" name="productPrice" value="<%= product.productPrice %>" placeholder="Precio2" required>
+                        <input type="number" name="productPrice" value="<%= product.productPrice %>" placeholder="Precio2" required>
                     </div>
 
                     <div class="listCategoriesProductUpload">
@@ -54,8 +54,8 @@
                     <div class="aimUpload">
                         <label>¿Qué quieres hacer con el producto?</label>
 
-                        <label><input type="checkbox" name="aimUpload" value="vender">Vender</label>
-                        <label><input type="checkbox" name="aimUpload" value="cambiar">Cambiar</label>
+                        <label><input type="checkbox" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
+                        <label><input type="checkbox" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>
                     </div>
 
                     <div class="questionExchange">

@@ -4,7 +4,7 @@ const path = require("path");
 
 //db
 const productsFilePath = path.resolve(__dirname, "./products.json");
-const dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const newId = () => {
     let last = 0;
@@ -13,7 +13,7 @@ const newId = () => {
       last = product.id > last ? product.id : last;
     });
 
-    return last + 1;
+    return (parseInt(last) + 1);
 }
 
 const productsModel = {
@@ -33,7 +33,7 @@ const productsModel = {
     let newProduct = {
       id: newId(),
       productName: product.productName,
-      productPrice: product.productPrice,
+      productPrice: parseInt(product.productPrice),
       listCategoriesProduct: product.listCategoriesProduct,
       productDescriptionUpload: product.productDescriptionUpload,
       mainImageUpload: files["mainImageUpload"][0].filename,
@@ -58,13 +58,11 @@ const productsModel = {
     
     return searchProduct[0];
   },
-  updateProduct: (product, files) => {
+  updateProduct: function(product, files){
     let db = dbProducts;
     let idProduct = product.id
 
-    let productToEdit = db.find((item)=>{
-      return item.id == idProduct
-    })
+    let productToEdit = this.searchProduct(idProduct)
 
     db = db.filter(productUpdate => {
       return productUpdate.id != idProduct;
@@ -84,9 +82,9 @@ const productsModel = {
     } 
 
     let updatedProduct = {
-      id: idProduct,
+      id: parseInt(idProduct),
       productName: product.productName,
-      productPrice: product.productPrice,
+      productPrice: parseInt(product.productPrice),
       listCategoriesProduct: product.listCategoriesProduct,
       productDescriptionUpload: product.productDescriptionUpload,
       mainImageUpload: mainImage,
@@ -98,6 +96,7 @@ const productsModel = {
     db.push(updatedProduct)
     db = JSON.stringify(db, null, 4);
     fs.writeFileSync(productsFilePath, db)
+    dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
   },
   deleteProduct: (id) => {
     let db = dbProducts;
@@ -107,6 +106,7 @@ const productsModel = {
 
     db = JSON.stringify(db, null, 4);
     fs.writeFileSync(productsFilePath, db)
+    dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
   }
 };
 
