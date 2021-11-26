@@ -244,13 +244,6 @@ main.mainHome section .allProducts {
   display: none;
 }
 
-main.mainHome h3 {
-  font-size: 2.5rem;
-  padding-bottom: 2%;
-  color: #666;
-  width: 100%;
-}
-
 main.mainHome section .carruselBtn {
   width: 3%;
   height: 5vh;
@@ -261,6 +254,31 @@ main.mainHome section .carruselBtn {
   border-style: double;
 }
 
+main.mainHome section.container .contentAllProducts{
+  width: 100%;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+main.mainHome .contentAllProducts h3 {
+  font-size: 2.5rem;
+  color: #666;
+}
+
+main.mainHome section.container .contentAllProducts a{
+  margin-left: 2%;
+  width: 25%;
+  color:  #11aea9;
+  text-decoration: none;
+}
+
+main.mainHome section.container .contentAllProducts i{
+  font-size: 2rem;
+  margin-top: 2%;
+  font-weight: bolder;
+}
+
+
 .articleProduct {
   width: 20%;
   height: 40vh;
@@ -269,7 +287,6 @@ main.mainHome section .carruselBtn {
   border-top: #11aea9 2px solid;
   border-left: #11aea9 3px solid;
   padding: 1%;
-  cursor: pointer;
 }
 
 .articleProduct img {
@@ -294,6 +311,14 @@ main.mainHome section .carruselBtn {
   right: 20px;
   top: -15px;
 }
+.articleProduct a{
+  text-decoration: none;
+  color: black;
+}
+
+.articleProduct a:visited{
+  text-decoration: none;
+}
 
 .articleProduct h4 {
   font-size: 1.3em;
@@ -301,16 +326,16 @@ main.mainHome section .carruselBtn {
   overflow: hidden;
 }
 
-.price {
+.articleProduct .price {
   font-size: 1.35em;
 }
 
-.discount {
+.articleProduct .discount {
   font-size: 1.3em;
   color: #5ad069;
 }
 
-.text-card-product {
+.articleProduct .text-card-product {
   padding: 1% 0px 1% 1%;
   border-top: #ebebeb 1px solid;
   position: relative;
@@ -322,12 +347,14 @@ main.mainHome section .carruselBtn {
 
 main.mainHome .categories {
   margin: 2%;
-  margin-left: 5%;
+  margin-left: 0%;
   width: 100%;
+  color: #666;
+  font-weight: bolder;
 }
 
 main.mainHome .labelCategories {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 main.mainHome .formCategories {
@@ -337,6 +364,9 @@ main.mainHome .formCategories {
   border: none;
   background: #11aea9;
   color: white;
+  font-size: 1.4em;
+  text-align: center;
+  margin-left: 1%;
 }
 
 .formCategories option {
