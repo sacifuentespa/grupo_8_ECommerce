@@ -1156,6 +1156,11 @@ main.mainAdmin{
     padding: 2%;
     border: none;
     background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+  }
+
+  main.mainHome .contentAllProducts .allProductsPc{
+    display: none;
   }
 
   .allProducts p {
