@@ -137,6 +137,20 @@ header nav ul li:hover {
   background: #11aea982;
 }
 
+
+header div.login a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
+}
+
+header div.register a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  
+}
 /* HEADER FINAL */
 
 /* FOOTER */
@@ -287,6 +301,7 @@ main.mainHome section.container .contentAllProducts i{
   border-top: #11aea9 2px solid;
   border-left: #11aea9 3px solid;
   padding: 1%;
+  cursor: pointer;
 }
 
 .articleProduct img {
@@ -370,9 +385,10 @@ main.mainHome .formCategories {
 }
 
 .formCategories option {
-  background: white;
-  color: black;
+  background: #11aea9;
+  color: white;
   font-size: 1.1em;
+  text-align: left;
 }
 
 /* main.mainHome FINAL */
@@ -837,7 +853,6 @@ main.mainLogin section{
   justify-content: space-between;
   margin: 1%;
 }
-
 
 .mainLogin form input {
   width: 80%;
