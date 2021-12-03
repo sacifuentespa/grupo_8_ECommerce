@@ -5,7 +5,7 @@ const controller = {
     res.render("users/register", { title: "Registro Usuario" });
   },
   uploadNewUser: (req, res) => {
-    // usersModel.newUser(req.body);
+    usersModel.newUser(req.body);
     res.redirect("/");
   },
   getLogin: (req, res) => {
