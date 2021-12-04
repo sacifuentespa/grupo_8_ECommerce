@@ -2,7 +2,7 @@
 
 ## Método:
 
-Usamos el "método estrella de mar", el cual consiste en usar un diagrama con forma de estrella de mar que permite analizar las siguientes áreas:
+Usamos el "método estrella de mar", el cual consiste en usar un diagrama con forma de estrella de mar que nos permite analizar las siguientes áreas:
 
 - **Continuar haciendo:** Prácticas que han gustado y que se desean mantener.
 - **Menos de:** Prácticas que no son útiles en las circunstancias actuales.
@@ -81,3 +81,27 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 
 - **Comenzar a hacer:**
 	-No encontramos prácticas que debamos empezar a implementar por el momento. 
+
+	## **Sprit 4:**
+
+## **Resultados:**
+
+- **Continuar haciendo:**
+	-Usar Discord y Whatsapp como canales de comunicación escrita.
+	-Reunirnos una vez por semana (Weekly).
+
+- **Menos de:**
+	-No encontramos prácticas que debamos hacer menos por el momento. 
+
+- **Mas de:**
+    -Usar whatsapp con mayor frecuencia para comunicar errores o difucultades.
+	-Comunicar acertivamente las dificultades que se puedan presentar.
+	-Ampliar el conocimiento sobre las ramas de GitHub y usarlas más a menudo.
+	-Reunirse en grupo para resolver dificultades que se presente a nivel individual aunque no sea responsabilidad directa. 
+
+- **Dejar de hacer:**
+    -Dejar de usar Discord para reuniones virtuales debido a dificultades con la plataforma. 
+
+- **Comenzar a hacer:**
+	-Trasladar los encuentros virtuales a Meet. 
+	-Anticipar los entregables para tener tiempo de corregir errores y tener oportunidades de mejora.
