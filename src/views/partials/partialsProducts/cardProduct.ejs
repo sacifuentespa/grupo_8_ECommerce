@@ -1,0 +1,15 @@
+<article class="articleProduct">
+    <a href="/product/<%= product.id %> ">
+        <img src="/img/imgProducts/<%= product.mainImageUpload %>"
+            alt="<%= product.productName %>" class="product_img">
+        <div class="text-card-product">
+            <i class="fas fa-truck"></i>
+            <p class="price">$<%= product.productPrice %>
+            </p>
+            <p class="discount">40% off</p>
+            <h4>
+                <%= product.productName %>
+            </h4>
+        </div>
+    </a>
+</article>

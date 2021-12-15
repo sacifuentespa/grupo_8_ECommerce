@@ -19,23 +19,8 @@
                     </div>
                     <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
                     <% for(let i=0; i<4; i++){ %>
-
-                        <article class="articleProduct">
-                            <img src="/img/imgProducts/<%= products[i].mainImageUpload %>"
-                                alt="<%= products[i].productName %>" class="product_img">
-                            <div class="text-card-product">
-                                <i class="fas fa-truck"></i>
-                                <p class="price">$<%= products[i].productPrice %>
-                                </p>
-                                <p class="discount">40% off</p>
-                                <a href="/product/<%= products[i].id %> ">
-                                    <h4>
-                                        <%= products[i].productName %>
-                                    </h4>
-                                </a>
-                            </div>
-                        </article>
-                        <% } %>
+                        <%- include('../partials/partialsProducts/cardProduct', {product: products[i]}) %> 
+                    <% } %>
                             <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
                             <a href="/listProducts" class="allProducts">
                                 <p>Ver todas</p>
@@ -59,23 +44,8 @@
                     </div>
                     <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
                     <% for(let i=4; i<8; i++){ %>
-
-                        <article class="articleProduct">
-                            <img src="/img/imgProducts/<%= products[i].mainImageUpload %>"
-                                alt="<%= products[i].productName %>" class="product_img">
-                            <div class="text-card-product">
-                                <i class="fas fa-truck"></i>
-                                <p class="price">$<%= products[i].productPrice %>
-                                </p>
-                                <p class="discount">40% off</p>
-                                <a href="/product/<%= products[i].id %> ">
-                                    <h4>
-                                        <%= products[i].productName %>
-                                    </h4>
-                                </a>
-                            </div>
-                        </article>
-                        <% } %>
+                        <%- include('../partials/partialsProducts/cardProduct', {product: products[i]}) %> 
+                    <% } %>
                             <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
                             <a href="/listProducts" class="allProducts">
                                 <p>Ver todas</p>

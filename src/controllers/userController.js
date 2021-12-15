@@ -1,4 +1,5 @@
 const usersModel = require("../model/users.js");
+const bycrypt = require("bcryptjs")
 
 const controller = {
   getRegister: (req, res) => {
@@ -12,12 +13,31 @@ const controller = {
     res.render("users/login", { title: "Iniciar Sesión" });
   },
   comprobationLogin: (req, res) => {
-    //usersModel.comprobation(req.body.email, req.body.password);
-    res.redirect("/");
+    let userToLoggin = usersModel.findByEmail(req.body.email)
+    if (userToLoggin) {
+      // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
+      let validatePassword = req.body.password == userToLoggin.password;
+      if(validatePassword){
+        delete userToLoggin.password;
+        req.session.userLogged = userToLoggin
+        res.redirect("/")
+      }
+    }
+    res.render("users/login", {
+      title: "Iniciar Sesión",
+      errors: 
+        {msg:"Crendenciales invalidas"}
+    })
+  },
+  logOut: (req, res) => {
+    //destroy the cookie
+    //res.clearCookie('userEmail')
+    req.session.destroy();
+    res.redirect('/')
   },
   deleteUser: (req, res) => {
-    // usersModel.deleteUser(req.body.id);
-    res.redirect("/");
+    usersModel.deleteUser(req.body.id);
+    res.redirect("/admin/users/314");
   },
 };
 

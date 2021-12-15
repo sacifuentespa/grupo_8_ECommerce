@@ -13,7 +13,7 @@ const controller = {
     getAllUsers: (req, res) => {
         let users = usersModel.getAllUsers
         if(req.params.password == 271){
-            res.render("/admin", {tittle:"Admin Users", users: users})
+            res.render("admin", {tittle:"Admin Users", users: users})
         }else{
             res.render('notFound', {tittle: "Error 404"});
         }

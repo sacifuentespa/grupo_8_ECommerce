@@ -10,8 +10,13 @@
                 <section>
                     <h1>Iniciar sesión</h1>
                     <form class="formLogin" action="/login" method="post">
-                        <input type="email" name="emailUsuario" placeholder="Correo electronico" required>
-                        <input type="password" name="passwordUsuario" placeholder="Contraseña" required>
+                        <input type="email" name="email" placeholder="Correo electronico" required>
+                        <input type="password" name="password" placeholder="Contraseña" required>
+                        <% if (locals.errors) { %>
+                            <div class="textDanger">
+                                <p><%= errors.msg %></p>
+                            </div>
+                        <% } %>
                         <div>
                             <input type="checkbox" name="remindMe" id="remindMe" class="remind">
                             <label for="remindMe">Recuerdame</label>

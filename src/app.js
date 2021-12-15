@@ -4,8 +4,16 @@ const app = express();
 const port = process.env.PORT || 3000;
 const routes = require("./routes/main.routes");
 const methodOverride = require('method-override');
+const session = require("express-session")
+const autUser = require("./middleware/authUser")
 
 //configuration
+app.use(session({
+  secret: "exampleSecret",
+  resave: false,
+  saveUnitialized: false
+}))
+app.use(autUser)
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended: false}));

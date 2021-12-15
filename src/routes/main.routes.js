@@ -27,6 +27,7 @@ router.get("/cart", mainController.getCart);
 
 //login
 router.get("/login", usersController.getLogin);
+router.post("/login", usersController.comprobationLogin)
 
 //register
 router.get("/register", usersController.getRegister);
@@ -34,6 +35,9 @@ router.post("/register", usersController.uploadNewUser);
 
 //list all products
 router.get("/listProducts", productsController.getProducts)
+
+//logout
+router.post("/logout", usersController.logOut)
 
 //admin
 router.get("/admin/products/:password", adminController.getAllProducts)

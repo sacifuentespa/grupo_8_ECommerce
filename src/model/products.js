@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 //db
-const productsFilePath = path.resolve(__dirname, "./products.json");
+const productsFilePath = path.resolve(__dirname, "../database/products.json");
 let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const newId = () => {
