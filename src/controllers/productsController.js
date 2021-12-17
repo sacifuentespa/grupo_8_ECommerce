@@ -1,4 +1,5 @@
 const productsModel = require("../model/products");
+const { validationResult } = require('express-validator')
 
 const controller = {
   getNewProduct: (req, res) => {
@@ -17,8 +18,17 @@ const controller = {
     res.render("products/listProducts", {title: "Productos", products: products})
   },
   uploadNewProduct: (req, res) => {
+    let resultValidation = validationResult(req)
+    if (resultValidation.errors.length > 0){
+      console.log(resultValidation.errors)
+      res.render("products/productUpload", { title: "Publicar Producto", 
+      errors: resultValidation.mapped(),
+      oldData: req.body
+    })
+    }else{
     let product = productsModel.newProduct(req.body, req.files)
     res.render("products/product", {title: product.productName, product: product});
+    }
     // res.redirect(`product/${req.body.id}`);
   },
   getUpdateProduct: (req, res) => {
