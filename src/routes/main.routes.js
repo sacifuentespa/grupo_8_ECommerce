@@ -6,6 +6,7 @@ const usersController = require("../controllers/userController");
 const adminController = require("../controllers/adminController")
 const cpUploadProduct = require("../middleware/uploadFileProduct")
 const validations = require("../middleware/validationUpload")
+const validationsEdit = require("../middleware/validationEdit")
 
 
 //home
@@ -21,7 +22,7 @@ router.post("/productUpload", cpUploadProduct, validations, productsController.u
 
 //productEdition
 router.get("/productEdit/:id", productsController.getUpdateProduct);
-router.put("/productEdit", cpUploadProduct, productsController.uploadUpdateProduct);
+router.put("/productEdit", cpUploadProduct, validationsEdit, productsController.uploadUpdateProduct);
 
 
 //cart

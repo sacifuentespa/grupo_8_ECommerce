@@ -6,6 +6,7 @@ const path = require("path");
 const productsFilePath = path.resolve(__dirname, "../database/products.json");
 let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+
 //ruta imagenes; para usar función deleteFileImage más facilmente
 const productsFileImagesPath = path.resolve(__dirname,'../public/img/imgProducts')
 
@@ -23,12 +24,14 @@ const productsModel = {
   id: newId(),
   getProducts: () => {
     return dbProducts;
-  },
-  newProduct: (product, files) => {
+  },deleteFileImage: function (imageName){
+    //Funcion para eliminar imagenes de una ruta 
+    fs.rmSync(productsFileImagesPath + '/' + imageName)
+  }
+  ,
+  newProduct: function(product, files) {
     let images = [];
-
-    // solo acepta los formatos siguientes y no guarda el archivo de otra forma
-    let acceptedFormats = ['.jpg', '.png', '.webp', '.jpeg', '.jfif']
+    
 
     if(files["imagesUpload"]){
       images = files["imagesUpload"].map((image) => {
@@ -47,6 +50,10 @@ const productsModel = {
       aimUpload: product.aimUpload,
       categoryExchange: product.categoryExchange,
     };
+
+    
+
+
     let db = dbProducts;
     db.push(newProduct)
     db = JSON.stringify(db, null, 4);
@@ -63,11 +70,6 @@ const productsModel = {
     
     return searchProduct[0];
   },
-  deleteFileImage: function (imageName){
-    //Funcion para eliminar imagenes de una ruta 
-    fs.rmSync(productsFileImagesPath + '/' + imageName)
-  }
-  ,
   //updateProduct sirve para editar un producto
   updateProduct: function(product, files){
     let db = dbProducts;

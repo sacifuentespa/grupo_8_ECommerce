@@ -14,12 +14,23 @@
 
                     <div class="productNameUpload">
                         <label>Nombre del producto</label>
-                        <input type="text" name="productName" value="<%= product.productName %>" required>
+                        <input type="text" name="productName" value="<%= product.productName %>" >
+
+                        <% if(locals.errors && errors.productName){ %>
+                            <div class= "validationError">
+                                <%= errors.productName.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="productPriceUpload">
                         <label>Precio del producto</label>
-                        <input type="number" name="productPrice" value="<%= product.productPrice %>" placeholder="Precio2" required>
+                        <input type="number" name="productPrice" value="<%= product.productPrice %>" placeholder="Precio2">
+                        <% if(locals.errors && errors.productPrice){ %>
+                            <div class= "validationError">
+                                <%= errors.productPrice.msg %>
+                            </div>
+                        <% } %>       
                     </div>
 
                     <div class="listCategoriesProductUpload">
@@ -38,17 +49,32 @@
 
                     <div class="productDescriptionUpload">
                         <label>Descripición del producto</label>
-                        <textarea name="productDescriptionUpload" required><%= product.productDescriptionUpload %></textarea>
+                        <textarea name="productDescriptionUpload"><%= product.productDescriptionUpload %></textarea>
+                        <% if(locals.errors && errors.productDescriptionUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.productDescriptionUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="mainImageUpload">
                         <label>Imagen principal</label>
                         <input type="file" name="mainImageUpload">
+                        <% if(locals.errors && errors.mainImageUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.mainImageUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="imagesUpload">
                         <label>Imagenes del producto</label>
                         <input type="file" name="imagesUpload" multiple>
+                        <% if(locals.errors && errors.imagesUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.imagesUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="aimUpload">
@@ -56,6 +82,13 @@
 
                         <label><input type="checkbox" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
                         <label><input type="checkbox" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>
+                        
+                        <% if(locals.errors && errors.aimUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.aimUpload.msg %>
+                            </div>
+                        <% } %> 
+                    
                     </div>
 
                     <div class="questionExchange">
