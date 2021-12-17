@@ -13,14 +13,30 @@
 
                     <div class="productNameUpload">
                         <label>Nombre del producto</label>
-                        <input type="text" name="productName" placeholder="Nombre del producto" required>
+                        <input type="text" name="productName" 
+                        value = "<%= locals.oldData ? oldData.productName : null %>"
+                        placeholder="Nombre del producto" >
+                        
+                        <% if(locals.errors && errors.productName){ %>
+                            <div class= "validationError">
+                                <%= errors.productName.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="productPriceUpload">
                         <label>Precio del producto</label>
-                        <input type="number" name="productPrice" placeholder="Precio" required>
+                        <input type="number" name="productPrice" 
+                        value = "<%= locals.oldData ? oldData.productPrice : null %>""
+                        placeholder="Precio" required>
+                        <% if(locals.errors && errors.productPrice){ %>
+                            <div class= "validationError">
+                                <%= errors.productPrice.msg %>
+                            </div>
+                        <% } %>                    
                     </div>
 
+                        
                     <div class="listCategoriesProductUpload">
                         <label>Categoría del producto</label>
                         <select name="listCategoriesProduct">
@@ -37,17 +53,32 @@
 
                     <div class="productDescriptionUpload">
                         <label>Descripición del producto</label>
-                        <textarea name="productDescriptionUpload" required></textarea>
+                        <textarea name="productDescriptionUpload" ><%= locals.oldData ? oldData.productDescriptionUpload : null %></textarea>
+                        <% if(locals.errors && errors.productDescriptionUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.productDescriptionUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="mainImageUpload">
                         <label>Imagen principal</label>
-                        <input type="file" name="mainImageUpload" required>
+                        <input type="file" name="mainImageUpload" >
+                        <% if(locals.errors && errors.mainImageUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.mainImageUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="imagesUpload">
                         <label>Imagenes del producto</label>
                         <input type="file" name="imagesUpload" multiple>
+                        <% if(locals.errors && errors.imagesUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.imagesUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="aimUpload">
@@ -55,6 +86,12 @@
 
                         <label><input type="checkbox" name="aimUpload" value="vender">Vender</label>
                         <label><input type="checkbox" name="aimUpload" value="cambiar">Cambiar</label>
+                        
+                        <% if(locals.errors && errors.aimUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.aimUpload.msg %>
+                            </div>
+                        <% } %> 
                     </div>
 
                     <div class="questionExchange">
