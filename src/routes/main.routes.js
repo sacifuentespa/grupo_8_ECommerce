@@ -5,6 +5,8 @@ const productsController = require("../controllers/productsController");
 const usersController = require("../controllers/userController");
 const adminController = require("../controllers/adminController")
 const cpUploadProduct = require("../middleware/uploadFileProduct")
+const validations = require("../middleware/validationUpload")
+
 
 //home
 router.get("/", mainController.getIndex);
@@ -15,11 +17,11 @@ router.get("/product/:id", productsController.getProduct);
 
 //productPageUpload
 router.get("/productUpload", productsController.getNewProduct);
-router.post("/productUpload", cpUploadProduct,productsController.uploadNewProduct);
+router.post("/productUpload", cpUploadProduct, validations, productsController.uploadNewProduct);
 
 //productEdition
 router.get("/productEdit/:id", productsController.getUpdateProduct);
-router.put("/productEdit", cpUploadProduct,productsController.uploadUpdateProduct);
+router.put("/productEdit", cpUploadProduct, productsController.uploadUpdateProduct);
 
 
 //cart

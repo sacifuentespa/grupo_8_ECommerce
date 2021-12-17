@@ -1055,6 +1055,13 @@ main.mainAdmin{
 
 /* final admin table */
 
+/* productUpload errors */
+div.validationError {
+  color: red
+}
+
+/* final productUpload errors*/
+
 /* Media Queries */
 /* Phone */
 @media (max-width: 480px) {

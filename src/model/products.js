@@ -6,6 +6,9 @@ const path = require("path");
 const productsFilePath = path.resolve(__dirname, "../database/products.json");
 let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+//ruta imagenes; para usar función deleteFileImage más facilmente
+const productsFileImagesPath = path.resolve(__dirname,'../public/img/imgProducts')
+
 const newId = () => {
     let last = 0;
     let db = dbProducts;
@@ -23,6 +26,9 @@ const productsModel = {
   },
   newProduct: (product, files) => {
     let images = [];
+
+    // solo acepta los formatos siguientes y no guarda el archivo de otra forma
+    let acceptedFormats = ['.jpg', '.png', '.webp', '.jpeg', '.jfif']
 
     if(files["imagesUpload"]){
       images = files["imagesUpload"].map((image) => {
@@ -50,14 +56,19 @@ const productsModel = {
   },
   searchProduct: function(id){
     let db = dbProducts;
-    
-
+  
     let searchProduct = db.filter(product => {
       return  product.id == id;
     });
     
     return searchProduct[0];
   },
+  deleteFileImage: function (imageName){
+    //Funcion para eliminar imagenes de una ruta 
+    fs.rmSync(productsFileImagesPath + '/' + imageName)
+  }
+  ,
+  //updateProduct sirve para editar un producto
   updateProduct: function(product, files){
     let db = dbProducts;
     let idProduct = product.id
@@ -70,7 +81,11 @@ const productsModel = {
 
     let mainImage = productToEdit.mainImageUpload 
     let images = productToEdit.imagesUpload
+    //se agregan dos variables que seran los nombres de los archivos de imagenes originales
+    let originalMainImage = mainImage
+    let originalImages = images
 
+    // si se actualizan las imagenes se cambian los nombres de tales imagenes por los nuevos
     if(files["mainImageUpload"]){
       mainImage = files["mainImageUpload"][0].filename
     }
@@ -80,7 +95,19 @@ const productsModel = {
         return image.filename;
       })
     } 
+    
+    //si los nombres difieren con los originales se eliminan los archivos originales
+    if(originalMainImage != mainImage){
+      this.deleteFileImage(originalMainImage)
+    }
 
+    if(originalImages != images){
+    if(originalImages.length>=1){
+      for(let i = 0; i<originalImages.length;i++){
+         this.deleteFileImage(originalImages[i])
+     }
+   }}
+    
     let updatedProduct = {
       id: parseInt(idProduct),
       productName: product.productName,
@@ -98,16 +125,35 @@ const productsModel = {
     fs.writeFileSync(productsFilePath, db)
     dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
   },
-  deleteProduct: (id) => {
+  
+  deleteProduct: function(id) {
     let db = dbProducts;
-    db = db.filter(product => {
-      return product.id != id;
-    })
+    
+    // Selecciona el producto a remover
+    let productToDelete = this.searchProduct(id)
+    
+    // Guarda los nombres de los archivos de imagenes a eliminar
+    let mainImage = productToDelete.mainImageUpload 
+    let images = productToDelete.imagesUpload
 
+    this.deleteFileImage(mainImage)
+    
+
+    if(images.length>=1){
+       for(let i = 0; i<images.length;i++){
+          this.deleteFileImage(images[i])
+      }
+    }
+
+     db = db.filter(product => {
+     return product.id != id;
+     })
+    
     db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(productsFilePath, db)
-    dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+     fs.writeFileSync(productsFilePath, db)
+     dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
   }
 };
 
 module.exports = productsModel
+
