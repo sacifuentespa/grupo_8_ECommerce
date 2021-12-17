@@ -14,6 +14,7 @@ const validations = [
         let fileExtension = path.extname(req.files["mainImageUpload"][0].originalname)
         if(!acceptedFormats.includes(fileExtension)){
             throw new Error(`Las extensiones permitidas son ${acceptedFormats.join(', ')}`)
+        //sin el else el value queda como undefined haciendo que haya errores en la validación aunque se cumplan los requisitos
         }else{
             return fileExtension
         }
