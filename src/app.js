@@ -11,7 +11,7 @@ const autUser = require("./middleware/authUser")
 app.use(session({
   secret: "exampleSecret",
   resave: false,
-  saveUnitialized: false
+  saveUninitialized: false
 }))
 app.use(autUser)
 app.use(express.static(path.resolve(__dirname, "./public")));
