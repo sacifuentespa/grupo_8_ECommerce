@@ -40,6 +40,7 @@ router.post("/register", usersController.uploadNewUser);
 router.get("/listProducts", productsController.getProducts)
 
 //logout
+router.get("/logout", usersController.logOut)
 router.post("/logout", usersController.logOut)
 
 //admin

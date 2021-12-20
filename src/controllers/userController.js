@@ -21,15 +21,15 @@ const controller = {
   comprobationLogin: (req, res) => {
 
     let userToLoggin = usersModel.findByEmail(req.body.email)
-    console.log(userToLoggin)
 
 
     if (userToLoggin) {
       // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
       let validatePassword = req.body.password == userToLoggin.password;
       if(validatePassword){
-        delete userToLoggin.password
-        req.session.userLogged = userToLoggin
+        let userNoPassword = Object.assign({}, userToLoggin)
+        delete userNoPassword.password
+        req.session.userLogged = userNoPassword;
         if(req.body.remindMe != undefined){
           res.cookie('remindMe', userToLoggin.email, {maxAge : 3600000})
         }
