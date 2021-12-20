@@ -17,7 +17,7 @@ const controller = {
       usersModel.newUser(req.body);
       res.redirect("/login");
     } else {
-      res.render("users/register", { title: "Registro Usuario", errors: errors.array(), old: req.body });
+      res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     }
   },
   getLogin: (req, res) => {

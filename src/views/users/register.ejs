@@ -10,19 +10,26 @@
                 <section>
                     <h1>Crear cuenta</h1>
         
-                    <% if(locals.errors) { errors.forEach( error=> { %>
-                        <li class="errorsRegister">
-                            <%= error.msg%>
-                        </li>
-                        <% }) } %>
+             
 
                     <form class="formLogin" action="/register" method="post" enctype="multipart/form-data">
                         <div class="contentForm">
                             <input type="text" name="name" placeholder="Nombre(s)" class="inputMed"
                             value="<%= locals.old ? old.name : '' %>">
+                            
                             <input type="text" name="lastName" placeholder="Apellido(s)" class="inputMed"
                             value="<%= locals.old ? old.lastName : '' %>">
                         </div>
+                        <% if(locals.errors && errors.name){ %>
+                            <div class= "validationError">
+                                <%= errors.name.msg %>
+                            </div>
+                        <% } %>
+                        <% if(locals.errors && errors.lastName){ %>
+                            <div class= "validationError">
+                                <%= errors.lastName.msg %>
+                            </div>
+                        <% } %>
                         <input type="email" name="email" placeholder="Correo electrónico"
                         value="<%= locals.old ? old.email : '' %>">
                         <div class="contentForm">
