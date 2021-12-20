@@ -5,7 +5,9 @@ const port = process.env.PORT || 3000;
 const routes = require("./routes/main.routes");
 const methodOverride = require('method-override');
 const session = require("express-session")
+const cookieParser = require ('cookie-parser')
 const autUser = require("./middleware/authUser")
+
 
 //configuration
 app.use(session({
@@ -13,11 +15,12 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }))
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(cookieParser())
 app.use(autUser)
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(methodOverride('_method'));
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
 app.set("views", path.resolve(__dirname, "./views"));
 app.set("view engine", "ejs");
 app.use("/", routes);
