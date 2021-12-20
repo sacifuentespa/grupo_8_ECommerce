@@ -1,6 +1,6 @@
 const multer = require('multer')
 const path = require('path')
-const productsController = require("../model/products.js");
+// const productsController = require("../model/products.js");
 
 //multer config
 const storage = multer.diskStorage({

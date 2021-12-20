@@ -7,6 +7,8 @@ const adminController = require("../controllers/adminController")
 const cpUploadProduct = require("../middleware/uploadFileProduct")
 const validations = require("../middleware/validationUpload")
 const validationsEdit = require("../middleware/validationEdit")
+const cpUploadUser = require("../middleware/uploadFileUser");
+const validationRegister = require("../middleware/validationRegister")
 
 
 //home
@@ -34,7 +36,7 @@ router.post("/login", usersController.comprobationLogin)
 
 //register
 router.get("/register", usersController.getRegister);
-router.post("/register", usersController.uploadNewUser);
+router.post("/register", cpUploadUser, validationRegister, usersController.uploadNewUser);
 
 //list all products
 router.get("/listProducts", productsController.getProducts)

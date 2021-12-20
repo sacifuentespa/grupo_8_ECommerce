@@ -10,7 +10,7 @@
                 <section>
                     <h1>Iniciar sesión</h1>
                     <form class="formLogin" action="/login" method="post">
-                        <input type="email" name="email" placeholder="Correo electronico" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <% if (locals.errors) { %>
                             <div class="textDanger">
@@ -19,9 +19,9 @@
                         <% } %>
                         <div>
                             <input type="checkbox" name="remindMe" id="remindMe" class="remind">
-                            <label for="remindMe">Recuerdame</label>
+                            <label for="remindMe">Recuérdame</label>
                         </div>
-                        <button class="buttoncontinuar" type="submit">Iniciar sesión</button>
+                        <button class="buttoncontinuar" type="submit">Continuar</button>
                     </form>
                     <a href="/register">¿Aún no tienes cuenta?</a>
                     <a href="#">¿Has olvidado tu contraseña?</a>

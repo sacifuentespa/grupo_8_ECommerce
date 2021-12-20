@@ -1,13 +1,21 @@
 const usersModel = require("../model/users.js");
 const bycrypt = require("bcryptjs")
+const { validationResult } = require("express-validator");
+
 
 const controller = {
   getRegister: (req, res) => {
     res.render("users/register", { title: "Registro Usuario" });
   },
   uploadNewUser: (req, res) => {
-    usersModel.newUser(req.body);
-    res.redirect("/");
+    let errors = validationResult(req);
+    if (errors.isEmpty()) {
+      let user = req.body;
+      usersModel.newUser(req.body);
+      res.redirect("/login");
+    } else {
+      res.render("users/register", { title: "Registro Usuario", errors: errors.array(), old: req.body });
+    }
   },
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });
@@ -17,7 +25,7 @@ const controller = {
     if (userToLoggin) {
       // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
       let validatePassword = req.body.password == userToLoggin.password;
-      if(validatePassword){
+      if (validatePassword) {
         delete userToLoggin.password;
         req.session.userLogged = userToLoggin
         res.redirect("/")
@@ -25,8 +33,8 @@ const controller = {
     }
     res.render("users/login", {
       title: "Iniciar Sesión",
-      errors: 
-        {msg:"Crendenciales invalidas"}
+      errors:
+        { msg: "Crendenciales inválidas" }
     })
   },
   logOut: (req, res) => {

@@ -21,12 +21,7 @@ const usersModel = {
   getUsers: () => {
     return dbUsers;
   },
-  newUser: (user, file) => {
-    let avatar
-    if(!file["avatar"]){
-      avatar = "avatarUndefined.jpg"
-    }
-    avatar = file["avatar"].filename
+  newUser: (user) => {
 
     let newUser = {
     id: newId(),
@@ -34,7 +29,9 @@ const usersModel = {
     last_name: user.lastName,
     email: user.email,
     password: user.password,
-    avatar: avatar
+    confirmPassword: user.confirmPassword
+    
+    
     };
 
     let db = dbUsers;

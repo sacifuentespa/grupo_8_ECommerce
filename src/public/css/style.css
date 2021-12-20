@@ -142,8 +142,14 @@ header div.notLogged a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
+
+header div.notLogged a:hover {
+  text-decoration: underline;
+}
+
+
 
 /* HEADER FINAL */
 
@@ -814,22 +820,22 @@ main.mainLogin {
   justify-content: center;
   align-items: center;
 }
-
+ 
 main.mainLogin section{
   background-color: #b6b6b656;
-  border-radius: 10px;
-  width: 50%;
+  border-radius: 5px;
+  width: 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1%;
 }
-
+ 
 .mainLogin h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
-
+ 
 .mainLogin form {
   width: 100%;
   display: flex;
@@ -837,76 +843,88 @@ main.mainLogin section{
   justify-content: center;
   align-items: center;
 }
-
+ 
 .mainLogin form.formLogin div{
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
-
+ 
 .mainLogin form.formLogin div.contentForm{
   width: 80%;
   justify-content: space-between;
   margin: 1%;
 }
-
+ 
 .mainLogin form input {
   width: 80%;
   margin: 2%;
   height: 3.5vh;
   border-radius: 5px;
-  font-size: 1.5em;
-  padding: 1%;
+  font-size: 1.3em;
+  padding: 1.5%;
   border: none;
   outline-color: #11aea9;
 }
-
+ 
 .mainLogin form input.inputMed{
   width: 47%;
   display: inline-block;
   margin: 0%;
 }
-
+ 
 .mainLogin form label{
   font-size: 1.1em;
 }
-
+ 
 .mainLogin form input.remind{
   display: inline-block;
   width: 2.5vh;
 }
-
+ 
 .mainLogin form input.remind{
   display: inline-block;
 }
-
+ 
 .mainLogin form button {
   width: 20%;
   height: 4vh;
-  background-color: #11aea9;
+  background-color: #3483fa;
   border-radius: 10px;
   cursor: pointer;
   color: white;
   margin: 1%;
   font-size: 1.3em;
+  border-radius: 5px;
+  border: none;
 }
-
+ 
 .mainLogin a{
   text-decoration: none;
   color: rgb(24, 41, 201);
   font-size: 1.1em;
+  margin: 1%;
 }
-
+ 
+.mainLogin a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+ 
 .mainLogin form button:hover {
-  background-color: #18a1a1;
+  background-color: blue;
 }
-
+ 
+.mainLogin form input:focus{
+  border: none;
+  box-shadow: 0px 0px 10px rgba(103, 223, 241, 0.646);
+}
+ 
 .mainLogin form input.remind:focus{
   box-shadow: none;
 }
-
-
+ 
 .mainLogin form input:focus{
   box-shadow: 5px 5px 10px rgba(103, 223, 241, 0.646);
 }
@@ -915,6 +933,26 @@ main.mainLogin section{
   font-size: 1.5rem;
   color:  #ee2222;
 }
+
+.mainLogin li.errorsRegister {
+  font-size: 1.2rem;
+  color:  #ee2222;
+  margin-top: 0.5%;
+}
+
+.mainLogin div label.addImgProfile {
+  margin: 2% ;
+  font-size: 1.3rem;
+  color:#666;
+  justify-content: center;
+}
+
+.mainLogin div .addAvatar {
+  padding: 3px;
+  font-size: 1.3rem;
+  color:#666;
+}
+
 /*FINAL REGISTER Y LOGIN*/
 
 /* main.mainProductUpload */
@@ -971,6 +1009,7 @@ main.mainProductUpload form textarea {
 /* mainProductUpload FINAL */
 
 /* ERROR 404 */
+
 #bodyError404 {
   background: #11aea9;
   width: 100%;
@@ -979,26 +1018,27 @@ main.mainProductUpload form textarea {
   justify-content: center;
   align-items: center;
 }
-
+ 
 #bodyError404 .container-404 {
   text-align: center;
   width: 40%;
-  background: white;
+  background-color: white;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(103, 223, 241, 0.646);
   border-radius: 5px;
   line-height: 2;
-  font-size: 14px;
 }
-
+ 
 #bodyError404 .container-404 p {
-  font-size: 14px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color:#666;
 }
-
+ 
 #bodyError404 .container-404 a {
-  font-size: 14px;
+  font-size: 1.4em;
 }
-
+ 
 .botonvolvererror {
   display: inline-block;
   margin-top: 20px;
@@ -1008,16 +1048,17 @@ main.mainProductUpload form textarea {
   padding: 10px;
   border-radius: 5px;
 }
-
+ 
 .botonvolvererror:hover {
   background: blue;
-  font-weight: bold;
+}
+ 
+.error_404 {
+  width: 60%;
+  height: 60%;
 }
 
-.error_404 {
-  width: 50%;
-  height: 50%;
-}
+
 /* Final 404 */
 
 /* LIST PRODUCTS */

@@ -11,7 +11,6 @@ const storage = multer.diskStorage({
     }
 })
 
-const uploadFile = multer({storage})
-const cpUpload = uploadFile.fields([{ name: 'mainImageUpload', maxCount: 1 }, { name: 'imagesUpload', maxCount: 8 }])
-
-module.exports = cpUpload;
+const uploadFile = multer({storage});
+const cpUploadUser = uploadFile.single("avatar");
+module.exports = cpUploadUser;

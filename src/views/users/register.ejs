@@ -9,22 +9,38 @@
             <main class="mainLogin">
                 <section>
                     <h1>Crear cuenta</h1>
-                    <form class="formLogin" action="/register" method="post">
+        
+                    <% if(locals.errors) { errors.forEach( error=> { %>
+                        <li class="errorsRegister">
+                            <%= error.msg%>
+                        </li>
+                        <% }) } %>
+
+                    <form class="formLogin" action="/register" method="post" enctype="multipart/form-data">
                         <div class="contentForm">
-                            <input type="text" name="name" placeholder="Nombres" class="inputMed">
-                            <input type="text" name="lastName" placeholder="Apellidos" class="inputMed"> 
+                            <input type="text" name="name" placeholder="Nombre(s)" class="inputMed"
+                            value="<%= locals.old ? old.name : '' %>">
+                            <input type="text" name="lastName" placeholder="Apellido(s)" class="inputMed"
+                            value="<%= locals.old ? old.lastName : '' %>">
                         </div>
-                        <input type="email" name="email" placeholder="Correo electronico">
+                        <input type="email" name="email" placeholder="Correo electrónico"
+                        value="<%= locals.old ? old.email : '' %>">
                         <div class="contentForm">
                             <input type="password" name="password" placeholder="Contraseña" class="inputMed">
-                            <input type="password" name="password" placeholder="Confirmar contraseña" class="inputMed">
+                            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña"
+                                class="inputMed">
+                        </div>
+                        <div class="contentForm">
+                            <label class="addImgProfile">Agrega una imagen de perfil</label>
+                            <input class="addAvatar" type="file" name="avatar">
                         </div>
                         <div>
                             <input type="checkbox" name="terminos" id="accept" class="remind">
-                            <label for="accept">Acepto términos y condiciones</label>   
+                            <label for="accept">Acepto términos y condiciones</label>
                         </div>
-                        <button type="submit">Crear Usuario</button>
+                        <button type="submit">Continuar</button>
                     </form>
+                    <a href="/login">¿Ya tienes una cuenta?</a>
                 </section>
             </main>
             <!-- footer -->

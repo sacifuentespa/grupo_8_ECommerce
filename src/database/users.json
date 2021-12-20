@@ -64,19 +64,34 @@
     },
     {
         "id": 10,
-        "first_name": "Claribel",
-        "last_name": "Greatbatch",
-        "email": "cgreatbatch9@nsw.gov.au",
-        "password": "hxJxFVAGUMDv"
+        "first_name": "Fulanito",
+        "last_name": "Cosme",
+        "email": "fulanito@hotmail.com",
+        "password": "123456",
+        "confirmPassword": "123456"
     },
     {
         "id": 11,
-        "first_name": "Mónica",
-        "last_name": "García",
-        "email": "monicagarcia1122@hotmail.com",
-        "password": [
-            "1234",
-            "1234"
-        ]
+        "first_name": "Pepito",
+        "last_name": "Perez",
+        "email": "pepitoperez@hotmail.com",
+        "password": "123456",
+        "confirmPassword": "123456"
+    },
+    {
+        "id": 12,
+        "first_name": "Fulanito",
+        "last_name": "Cosme",
+        "email": "cosme@hotmail.com",
+        "password": "123456",
+        "confirmPassword": "123456"
+    },
+    {
+        "id": 13,
+        "first_name": "Fulanito",
+        "last_name": "Cosme",
+        "email": "fulanito@hotmail.com",
+        "password": "123456",
+        "confirmPassword": "123456"
     }
 ]
