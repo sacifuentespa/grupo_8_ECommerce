@@ -42,6 +42,7 @@ router.post("/register", cpUploadUser, validationRegister, usersController.uploa
 router.get("/listProducts", productsController.getProducts)
 
 //logout
+router.get("/logout", usersController.logOut)
 router.post("/logout", usersController.logOut)
 
 //admin

@@ -5,7 +5,10 @@ const { validationResult } = require("express-validator");
 
 const controller = {
   getRegister: (req, res) => {
-    res.render("users/register", { title: "Registro Usuario" });
+    if (req.session.userLogged){
+      res.redirect("/")
+    }else{
+    res.render("users/register", { title: "Registro Usuario" })};
   },
   uploadNewUser: (req, res) => {
     let errors = validationResult(req);
@@ -18,19 +21,29 @@ const controller = {
     }
   },
   getLogin: (req, res) => {
-    res.render("users/login", { title: "Iniciar Sesión" });
+    if (req.session.userLogged){
+      res.redirect("/")
+    }else{
+    res.render("users/login", { title: "Iniciar Sesión" })};
   },
   comprobationLogin: (req, res) => {
+
     let userToLoggin = usersModel.findByEmail(req.body.email)
+
+
     if (userToLoggin) {
       // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
       let validatePassword = req.body.password == userToLoggin.password;
-      if (validatePassword) {
-        delete userToLoggin.password;
-        req.session.userLogged = userToLoggin
+      if(validatePassword){
+        let userNoPassword = Object.assign({}, userToLoggin)
+        delete userNoPassword.password
+        req.session.userLogged = userNoPassword;
+        if(req.body.remindMe != undefined){
+          res.cookie('remindMe', userToLoggin.email, {maxAge : 3600000})
+        }
         res.redirect("/")
       }
-    }
+    }   
     res.render("users/login", {
       title: "Iniciar Sesión",
       errors:

@@ -27,7 +27,7 @@ const controller = {
           productsModel.deleteFileImage(req.files["imagesUpload"][i].filename)
         }
       }
-
+      console.log(resultValidation.errors)
       res.render("products/productUpload", { title: "Publicar Producto", 
       errors: resultValidation.mapped(),
       oldData: req.body

@@ -155,19 +155,5 @@
         ],
         "aimUpload": "vender",
         "categoryExchange": "vehiculos"
-    },
-    {
-        "id": 13,
-        "productName": "Tenis Infantil Azul*tostado 2008j",
-        "productPrice": 120000,
-        "listCategoriesProduct": "ropa",
-        "productDescriptionUpload": "Tenis Wilson para niño",
-        "mainImageUpload": "img1639771604207_TenisWilson01.jpg",
-        "imagesUpload": [
-            "img1639771604207_TenisWilson0101.jpg",
-            "img1639771604209_TenisWilson0102.jpg"
-        ],
-        "aimUpload": "vender",
-        "categoryExchange": "ropa"
     }
 ]
