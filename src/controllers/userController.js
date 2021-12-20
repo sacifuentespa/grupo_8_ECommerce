@@ -14,7 +14,7 @@ const controller = {
   },
   comprobationLogin: (req, res) => {
     let userToLoggin = usersModel.findByEmail(req.body.email)
-    console.log(userToLoggin)
+    
     if (userToLoggin) {
       // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
       let validatePassword = req.body.password == userToLoggin.password;
