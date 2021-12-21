@@ -40,10 +40,6 @@ const controller = {
 
     if (userToLoggin) {
       let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
-<<<<<<< HEAD
-=======
-      // let validatePassword = req.body.password == userToLoggin.password;
->>>>>>> 56af990b719ee1a863e3cbe891c575baa5bf47ae
       if(validatePassword){
         let userNoPassword = Object.assign({}, userToLoggin)
         delete userNoPassword.password
