@@ -10,8 +10,8 @@
     <% if (locals.isLogged) { %>     
         <ul class="iconNav">
             <li class="dropdownUser">
-                <i class="far fa-user-circle"></i>
-                <ul class="modalNavBurguer" id="dropdownBurguer">
+                <img src="/img/imgUsers/<%= locals.user.avatar %>" alt="Avatar user" class="avatarUser">
+                <ul class="modalNavBurguer modalDropdownUser" >
                     <li><a href="/user/profile">Mi perfil</a></li>
                     <li><a href="/logout">Cerrar Sesión</a></li>
                 </ul>

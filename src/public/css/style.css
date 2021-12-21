@@ -149,7 +149,13 @@ header div.notLogged a:hover {
   text-decoration: underline;
 }
 
-
+header .avatarUser{
+  width: 3.5vh;
+  height: 4vh;
+  border-radius: 50%;
+  margin: 2.5vh;
+  margin-right: 0;
+}
 
 /* HEADER FINAL */
 
