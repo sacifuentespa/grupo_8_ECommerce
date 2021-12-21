@@ -93,5 +93,19 @@
         "email": "fulanito@hotmail.com",
         "password": "123456",
         "confirmPassword": "123456"
+    },
+    {
+        "id": 14,
+        "first_name": "Pepito",
+        "last_name": "Perez",
+        "email": "pepitoperez@hotmail.com",
+        "password": "$2a$10$xBbRfNy6PaUO/FhC9YJc..VTOW4NFodxiSj563f1y059ANfa5PRmO"
+    },
+    {
+        "id": 15,
+        "first_name": "Fulanito",
+        "last_name": "Cosme",
+        "email": "fulanito@hotmail.com",
+        "password": "$2a$10$RGLGE9SUMcF3bMMjK60MAO9Bfp1qZetjqedzYMHRzI8Ce3BiWIwW."
     }
 ]

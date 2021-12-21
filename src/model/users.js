@@ -1,6 +1,7 @@
 //modules
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("bcryptjs");
 
 //db
 const usersFilePath = path.resolve(__dirname, "../database/users.json");
@@ -28,10 +29,7 @@ const usersModel = {
     first_name: user.name,
     last_name: user.lastName,
     email: user.email,
-    password: user.password,
-    confirmPassword: user.confirmPassword
-    
-    
+    password: bcrypt.hashSync(user.password,10),
     };
 
     let db = dbUsers;
