@@ -14,7 +14,7 @@ const controller = {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
       let user = req.body;
-      usersModel.newUser(req.body);
+      usersModel.newUser(req.body, req.file);
       res.redirect("/login");
     } else {
       res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
@@ -26,14 +26,21 @@ const controller = {
     }else{
     res.render("users/login", { title: "Iniciar Sesión" })};
   },
+  getProfile: (req, res) => {
+    if (req.session.userLogged){
+      res.render("users/userProfile")
+    }else{
+    res.render("users/login", { title: "Iniciar Sesión" })};
+  }
+  ,
   comprobationLogin: (req, res) => {
 
     let userToLoggin = usersModel.findByEmail(req.body.email)
 
 
     if (userToLoggin) {
-      // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
-      let validatePassword = req.body.password == userToLoggin.password;
+      let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
+      // let validatePassword = req.body.password == userToLoggin.password;
       if(validatePassword){
         let userNoPassword = Object.assign({}, userToLoggin)
         delete userNoPassword.password

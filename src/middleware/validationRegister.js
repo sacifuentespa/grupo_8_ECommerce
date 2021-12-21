@@ -2,7 +2,7 @@ const { body, check } = require("express-validator");
 const path = require("path");
 const bycrypt = require("bcryptjs");
 
-let acceptedFormats = ['.jpg', '.png', '.jpeg']
+let acceptedFormats = ['.jpg', '.png', '.webp', '.jpeg', '.jfif']
 
 
 const validationRegister = [
@@ -20,18 +20,15 @@ const validationRegister = [
     }).withMessage("Las contraseñas deben coincidir"),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg']
-
-        if (!file) {
-            throw new Error("Debes agregar una imagen de perfil");
-        } else {
+        if (file) {
             let fileExtension = path.extname(file.originalname)
-            if (!acceptedExtensions.includes(fileExtension)) {
-                throw new Error("La imagen debe ser en formato JPG, PNG O JPEG");
+            if (!acceptedFormats.includes(fileExtension)) {
+                throw new Error(`Las extensiones permitidas son ${acceptedFormats.join(', ')}`);
             }
         }
         return true; 
-    })
+    }),
+    body("terminos").notEmpty().withMessage("Debes estar de acuerdo con los terminos y condiciones"),
 ];
 
 module.exports = validationRegister;

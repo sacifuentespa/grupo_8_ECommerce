@@ -1,85 +1,5 @@
 [
     {
-        "id": 1,
-        "first_name": "Joice",
-        "last_name": "Jolliss",
-        "email": "jjolliss0@geocities.jp",
-        "password": "1hh4OMDv",
-        "avatar": "https://robohash.org/quodaveritatis.png?size=50x50&set=set1"
-    },
-    {
-        "id": 2,
-        "first_name": "Clevie",
-        "last_name": "Edgeon",
-        "email": "cedgeon1@canalblog.com",
-        "password": "euJwZzlkSQ8",
-        "avatar": "https://robohash.org/quaeauteos.png?size=50x50&set=set1"
-    },
-    {
-        "id": 3,
-        "first_name": "Kayne",
-        "last_name": "Wickson",
-        "email": "kwickson2@lulu.com",
-        "password": "e01BTYjr",
-        "avatar": "https://robohash.org/solutaipsafugit.png?size=50x50&set=set1"
-    },
-    {
-        "id": 4,
-        "first_name": "Waldo",
-        "last_name": "Eisikovitsh",
-        "email": "weisikovitsh3@cbc.ca",
-        "password": "MUDXkJQ",
-        "avatar": "https://robohash.org/delectusasperioresnulla.png?size=50x50&set=set1"
-    },
-    {
-        "id": 5,
-        "first_name": "Siana",
-        "last_name": "Fewkes",
-        "email": "sfewkes4@google.es",
-        "password": "D9KU10Ui",
-        "avatar": "https://robohash.org/exquasiminus.png?size=50x50&set=set1"
-    },
-    {
-        "id": 6,
-        "first_name": "Sheila-kathryn",
-        "last_name": "Sleigh",
-        "email": "ssleigh5@example.com",
-        "password": "EqVH2H",
-        "avatar": "https://robohash.org/autrerumeius.png?size=50x50&set=set1"
-    },
-    {
-        "id": 7,
-        "first_name": "Orren",
-        "last_name": "Tarpey",
-        "email": "otarpey6@washingtonpost.com",
-        "password": "unaI0Dc4",
-        "avatar": "https://robohash.org/autemfugitin.png?size=50x50&set=set1"
-    },
-    {
-        "id": 8,
-        "first_name": "Tomaso",
-        "last_name": "Rawlence",
-        "email": "trawlence7@umn.edu",
-        "password": "8oqK30nKuMR",
-        "avatar": "https://robohash.org/maximetemporerecusandae.png?size=50x50&set=set1"
-    },
-    {
-        "id": 9,
-        "first_name": "Mab",
-        "last_name": "Petrol",
-        "email": "mpetrol8@loc.gov",
-        "password": "3Mks1JLLGD4",
-        "avatar": "https://robohash.org/perspiciatisilloet.png?size=50x50&set=set1"
-    },
-    {
-        "id": 10,
-        "first_name": "Cathy",
-        "last_name": "Pawlaczyk",
-        "email": "cpawlaczyk9@ebay.com",
-        "password": "4eIRsrw",
-        "avatar": "https://robohash.org/sequimagniab.png?size=50x50&set=set1"
-    },
-    {
         "id": 11,
         "first_name": "Pepito",
         "last_name": "Perez",
@@ -113,5 +33,13 @@
         "last_name": "Cosme",
         "email": "pepitocosme@hotmail.com",
         "password": "$2a$10$mRaF7W/r4mPrNqtDD8RJ3ejCz78qIiwbq4T80t.yt.3HL7zY.6MXO"
+    },
+    {
+        "id": 16,
+        "first_name": "Juanito",
+        "last_name": "Skinner",
+        "email": "juanitoconclonosaurios@gmail.com",
+        "password": "$2a$10$TKUZ6ePuQzt2w35klnxCIOu7NJB3dYOgoYh7fYxK00w7CZ/bojISO",
+        "avatar": ""
     }
 ]

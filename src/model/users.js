@@ -2,6 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const req = require("express/lib/request");
 
 //db
 const usersFilePath = path.resolve(__dirname, "../database/users.json");
@@ -22,7 +23,12 @@ const usersModel = {
   getUsers: () => {
     return dbUsers;
   },
-  newUser: (user) => {
+  newUser: (user, file) => {
+    
+    let fileAvatar = ""
+    if (file){
+      fileAvatar = file.filename
+    }
 
     let newUser = {
     id: newId(),
@@ -30,6 +36,7 @@ const usersModel = {
     last_name: user.lastName,
     email: user.email,
     password: bcrypt.hashSync(user.password,10),
+    avatar: fileAvatar
     };
 
     let db = dbUsers;

@@ -62,11 +62,17 @@
                                                                     </div>
                                                                     <% } %>
                                                                         <div>
-                                                                            <input type="checkbox" name="terminos"
-                                                                                id="accept" class="remind">
                                                                             <label for="accept">Acepto términos y
                                                                                 condiciones</label>
+                                                                            <input type="checkbox" name="terminos"
+                                                                                id="accept" class="remind">
+                                                                
                                                                         </div>
+                                                                        <% if(locals.errors && errors.terminos){ %>
+                                                                            <div class="validationError">
+                                                                                <%= errors.terminos.msg %>
+                                                                            </div>
+                                                                            <% } %>
                                                                         <button type="submit">Continuar</button>
                     </form>
                     <a href="/login">¿Ya tienes una cuenta?</a>

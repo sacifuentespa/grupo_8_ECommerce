@@ -19,6 +19,7 @@ const controller = {
   },
   uploadNewProduct: (req, res) => {
     let resultValidation = validationResult(req)
+    //para borrar documentos subidos de un producto que no cumpla con las validaciones
     if (resultValidation.errors.length > 0){
       if(req.files["mainImageUpload"]){
         productsModel.deleteFileImage(req.files["mainImageUpload"][0].filename)}
@@ -49,6 +50,7 @@ const controller = {
   uploadUpdateProduct: (req, res) => {
     let resultValidation = validationResult(req)
     let product = productsModel.searchProduct(req.body.id)
+    //para borrar documentos subidos de un producto que no cumpla con las validaciones
     if (resultValidation.errors.length > 0){
       if(req.files["mainImageUpload"]){
       productsModel.deleteFileImage(req.files["mainImageUpload"][0].filename)}
