@@ -36,7 +36,7 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 	-Dejar constancia de las tareas asignadas 
 	-Realizar los encuentros virtuales por discord.
 
-## **Sprit 2:**
+## **Sprint 2:**
 
 ## **Resultados:**
 
@@ -60,7 +60,7 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 	-Hacer un demo del proyecto dos días antes de la entrega.
 	-Realizar una reunión tipo Dayli al menos una vez por semana.
 
-## **Sprit 3:**
+## **Sprint 3:**
 
 ## **Resultados:**
 
@@ -82,7 +82,7 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 - **Comenzar a hacer:**
 	-No encontramos prácticas que debamos empezar a implementar por el momento. 
 
-	## **Sprit 4:**
+	## **Sprint 4:**
 
 ## **Resultados:**
 
