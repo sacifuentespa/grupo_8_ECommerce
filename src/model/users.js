@@ -33,7 +33,7 @@ const usersModel = {
   ,
   newUser: (user, file) => {
     
-    let fileAvatar = ""
+    let fileAvatar = "default.png"
     if (file){
       fileAvatar = file.filename
     }

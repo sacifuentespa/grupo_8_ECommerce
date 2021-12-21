@@ -13,7 +13,6 @@ const controller = {
   uploadNewUser: (req, res) => {
     let errors = validationResult(req);
 
-
     if (errors.isEmpty()) {
       let user = req.body;
       usersModel.newUser(req.body, req.file);
@@ -22,12 +21,10 @@ const controller = {
       usersModel.deleteFileImage(req.file.filename)
       res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     }
+    
   },
   getLogin: (req, res) => {
-    if (req.session.userLogged){
-      res.redirect("/")
-    }else{
-    res.render("users/login", { title: "Iniciar Sesión" })};
+    res.render("users/login", { title: "Iniciar Sesión" });
   },
   getProfile: (req, res) => {
     if (req.session.userLogged){
@@ -43,7 +40,6 @@ const controller = {
 
     if (userToLoggin) {
       let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
-      // let validatePassword = req.body.password == userToLoggin.password;
       if(validatePassword){
         let userNoPassword = Object.assign({}, userToLoggin)
         delete userNoPassword.password
@@ -68,7 +64,7 @@ const controller = {
   },
   deleteUser: (req, res) => {
     usersModel.deleteUser(req.body.id);
-    res.redirect("/admin/users/314");
+    res.redirect("/admin/users/271");
   },
 };
 
