@@ -22,52 +22,47 @@
                             <div class="validationError">
                                 <%= errors.name.msg %>
                             </div>
-                            <% } %>
-                                <% if(locals.errors && errors.lastName){ %>
-                                    <div class="validationError">
-                                        <%= errors.lastName.msg %>
-                                    </div>
-                                    <% } %>
-                                        <input type="email" name="email" placeholder="Correo electrónico"
-                                            value="<%= locals.old ? old.email : '' %>">
-                                        <% if(locals.errors && errors.email){ %>
-                                            <div class="validationError">
-                                                <%= errors.email.msg %>
-                                            </div>
-                                            <% } %>
-                                                <div class="contentForm">
-                                                    <input type="password" name="password" placeholder="Contraseña"
-                                                        class="inputMed">
-                                                    <input type="password" name="confirmPassword"
-                                                        placeholder="Confirmar contraseña" class="inputMed">
-                                                </div>
-                                                <% if(locals.errors && errors.password){ %>
-                                                    <div class="validationError">
-                                                        <%= errors.password.msg %>
-                                                    </div>
-                                                    <% } %>
-                                                        <% if(locals.errors && errors.confirmPassword){ %>
-                                                            <div class="validationError">
-                                                                <%= errors.confirmPassword.msg %>
-                                                            </div>
-                                                            <% } %>
-                                                                <div class="contentForm">
-                                                                    <label class="addImgProfile">Agrega una imagen de
-                                                                        perfil</label>
-                                                                    <input class="addAvatar" type="file" name="avatar">
-                                                                </div>
-                                                                <% if(locals.errors && errors.avatar){ %>
-                                                                    <div class="validationError">
-                                                                        <%= errors.avatar.msg %>
-                                                                    </div>
-                                                                    <% } %>
-                                                                        <div>
-                                                                            <input type="checkbox" name="terminos"
-                                                                                id="accept" class="remind">
-                                                                            <label for="accept">Acepto términos y
-                                                                                condiciones</label>
-                                                                        </div>
-                                                                        <button type="submit">Continuar</button>
+                        <% } %>
+                        <% if(locals.errors && errors.lastName){ %>
+                            <div class="validationError">
+                                <%= errors.lastName.msg %>
+                            </div>
+                        <% } %>
+                        <input type="email" name="email" placeholder="Correo electrónico"
+                            value="<%= locals.old ? old.email : '' %>">
+                        <% if(locals.errors && errors.email){ %>
+                            <div class="validationError">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <div class="contentForm">
+                            <input type="password" name="password" placeholder="Contraseña" class="inputMed">
+                            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" class="inputMed">
+                        </div>
+                        <% if(locals.errors && errors.password){ %>
+                            <div class="validationError">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                        <% if(locals.errors && errors.confirmPassword){ %>
+                            <div class="validationError">
+                                <%= errors.confirmPassword.msg %>
+                            </div>
+                        <% } %>
+                        <div class="contentForm">
+                            <label class="addImgProfile">Agrega una imagen de perfil</label>
+                            <input class="addAvatar" type="file" name="avatar">
+                        </div>
+                        <% if(locals.errors && errors.avatar){ %>
+                            <div class="validationError">
+                                <%= errors.avatar.msg %>
+                            </div>
+                        <% } %>
+                        <div>
+                            <input type="checkbox" name="terminos" id="accept" class="remind">
+                            <label for="accept">Acepto términos y condiciones</label>
+                        </div>
+                        <button type="submit">Continuar</button>
                     </form>
                     <a href="/login">¿Ya tienes una cuenta?</a>
                 </section>

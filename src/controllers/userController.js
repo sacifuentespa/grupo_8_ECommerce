@@ -12,19 +12,20 @@ const controller = {
   },
   uploadNewUser: (req, res) => {
     let errors = validationResult(req);
+    console.log(req.files["avatar"])
     if (errors.isEmpty()) {
       let user = req.body;
-      usersModel.newUser(req.body);
+      let avatar = req.files["avatar"] ? req.files : null;
+
+      usersModel.newUser(user, avatar);
       res.redirect("/login");
-    } else {
-      res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     }
+    
+    res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
+    
   },
   getLogin: (req, res) => {
-    if (req.session.userLogged){
-      res.redirect("/")
-    }else{
-    res.render("users/login", { title: "Iniciar Sesión" })};
+    res.render("users/login", { title: "Iniciar Sesión" });
   },
   comprobationLogin: (req, res) => {
 
@@ -32,8 +33,7 @@ const controller = {
 
 
     if (userToLoggin) {
-      // let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
-      let validatePassword = req.body.password == userToLoggin.password;
+      let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
       if(validatePassword){
         let userNoPassword = Object.assign({}, userToLoggin)
         delete userNoPassword.password
@@ -58,7 +58,7 @@ const controller = {
   },
   deleteUser: (req, res) => {
     usersModel.deleteUser(req.body.id);
-    res.redirect("/admin/users/314");
+    res.redirect("/admin/users/271");
   },
 };
 

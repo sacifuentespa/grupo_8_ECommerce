@@ -22,7 +22,10 @@ const usersModel = {
   getUsers: () => {
     return dbUsers;
   },
-  newUser: (user) => {
+  newUser: (user, file) => {
+
+    let nameAvatar = file!==null ? req.file.filename : "defaultUser.jpg"
+
 
     let newUser = {
     id: newId(),
@@ -30,6 +33,7 @@ const usersModel = {
     last_name: user.lastName,
     email: user.email,
     password: bcrypt.hashSync(user.password,10),
+    avatar: nameAvatar
     };
 
     let db = dbUsers;
