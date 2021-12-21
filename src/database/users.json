@@ -22,5 +22,85 @@
         "email": "oliwashington@walmart.com",
         "password": "$2a$10$vdzY5yWCnfufZwKgQM8O8.H06QedsRCFmK7e.owoExRTiByawsrbS",
         "avatar": "default.png"
+    },
+    {
+        "id": 19,
+        "name": "Andrea Sofia",
+        "lastName": "Mora Duarte",
+        "email": "andrea@hotmail.com",
+        "password": "$2a$10$RLrZzD8jNQ7seClwSytryOGK0pwdX8.yYP/Vwz1qpkqal/w/0EQMm",
+        "avatar": "img1640109359853_buyer-persona-e1545248524290.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Ricardo",
+        "lastName": "Fuentes ",
+        "email": "ricardo@hotmail.com",
+        "password": "$2a$10$pWSZjd/qDrKDiht8ghcq/Ocy5qrZlqTqS1l1JF9A8rDLFCruHPdg2",
+        "avatar": "img1640109413968_f145520-2-h.jpeg"
+    },
+    {
+        "id": 21,
+        "name": "Adriana ",
+        "lastName": "Moreno Quintero",
+        "email": "adriana@hotmail.com",
+        "password": "$2a$10$5h9hX8sE5p2R7I3yEnB1pek.mmbhmpKfZ6KszPP1G9PyYFYns7XXe",
+        "avatar": "img1640109478769_images (1).jfif"
+    },
+    {
+        "id": 22,
+        "name": "Juan Fernando",
+        "lastName": "Herrera Montes",
+        "email": "juan@hotmail.com",
+        "password": "$2a$10$B9/9LSvGJh2KgRC9ztZPcOMQd/EXmqk3DDrQPURTrNLZGD3sChWWS",
+        "avatar": "img1640109555793_GettyImages-522796439.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Andrés ",
+        "lastName": "Guerrero ",
+        "email": "andres@hotmail.com",
+        "password": "$2a$10$YTvaK1J/5A/qm3RE4OgTQu3dH4IPwC1STqczFtJHUO40LX667/tfa",
+        "avatar": "img1640109660722_images.jfif"
+    },
+    {
+        "id": 24,
+        "name": "Jhon",
+        "lastName": "Restrepo ",
+        "email": "jhon@hotmail.com",
+        "password": "$2a$10$gJ920qm5Gz/jAwoinAzD3eNWV6RkQoYHvKzRqZitCjnianlv08cOu",
+        "avatar": "img1640110002782_Guillermo-Dorronsoro-04.jpg"
+    },
+    {
+        "id": 25,
+        "name": "Maria",
+        "lastName": "Herrera Montes",
+        "email": "maria@hotmail.com",
+        "password": "$2a$10$SRlRxRNpVwDToH4NYAlkteTv6GilUZECRuxszii7u/qqAk4Kmr1Om",
+        "avatar": "img1640110061943_Madurez-emocional-7.jpg"
+    },
+    {
+        "id": 26,
+        "name": "Felipe",
+        "lastName": "Gómez Rivas",
+        "email": "felipe@hotmail.com",
+        "password": "$2a$10$yNgJBx4SWGqDhYsyL/DYCeBFFIaw40kvsaO5l7iMeQDjwTZ0GuzbS",
+        "avatar": "img1640110146363_persona-e1533759204552 (1).jpg"
+    },
+    {
+        "id": 27,
+        "name": "Ana María",
+        "lastName": "Restrepo Gómez",
+        "email": "ana@hotmail.com",
+        "password": "$2a$10$oQmrQl8Z8QnuRfFsX1fNEuIcNlwf.F3egkRPU7KSYUsm94YpgXryq",
+        "avatar": "img1640110219988_perfil-resilencia.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Daniela",
+        "lastName": "Moreno Quintero",
+        "email": "daniela@hotmail.com",
+        "password": "$2a$10$0g8chNwf8dIEv8wYIRpUCO0Gt3L9j1zfa240fPrBprq5wY8aKu49S",
+        "avatar": "img1640110381729_images (1).jfif"
     }
 ]

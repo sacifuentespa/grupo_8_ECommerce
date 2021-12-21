@@ -5,4 +5,4 @@ function comprobationGuest(req, res, next) {
     next();
 }
 
-module.exports = comprobationLogged
+module.exports = comprobationGuest
