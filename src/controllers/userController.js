@@ -12,21 +12,27 @@ const controller = {
   },
   uploadNewUser: (req, res) => {
     let errors = validationResult(req);
-    console.log(req.files["avatar"])
+
     if (errors.isEmpty()) {
       let user = req.body;
-      let avatar = req.files["avatar"] ? req.files : null;
-
-      usersModel.newUser(user, avatar);
+      usersModel.newUser(req.body, req.file);
       res.redirect("/login");
+    } else {
+      usersModel.deleteFileImage(req.file.filename)
+      res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     }
-    
-    res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     
   },
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });
   },
+  getProfile: (req, res) => {
+    if (req.session.userLogged){
+      res.render("users/userProfile")
+    }else{
+    res.render("users/login", { title: "Iniciar Sesión" })};
+  }
+  ,
   comprobationLogin: (req, res) => {
 
     let userToLoggin = usersModel.findByEmail(req.body.email)
@@ -34,6 +40,10 @@ const controller = {
 
     if (userToLoggin) {
       let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
+<<<<<<< HEAD
+=======
+      // let validatePassword = req.body.password == userToLoggin.password;
+>>>>>>> 56af990b719ee1a863e3cbe891c575baa5bf47ae
       if(validatePassword){
         let userNoPassword = Object.assign({}, userToLoggin)
         delete userNoPassword.password

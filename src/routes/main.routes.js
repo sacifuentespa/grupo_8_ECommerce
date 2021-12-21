@@ -38,6 +38,10 @@ router.post("/login", usersController.comprobationLogin)
 router.get("/register", usersController.getRegister);
 router.post("/register", cpUploadUser, validationRegister, usersController.uploadNewUser);
 
+//profile
+router.get("/users/userProfile", usersController.getProfile)
+
+
 //list all products
 router.get("/listProducts", productsController.getProducts)
 

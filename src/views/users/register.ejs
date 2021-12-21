@@ -36,8 +36,10 @@
                             </div>
                         <% } %>
                         <div class="contentForm">
-                            <input type="password" name="password" placeholder="Contraseña" class="inputMed">
-                            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" class="inputMed">
+                            <input type="password" name="password" placeholder="Contraseña"
+                                class="inputMed">
+                            <input type="password" name="confirmPassword"
+                                placeholder="Confirmar contraseña" class="inputMed">
                         </div>
                         <% if(locals.errors && errors.password){ %>
                             <div class="validationError">
@@ -50,7 +52,8 @@
                             </div>
                         <% } %>
                         <div class="contentForm">
-                            <label class="addImgProfile">Agrega una imagen de perfil</label>
+                            <label class="addImgProfile">Agrega una imagen de
+                                perfil</label>
                             <input class="addAvatar" type="file" name="avatar">
                         </div>
                         <% if(locals.errors && errors.avatar){ %>
@@ -59,9 +62,17 @@
                             </div>
                         <% } %>
                         <div>
-                            <input type="checkbox" name="terminos" id="accept" class="remind">
-                            <label for="accept">Acepto términos y condiciones</label>
+                            <label for="accept">Acepto términos y
+                                condiciones</label>
+                            <input type="checkbox" name="terminos"
+                                id="accept" class="remind">
+                
                         </div>
+                        <% if(locals.errors && errors.terminos){ %>
+                            <div class="validationError">
+                                <%= errors.terminos.msg %>
+                            </div>
+                        <% } %>
                         <button type="submit">Continuar</button>
                     </form>
                     <a href="/login">¿Ya tienes una cuenta?</a>

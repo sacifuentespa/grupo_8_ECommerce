@@ -2,10 +2,14 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
+const req = require("express/lib/request");
 
 //db
 const usersFilePath = path.resolve(__dirname, "../database/users.json");
 let dbUsers = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+
+//ruta imagenes; para usar función deleteFileImage más facilmente
+const usersFileImagesPath = path.resolve(__dirname,'../public/img/imgUsers')
 
 const newId = () => {
   let last = 0;
@@ -22,10 +26,17 @@ const usersModel = {
   getUsers: () => {
     return dbUsers;
   },
+  deleteFileImage: function (imageName){
+    //Funcion para eliminar imagenes de una ruta 
+    fs.rmSync(usersFileImagesPath + '/' + imageName)
+  }
+  ,
   newUser: (user, file) => {
-
-    let nameAvatar = file!==null ? req.file.filename : "defaultUser.jpg"
-
+    
+    let fileAvatar = "default.png"
+    if (file){
+      fileAvatar = file.filename
+    }
 
     let newUser = {
     id: newId(),
@@ -33,7 +44,7 @@ const usersModel = {
     last_name: user.lastName,
     email: user.email,
     password: bcrypt.hashSync(user.password,10),
-    avatar: nameAvatar
+    avatar: fileAvatar
     };
 
     let db = dbUsers;
