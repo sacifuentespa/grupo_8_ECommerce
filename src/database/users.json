@@ -14,5 +14,13 @@
         "email": "juanitoarco@gmail.com",
         "password": "$2a$10$V1to9N0ot3cVfYEyYqggDOfFHJnIzmlR9eaeh5.M0vbb.hFiz9cju",
         "avatar": "arcoiris.jpg1640107497281_img_.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Olivia",
+        "lastName": "Washington",
+        "email": "oliwashington@walmart.com",
+        "password": "$2a$10$vdzY5yWCnfufZwKgQM8O8.H06QedsRCFmK7e.owoExRTiByawsrbS",
+        "avatar": "default.png"
     }
 ]
