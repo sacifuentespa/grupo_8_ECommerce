@@ -155,5 +155,16 @@
         ],
         "aimUpload": "vender",
         "categoryExchange": "vehiculos"
+    },
+    {
+        "id": 13,
+        "productName": "Moto Kymco",
+        "productPrice": 2349453,
+        "listCategoriesProduct": "hogar",
+        "productDescriptionUpload": "Moto kymco Twist - Auteco Mobility color negra en buen estado.",
+        "mainImageUpload": "img1640055728514_moto_kymco_twist_gris_azul_2021_foto1.jpg",
+        "imagesUpload": [],
+        "aimUpload": "vender",
+        "categoryExchange": "vehiculos"
     }
 ]

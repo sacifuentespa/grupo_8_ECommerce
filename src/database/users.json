@@ -1,111 +1,117 @@
 [
     {
         "id": 1,
-        "first_name": "Oralie",
-        "last_name": "Fosten",
-        "email": "ofosten0@walmart.com",
-        "password": "NnTnxvvUL"
+        "first_name": "Joice",
+        "last_name": "Jolliss",
+        "email": "jjolliss0@geocities.jp",
+        "password": "1hh4OMDv",
+        "avatar": "https://robohash.org/quodaveritatis.png?size=50x50&set=set1"
     },
     {
         "id": 2,
-        "first_name": "Bathsheba",
-        "last_name": "Robotham",
-        "email": "brobotham1@hostgator.com",
-        "password": "pvkjrn"
+        "first_name": "Clevie",
+        "last_name": "Edgeon",
+        "email": "cedgeon1@canalblog.com",
+        "password": "euJwZzlkSQ8",
+        "avatar": "https://robohash.org/quaeauteos.png?size=50x50&set=set1"
     },
     {
         "id": 3,
-        "first_name": "Aeriel",
-        "last_name": "Storch",
-        "email": "astorch2@blog.com",
-        "password": "0MkpnW18"
+        "first_name": "Kayne",
+        "last_name": "Wickson",
+        "email": "kwickson2@lulu.com",
+        "password": "e01BTYjr",
+        "avatar": "https://robohash.org/solutaipsafugit.png?size=50x50&set=set1"
     },
     {
         "id": 4,
-        "first_name": "Ketti",
-        "last_name": "Malarkey",
-        "email": "kmalarkey3@fda.gov",
-        "password": "RcelnQWLupxN"
+        "first_name": "Waldo",
+        "last_name": "Eisikovitsh",
+        "email": "weisikovitsh3@cbc.ca",
+        "password": "MUDXkJQ",
+        "avatar": "https://robohash.org/delectusasperioresnulla.png?size=50x50&set=set1"
     },
     {
         "id": 5,
-        "first_name": "Jeanine",
-        "last_name": "Ortler",
-        "email": "jortler4@networksolutions.com",
-        "password": "fyrHmUMbe"
+        "first_name": "Siana",
+        "last_name": "Fewkes",
+        "email": "sfewkes4@google.es",
+        "password": "D9KU10Ui",
+        "avatar": "https://robohash.org/exquasiminus.png?size=50x50&set=set1"
     },
     {
         "id": 6,
-        "first_name": "Rozelle",
-        "last_name": "Cockerell",
-        "email": "rcockerell5@clickbank.net",
-        "password": "iKRT5Ye2y"
+        "first_name": "Sheila-kathryn",
+        "last_name": "Sleigh",
+        "email": "ssleigh5@example.com",
+        "password": "EqVH2H",
+        "avatar": "https://robohash.org/autrerumeius.png?size=50x50&set=set1"
     },
     {
         "id": 7,
-        "first_name": "Forbes",
-        "last_name": "Gamlen",
-        "email": "fgamlen6@admin.ch",
-        "password": "kPmthaJ0"
+        "first_name": "Orren",
+        "last_name": "Tarpey",
+        "email": "otarpey6@washingtonpost.com",
+        "password": "unaI0Dc4",
+        "avatar": "https://robohash.org/autemfugitin.png?size=50x50&set=set1"
     },
     {
         "id": 8,
-        "first_name": "Darren",
-        "last_name": "Strahan",
-        "email": "dstrahan7@umich.edu",
-        "password": "Z7UgdgA"
+        "first_name": "Tomaso",
+        "last_name": "Rawlence",
+        "email": "trawlence7@umn.edu",
+        "password": "8oqK30nKuMR",
+        "avatar": "https://robohash.org/maximetemporerecusandae.png?size=50x50&set=set1"
     },
     {
         "id": 9,
-        "first_name": "Saloma",
-        "last_name": "Jilkes",
-        "email": "sjilkes8@wikia.com",
-        "password": "fkVOJA8K"
+        "first_name": "Mab",
+        "last_name": "Petrol",
+        "email": "mpetrol8@loc.gov",
+        "password": "3Mks1JLLGD4",
+        "avatar": "https://robohash.org/perspiciatisilloet.png?size=50x50&set=set1"
     },
     {
         "id": 10,
-        "first_name": "Fulanito",
-        "last_name": "Cosme",
-        "email": "fulanito@hotmail.com",
-        "password": "123456",
-        "confirmPassword": "123456"
+        "first_name": "Cathy",
+        "last_name": "Pawlaczyk",
+        "email": "cpawlaczyk9@ebay.com",
+        "password": "4eIRsrw",
+        "avatar": "https://robohash.org/sequimagniab.png?size=50x50&set=set1"
     },
     {
         "id": 11,
         "first_name": "Pepito",
         "last_name": "Perez",
         "email": "pepitoperez@hotmail.com",
-        "password": "123456",
-        "confirmPassword": "123456"
+        "password": "$2a$10$I4aCNM3ByJIK94EiLsExxO6BguJHj4knJsVflGL1NZ.1LZmutPPNm"
     },
     {
         "id": 12,
         "first_name": "Fulanito",
         "last_name": "Cosme",
-        "email": "cosme@hotmail.com",
-        "password": "123456",
-        "confirmPassword": "123456"
+        "email": "fulanito@hotmail.com",
+        "password": "$2a$10$5T.gF3tsPfhQTWQhqxpt1evKJRIiDy5sSUPoyeLetceUgXd9E2njO"
     },
     {
         "id": 13,
-        "first_name": "Fulanito",
-        "last_name": "Cosme",
-        "email": "fulanito@hotmail.com",
-        "password": "123456",
-        "confirmPassword": "123456"
+        "first_name": "Pepito",
+        "last_name": "Perez",
+        "email": "pepito@hotmail.com",
+        "password": "$2a$10$ZD0eVeWgUbKtCo5mTTs2MOPQuEwPBlDhCfXaHNW5cRjHzyp2B9NbW"
     },
     {
         "id": 14,
-        "first_name": "Pepito",
-        "last_name": "Perez",
-        "email": "pepitoperez@hotmail.com",
-        "password": "$2a$10$xBbRfNy6PaUO/FhC9YJc..VTOW4NFodxiSj563f1y059ANfa5PRmO"
+        "first_name": "Fulanito",
+        "last_name": "Garcia",
+        "email": "fulanitogarcia@hotmail.com",
+        "password": "$2a$10$JhrlrJvwhpLycQvlwbVTVOJ6.ZnMDu.ad/NRcz7DxKzsHKH8DSCqe"
     },
     {
         "id": 15,
-        "first_name": "Fulanito",
+        "first_name": "Pepito",
         "last_name": "Cosme",
-        "email": "fulanito@hotmail.com",
-        "password": "$2a$10$RGLGE9SUMcF3bMMjK60MAO9Bfp1qZetjqedzYMHRzI8Ce3BiWIwW."
+        "email": "pepitocosme@hotmail.com",
+        "password": "$2a$10$mRaF7W/r4mPrNqtDD8RJ3ejCz78qIiwbq4T80t.yt.3HL7zY.6MXO"
     }
 ]

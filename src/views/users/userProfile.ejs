@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<%- include('../partials/head') %>
+
+    <body>
+        <!-- header -->
+        <%- include('../partials/partialsUsers/headerUsers') %>
+
+            <main class="mainProduct">
+
+                <section class="currentProduct">
+                    <section class="productSectionImageAndButtons">
+                        <section>
+                            <h2>
+                               <%= user.name %>
+                            </h2>
+                            <div class="currentProductImage">
+                                <img src="/img/imgUsers/<%= user.avatar %>" class="product_img">
+                            </div>
+                            <section class="productButtonsDesktop">
+                                <button class="offerExchangeButton" name="offerExchangeButton">Editar Perfil</button>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                </section>
+
+                <section class="optionsProducts">
+                    <article class="priceProduct">
+                        <h3>Nombre(s)</h3>
+                        <p class="priceProduct">
+                            <%= user.name %>
+                        </p>
+                    </article>
+                    <article class="priceProduct">
+                        <h3>Apellido(s)</h3>
+                        <p class="priceProduct">
+                            <%= user.lastName %>
+                        </p>
+                    </article>
+                    <article class="priceProduct">
+                        <h3>Email</h3>
+                        <p class="priceProduct">
+                            <%= user.email %>
+                        </p>
+                    </article>
+                </section>
+
+            </main>
+            <!-- footer -->
+            <%- include('../partials/partialsUsers/footerUsers') %>
+    </body>
+
+</html>
