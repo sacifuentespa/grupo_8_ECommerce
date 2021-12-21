@@ -40,8 +40,8 @@ const usersModel = {
 
     let newUser = {
     id: newId(),
-    first_name: user.name,
-    last_name: user.lastName,
+    name: user.name,
+    lastName: user.lastName,
     email: user.email,
     password: bcrypt.hashSync(user.password,10),
     avatar: fileAvatar
@@ -91,8 +91,8 @@ const usersModel = {
 
     let updateUser = {
     id: user.id,
-    first_name: userToEdit.name,
-    last_name: userToEdit.lastName,
+    name: userToEdit.name,
+    lastName: userToEdit.lastName,
     email: userToEdit.email,
     password: userToEdit.password,
     avatar: avatar

@@ -1,37 +1,18 @@
 [
     {
-        "id": 11,
-        "first_name": "Pepito",
-        "last_name": "Perez",
-        "email": "pepitoperez@hotmail.com",
-        "password": "$2a$10$I4aCNM3ByJIK94EiLsExxO6BguJHj4knJsVflGL1NZ.1LZmutPPNm"
+        "id": 16,
+        "name": "Juanito",
+        "lastName": "Skinner",
+        "email": "juanitoconclonosaurios@gmail.com",
+        "password": "$2a$10$KFQf5GJpHR75DinI4Cn6funtA8X4dCg7jKS9/LQ8atE3To0YGFzRK",
+        "avatar": "TenisWilson0102.jpg1640107075167_img_.jpg"
     },
     {
-        "id": 12,
-        "first_name": "Fulanito",
-        "last_name": "Cosme",
-        "email": "fulanito@hotmail.com",
-        "password": "$2a$10$5T.gF3tsPfhQTWQhqxpt1evKJRIiDy5sSUPoyeLetceUgXd9E2njO"
-    },
-    {
-        "id": 13,
-        "first_name": "Pepito",
-        "last_name": "Perez",
-        "email": "pepito@hotmail.com",
-        "password": "$2a$10$ZD0eVeWgUbKtCo5mTTs2MOPQuEwPBlDhCfXaHNW5cRjHzyp2B9NbW"
-    },
-    {
-        "id": 14,
-        "first_name": "Fulanito",
-        "last_name": "Garcia",
-        "email": "fulanitogarcia@hotmail.com",
-        "password": "$2a$10$JhrlrJvwhpLycQvlwbVTVOJ6.ZnMDu.ad/NRcz7DxKzsHKH8DSCqe"
-    },
-    {
-        "id": 15,
-        "first_name": "Pepito",
-        "last_name": "Cosme",
-        "email": "pepitocosme@hotmail.com",
-        "password": "$2a$10$mRaF7W/r4mPrNqtDD8RJ3ejCz78qIiwbq4T80t.yt.3HL7zY.6MXO"
+        "id": 17,
+        "name": "Juanito",
+        "lastName": "Arcoiris",
+        "email": "juanitoarco@gmail.com",
+        "password": "$2a$10$V1to9N0ot3cVfYEyYqggDOfFHJnIzmlR9eaeh5.M0vbb.hFiz9cju",
+        "avatar": "arcoiris.jpg1640107497281_img_.jpg"
     }
 ]
