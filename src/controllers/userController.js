@@ -12,11 +12,14 @@ const controller = {
   },
   uploadNewUser: (req, res) => {
     let errors = validationResult(req);
+
+
     if (errors.isEmpty()) {
       let user = req.body;
       usersModel.newUser(req.body, req.file);
       res.redirect("/login");
     } else {
+      usersModel.deleteFileImage(req.file.filename)
       res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     }
   },

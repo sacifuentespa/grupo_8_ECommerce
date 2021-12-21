@@ -33,13 +33,5 @@
         "last_name": "Cosme",
         "email": "pepitocosme@hotmail.com",
         "password": "$2a$10$mRaF7W/r4mPrNqtDD8RJ3ejCz78qIiwbq4T80t.yt.3HL7zY.6MXO"
-    },
-    {
-        "id": 16,
-        "first_name": "Juanito",
-        "last_name": "Skinner",
-        "email": "juanitoconclonosaurios@gmail.com",
-        "password": "$2a$10$TKUZ6ePuQzt2w35klnxCIOu7NJB3dYOgoYh7fYxK00w7CZ/bojISO",
-        "avatar": ""
     }
 ]
