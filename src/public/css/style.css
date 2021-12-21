@@ -98,7 +98,7 @@ header ul ul {
   display:none;
   position:absolute;
   top:100%;
-  left: -150%;
+  left: -170%;
   padding:0;
 }
 
@@ -302,6 +302,7 @@ main.mainHome section.container .contentAllProducts i{
   border-left: #11aea9 3px solid;
   padding: 1%;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .articleProduct a{
@@ -1236,10 +1237,15 @@ div.validationError {
     border-radius: 0px;
     border-bottom: 1px solid #11aea9;
     width: 100%;
+    height: 15vh;
+  }
+
+  .articleProduct a{
+    width: 100%;
     margin: 0;
     padding-left: 0%;
     display: flex;
-    height: 15vh;
+    height: 100%;
     justify-content: flex-start;
   }
 

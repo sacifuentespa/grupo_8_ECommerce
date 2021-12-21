@@ -27,10 +27,8 @@ const controller = {
     res.render("users/login", { title: "Iniciar Sesión" });
   },
   getProfile: (req, res) => {
-    if (req.session.userLogged){
-      res.render("users/userProfile", { title: "Tu perfil" })
-    }else{
-    res.render("users/login", { title: "Iniciar Sesión" })};
+   
+    res.render("users/userProfile", { title: "Iniciar Sesión" });
   }
   ,
   comprobationLogin: (req, res) => {
@@ -58,7 +56,7 @@ const controller = {
   },
   logOut: (req, res) => {
     //destroy the cookie
-    //res.clearCookie('userEmail')
+    res.clearCookie('remindMe')
     req.session.destroy();
     res.redirect('/')
   },

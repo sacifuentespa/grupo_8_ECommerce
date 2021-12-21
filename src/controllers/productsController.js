@@ -24,16 +24,19 @@ const controller = {
     });
   },
   uploadNewProduct: (req, res) => {
-    let resultValidation = validationResult(req)
+    let resultValidation = validationResult(req);
     //para borrar documentos subidos de un producto que no cumpla con las validaciones
-    if (resultValidation.errors.length > 0){
-      if(req.files["mainImageUpload"]){
-        productsModel.deleteFileImage(req.files["mainImageUpload"][0].filename)}
-      if(req.files["imagesUpload"] && req.files["imagesUpload"].length>0){
-        for(let i = 0;i<req.files["imagesUpload"].length;i++){
-          productsModel.deleteFileImage(req.files["imagesUpload"][i].filename)
+    if (resultValidation.errors.length > 0) {
+      if (req.files["mainImageUpload"]) {
+        productsModel.deleteFileImage(req.files["mainImageUpload"][0].filename);
+      }
+
+      if (req.files["imagesUpload"] && req.files["imagesUpload"].length > 0) {
+        for (let i = 0; i < req.files["imagesUpload"].length; i++) {
+          productsModel.deleteFileImage(req.files["imagesUpload"][i].filename);
         }
       }
+      
       res.render("products/productUpload", {
         title: "Publicar Producto",
         errors: resultValidation.mapped(),

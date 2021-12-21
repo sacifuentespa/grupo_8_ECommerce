@@ -9,6 +9,8 @@ const validations = require("../middleware/validationUpload")
 const validationsEdit = require("../middleware/validationEdit")
 const cpUploadUser = require("../middleware/uploadFileUser");
 const validationRegister = require("../middleware/validationRegister")
+const comprobationLogged = require("../middleware/comprobationLogged")
+const comprobationGuest = require("../middleware/comprobationGuest")
 
 
 //home
@@ -31,15 +33,15 @@ router.put("/productEdit", cpUploadProduct, validationsEdit, productsController.
 router.get("/cart", mainController.getCart);
 
 //login
-router.get("/login", usersController.getLogin);
+router.get("/login", comprobationLogged, usersController.getLogin);
 router.post("/login", usersController.comprobationLogin)
 
 //register
-router.get("/register", usersController.getRegister);
+router.get("/register", comprobationLogged, usersController.getRegister);
 router.post("/register", cpUploadUser, validationRegister, usersController.uploadNewUser);
 
 //profile
-router.get("/users/userProfile", usersController.getProfile)
+router.get("/users/userProfile", comprobationGuest,  usersController.getProfile)
 
 
 //list all products

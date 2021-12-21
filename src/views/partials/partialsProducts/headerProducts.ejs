@@ -10,9 +10,11 @@
     <% if (locals.isLogged) { %>     
         <ul class="iconNav">
             <li class="dropdownUser">
-                <a href="users/userProfile">
-                    <i class="far fa-user-circle"></i>
-                </a>
+                <i class="far fa-user-circle"></i>
+                <ul class="modalNavBurguer" id="dropdownBurguer">
+                    <li><a href="/users/userProfile">Mi perfil</a></li>
+                    <li><a href="/logout">Cerrar Sesión</a></li>
+                </ul>
             </li>
             <li>
                 <i class="fas fa-bars" id="dropdownBurguer"></i>
