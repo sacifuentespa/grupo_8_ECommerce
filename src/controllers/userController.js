@@ -58,7 +58,7 @@ const controller = {
   },
   logOut: (req, res) => {
     //destroy the cookie
-    //res.clearCookie('userEmail')
+    res.clearCookie('remindMe')
     req.session.destroy();
     res.redirect('/')
   },
