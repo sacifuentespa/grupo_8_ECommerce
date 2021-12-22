@@ -28,7 +28,7 @@
                         <label>Precio del producto</label>
                         <input type="number" name="productPrice" 
                         value = "<%= locals.oldData ? oldData.productPrice : null %>""
-                        placeholder="Precio" required>
+                        placeholder="Precio">
                         <% if(locals.errors && errors.productPrice){ %>
                             <div class= "validationError">
                                 <%= errors.productPrice.msg %>
