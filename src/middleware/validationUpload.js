@@ -8,7 +8,8 @@ const validations = [
     .isLength({min:3}).withMessage('El nombre debe tener por lo menos 5 caracteres'), 
     body('productPrice').notEmpty().withMessage('El producto debe tener un precio'),
     body('productDescriptionUpload').notEmpty().withMessage('El producto debe tener una descripción')
-    .isLength({min:15}).withMessage('La descripción debe tener por lo menos 15 caracteres'),  
+    .isLength({min:15}).withMessage('La descripción debe tener por lo menos 15 caracteres').isLength({max:1000})
+    .withMessage('La descripción debe tener menos de 500 caracteres'),  
     check('mainImageUpload').custom((value, {req})=>{
         if(req.files["mainImageUpload"]){
         let fileExtension = path.extname(req.files["mainImageUpload"][0].originalname)
