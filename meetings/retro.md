@@ -105,3 +105,24 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 - **Comenzar a hacer:**
 	-Trasladar los encuentros virtuales a Meet. 
 	-Anticipar los entregables para tener tiempo de corregir errores y tener oportunidades de mejora.
+
+		## **Sprint 5:**
+
+## **Resultados:**
+
+- **Continuar haciendo:**
+	-Resolver en equipo las dificultades que se presenten.
+	-Reunirnos una vez por semana (Weekly) o las veces que sean necesarias. 
+
+- **Menos de:**
+	-No encontramos prácticas que debamos hacer menos por el momento. 
+
+- **Mas de:**
+    -Organizar nuestras fechas internas de entrega para tener tiempo de hacer correcciones y/o test.
+	-Comunicar con tiempo cualquier dificultad que se pueda presentar.
+
+- **Dejar de hacer:**
+    -No encontramos prácticas que debamos hacer menos por el momento. 
+
+- **Comenzar a hacer:**
+	-Hacer test manuales a la página. 
