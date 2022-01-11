@@ -118,5 +118,13 @@
         "email": "datebayo@gmail.com",
         "password": "$2a$10$Ev0bOI.WorQ1NWLZMnMrrOlD6HnhsmKlXKjZxr6w7HI5hY383ANhO",
         "avatar": "img1640133315562_MangaOnePiece20.webp"
+    },
+    {
+        "id": 31,
+        "name": "Fulanito",
+        "lastName": "Perez",
+        "email": "fulanito@hotmail.com",
+        "password": "$2a$10$vxXN7s24aM4koIFQORIvd.VORE4b23Av3eNM0mxdXXNctF78u8aSG",
+        "avatar": "img1641843039707_persona-e1533759204552.jpg"
     }
 ]
