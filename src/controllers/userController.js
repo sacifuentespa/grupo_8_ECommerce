@@ -18,7 +18,8 @@ const controller = {
       usersModel.newUser(req.body, req.file);
       res.redirect("/login");
     } else {
-      usersModel.deleteFileImage(req.file.filename)
+      if(req.file){
+      usersModel.deleteFileImage(req.file.filename)}
       res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
     }
     

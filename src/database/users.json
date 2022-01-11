@@ -102,5 +102,29 @@
         "email": "daniela@hotmail.com",
         "password": "$2a$10$0g8chNwf8dIEv8wYIRpUCO0Gt3L9j1zfa240fPrBprq5wY8aKu49S",
         "avatar": "img1640110381729_images (1).jfif"
+    },
+    {
+        "id": 29,
+        "name": "lololololol",
+        "lastName": "loloolololololo",
+        "email": "lol@gmail.com",
+        "password": "$2a$10$aex/ET9Qp4wrJ8ZLufs/vOTQ9LAwAhZUsM/M0tO6vy.H2AjUAtrdO",
+        "avatar": "img1640132623457_TenisWilson01.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Naruto",
+        "lastName": "Uzumaki",
+        "email": "datebayo@gmail.com",
+        "password": "$2a$10$Ev0bOI.WorQ1NWLZMnMrrOlD6HnhsmKlXKjZxr6w7HI5hY383ANhO",
+        "avatar": "img1640133315562_MangaOnePiece20.webp"
+    },
+    {
+        "id": 31,
+        "name": "Fulanito",
+        "lastName": "Perez",
+        "email": "fulanito@hotmail.com",
+        "password": "$2a$10$vxXN7s24aM4koIFQORIvd.VORE4b23Av3eNM0mxdXXNctF78u8aSG",
+        "avatar": "img1641843039707_persona-e1533759204552.jpg"
     }
 ]

@@ -28,7 +28,7 @@
                         <label>Precio del producto</label>
                         <input type="number" name="productPrice" 
                         value = "<%= locals.oldData ? oldData.productPrice : null %>""
-                        placeholder="Precio" required>
+                        placeholder="Precio">
                         <% if(locals.errors && errors.productPrice){ %>
                             <div class= "validationError">
                                 <%= errors.productPrice.msg %>
@@ -84,8 +84,8 @@
                     <div class="aimUpload">
                         <label>¿Qué quieres hacer con el producto?</label>
 
-                        <label><input type="checkbox" name="aimUpload" value="vender">Vender</label>
-                        <label><input type="checkbox" name="aimUpload" value="cambiar">Cambiar</label>
+                        <label><input type="radio" name="aimUpload" value="vender">Vender</label>
+                        <label><input type="radio" name="aimUpload" value="cambiar">Cambiar</label>
                         
                         <% if(locals.errors && errors.aimUpload){ %>
                             <div class= "validationError">

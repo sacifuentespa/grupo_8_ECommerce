@@ -28,7 +28,7 @@ const validationRegister = [
         }
         return true; 
     }),
-    body("terminos").notEmpty().withMessage("Debes estar de acuerdo con los terminos y condiciones"),
+    body("terminos").notEmpty().withMessage("Debes estar de acuerdo con los términos y condiciones"),
 ];
 
 module.exports = validationRegister;

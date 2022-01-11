@@ -80,8 +80,8 @@
                     <div class="aimUpload">
                         <label>¿Qué quieres hacer con el producto?</label>
 
-                        <label><input type="checkbox" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
-                        <label><input type="checkbox" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>
+                        <label><input type="radio" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
+                        <label><input type="radio" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>
                         
                         <% if(locals.errors && errors.aimUpload){ %>
                             <div class= "validationError">
