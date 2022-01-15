@@ -41,6 +41,13 @@ module.exports = (sequelize, dataTypes) =>{
         User.hasOne(models.Cart, { 
             as: "cart", // El nombre del modelo pero en plural
             foreignKey: "users_idUser"
+        });
+        User.belongsToMany(models.Product,{
+            as: 'product',
+            through: 'users_has_products',
+            foreignKey: 'users_idUser',
+            otherKey: 'products_idProduct',
+            timestamps: false
         })
 
     }
