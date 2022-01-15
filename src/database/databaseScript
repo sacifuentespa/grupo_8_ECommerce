@@ -24,13 +24,13 @@ USE `truequeOnline` ;
 -- Table `truequeOnline`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`users` (
-  `idUsers` INT(11) NOT NULL AUTO_INCREMENT,
+  `idUser` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(50) NOT NULL,
   `lastName` VARCHAR(50) NOT NULL,
   `email` VARCHAR(75) NOT NULL,
   `password` VARCHAR(61) NOT NULL,
   `avatar` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`idUsers`),
+  PRIMARY KEY (`idUser`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
@@ -41,12 +41,12 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`cart` (
   `idCart` INT(11) NOT NULL,
-  `users_idUsers` INT(11) NOT NULL,
-  PRIMARY KEY (`idCart`, `users_idUsers`),
-  INDEX `fk_cart_users1_idx` (`users_idUsers` ASC) ,
+  `users_idUser` INT(11) NOT NULL,
+  PRIMARY KEY (`idCart`, `users_idUser`),
+  INDEX `fk_cart_users1_idx` (`users_idUser` ASC) ,
   CONSTRAINT `fk_cart_users1`
-    FOREIGN KEY (`users_idUsers`)
-    REFERENCES `truequeOnline`.`users` (`idUsers`)
+    FOREIGN KEY (`users_idUser`)
+    REFERENCES `truequeOnline`.`users` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -98,11 +98,11 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`details`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`details` (
-  `idDetails` INT(18) NOT NULL,
+  `idDetail` INT(18) NOT NULL,
   `color` VARCHAR(45) NULL DEFAULT NULL,
   `amount` TINYINT(3) NULL DEFAULT NULL,
   `products_idProduct` INT(15) NOT NULL,
-  PRIMARY KEY (`idDetails`, `products_idProduct`),
+  PRIMARY KEY (`idDetail`, `products_idProduct`),
   INDEX `fk_details_products1_idx` (`products_idProduct` ASC) ,
   CONSTRAINT `fk_details_products1`
     FOREIGN KEY (`products_idProduct`)
@@ -117,11 +117,11 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`images`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`images` (
-  `idImages` INT(18) NOT NULL,
+  `idImage` INT(18) NOT NULL,
   `path` VARCHAR(200) NOT NULL,
   `products_idProduct` INT(15) NOT NULL,
   `type` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`idImages`, `products_idProduct`),
+  PRIMARY KEY (`idImage`, `products_idProduct`),
   UNIQUE INDEX `path_UNIQUE` (`path` ASC) ,
   INDEX `fk_images_products1_idx` (`products_idProduct` ASC) ,
   CONSTRAINT `fk_images_products1`
@@ -137,20 +137,20 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`users_has_products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`users_has_products` (
-  `users_idUsers` INT(11) NOT NULL,
+  `users_idUser` INT(11) NOT NULL,
   `products_idProduct` INT(11) NOT NULL,
   `relation` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`users_idUsers`, `products_idProduct`),
+  PRIMARY KEY (`users_idUser`, `products_idProduct`),
   INDEX `fk_users_has_products_products1_idx` (`products_idProduct` ASC) ,
-  INDEX `fk_users_has_products_users1_idx` (`users_idUsers` ASC) ,
+  INDEX `fk_users_has_products_users1_idx` (`users_idUser` ASC) ,
   CONSTRAINT `fk_users_has_products_products1`
     FOREIGN KEY (`products_idProduct`)
     REFERENCES `truequeOnline`.`products` (`idProduct`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_users_has_products_users1`
-    FOREIGN KEY (`users_idUsers`)
-    REFERENCES `truequeOnline`.`users` (`idUsers`)
+    FOREIGN KEY (`users_idUser`)
+    REFERENCES `truequeOnline`.`users` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB

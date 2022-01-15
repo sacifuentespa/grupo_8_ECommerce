@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) =>{
     let alias = 'Image'
     let cols = {
-        idImages:{
+        idImage:{
             autoIncrement: true,
             primaryKey: true,
             allowNull: false,
@@ -30,6 +30,13 @@ module.exports = (sequelize, dataTypes) =>{
     
 
     const Image = sequelize.define(alias, cols, config)
+
+    Image.associate = function (models) {
+        Image.belongsTo(models.Product, { 
+            as: "product",
+            foreignKey: "products_idProduct"
+        })
+    }
 
     return Image
 }
