@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) =>{
         },
         productDescriptionUpload:{
             allowNull: false,
-            type: dataTypes.STRING
+            type: dataTypes.TEXT
         },
         aimUpload:{
             allowNull: false,
