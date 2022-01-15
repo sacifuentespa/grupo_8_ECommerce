@@ -8,6 +8,9 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
+-- Schema movies_db
+-- -----------------------------------------------------
+-- -----------------------------------------------------
 -- Schema truequeOnline
 -- -----------------------------------------------------
 
@@ -28,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `truequeOnline`.`users` (
   `password` VARCHAR(61) NOT NULL,
   `avatar` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`idUsers`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC))
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -71,9 +74,9 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`cart_has_products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`cart_has_products` (
-  `cart_idCart` INT(11) NOT NULL,
+  `cart_idCart` INT(15) NOT NULL,
   `products_idProduct` INT(11) NOT NULL,
-  `quantity` INT(11) NOT NULL,
+  `quantity` INT(3) NOT NULL,
   PRIMARY KEY (`cart_idCart`, `products_idProduct`, `quantity`),
   INDEX `fk_cart_has_products_products1_idx` (`products_idProduct` ASC) ,
   INDEX `fk_cart_has_products_cart1_idx` (`cart_idCart` ASC) ,
@@ -116,7 +119,7 @@ DEFAULT CHARACTER SET = latin1;
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`images` (
   `idImages` INT(18) NOT NULL,
   `path` VARCHAR(200) NOT NULL,
-  `products_idProduct` INT(11) NOT NULL,
+  `products_idProduct` INT(15) NOT NULL,
   `type` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idImages`, `products_idProduct`),
   UNIQUE INDEX `path_UNIQUE` (`path` ASC) ,
