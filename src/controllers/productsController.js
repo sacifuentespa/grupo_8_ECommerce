@@ -1,5 +1,6 @@
 const productsModel = require("../model/products");
 const { validationResult } = require("express-validator");
+const db = require("../database/models")
 
 const controller = {
   getNewProduct: (req, res) => {
