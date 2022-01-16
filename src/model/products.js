@@ -51,8 +51,6 @@ const productsModel = {
       categoryExchange: product.categoryExchange,
     };
 
-    
-
 
     let db = dbProducts;
     db.push(newProduct)
