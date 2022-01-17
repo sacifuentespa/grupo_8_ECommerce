@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) =>{
         products_idProduct:{
             
             allowNull: false,
-            type: dataTypes.INT(15)
+            type: dataTypes.INTEGER(15)
         },
         type:{
             unique: true,

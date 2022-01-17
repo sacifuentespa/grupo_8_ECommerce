@@ -11,10 +11,10 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING(45)
         },
         amount:{
-            type: dataTypes.INT(3)
+            type: dataTypes.INTEGER(3)
         },
         products_idProduct:{
-            type: dataTypes.INT(15)
+            type: dataTypes.INTEGER(15)
         }
     }
     let config = {
