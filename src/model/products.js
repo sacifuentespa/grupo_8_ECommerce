@@ -1,4 +1,4 @@
-git //modules
+//modules
 const fs = require("fs");
 const path = require("path");
 
@@ -35,20 +35,22 @@ const productsModel = {
     }
 
     dbProducts.create({
-      productName: product.productName
-    })
-
-    let newProduct = {
-      id: newId(),
       productName: product.productName,
       productPrice: parseInt(product.productPrice),
       listCategoriesProduct: product.listCategoriesProduct,
       productDescriptionUpload: product.productDescriptionUpload,
-      mainImageUpload: files["mainImageUpload"][0].filename,
-      imagesUpload: images,
       aimUpload: product.aimUpload,
+      active: 1,
       categoryExchange: product.categoryExchange,
-    };
+    })
+
+    // dbImage.create = {
+      
+    //   mainImageUpload: files["mainImageUpload"][0].filename,
+    //   imagesUpload: images,
+    //   aimUpload: product.aimUpload,
+    //   categoryExchange: product.categoryExchange,
+    // };
 
   },
   searchProduct: function(id){
