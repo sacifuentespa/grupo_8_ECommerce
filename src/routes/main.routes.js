@@ -29,7 +29,7 @@ router.get("/productEdit/:id", productsController.getUpdateProduct);
 router.put("/productEdit", cpUploadProduct, validationsEdit, productsController.uploadUpdateProduct);
 
 
-//cart
+//cart  
 router.get("/cart", mainController.getCart);
 
 //login

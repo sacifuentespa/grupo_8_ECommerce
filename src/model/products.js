@@ -3,41 +3,40 @@ const fs = require("fs");
 const path = require("path");
 
 //db
-const productsFilePath = path.resolve(__dirname, "../database/products.json");
-let dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
+const db = require("../database/models")
+
+const dbProducts = db.Product
+const dbUser = db.User
+const dbDetail = db.Detail
+const dbCart = db.Cart
+const dbusers_has_products = db.users_has_products
+const dbcart_has_products = db.cart_has_products
+const dbImage = db.Image
 
 //ruta imagenes; para usar función deleteFileImage más facilmente
 const productsFileImagesPath = path.resolve(__dirname,'../public/img/imgProducts')
 
-const newId = () => {
-    let last = 0;
-    let db = dbProducts;
-    db.forEach(product => {
-      last = product.id > last ? product.id : last;
-    });
-
-    return (parseInt(last) + 1);
-}
 
 const productsModel = {
-  id: newId(),
-  getProducts: () => {
-    return dbProducts;
-  },deleteFileImage: function (imageName){
+  
+  deleteFileImage: function (imageName){
     //Funcion para eliminar imagenes de una ruta 
     fs.rmSync(productsFileImagesPath + '/' + imageName)
   }
   ,
   newProduct: function(product, files) {
     let images = [];
-    
 
     if(files["imagesUpload"]){
       images = files["imagesUpload"].map((image) => {
         return image.filename;
       })
     }
+
+    dbProducts.create({
+      productName: product.productName
+    })
 
     let newProduct = {
       id: newId(),
@@ -51,15 +50,6 @@ const productsModel = {
       categoryExchange: product.categoryExchange,
     };
 
-    
-
-
-    let db = dbProducts;
-    db.push(newProduct)
-    db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(productsFilePath, db)
-
-    return newProduct
   },
   searchProduct: function(id){
     let db = dbProducts;
