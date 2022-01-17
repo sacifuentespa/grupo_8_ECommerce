@@ -5,7 +5,7 @@ module.exports = (sequelize, dataTypes) =>{
             autoIncrement: true,
             primaryKey: true,
             allowNull: false,
-            type: dataTypes.INTEGER(15),
+            type: dataTypes.INTEGER(15).UNSIGNED
         },
         productName:{
             allowNull: false,
@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) =>{
         },
         productPrice:{
             allowNull: false,
-            type: dataTypes.INTEGER(11)
+            type: dataTypes.INTEGER(11).UNSIGNED
         },
         listCategoriesProduct:{
             allowNull: false,
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) =>{
         },
         active:{
             allowNull: false,
-            type: dataTypes.INTEGER(1)
+            type: dataTypes.INTEGER(1).UNSIGNED
         },
         categoryExchange:{
             type: dataTypes.STRING(15)

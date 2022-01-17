@@ -19,7 +19,16 @@ const productsFileImagesPath = path.resolve(__dirname,'../public/img/imgProducts
 
 
 const productsModel = {
-  
+  getProducts: () => {
+    dbProducts.findAll().then(result => result.json()).catch(error=> console.log(error))
+    
+    
+    ;
+  },deleteFileImage: function (imageName){
+    //Funcion para eliminar imagenes de una ruta 
+    fs.rmSync(productsFileImagesPath + '/' + imageName)
+  }
+  ,
   deleteFileImage: function (imageName){
     //Funcion para eliminar imagenes de una ruta 
     fs.rmSync(productsFileImagesPath + '/' + imageName)
@@ -42,7 +51,10 @@ const productsModel = {
       aimUpload: product.aimUpload,
       active: 1,
       categoryExchange: product.categoryExchange,
-    })
+    }).then(()=>{
+      return result
+     })
+    .catch(err=>console.error(err))
 
     // dbImage.create = {
       

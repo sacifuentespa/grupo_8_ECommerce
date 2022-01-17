@@ -45,15 +45,11 @@ const controller = {
         oldData: req.body,
       });
     } else {
-      let product = productsModel.newProduct(req.body, req.files)
-      .then(()=>{
-        res.render("products/product", {
-          title: product.productName,
-          product: product,
-        })
-        .catch(err=>console.error(err))
-        ;
-      }) 
+      let product = productsModel.newProduct(req.body, req.files);
+      res.render("products/product", {
+        title: product.productName,
+        product: product,
+      });
     }
     // res.redirect(`product/${req.body.id}`);
   },
