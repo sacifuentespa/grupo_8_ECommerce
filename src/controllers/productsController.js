@@ -1,7 +1,5 @@
 const productsModel = require("../model/products");
 const { validationResult } = require("express-validator");
-const db = require("../database/models")
-const Op = db.Sequelize.Op
 
 const controller = {
   getNewProduct: (req, res) => {
