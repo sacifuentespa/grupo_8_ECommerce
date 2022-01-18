@@ -54,10 +54,19 @@ const productsModel = {
           type: 'mainImage',
           products_id: result,
         })
+        if(images.length>1){
+          for(let i=0;i<images.length;i++){
+            dbImage.create({
+              path: images[i],
+              type: 'secondaryImage',
+              products_id: result,
+            })
+          }
+        }
       }
       )
       .catch(err => console.error(err))
-  },
+    },
   
   searchProduct: function (id) {
     let db = dbProducts;
