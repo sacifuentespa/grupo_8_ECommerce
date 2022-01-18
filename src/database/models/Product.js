@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) =>{
         },
         productDescriptionUpload:{
             allowNull: false,
-            type: dataTypes.STRING(1000)
+            type: dataTypes.STRING(1500)
         },
         aimUpload:{
             allowNull: false,

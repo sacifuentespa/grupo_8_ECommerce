@@ -37,7 +37,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`cart`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`cart` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `users_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cart_users1_idx` (`users_id` ASC) ,
@@ -54,11 +54,11 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`products` (
-  `id` INT(15) NOT NULL,
+  `id` INT(15) NOT NULL AUTO_INCREMENT,
   `productName` VARCHAR(50) NOT NULL,
   `productPrice` INT(11) NOT NULL,
   `listCategoriesProduct` VARCHAR(15) NOT NULL,
-  `productDescriptionUpload` VARCHAR(1000) NOT NULL,
+  `productDescriptionUpload` VARCHAR(1500) NOT NULL,
   `aimUpload` VARCHAR(9) NOT NULL,
   `active` TINYINT(1) NOT NULL,
   `categoryExchange` VARCHAR(15) NULL DEFAULT NULL,
@@ -94,7 +94,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`details`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`details` (
-  `id` INT(18) NOT NULL,
+  `id` INT(18) NOT NULL AUTO_INCREMENT,
   `color` VARCHAR(45) NULL DEFAULT NULL,
   `amount` TINYINT(3) NULL DEFAULT NULL,
   `products_id` INT(15) NOT NULL,
@@ -113,7 +113,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `truequeOnline`.`images`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`images` (
-  `id` INT(18) NOT NULL,
+  `id` INT(18) NOT NULL AUTO_INCREMENT,
   `path` VARCHAR(200) NOT NULL,
   `type` VARCHAR(45) NULL DEFAULT NULL,
   `products_id` INT(15) NOT NULL,
