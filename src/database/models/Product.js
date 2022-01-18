@@ -1,12 +1,7 @@
 module.exports = (sequelize, dataTypes) =>{
     let alias = 'Product'
     let cols = {
-        idProduct:{
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false,
-            type: dataTypes.INTEGER(15).UNSIGNED
-        },
+        
         productName:{
             allowNull: false,
             type: dataTypes.STRING(50)
@@ -47,24 +42,24 @@ module.exports = (sequelize, dataTypes) =>{
     Product.associate = function(models) {
         Product.hasMany(models.Detail, { 
             as: "details", // El nombre del modelo pero en plural
-            foreignKey: "products_idProduct"
+            foreignKey: "products_id"
         });
         Product.hasMany(models.Image, { 
             as: "images", // El nombre del modelo pero en plural
-            foreignKey: "products_idProduct"
+            foreignKey: "products_id"
         });
         Product.belongsToMany(models.User,{
             as: 'user',
             through: 'users_has_products',
-            foreignKey: 'products_idProduct',
-            otherKey: 'users_idUser',
+            foreignKey: 'products_id',
+            otherKey: 'users_id',
             timestamps: false
         });
         Product.belongsToMany(models.Cart,{
             as: 'cart',
             through: 'cart_has_products',
-            foreignKey: 'products_idProduct',
-            otherKey: 'cart_idCart',
+            foreignKey: 'products_id',
+            otherKey: 'cart_id',
             timestamps: false
         })
 

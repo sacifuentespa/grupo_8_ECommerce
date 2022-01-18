@@ -22,7 +22,6 @@ const productsModel = {
   getProducts: () => {
     dbProducts.findAll().then(result => result.json()).catch(error=> console.log(error))
     
-    
     ;
   },deleteFileImage: function (imageName){
     //Funcion para eliminar imagenes de una ruta 
