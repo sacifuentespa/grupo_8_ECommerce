@@ -28,11 +28,6 @@ const productsModel = {
     fs.rmSync(productsFileImagesPath + '/' + imageName)
   }
   ,
-  deleteFileImage: function (imageName){
-    //Funcion para eliminar imagenes de una ruta 
-    fs.rmSync(productsFileImagesPath + '/' + imageName)
-  }
-  ,
   newProduct: function(product, files) {
     let images = [];
 
@@ -50,7 +45,7 @@ const productsModel = {
       aimUpload: product.aimUpload,
       active: 1,
       categoryExchange: product.categoryExchange,
-    }).then(()=>{
+    }).then((result)=>{
       return result
      })
     .catch(err=>console.error(err))
