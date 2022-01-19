@@ -7,23 +7,27 @@ const path = require("path");
 const db = require("../database/models")
 
 const dbProducts = db.Product
-const dbUser = db.User
-const dbDetail = db.Detail
+const dbUsers = db.User
+const dbDetails = db.Detail
 const dbCart = db.Cart
 const dbusers_has_products = db.users_has_products
 const dbcart_has_products = db.cart_has_products
-const dbImage = db.Image
+const dbImages = db.Image
 
 //ruta imagenes; para usar función deleteFileImage más facilmente
 const productsFileImagesPath = path.resolve(__dirname, '../public/img/imgProducts')
 
 
 const productsModel = {
-  getProducts: () => {
-    dbProducts.findAll().then(result => result.json()).catch(error => console.log(error))
-
-      ;
-  }, deleteFileImage: function (imageName) {
+  getProducts: async () => {
+    try{let result = await dbProducts.findAll(
+      {include: [{association: "images"}]}
+    )
+    
+    return result
+  }catch (error){console.error(error)}}, 
+  
+  deleteFileImage: function (imageName) {
     //Funcion para eliminar imagenes de una ruta 
     fs.rmSync(productsFileImagesPath + '/' + imageName)
   }
@@ -49,14 +53,14 @@ const productsModel = {
       return result.dataValues.id
     })
       .then((result) => {
-        dbImage.create({
+        dbImages.create({
           path: files["mainImageUpload"][0].filename,
           type: 'mainImage',
           products_id: result,
         })
         if(images.length>1){
           for(let i=0;i<images.length;i++){
-            dbImage.create({
+            dbImages.create({
               path: images[i],
               type: 'secondaryImage',
               products_id: result,
