@@ -1,6 +1,7 @@
 const productsModel = require("../model/products");
 const { validationResult } = require("express-validator");
-const db = require("../database/models")
+const db = require("../database/models");
+const { searchProduct } = require("../model/products");
 const Op = db.Sequelize.Op
 
 const controller = {
@@ -29,7 +30,7 @@ const controller = {
       });
     } catch (error) { console.error(error) }
   },
-  uploadNewProduct: (req, res) => {
+  uploadNewProduct: async (req, res) => {
     let resultValidation = validationResult(req);
     //para borrar documentos subidos de un producto que no cumpla con las validaciones
     if (resultValidation.errors.length > 0) {
@@ -48,13 +49,15 @@ const controller = {
         errors: resultValidation.mapped(),
         oldData: req.body,
       });
-    } else {
-      let product = productsModel.newProduct(req.body, req.files);
+    } else try {
+      let newProduct = await productsModel.newProduct(req.body, req.files)
+      let product = await productsModel.searchProduct(newProduct.dataValues.id)
+      console.log(product)
       res.render("products/product", {
         title: product.productName,
         product: product,
-      });
-    }
+      })
+    } catch (error) { console.error(error) }
     // res.redirect(`product/${req.body.id}`);
   },
   getUpdateProduct: async (req, res) => {
