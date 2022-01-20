@@ -11,11 +11,11 @@
                 <section class="productImages">
                     <section class="carouselProduct">
 
-                        <% for(let i = 0; i<4; i++){ %>
+                        <% for(let i = 1; i<5; i++){ %>
 
-                        <% if(product.imagesUpload[i] !=undefined){ %>
+                        <% if(product.images[i] !=undefined){ %>
                             <article>
-                                <img src="/img/imgProducts/<%= product.imagesUpload[i] %>" alt="Imagen" class="product_img">
+                                <img src="/img/imgProducts/<%= product.images[i].path %>" alt="Imagen" class="product_img">
                             </article>
                         <%} else {%>
                             <article>
@@ -35,7 +35,7 @@
                         <section>
                             <h2><%= product.productName %></h2>
                             <div class="currentProductImage">
-                                <img src="/img/imgProducts/<%= product.mainImageUpload %>" alt="<%= product.productName %>" class="product_img">
+                                <img src="/img/imgProducts/<%= product.images[0].path %>" alt="<%= product.productName %>" class="product_img">
                             </div>
                             <section class="productButtonsDesktop">
                                 <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>

@@ -19,14 +19,25 @@ const productsFileImagesPath = path.resolve(__dirname, '../public/img/imgProduct
 
 
 const productsModel = {
+
+  // async function, needed async treatment when called
+
   getProducts: async () => {
     try{let result = await dbProducts.findAll(
       {include: [{association: "images"}]}
     )
-    
     return result
   }catch (error){console.error(error)}}, 
   
+  // async function, needed async treatment when called
+  
+  searchProduct: async function (id) {
+    try{
+      let product = await dbProducts.findByPk(id,
+        {include: [{association: "images"}]})
+        return product
+    }catch(error){console.error(error)}}, 
+
   deleteFileImage: function (imageName) {
     //Funcion para eliminar imagenes de una ruta 
     fs.rmSync(productsFileImagesPath + '/' + imageName)
@@ -70,17 +81,8 @@ const productsModel = {
       }
       )
       .catch(err => console.error(err))
-    },
-  
-  searchProduct: function (id) {
-    let db = dbProducts;
-
-    let searchProduct = db.filter(product => {
-      return product.id == id;
-    });
-
-    return searchProduct[0];
-  },
+    }
+  ,
   //updateProduct sirve para editar un producto
   updateProduct: function (product, files) {
     let db = dbProducts;
