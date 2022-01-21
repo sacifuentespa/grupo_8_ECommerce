@@ -1,13 +1,8 @@
 module.exports = (sequelize, dataTypes) =>{
     let alias = 'Cart'
     let cols = {
-        idCart:{
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false,
-            type: dataTypes.INTEGER(11),
-        },
-        users_idUser:{
+        
+        users_id:{
             type: dataTypes.INTEGER(11)
         }
     }
@@ -21,13 +16,13 @@ module.exports = (sequelize, dataTypes) =>{
     Cart.associate = function (models) {
         Cart.belongsTo(models.User, { 
             as: "user",
-            foreignKey: "users_idUser"
+            foreignKey: "users_id"
         });
         Cart.belongsToMany(models.Product,{
             as: 'product',
             through: 'cart_has_products',
-            foreignKey: 'cart_idCart',
-            otherKey: 'products_idProduct',
+            foreignKey: 'cart_id',
+            otherKey: 'products_id',
             timestamps: false
         })
     }

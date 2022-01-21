@@ -1,20 +1,15 @@
 module.exports = (sequelize, dataTypes) =>{
     let alias = 'Detail'
     let cols = {
-        idDetail:{
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false,
-            type: dataTypes.INTEGER(18),
-        },
+        
         color:{
             type: dataTypes.STRING(45)
         },
         amount:{
-            type: dataTypes.INT(3)
+            type: dataTypes.INTEGER(3)
         },
-        products_idProduct:{
-            type: dataTypes.INT(15)
+        products_id:{
+            type: dataTypes.INTEGER(15)
         }
     }
     let config = {
@@ -27,7 +22,7 @@ module.exports = (sequelize, dataTypes) =>{
     Detail.associate = function (models) {
         Detail.belongsTo(models.Product, { 
             as: "product",
-            foreignKey: "products_idProduct"
+            foreignKey: "products_id"
         })
     }
 

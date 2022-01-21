@@ -1,8 +1,6 @@
 -- MySQL Workbench Forward Engineering
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
 
 -- -----------------------------------------------------
 -- Schema mydb
@@ -14,7 +12,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema truequeOnline
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `truequeOnline` DEFAULT CHARACTER SET latin1 ;
+CREATE DATABASE IF NOT EXISTS `truequeOnline` DEFAULT CHARACTER SET latin1 ;
 USE `truequeOnline` ;
 
 -- -----------------------------------------------------
@@ -55,13 +53,13 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `truequeOnline`.`products` (
   `id` INT(15) NOT NULL AUTO_INCREMENT,
-  `productName` VARCHAR(50) NOT NULL,
+  `productName` VARCHAR(150) NOT NULL,
   `productPrice` INT(11) NOT NULL,
-  `listCategoriesProduct` VARCHAR(15) NOT NULL,
+  `listCategoriesProduct` VARCHAR(20) NOT NULL,
   `productDescriptionUpload` VARCHAR(1500) NOT NULL,
   `aimUpload` VARCHAR(9) NOT NULL,
   `active` TINYINT(1) NOT NULL,
-  `categoryExchange` VARCHAR(15) NULL DEFAULT NULL,
+  `categoryExchange` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
@@ -152,6 +150,3 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
