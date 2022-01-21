@@ -61,20 +61,22 @@ const controller = {
     // res.redirect(`product/${req.body.id}`);
   },
   getUpdateProduct: async (req, res) => {
-    try{let product = await productsModel.searchProduct(req.params.id);
+    try {
+      let product = await productsModel.searchProduct(req.params.id);
 
-    if (product) {
-      res.render("products/productEdit", {
-        title: "Actualizar producto",
-        product: product,
-      });
-    } else {
-      res.status(404).render("notFound", { tittle: "Error 404" });
-    }
-  }catch(error){console.error(error)}},
-  uploadUpdateProduct: (req, res) => {
+      if (product) {
+        res.render("products/productEdit", {
+          title: "Actualizar producto",
+          product: product,
+        });
+      } else {
+        res.status(404).render("notFound", { tittle: "Error 404" });
+      }
+    } catch (error) { console.error(error) }
+  },
+  uploadUpdateProduct: async (req, res) => {
     let resultValidation = validationResult(req)
-    let product = productsModel.searchProduct(req.body.id)
+
     //para borrar documentos subidos de un producto que no cumpla con las validaciones
     if (resultValidation.errors.length > 0) {
       if (req.files["mainImageUpload"]) {
@@ -90,16 +92,18 @@ const controller = {
         errors: resultValidation.mapped(),
         product: product,
       });
-    } else {
-      productsModel.updateProduct(req.body, req.files);
+    } else try {
+      
+      await productsModel.updateProduct(req.body, req.files);
       res.redirect(`product/${req.body.id}`);
-    }
-  },
+    } catch (error) {
+      console.error(error)
+    }},
 
-  deleteProduct: (req, res) => {
-    productsModel.deleteProduct(req.params.id);
-    res.redirect("/admin/products/314");
-  },
+    deleteProduct: (req, res) => {
+      productsModel.deleteProduct(req.params.id);
+      res.redirect("/admin/products/314");
+    },
 };
 
-module.exports = controller;
+  module.exports = controller;
