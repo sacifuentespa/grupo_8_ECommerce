@@ -15,6 +15,7 @@ const comprobationGuest = require("../middleware/comprobationGuest")
 
 //home
 router.get("/", mainController.getIndex);
+router.post("/search", productsController.search)
 
 //productPage
 router.get("/product/:id", productsController.getProduct);

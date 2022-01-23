@@ -1,11 +1,11 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": "1234",
+    "username": "franAdmin",
+    "password": "Adrian12234..",
     "database": "truequeOnline",
-    "host": "127.0.0.1",
+    "host": "45.79.201.214",
     "dialect": "mysql",
-    "port": "3307"
+    "port": "3306"
   },
   "test": {
     "username": "root",
