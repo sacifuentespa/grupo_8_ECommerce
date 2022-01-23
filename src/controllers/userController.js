@@ -1,71 +1,83 @@
 const usersModel = require("../model/users.js");
-const bycrypt = require("bcryptjs")
+const bycrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const db = require("../database/models")
-const Op = db.Sequelize.Op
-
 
 const controller = {
   getRegister: (req, res) => {
-    if (req.session.userLogged){
-      res.redirect("/")
-    }else{
-    res.render("users/register", { title: "Registro Usuario" })};
+    res.render("users/register", { title: "Registro Usuario" });
   },
-  uploadNewUser: (req, res) => {
-    let errors = validationResult(req);
+  uploadNewUser: async (req, res) => {
+    try {
+      let errors = validationResult(req);
 
-    if (errors.isEmpty()) {
-      let user = req.body;
-      usersModel.newUser(req.body, req.file);
-      res.redirect("/login");
-    } else {
-      if(req.file){
-      usersModel.deleteFileImage(req.file.filename)}
-      res.render("users/register", { title: "Registro Usuario", errors: errors.mapped(), old: req.body });
+      if (errors.isEmpty()) {
+        await usersModel.newUser(req.body, req.file.filename);
+        res.redirect("/login");
+      } else {
+        if (req.file) {
+          usersModel.deleteFileImage(req.file.filename);
+        }
+
+        res.render("users/register", {
+          title: "Registro Usuario",
+          errors: errors.mapped(),
+          old: req.body,
+        });
+      }
+    } catch (err) {
+      console.log(err);
     }
-    
   },
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });
   },
   getProfile: (req, res) => {
-   
     res.render("users/userProfile", { title: "Iniciar Sesión" });
-  }
-  ,
-  comprobationLogin: (req, res) => {
+  },
+  comprobationLogin: async (req, res) => {
+    try {
+      let userToLoggin = await usersModel.findByEmail(req.body.email);
 
-    let userToLoggin = usersModel.findByEmail(req.body.email)
+      if (userToLoggin) {
+        let validatePassword = bycrypt.compareSync(
+          req.body.password,
+          userToLoggin.password
+        );
 
+        if (validatePassword) {
+          let userNoPassword = Object.assign({}, userToLoggin);
+          delete userNoPassword.password;
+          req.session.userLogged = userNoPassword;
 
-    if (userToLoggin) {
-      let validatePassword = bycrypt.compareSync(req.body.password, userToLoggin.password)
-      if(validatePassword){
-        let userNoPassword = Object.assign({}, userToLoggin)
-        delete userNoPassword.password
-        req.session.userLogged = userNoPassword;
-        if(req.body.remindMe != undefined){
-          res.cookie('remindMe', userToLoggin.email, {maxAge : 3600000})
+          if (req.body.remindMe) {
+            res.cookie("remindMe", userToLoggin.email, { maxAge: 3600000 });
+          }
+
+          res.redirect("/");
         }
-        res.redirect("/")
       }
-    }   
-    res.render("users/login", {
-      title: "Iniciar Sesión",
-      errors:
-        { msg: "Crendenciales inválidas" }
-    })
+
+      res.render("users/login", {
+        title: "Iniciar Sesión",
+        errors: { msg: "Crendenciales inválidas" },
+      });
+    } catch (err) {
+      console.log(err);
+    }
   },
   logOut: (req, res) => {
     //destroy the cookie
-    res.clearCookie('remindMe')
+    res.clearCookie("remindMe");
     req.session.destroy();
-    res.redirect('/')
+    res.redirect("/");
   },
-  deleteUser: (req, res) => {
-    usersModel.deleteUser(req.body.id);
-    res.redirect("/admin/users/271");
+  deleteUser: async (req, res) => {
+    try {
+      await usersModel.deleteUser(req.body.id);
+      res.redirect("/admin/users/271");
+    } catch (err) {
+      console.log(err);
+    }
   },
 };
 

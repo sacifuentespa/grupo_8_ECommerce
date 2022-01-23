@@ -2,117 +2,106 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
-const req = require("express/lib/request");
 
 //db
-const usersFilePath = path.resolve(__dirname, "../database/users.json");
-let dbUsers = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const db = require("../database/models");
+
+const dbUsers = db.User;
+const dbCart = db.Cart;
+const Op = db.Sequelize.Op;
 
 //ruta imagenes; para usar función deleteFileImage más facilmente
-const usersFileImagesPath = path.resolve(__dirname,'../public/img/imgUsers')
-
-const newId = () => {
-  let last = 0;
-  let db = dbUsers;
-  db.forEach(user => {
-    last = user.id > last ? user.id : last;
-  });
-
-  return (parseInt(last) + 1);
-}
+const usersFileImagesPath = path.resolve(__dirname, "../public/img/imgUsers");
 
 const usersModel = {
-  id: newId(),
-  getUsers: () => {
-    return dbUsers;
+  deleteFileImage: function (imageName) {
+    //Funcion para eliminar imagenes de una ruta
+    fs.rmSync(usersFileImagesPath + "/" + imageName);
   },
-  deleteFileImage: function (imageName){
-    //Funcion para eliminar imagenes de una ruta 
-    fs.rmSync(usersFileImagesPath + '/' + imageName)
-  }
-  ,
-  newUser: (user, file) => {
-    
-    let fileAvatar = "default.png"
-    if (file){
-      fileAvatar = file.filename
+  getUsers: async () => {
+    try {
+      let users = await dbUsers.findAll();
+      return users;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getUser: async function (id) {
+    try {
+      let user = await dbUsers.findByPk(id);
+      return user;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  findByEmail: async function (email) {
+    try {
+      let user = dbUsers.findOne({
+        where: { email: email },
+      });
+
+      return user;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  newUser: async function (user, file) {
+    let fileAvatar = "default.png";
+    if (file) {
+      fileAvatar = file;
     }
 
-    let newUser = {
-    id: newId(),
-    name: user.name,
-    lastName: user.lastName,
-    email: user.email,
-    password: bcrypt.hashSync(user.password,10),
-    avatar: fileAvatar
-    };
-
-    let db = dbUsers;
-    db.push(newUser)
-    db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(usersFilePath, db)
-
-    return newUser
-  },
-  findAll: function(){
-    return dbUsers;
-  },
-  findById: function(id){
-    let db = dbUsers;
-
-    let searchUser = db.find(user => {
-      return  user.id == id;
-    });
-    
-    return searchUser;
-  },
-  findByEmail: function(email){
-    let db = dbUsers;
-
-    let searchUser = db.find(user => {
-      return  user.email == email;
-    });
-    
-    return searchUser;
-  },
-  update: function(user, file){
-    let db = dbUsers;
-    let userToEdit = this.findById(user.id)
-
-    db = db.filter(userUpdate => {
-      return userUpdate.id != user.id;
-    })
-
-    let avatar = userToEdit.avatar;
-
-    if(file["avatar"]){
-      avatar = file["avatar"][0].filename
+    try {
+      await dbUsers.create({
+        name: user.name,
+        lastName: user.lastName,
+        email: user.email,
+        password: bcrypt.hashSync(user.password, 10),
+        avatar: fileAvatar,
+      });
+      return true;
+    } catch (err) {
+      this.deleteFileImage(fileAvatar);
+      console.log(err);
+      return false;
     }
-
-    let updateUser = {
-    id: user.id,
-    name: userToEdit.name,
-    lastName: userToEdit.lastName,
-    email: userToEdit.email,
-    password: userToEdit.password,
-    avatar: avatar
-    };
-
-    db.push(updateUser)
-    db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(usersFilePath, db)
-    dbUsers = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
   },
-  delete: (id) => {
-    let db = dbUsers;
-    db = db.filter((user) => {
-      return user.id != id;
-    });
+  update: async function (user, file) {
+    try {
+      let fileAvatar = user.avatar;
+      if (file) {
+        this.deleteFileImage(user.avatar)
+        fileAvatar = file.filename;
+      }
 
-    db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(usersFilePath, db);
-    dbUsers = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-  } 
+      await dbUsers.update(
+        {
+          name: user.name,
+          lastName: user.lastName,
+          email: user.email,
+          password: bcrypt.hashSync(user.password, 10),
+          avatar: fileAvatar,
+        },
+        {
+          where: { id: user.id },
+        }
+      );
+      return true;
+    } catch (err) {
+      console.log(err);
+      return false;
+    }
+  },
+  delete: async (id) => {
+    try {
+      await dbUsers.destroy({
+        where: { id: id },
+      });
+      return true;
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };
 
-module.exports = usersModel
+module.exports = usersModel;
