@@ -19,7 +19,9 @@ const controller = {
       } else {
         res.render("notFound", { tittle: "Error 404" });
       }
-    } catch (error) { console.error(error) }
+    } catch (error) {
+       console.error(error) 
+      }
   },
   getProducts: async (req, res) => {
     try {
@@ -28,7 +30,9 @@ const controller = {
         title: "Productos",
         products: products,
       });
-    } catch (error) { console.error(error) }
+    } catch (error) {
+       console.error(error) 
+      }
   },
   uploadNewProduct: async (req, res) => {
     let resultValidation = validationResult(req);
@@ -52,7 +56,7 @@ const controller = {
     } else try {
       let newProduct = await productsModel.newProduct(req.body, req.files)
       let product = await productsModel.searchProduct(newProduct.dataValues.id)
-      console.log(product)
+
       res.render("products/product", {
         title: product.productName,
         product: product,
@@ -100,10 +104,22 @@ const controller = {
       console.error(error)
     }},
 
-    deleteProduct: (req, res) => {
-      productsModel.deleteProduct(req.params.id);
-      res.redirect("/admin/products/314");
-    },
+  deleteProduct: (req, res) => {
+    productsModel.deleteProduct(req.params.id);
+    res.redirect("/admin/products/314");
+  },
+
+  search: async (req, res) => {
+    try {
+      let products = await productsModel.search(req.body.qu)
+      res.render("products/listProducts", {
+        title: "Productos",
+        products: products,
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  }
 };
 
   module.exports = controller;
