@@ -7,26 +7,26 @@ const controller = {
     res.render("users/register", { title: "Registro Usuario" });
   },
   uploadNewUser: async (req, res) => {
+    let errors = validationResult(req);
+    let files = req.files ? req.files : false
+
     try {
-      let errors = validationResult(req);
-
       if (errors.isEmpty()) {
-        await usersModel.newUser(req.body, req.file.filename);
+        await usersModel.newUser(req.body, files);
         res.redirect("/login");
-      } else {
-        if (req.file) {
-          usersModel.deleteFileImage(req.file.filename);
-        }
-
-        res.render("users/register", {
-          title: "Registro Usuario",
-          errors: errors.mapped(),
-          old: req.body,
-        });
       }
     } catch (err) {
       console.log(err);
     }
+
+    if (req.file) {
+      usersModel.deleteFileImage(req.file.filename);
+    }
+    res.render("users/register", {
+      title: "Registro Usuario",
+      errors: errors.mapped(),
+      old: req.body,
+    });
   },
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });

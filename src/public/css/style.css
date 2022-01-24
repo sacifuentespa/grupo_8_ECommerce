@@ -11,6 +11,9 @@ body {
   background: #ebebeb;
 }
 
+main {
+  min-height: 66.7vh;
+}
 /* HEADER */
 header {
   display: flex;

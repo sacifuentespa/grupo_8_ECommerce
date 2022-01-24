@@ -45,21 +45,38 @@ const usersModel = {
       console.log(err);
     }
   },
+  findByEmailNoPassword: async function (email) {
+    try {
+      let user = dbUsers.findOne({
+        attributes: {exclude: ['password']},
+        where: { email: email },
+      });
+
+      return user;
+    } catch (err) {
+      console.log(err);
+    }
+  },
   newUser: async function (user, file) {
     let fileAvatar = "default.png";
-    if (file) {
-      fileAvatar = file;
+    if (file["avatar"]) {
+      fileAvatar = file.filename;
     }
 
     try {
-      await dbUsers.create({
+      let newUser = await dbUsers.create({
         name: user.name,
         lastName: user.lastName,
         email: user.email,
         password: bcrypt.hashSync(user.password, 10),
         avatar: fileAvatar,
       });
+
+      await dbCart.create({
+        users_id: newUser.dataValues.id
+      })
       return true;
+
     } catch (err) {
       this.deleteFileImage(fileAvatar);
       console.log(err);
