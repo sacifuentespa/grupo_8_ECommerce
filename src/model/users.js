@@ -64,6 +64,7 @@ const usersModel = {
       if(file){
         fileAvatar = file.filename
         }
+        
       let newUser = await dbUsers.create({
         name: user.name,
         lastName: user.lastName,
