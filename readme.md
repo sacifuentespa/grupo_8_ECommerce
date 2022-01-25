@@ -66,8 +66,8 @@ Sabemos que actualmente la página no es tan intuitiva como debería, así que p
     * '/cart' muestra el carrito, en desarrollo.
     * '/login' login de usuarios, puedes acceder desde el header del sitio
     * '/ register'registro de usuarios, puedes acceder desde el header del sitio. Si no proporcionas una imagen te asignaremos una default.
-    * '/users/userProfile' te dirige a tu perfil, tienes que estar loggeado.
-    * '/users/userEdit' te dirige a la edición del perfil, tienes que estar loggeado.
+    * '/users/userProfile' te dirige a tu perfil, tienes que estar logueado.
+    * '/users/userEdit' te dirige a la edición del perfil, tienes que estar logueado. Al editar se requerirá loguearse de nuevo para comprobar los cambios con tus nuevas credenciales, si es que las cambiaste.
     * '/listProducts' basicamente lista todos los productos que hay en el momento.
     * '/admin/products/314' solo para propositos de comprobación, puedes eliminar o editar productos en está pagina. La idea es que actue como la pagina de un administrador.
     * ''/admin/users/271' solo para propositos de comprobación, puedes eliminar o editar usuarios en está pagina. La idea es que actue como la pagina de un administrador.
