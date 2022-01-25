@@ -58,12 +58,12 @@ const usersModel = {
     }
   },
   newUser: async function (user, file) {
-    let fileAvatar = "default.png";
-    if (file["avatar"]) {
-      fileAvatar = file.filename;
-    }
-
+    
     try {
+      let fileAvatar = 'default.png'
+      if(file){
+        fileAvatar = file.filename
+        }
       let newUser = await dbUsers.create({
         name: user.name,
         lastName: user.lastName,
@@ -111,6 +111,9 @@ const usersModel = {
   },
   delete: async (id) => {
     try {
+      await dbCart.destroy({
+        where: { users_id: id },
+      })
       await dbUsers.destroy({
         where: { id: id },
       });

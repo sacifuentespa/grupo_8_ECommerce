@@ -8,25 +8,28 @@ const controller = {
   },
   uploadNewUser: async (req, res) => {
     let errors = validationResult(req);
-    let files = req.files ? req.files : false
+    
 
     try {
       if (errors.isEmpty()) {
-        await usersModel.newUser(req.body, files);
+        await usersModel.newUser(req.body, req.file);
         res.redirect("/login");
+      }
+      else {
+        if (req.file) {
+          usersModel.deleteFileImage(req.file.filename);
+        }
+        res.render("users/register", {
+          title: "Registro Usuario",
+          errors: errors.mapped(),
+          old: req.body,
+        });
       }
     } catch (err) {
       console.log(err);
     }
 
-    if (req.file) {
-      usersModel.deleteFileImage(req.file.filename);
-    }
-    res.render("users/register", {
-      title: "Registro Usuario",
-      errors: errors.mapped(),
-      old: req.body,
-    });
+    
   },
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });
@@ -54,13 +57,13 @@ const controller = {
           }
 
           res.redirect("/");
-        }
+        } else {res.render("users/login", {
+          title: "Iniciar Sesión",
+          errors: { msg: "Crendenciales inválidas" },
+        });}
       }
 
-      res.render("users/login", {
-        title: "Iniciar Sesión",
-        errors: { msg: "Crendenciales inválidas" },
-      });
+      
     } catch (err) {
       console.log(err);
     }
