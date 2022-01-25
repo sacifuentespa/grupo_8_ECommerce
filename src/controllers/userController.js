@@ -114,7 +114,7 @@ const controller = {
   },
   deleteUser: async (req, res) => {
     try {
-      await usersModel.deleteUser(req.body.id);
+      await usersModel.delete(req.params.id);
       res.redirect("/admin/users/271");
     } catch (err) {
       console.log(err);
