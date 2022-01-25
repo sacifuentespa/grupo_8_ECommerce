@@ -50,4 +50,26 @@ El sitio web será un espacio de encuentro entre potenciales vendedores y/o comp
 Notas:
     - Los wireframes se encuentran en la carpeta con el respectivo nombre
     -Tablero de trabajo(Trello): https://trello.com/b/MtXctl2n/tablero-ecommerce
+
+Importante:
+
+Sabemos que actualmente la página no es tan intuitiva como debería, así que preparamos las siguientes recomendaciones:
+
+    - La página no funciona sin poblar la base de datos con productos. Si realizas un drop schema vuelve a crear la base de datos importando el script truequeOnlineDatabase.sql y luego importando los datos de productos con el script truequeOnlineData.
+    - Recomendamos probar el CRUD de productos con nuevos productos que crees por la razón anterior, y si borras un producto original, no hagas push :'c
+    -  ahora las rutas
+    * puedes buscar productos en la barra de busqueda
+    * '/' devuelve el home de la aplicacion.
+    * '/product/:id' muestra el producto, puedes encontrarlo más facil al hacer la busqueda
+    * '/productUpload' para subir tu producto a nuestra página.
+    * '/productEdit' no te gusto? puedes editarlo. Si no subes nuevas imagenes se conservaran las que ya estaban.
+    * '/cart' muestra el carrito, en desarrollo.
+    * '/login' login de usuarios, puedes acceder desde el header del sitio
+    * '/ register'registro de usuarios, puedes acceder desde el header del sitio. Si no proporcionas una imagen te asignaremos una default.
+    * '/users/userProfile' te dirige a tu perfil, tienes que estar loggeado.
+    * '/users/userEdit' te dirige a la edición del perfil, tienes que estar loggeado.
+    * '/listProducts' basicamente lista todos los productos que hay en el momento.
+    * '/admin/products/314' solo para propositos de comprobación, puedes eliminar o editar productos en está pagina. La idea es que actue como la pagina de un administrador.
+    * ''/admin/users/271' solo para propositos de comprobación, puedes eliminar o editar usuarios en está pagina. La idea es que actue como la pagina de un administrador.
+
 ~~~

@@ -45,7 +45,7 @@ router.post("/register", cpUploadUser, validationRegister, usersController.uploa
 router.get("/users/userProfile", comprobationGuest,  usersController.getProfile)
 
 //userEdition
-router.get("/users/userEdit", usersController.getUpdateUser);
+router.get("/users/userEdit", comprobationGuest, usersController.getUpdateUser);
 router.put("/users/userEdit", cpUploadUser, validationRegister, usersController.updateUser);
 
 

@@ -114,7 +114,7 @@ const controller = {
 
   deleteProduct: (req, res) => {
     productsModel.deleteProduct(req.params.id);
-    location.reload();
+    res.redirect("/admin/products/314");
   },
 
   search: async (req, res) => {
