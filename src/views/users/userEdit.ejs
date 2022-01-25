@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<%- include('../partials/head') %>
+
+    <body class="bodyregister">
+        <!-- header -->
+        <%- include('../partials/partialsUsers/headerUsers') %>
+            <main class="mainLogin">
+                <section>
+                    <h1>Cambiar cuenta</h1>
+
+                    <form class="formLogin" action="/users/userEdit?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<%= locals.user.dataValues.id %>">
+                        <div class="contentForm">
+                            <input type="text" name="name" placeholder="Nombre(s)" class="inputMed"
+                                value="<%= locals.user.dataValues.name %>">
+
+                            <input type="text" name="lastName" placeholder="Apellido(s)" class="inputMed"
+                                value="<%= locals.user.dataValues.lastName %>">
+                        </div>
+                        <% if(locals.errors && errors.name){ %>
+                            <div class="validationError">
+                                <%= errors.name.msg %>
+                            </div>
+                        <% } %>
+                        <% if(locals.errors && errors.lastName){ %>
+                            <div class="validationError">
+                                <%= errors.lastName.msg %>
+                            </div>
+                        <% } %>
+                        <input type="email" name="email" placeholder="Correo electrónico"
+                            value="<%= locals.user.dataValues.email %>">
+                        <% if(locals.errors && errors.email){ %>
+                            <div class="validationError">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                        <div class="contentForm">
+                            <input type="password" name="password" placeholder="Contraseña"
+                                class="inputMed">
+                            <input type="password" name="confirmPassword"
+                                placeholder="Confirmar contraseña" class="inputMed">
+                        </div>
+                        <% if(locals.errors && errors.password){ %>
+                            <div class="validationError">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
+                        <% if(locals.errors && errors.confirmPassword){ %>
+                            <div class="validationError">
+                                <%= errors.confirmPassword.msg %>
+                            </div>
+                        <% } %>
+                        <div class="contentForm">
+                            <label class="addImgProfile">Agrega una imagen de
+                                perfil</label>
+                            <input class="addAvatar" type="file" name="avatar">
+                        </div>
+                        <% if(locals.errors && errors.avatar){ %>
+                            <div class="validationError">
+                                <%= errors.avatar.msg %>
+                            </div>
+                        <% } %>
+                        <div>
+                            <label for="accept">Acepto términos y
+                                condiciones</label>
+                            <input type="checkbox" name="terminos"
+                                id="accept" class="remind">
+                
+                        </div>
+                        <% if(locals.errors && errors.terminos){ %>
+                            <div class="validationError">
+                                <%= errors.terminos.msg %>
+                            </div>
+                        <% } %>
+                        <button type="submit">Continuar</button>
+                    </form>
+                    <a href="/login">¿Ya tienes una cuenta?</a>
+                </section>
+            </main>
+            <!-- footer -->
+            <%- include('../partials/partialsUsers/footerUsers') %>
+    </body>
+
+</html>

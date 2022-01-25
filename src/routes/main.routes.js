@@ -44,6 +44,10 @@ router.post("/register", cpUploadUser, validationRegister, usersController.uploa
 //profile
 router.get("/users/userProfile", comprobationGuest,  usersController.getProfile)
 
+//userEdition
+router.get("/users/userEdit", usersController.getUpdateUser);
+router.put("/users/userEdit", cpUploadUser, validationRegister, usersController.updateUser);
+
 
 //list all products
 router.get("/listProducts", productsController.getProducts)

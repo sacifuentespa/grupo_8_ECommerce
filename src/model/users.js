@@ -84,12 +84,17 @@ const usersModel = {
       return false;
     }
   },
-  update: async function (user, file) {
+  updateUser: async function (user, file) {
     try {
-      let fileAvatar = user.avatar;
+      let userToEdit = await this.getUser(user.id)
+      
+      let fileAvatar = userToEdit.avatar
+      
       if (file) {
-        this.deleteFileImage(user.avatar)
         fileAvatar = file.filename;
+        if (userToEdit.avatar != 'default.png') {
+          this.deleteFileImage(userToEdit.avatar)
+        }
       }
 
       await dbUsers.update(

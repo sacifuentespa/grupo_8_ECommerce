@@ -18,7 +18,7 @@ async function defaultUser (req, res, next){
     if(req.session.userLogged){
         res.locals.isLogged = true;
         res.locals.user = req.session.userLogged
-        console.log(res.locals.user)
+        // console.log(res.locals.user)
     }
 
     next()

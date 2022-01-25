@@ -27,16 +27,55 @@ const controller = {
       }
     } catch (err) {
       console.log(err);
-    }
-
-    
+    } 
   },
+  getUpdateUser: async (req, res) => {
+    try {
+      let user = await usersModel.getUser(req.session.userLogged.dataValues.id)
+
+        res.render("users/userEdit", {
+          title: "Actualizar usuario",
+          user:user,
+        })
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  updateUser: async function (req,res) {
+    let errors = validationResult(req)
+    
+    if (errors.errors.length > 0) {
+      if (req.file) {
+        usersModel.deleteFileImage(req.file.filename);
+      }
+      res.render("users/userEdit", {
+        title: "Edición Usuario",
+        errors: errors.mapped(),
+        user: req.session.userLogged,
+      })
+    }else 
+    try{
+    await usersModel.updateUser(req.body, req.file)
+    res.clearCookie("remindMe");
+    req.session.destroy();
+    res.redirect("/");
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
+  ,
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });
   },
-  getProfile: (req, res) => {
-    res.render("users/userProfile", { title: "Iniciar Sesión" });
-  },
+  getProfile: async (req, res) => {
+    try{
+
+    let user = await usersModel.getUser(req.session.userLogged.dataValues.id)
+    res.render("users/userProfile", { title: "Iniciada Sesión", user:user });
+  }catch (err) {
+    console.log(err);
+  }},
   comprobationLogin: async (req, res) => {
     try {
       let userToLoggin = await usersModel.findByEmail(req.body.email);
@@ -68,7 +107,7 @@ const controller = {
       console.log(err);
     }
   },
-  logOut: (req, res) => {
+  logOut: function (req, res){
     //destroy the cookie
     res.clearCookie("remindMe");
     req.session.destroy();

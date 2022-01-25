@@ -88,63 +88,75 @@ const productsModel = {
     }
   },
   //updateProduct sirve para editar un producto
-  updateProduct: function (product, files) {
-    let db = dbProducts;
-    let idProduct = product.id;
+  updateProduct: async function (product, files) {
 
-    let productToEdit = this.searchProduct(idProduct);
+    try {
+      let idProduct = product.id
 
-    db = db.filter((productUpdate) => {
-      return productUpdate.id != idProduct;
-    });
+      let productToEdit = await this.searchProduct(idProduct)
 
-    let mainImage = productToEdit.mainImageUpload;
-    let images = productToEdit.imagesUpload;
-    //se agregan dos variables que seran los nombres de los archivos de imagenes originales
-    let originalMainImage = mainImage;
-    let originalImages = images;
 
-    // si se actualizan las imagenes se cambian los nombres de tales imagenes por los nuevos
-    if (files["mainImageUpload"]) {
-      mainImage = files["mainImageUpload"][0].filename;
-    }
-
-    if (files["imagesUpload"]) {
-      images = files["imagesUpload"].map((image) => {
-        return image.filename;
-      });
-    }
-
-    //si los nombres difieren con los originales se eliminan los archivos originales
-    if (originalMainImage != mainImage) {
-      this.deleteFileImage(originalMainImage);
-    }
-
-    if (originalImages != images) {
-      if (originalImages.length >= 1) {
-        for (let i = 0; i < originalImages.length; i++) {
-          this.deleteFileImage(originalImages[i]);
-        }
+      let mainImage = productToEdit.images[0].dataValues.path
+      let images = await dbImages.findAll({ where: { products_id: idProduct, type: "secondaryImage" } })
+      images = images.map((image) => { return image.dataValues.path })
+      // //se agregan dos variables que seran los nombres de los archivos de imagenes originales
+      let originalMainImage = mainImage
+      let originalImages = images
+      
+      // si se actualizan las imagenes se cambian los nombres de tales imagenes por los nuevos
+      if (files["mainImageUpload"]) {
+        mainImage = files["mainImageUpload"][0].filename
       }
+
+      if (files["imagesUpload"]) {
+        images = files["imagesUpload"].map((image) => {
+          return image.filename;
+        })
+      }
+
+      await dbProducts.update({
+        productName: product.productName,
+        productPrice: parseInt(product.productPrice),
+        listCategoriesProduct: product.listCategoriesProduct,
+        productDescriptionUpload: product.productDescriptionUpload,
+        aimUpload: product.aimUpload,
+        categoryExchange: product.categoryExchange,
+      }, {
+        where: { id: idProduct }
+      }
+      )
+
+      // si los nombres difieren con los originales se eliminan los archivos originales y se agregan los nuevos
+      if (originalMainImage != mainImage) {
+         this.deleteFileImage(originalMainImage)
+         await dbImages.update({
+           path: mainImage
+         },
+           {where : {path : originalMainImage}})        
+       }
+    
+       if (originalImages != images) {
+
+        for (let i = 0; i < images.length; i++){
+        await dbImages.create({
+          path: images[i],
+          type: 'secondaryImage',
+          products_id: idProduct,
+        })}
+        
+         if (originalImages.length >= 1) {
+           for (let i = 0; i < originalImages.length; i++) {
+             this.deleteFileImage(originalImages[i])
+             console.log(originalImages[i])
+             await dbImages.destroy({where : {path : originalImages[i]}})
+           }
+         }
+       } 
+    }  catch (error) {
+      console.error(error)
     }
-
-    let updatedProduct = {
-      id: parseInt(idProduct),
-      productName: product.productName,
-      productPrice: parseInt(product.productPrice),
-      listCategoriesProduct: product.listCategoriesProduct,
-      productDescriptionUpload: product.productDescriptionUpload,
-      mainImageUpload: mainImage,
-      imagesUpload: images,
-      aimUpload: product.aimUpload,
-      categoryExchange: product.categoryExchange,
-    };
-
-    db.push(updatedProduct);
-    db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(productsFilePath, db);
-    dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
   },
+
 
   deleteProduct: function (id) {
     let db = dbProducts;
