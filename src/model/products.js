@@ -147,7 +147,7 @@ const productsModel = {
          if (originalImages.length >= 1) {
            for (let i = 0; i < originalImages.length; i++) {
              this.deleteFileImage(originalImages[i])
-             console.log(originalImages[i])
+             
              await dbImages.destroy({where : {path : originalImages[i]}})
            }
          }
@@ -158,32 +158,31 @@ const productsModel = {
   },
 
 
-  deleteProduct: function (id) {
-    let db = dbProducts;
-
+  deleteProduct: async function (id) {
+   
+    try{
     // Selecciona el producto a remover
-    let productToDelete = this.searchProduct(id);
+    
 
     // Guarda los nombres de los archivos de imagenes a eliminar
-    let mainImage = productToDelete.mainImageUpload;
-    let images = productToDelete.imagesUpload;
 
-    this.deleteFileImage(mainImage);
+    let images = await dbImages.findAll({ where: { products_id: id}})
+    images = images.map((image) => { return image.dataValues.path })
+
 
     if (images.length >= 1) {
       for (let i = 0; i < images.length; i++) {
-        this.deleteFileImage(images[i]);
+        this.deleteFileImage(images[i])
+        console.log(images[i])
+        await dbImages.destroy({where : {path : images[i]}})
       }
     }
 
-    db = db.filter((product) => {
-      return product.id != id;
-    });
+    await dbProducts.destroy({where: {id:id}})
 
-    db = JSON.stringify(db, null, 4);
-    fs.writeFileSync(productsFilePath, db);
-    dbProducts = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-  },
+  }catch (error) {
+    console.log(error);
+  }},
   search: async function(arg) {
     try {
       let products = await dbProducts.findAll({
