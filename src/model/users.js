@@ -48,7 +48,7 @@ const usersModel = {
   findByEmailNoPassword: async function (email) {
     try {
       let user = dbUsers.findOne({
-        attributes: {exclude: ['password']},
+        attributes: { exclude: ["password"] },
         where: { email: email },
       });
 
@@ -58,13 +58,12 @@ const usersModel = {
     }
   },
   newUser: async function (user, file) {
-    
     try {
-      let fileAvatar = 'default.png'
-      if(file){
-        fileAvatar = file.filename
-        }
-        
+      let fileAvatar = "default.png";
+      if (file) {
+        fileAvatar = file.filename;
+      }
+
       let newUser = await dbUsers.create({
         name: user.name,
         lastName: user.lastName,
@@ -74,10 +73,9 @@ const usersModel = {
       });
 
       await dbCart.create({
-        users_id: newUser.dataValues.id
-      })
+        users_id: newUser.dataValues.id,
+      });
       return true;
-
     } catch (err) {
       this.deleteFileImage(fileAvatar);
       console.log(err);
@@ -86,14 +84,14 @@ const usersModel = {
   },
   updateUser: async function (user, file) {
     try {
-      let userToEdit = await this.getUser(user.id)
-      
-      let fileAvatar = userToEdit.avatar
-      
+      let userToEdit = await this.getUser(user.id);
+
+      let fileAvatar = userToEdit.avatar;
+
       if (file) {
         fileAvatar = file.filename;
-        if (userToEdit.avatar != 'default.png') {
-          this.deleteFileImage(userToEdit.avatar)
+        if (userToEdit.avatar != "default.png") {
+          this.deleteFileImage(userToEdit.avatar);
         }
       }
 
@@ -119,10 +117,12 @@ const usersModel = {
     try {
       await dbCart.destroy({
         where: { users_id: id },
-      })
+      });
       await dbUsers.destroy({
         where: { id: id },
       });
+      let user = await this.getUser(id);
+      this.deleteFileImage(user.avatar)
       return true;
     } catch (err) {
       console.log(err);

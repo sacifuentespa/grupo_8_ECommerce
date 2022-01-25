@@ -79,7 +79,6 @@ const controller = {
   comprobationLogin: async (req, res) => {
     try {
       let userToLoggin = await usersModel.findByEmail(req.body.email);
-
       if (userToLoggin) {
         let validatePassword = bycrypt.compareSync(
           req.body.password,

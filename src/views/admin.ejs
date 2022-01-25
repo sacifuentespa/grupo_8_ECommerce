@@ -10,13 +10,21 @@
             <thead>
                 <tr>
                     <td>Id</td>
-                    <td>Producto</td>
-                    <td>Precio</td>
-                    <td>Categoria</td>
+                    <% if (!(typeof products == "undefined")) { %>                     
+                        <td>Producto</td>
+                        <td>Precio</td>
+                        <td>Categoria</td>
+                    <% } %>
+                    <% if (!(typeof users == "undefined")) { %>                     
+                        <td>Nombre</td>
+                        <td>Apellido</td>
+                        <td>Correo</td>
+                    <% } %>
                     <td>Acciones</td>
                 </tr>
             </thead>
             <tbody>
+                <% if (!(typeof products == "undefined")) { %>
                 <% products.forEach(product => { %>
                     <tr>
                         <td><%= product.id %></td>
@@ -34,6 +42,26 @@
                         </td>
                     </tr>
                 <% }) %>
+                <% } %>
+                <% if (!(typeof users == "undefined")) { %>
+                    <% users.forEach(user => { %>l
+                        <tr>
+                            <td><%= user.id %></td>
+                            <td><%=user.name %></td>
+                            <td><%=user.lastName %></td>
+                            <td><%=user.email %></td>
+                            <td>
+                                <form action="/productEdit/<%= user.id %>" method="get">
+                                    <input type="hidden" name="id" value="<%= user.id %>">
+                                    <button type="submit"><i class="fas fa-edit"></i></i></button>
+                                </form>
+                                <form method="post" action="/deleteUser/<%= user.id %>?_method=DELETE">
+                                    <button type="submit"><i class="far fa-trash-alt"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                    <% } %>
             </tbody>
         </table>
     </main>

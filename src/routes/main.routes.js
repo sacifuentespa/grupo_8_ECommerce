@@ -60,5 +60,7 @@ router.post("/logout", usersController.logOut)
 router.get("/admin/products/:password", adminController.getAllProducts)
 router.get("/admin/users/:password", adminController.getAllUsers)
 router.delete("/deleteProduct/:id", productsController.deleteProduct)
+router.delete("/deleteUser/:id", usersController.delete)
+
 
 module.exports = router;

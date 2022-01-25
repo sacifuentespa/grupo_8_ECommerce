@@ -112,9 +112,13 @@ const controller = {
       }
   },
 
-  deleteProduct: (req, res) => {
-    productsModel.deleteProduct(req.params.id);
-    res.redirect("/admin/products/314");
+  deleteProduct: async (req, res) => {
+    try {
+      await productsModel.deleteProduct(req.params.id);
+      res.redirect("/admin/products/314"); 
+    } catch (err) {
+      console.log(err)
+    }
   },
 
   search: async (req, res) => {
