@@ -1,7 +1,7 @@
 <header class="headerLong">
     <a href="/" class="linkPc"><img class="logoPc" src="/img/logoWhite.png" alt="Logo de Trueque Online"></a>
     <a href="/"><img class="logoPhone" src="/img/iconWhite.png" alt="Logo de Trueque Online"></a>
-    <form action="/search" method="post">
+    <form action="/products/search" method="post">
         <input type="search" name="qu" placeholder="Buscar productos">
         <button type="submit">
             <i class="fas fa-search"></i>
@@ -12,8 +12,8 @@
             <li class="dropdownUser">
                 <img src="/img/imgUsers/<%= locals.user.dataValues.avatar %>" alt="Avatar user" class="avatarUser">
                 <ul class="modalNavBurguer modalDropdownUser" >
-                    <li><a href="/users/userProfile">Mi perfil</a></li>
-                    <li><a href="/logout">Cerrar Sesión</a></li>
+                    <li><a href="/users/profile">Mi perfil</a></li>
+                    <li><a href="/users/logout">Cerrar Sesión</a></li>
                 </ul>
             </li>
             <li>
@@ -23,7 +23,7 @@
                         <li><a href="#">Mis ventas</a></li>
                         <li><a href="#">Favoritos</a></li>
                         <li><a href="#">Notificaciones</a></li>
-                        <li><a href="#">Mensajes</a></li>
+                        <li><a href="/products/upload">Publicar producto</a></li>
                     </ul>
             </li>
         </ul>
@@ -31,8 +31,8 @@
 
     <% if (!locals.isLogged) { %>
         <div class="notLogged">
-            <a href="/login">Iniciar sesión</a>
-            <a href="/register">Crear cuenta</a>
+            <a href="/users/login">Iniciar sesión</a>
+            <a href="/users/register">Crear cuenta</a>
         </div>
     <% } %>
 </header>

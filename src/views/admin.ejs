@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <!-- head -->
 <%- include('./partials/head', {title:title}) %>
 <body>
@@ -32,11 +32,11 @@
                         <td><%=product.productPrice %></td>
                         <td><%=product.listCategoriesProduct %></td>
                         <td>
-                            <form action="/productEdit/<%= product.id %>" method="get">
+                            <form action="/products/edit/<%= product.id %>" method="get">
                                 <input type="hidden" name="id" value="<%= product.id %>">
                                 <button type="submit"><i class="fas fa-edit"></i></i></button>
                             </form>
-                            <form method="post" action="/deleteProduct/<%= product.id %>?_method=DELETE">
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="post">
                                 <button type="submit"><i class="far fa-trash-alt"></i></button>
                             </form>
                         </td>
@@ -51,11 +51,11 @@
                             <td><%=user.lastName %></td>
                             <td><%=user.email %></td>
                             <td>
-                                <form action="/productEdit/<%= user.id %>" method="get">
+                                <form action="/users/edit/<%= user.id %>" method="get">
                                     <input type="hidden" name="id" value="<%= user.id %>">
                                     <button type="submit"><i class="fas fa-edit"></i></i></button>
                                 </form>
-                                <form method="post" action="/deleteUser/<%= user.id %>?_method=DELETE">
+                                <form action="/users/delete/<%= user.id %>?_method=DELETE" method="post">
                                     <button type="submit"><i class="far fa-trash-alt"></i></button>
                                 </form>
                             </td>

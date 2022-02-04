@@ -13,7 +13,7 @@
                 <section class="container">
                     <div class="contentAllProducts">
                         <h3>Productos</h3>
-                        <a href="/listProducts" class="allProductsPc">
+                        <a href="/products" class="allProductsPc">
                             <i class="fas fa-bars"></i>
                         </a>
                     </div>
@@ -21,11 +21,11 @@
                     <% for(let i=0; i<4; i++){ %>
                         <%- include('../partials/partialsProducts/cardProduct', {product: products[i]}) %> 
                     <% } %>
-                            <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
-                            <a href="/listProducts" class="allProducts">
-                                <p>Ver todas</p>
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
+                    <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
+                    <a href="/products" class="allProducts">
+                        <p>Ver todas</p>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
                 </section>
                 <section>
                     <div class="categories">
@@ -47,7 +47,7 @@
                         <%- include('../partials/partialsProducts/cardProduct', {product: products[i]}) %> 
                     <% } %>
                     <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
-                    <a href="/listProducts" class="allProducts">
+                    <a href="/products" class="allProducts">
                         <p>Ver todas</p>
                         <i class="fas fa-chevron-right"></i>
                     </a>

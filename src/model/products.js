@@ -82,7 +82,7 @@ const productsModel = {
           });
         }
       }
-      return newProduct;
+      return newProduct.dataValues.id;
     } catch (error) {
       console.error(error);
     }
