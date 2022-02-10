@@ -1,123 +1,123 @@
 <!DOCTYPE html>
 <html>
 <!-- head -->
-<%- include('../partials/head', {title:title}) %>
+<%- include('../partials/head') %>
 
     <body>
         <!-- header -->
         <%- include('../partials/partialsProducts/headerProducts') %>
 
-        <main class="mainProductUpload">
+            <main class="mainProductUpload">
 
-            <form action="/products/upload" method="POST" enctype="multipart/form-data">
+                <form action="/productUpload" method="POST" enctype="multipart/form-data">
 
-                <div class="productNameUpload">
-                    <label>Nombre del producto</label>
-                    <input type="text" name="productName" 
-                    value = "<%= locals.oldData ? oldData.productName : null %>"
-                    placeholder="Nombre del producto" >
-                    
-                    <% if(locals.errors && errors.productName){ %>
-                        <div class= "validationError">
-                            <%= errors.productName.msg %>
-                        </div>
-                    <% } %>
-                </div>
+                    <div class="productNameUpload">
+                        <label>Nombre del producto</label>
+                        <input type="text" name="productName" 
+                        value = "<%= locals.oldData ? oldData.productName : null %>"
+                        placeholder="Nombre del producto" >
+                        
+                        <% if(locals.errors && errors.productName){ %>
+                            <div class= "validationError">
+                                <%= errors.productName.msg %>
+                            </div>
+                        <% } %>
+                    </div>
 
-                <div class="productPriceUpload">
-                    <label>Precio del producto</label>
-                    <input type="number" name="productPrice" 
-                    value = "<%= locals.oldData ? oldData.productPrice : null %>""
-                    placeholder="Precio">
-                    <% if(locals.errors && errors.productPrice){ %>
-                        <div class= "validationError">
-                            <%= errors.productPrice.msg %>
-                        </div>
-                    <% } %>                    
-                </div>
+                    <div class="productPriceUpload">
+                        <label>Precio del producto</label>
+                        <input type="number" name="productPrice" 
+                        value = "<%= locals.oldData ? oldData.productPrice : null %>""
+                        placeholder="Precio">
+                        <% if(locals.errors && errors.productPrice){ %>
+                            <div class= "validationError">
+                                <%= errors.productPrice.msg %>
+                            </div>
+                        <% } %>                    
+                    </div>
 
-                    
-                <div class="listCategoriesProductUpload">
-                    <label>Categoría del producto</label>
-                    <select name="listCategoriesProduct">
-                        <option value="vehiculos">Hogar</option>
-                        <option value="hogar">Vehiculos</option>
-                        <option value="electrodomesticos">Electrodomésticos</option>
-                        <option value="inmobiliaria">Inmobiliaria</option>
-                        <option value="electronica">Electrónica</option>
-                        <option value="ropa"> Ropa y accesorios</option>
-                        <option value="deportes">Deportes</option>
-                        <option value="libros">Libros, revistas y comics</option>
-                    </select>
-                </div>
+                        
+                    <div class="listCategoriesProductUpload">
+                        <label>Categoría del producto</label>
+                        <select name="listCategoriesProduct">
+                            <option value="vehiculos">Hogar</option>
+                            <option value="hogar">Vehiculos</option>
+                            <option value="electrodomesticos">Electrodomésticos</option>
+                            <option value="inmobiliaria">Inmobiliaria</option>
+                            <option value="electronica">Electrónica</option>
+                            <option value="ropa"> Ropa y accesorios</option>
+                            <option value="deportes">Deportes</option>
+                            <option value="libros">Libros, revistas y comics</option>
+                        </select>
+                    </div>
 
-                <div class="productDescriptionUpload">
-                    <label>Descripición del producto</label>
-                    <textarea name="productDescriptionUpload" ><%= locals.oldData ? oldData.productDescriptionUpload : null %></textarea>
-                    <% if(locals.errors && errors.productDescriptionUpload){ %>
-                        <div class= "validationError">
-                            <%= errors.productDescriptionUpload.msg %>
-                        </div>
-                    <% } %> 
-                </div>
+                    <div class="productDescriptionUpload">
+                        <label>Descripición del producto</label>
+                        <textarea name="productDescriptionUpload" ><%= locals.oldData ? oldData.productDescriptionUpload : null %></textarea>
+                        <% if(locals.errors && errors.productDescriptionUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.productDescriptionUpload.msg %>
+                            </div>
+                        <% } %> 
+                    </div>
 
-                <div class="mainImageUpload">
-                    <label>Imagen principal</label>
-                    <input type="file" name="mainImageUpload" >
-                    <% if(locals.errors && errors.mainImageUpload){ %>
-                        <div class= "validationError">
-                            <%= errors.mainImageUpload.msg %>
-                        </div>
-                    <% } %> 
-                </div>
+                    <div class="mainImageUpload">
+                        <label>Imagen principal</label>
+                        <input type="file" name="mainImageUpload" >
+                        <% if(locals.errors && errors.mainImageUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.mainImageUpload.msg %>
+                            </div>
+                        <% } %> 
+                    </div>
 
-                <div class="imagesUpload">
-                    <label>Imagenes del producto</label>
-                    <input type="file" name="imagesUpload" multiple>
-                    <% if(locals.errors && errors.imagesUpload){ %>
-                        <div class= "validationError">
-                            <%= errors.imagesUpload.msg %>
-                        </div>
-                    <% } %> 
-                </div>
+                    <div class="imagesUpload">
+                        <label>Imagenes del producto</label>
+                        <input type="file" name="imagesUpload" multiple>
+                        <% if(locals.errors && errors.imagesUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.imagesUpload.msg %>
+                            </div>
+                        <% } %> 
+                    </div>
 
-                <div class="aimUpload">
-                    <label>¿Qué quieres hacer con el producto?</label>
+                    <div class="aimUpload">
+                        <label>¿Qué quieres hacer con el producto?</label>
 
-                    <label><input type="radio" name="aimUpload" value="vender">Vender</label>
-                    <label><input type="radio" name="aimUpload" value="cambiar">Cambiar</label>
-                    
-                    <% if(locals.errors && errors.aimUpload){ %>
-                        <div class= "validationError">
-                            <%= errors.aimUpload.msg %>
-                        </div>
-                    <% } %> 
-                </div>
+                        <label><input type="radio" name="aimUpload" value="vender">Vender</label>
+                        <label><input type="radio" name="aimUpload" value="cambiar">Cambiar</label>
+                        
+                        <% if(locals.errors && errors.aimUpload){ %>
+                            <div class= "validationError">
+                                <%= errors.aimUpload.msg %>
+                            </div>
+                        <% } %> 
+                    </div>
 
-                <div class="questionExchange">
-                    <label>¿Por qué tipo de producto aceptarías un cambio?</label>
-                    <select name="categoryExchange">
-                        <option value="vehiculos">Hogar</option>
-                        <option value="hogar">Vehículos</option>
-                        <option value="electrodomesticos">Electrodomésticos</option>
-                        <option value="inmobiliaria">Inmobiliaria</option>
-                        <option value="electronica">Electrónica</option>
-                        <option value="ropa"> Ropa y accesorios</option>
-                        <option value="deportes">Deportes</option>
-                        <option value="libros">Libros, revistas y comics</option>
-                    </select>
-                </div>
+                    <div class="questionExchange">
+                        <label>¿Por qué tipo de producto aceptarías un cambio?</label>
+                        <select name="categoryExchange">
+                            <option value="vehiculos">Hogar</option>
+                            <option value="hogar">Vehículos</option>
+                            <option value="electrodomesticos">Electrodomésticos</option>
+                            <option value="inmobiliaria">Inmobiliaria</option>
+                            <option value="electronica">Electrónica</option>
+                            <option value="ropa"> Ropa y accesorios</option>
+                            <option value="deportes">Deportes</option>
+                            <option value="libros">Libros, revistas y comics</option>
+                        </select>
+                    </div>
 
-                <div class="buttonsUpload">
-                    <button type="submit">Subir</button>
-                    <button type="reset">Cancelar</button>
-                </div>
+                    <div class="buttonsUpload">
+                        <button type="submit">Subir</button>
+                        <button type="reset">Cancelar</button>
+                    </div>
 
-            </form>
+                </form>
 
-        </main>
-        <!-- footer -->
-        <%- include('../partials/partialsProducts/footerProducts') %>
+            </main>
+            <!-- footer -->
+            <%- include('../partials/partialsProducts/footerProducts') %>
     </body>
 
 </html>

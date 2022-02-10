@@ -13,7 +13,7 @@ const controller = {
     try {
       if (errors.isEmpty()) {
         await usersModel.newUser(req.body, req.file);
-        res.redirect("/users/login");
+        res.redirect("/login");
       }
       else {
         if (req.file) {
@@ -115,7 +115,7 @@ const controller = {
   deleteUser: async (req, res) => {
     try {
       await usersModel.delete(req.params.id);
-      res.redirect("/users/admin/271");
+      res.redirect("/admin/users/271");
     } catch (err) {
       console.log(err);
     }

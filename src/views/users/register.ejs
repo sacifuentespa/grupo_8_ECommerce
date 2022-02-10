@@ -10,7 +10,7 @@
                 <section>
                     <h1>Crear cuenta</h1>
 
-                    <form class="formLogin" action="/users/register" method="post" enctype="multipart/form-data">
+                    <form class="formLogin" action="/register" method="post" enctype="multipart/form-data">
                         <div class="contentForm">
                             <input type="text" name="name" placeholder="Nombre(s)" class="inputMed"
                                 value="<%= locals.old ? old.name : '' %>">
@@ -75,7 +75,7 @@
                         <% } %>
                         <button type="submit">Continuar</button>
                     </form>
-                    <a href="/users/login">¿Ya tienes una cuenta?</a>
+                    <a href="/login">¿Ya tienes una cuenta?</a>
                 </section>
             </main>
             <!-- footer -->

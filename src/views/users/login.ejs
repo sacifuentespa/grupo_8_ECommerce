@@ -9,7 +9,7 @@
             <main class="mainLogin">
                 <section>
                     <h1>Iniciar sesión</h1>
-                    <form class="formLogin" action="/users/login" method="post">
+                    <form class="formLogin" action="/login" method="post">
                         <input type="email" name="email" placeholder="Correo electrónico" required>
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <% if (locals.errors) { %>
@@ -23,7 +23,7 @@
                         </div>
                         <button class="buttoncontinuar" type="submit">Continuar</button>
                     </form>
-                    <a href="/users/register">¿Aún no tienes cuenta?</a>
+                    <a href="/register">¿Aún no tienes cuenta?</a>
                     <a href="#">¿Has olvidado tu contraseña?</a>
                 </section>
             </main>

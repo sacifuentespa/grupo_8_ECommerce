@@ -10,7 +10,7 @@
                 <section>
                     <h1>Cambiar cuenta</h1>
 
-                    <form class="formLogin" action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form class="formLogin" action="/users/userEdit?_method=PUT" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<%= locals.user.dataValues.id %>">
                         <div class="contentForm">
                             <input type="text" name="name" placeholder="Nombre(s)" class="inputMed"
@@ -62,7 +62,7 @@
                                 <%= errors.avatar.msg %>
                             </div>
                         <% } %>
-<                        <div>
+                        <div>
                             <label for="accept">Acepto términos y
                                 condiciones</label>
                             <input type="checkbox" name="terminos"
@@ -73,9 +73,10 @@
                             <div class="validationError">
                                 <%= errors.terminos.msg %>
                             </div>
-                        <% } %>>
+                        <% } %>
                         <button type="submit">Continuar</button>
                     </form>
+                    <a href="/login">¿Ya tienes una cuenta?</a>
                 </section>
             </main>
             <!-- footer -->

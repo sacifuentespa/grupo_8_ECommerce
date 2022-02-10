@@ -17,7 +17,7 @@ const controller = {
           product: product,
         });
       } else {
-        res.render("notFound", { title: "Error 404" });
+        res.render("notFound", { tittle: "Error 404" });
       }
     } catch (error) {
       console.error(error);
@@ -56,15 +56,18 @@ const controller = {
     } else
       try {
         let newProduct = await productsModel.newProduct(req.body, req.files);
+        let product = await productsModel.searchProduct(
+          newProduct.dataValues.id
+        );
 
-        // res.render("products/product", {
-        //   title: product.productName,
-        //   product: product,
-        // });
-        res.redirect(`products/${newProduct}`);
+        res.render("products/product", {
+          title: product.productName,
+          product: product,
+        });
       } catch (error) {
         console.error(error);
       }
+    // res.redirect(`product/${req.body.id}`);
   },
   getUpdateProduct: async (req, res) => {
     try {
@@ -76,7 +79,7 @@ const controller = {
           product: product,
         });
       } else {
-        res.status(404).render("notFound", { title: "Error 404" });
+        res.status(404).render("notFound", { tittle: "Error 404" });
       }
     } catch (error) {
       console.error(error);
@@ -112,7 +115,7 @@ const controller = {
   deleteProduct: async (req, res) => {
     try {
       await productsModel.deleteProduct(req.params.id);
-      res.redirect("/products/admin/314"); 
+      res.redirect("/admin/products/314"); 
     } catch (err) {
       console.log(err)
     }
