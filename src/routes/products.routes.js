@@ -12,15 +12,17 @@ const adminController = require("../controllers/adminController")
 //list all products
 router.get("/", productsController.getProducts)
 
+//productPageUpload
+router.get("/upload", productsController.getNewProduct);
+router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
+
 //productPage
 router.get("/:id", productsController.getProduct);
 
 //searchProduct
 router.post("/search", productsController.search)   
 
-//productPageUpload
-router.get("/upload", productsController.getNewProduct);
-router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
+
 
 //productEdition
 router.get("/edit/:id", productsController.getUpdateProduct);
