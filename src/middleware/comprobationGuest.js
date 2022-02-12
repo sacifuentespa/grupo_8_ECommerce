@@ -1,6 +1,6 @@
 function comprobationGuest(req, res, next) {
     if(!req.session.userLogged){
-        res.redirect("/login")
+        res.redirect("/users/login")
     }
     next();
 }

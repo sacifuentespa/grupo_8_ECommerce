@@ -1,6 +1,6 @@
 function comprobationLogged(req, res, next) {
     if(req.session.userLogged){
-        res.redirect("/users/userProfile")
+        res.redirect("/users/profile")
     }
     next(); 
 }

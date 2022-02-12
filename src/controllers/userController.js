@@ -114,6 +114,9 @@ const controller = {
   },
   deleteUser: async (req, res) => {
     try {
+      res.clearCookie("remindMe");
+      req.session.destroy();
+      res.redirect("/");
       await usersModel.delete(req.params.id);
       res.redirect("/admin/users/271");
     } catch (err) {
