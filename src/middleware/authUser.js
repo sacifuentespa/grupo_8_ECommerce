@@ -7,8 +7,10 @@ async function defaultUser (req, res, next){
 
      if(req.cookies.remindMe != undefined && req.session.userLogged == undefined){
          try {
-            let userToLoggin = await usersModel.findByEmailNoPassword(req.cookies.remindMe)
+             
+            let userToLoggin = await usersModel.findByEmail(req.cookies.remindMe)
             req.session.userLogged = userToLoggin;
+            
          } catch (err) {
             console.log(err)
          }

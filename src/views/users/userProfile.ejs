@@ -13,10 +13,10 @@
                     <section class="productSectionImageAndButtons">
                         <section>
                             <h2>
-                               Hola <%= user.dataValues.name %>!
+                               Hola <%= user.name %>!
                             </h2>
                             <div class="currentProductImage">
-                                <img src="/img/imgUsers/<%= user.dataValues.avatar %>" class="product_img">
+                                <img src="/img/imgUsers/<%= user.avatar %>" class="product_img">
                             </div>
                             <section class="productButtonsDesktop">
                                 <a href="/users/edit">Editar Perfil</a>
@@ -31,19 +31,19 @@
                     <article class="priceProduct">
                         <h3>Nombre(s)</h3>
                         <p class="priceProduct">
-                            <%= user.dataValues.name %>
+                            <%= user.name %>
                         </p>
                     </article>
                     <article class="priceProduct">
                         <h3>Apellido(s)</h3>
                         <p class="priceProduct">
-                            <%= user.dataValues.lastName %>
+                            <%= user.lastName %>
                         </p>
                     </article>
                     <article class="priceProduct">
                         <h3>Email</h3>
                         <p class="priceProduct">
-                            <%= user.dataValues.email %>
+                            <%= user.email %>
                         </p>
                     </article>
                 </section>

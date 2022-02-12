@@ -70,8 +70,8 @@ const controller = {
   },
   getProfile: async (req, res) => {
     try{
-
-    let user = await usersModel.getUser(req.session.userLogged.dataValues.id)
+    
+    let user = await usersModel.getUser(req.session.userLogged.id)
     res.render("users/userProfile", { title: "Iniciada Sesión", user:user });
   }catch (err) {
     console.log(err);
@@ -87,9 +87,9 @@ const controller = {
 
         if (validatePassword) {
           let userNoPassword = Object.assign({}, userToLoggin);
-          delete userNoPassword.password;
-          req.session.userLogged = userNoPassword;
-
+          delete userNoPassword.dataValues.password;
+          req.session.userLogged = userNoPassword.dataValues;
+          console.log(req.session.userLogged)
           if (req.body.remindMe) {
             res.cookie("remindMe", userToLoggin.email, { maxAge: 3600000 });
           }
