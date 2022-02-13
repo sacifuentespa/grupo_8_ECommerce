@@ -17,9 +17,6 @@ router.get("/", productsController.getProducts)
 router.get("/upload", comprobationGuest, productsController.getNewProduct);
 router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
 
-//productPage
-router.get("details/:id", productsController.getProduct);
-
 //searchProduct
 router.post("/search", productsController.search)   
 
@@ -34,5 +31,8 @@ router.delete("/delete/:id", productsController.deleteProduct)
 
 //adminRoute
 router.get("/admin/:password", adminController.getAllProducts)
+
+//productPage
+router.get("/:id", productsController.getProduct);
 
 module.exports = router;
