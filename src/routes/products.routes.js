@@ -4,7 +4,8 @@ const productsController = require("../controllers/productsController");
 const cpUploadProduct = require("../middleware/uploadFileProduct")
 const validations = require("../middleware/validationUpload")
 const validationsEdit = require("../middleware/validationEdit")
-const adminController = require("../controllers/adminController")
+const adminController = require("../controllers/adminController");
+const comprobationGuest = require("../middleware/comprobationGuest");
 
 
 // route/products/
@@ -13,7 +14,7 @@ const adminController = require("../controllers/adminController")
 router.get("/", productsController.getProducts)
 
 //productPageUpload
-router.get("/upload", productsController.getNewProduct);
+router.get("/upload", comprobationGuest, productsController.getNewProduct);
 router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
 
 //productPage

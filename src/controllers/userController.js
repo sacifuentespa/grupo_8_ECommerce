@@ -13,7 +13,7 @@ const controller = {
     try {
       if (errors.isEmpty()) {
         await usersModel.newUser(req.body, req.file);
-        res.redirect("/login");
+        res.redirect("/users/login");
       }
       else {
         if (req.file) {
