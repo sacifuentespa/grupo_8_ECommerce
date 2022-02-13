@@ -4,6 +4,7 @@ const mainController = require("../controllers/mainController");
 const usersController = require("../controllers/userController");
 const cpUploadUser = require("../middleware/uploadFileUser");
 const validationRegister = require("../middleware/validationRegister")
+const validationUserEdit = require("../middleware/validationUserEdit")
 const comprobationLogged = require("../middleware/comprobationLogged")
 const comprobationGuest = require("../middleware/comprobationGuest")
 const adminController = require("../controllers/adminController")
@@ -27,7 +28,7 @@ router.get("/profile", comprobationGuest,  usersController.getProfile)
 
 //userEdition
 router.get("/edit", comprobationGuest, usersController.getUpdateUser);
-router.put("/edit", cpUploadUser, validationRegister, usersController.updateUser);
+router.put("/edit", cpUploadUser, validationUserEdit, usersController.updateUser);
 
 //logout
 router.get("/logout", usersController.logOut)

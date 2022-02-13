@@ -62,13 +62,7 @@
                                 <%= errors.avatar.msg %>
                             </div>
                         <% } %>
-                        <div>
-                            <label for="accept">Acepto términos y
-                                condiciones</label>
-                            <input type="checkbox" name="terminos"
-                                id="accept" class="remind">
-                
-                        </div>
+                        
                         <% if(locals.errors && errors.terminos){ %>
                             <div class="validationError">
                                 <%= errors.terminos.msg %>
