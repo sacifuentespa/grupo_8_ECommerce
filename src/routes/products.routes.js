@@ -18,7 +18,7 @@ router.get("/upload", comprobationGuest, productsController.getNewProduct);
 router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
 
 //productPage
-router.get("/:id", productsController.getProduct);
+router.get("details/:id", productsController.getProduct);
 
 //searchProduct
 router.post("/search", productsController.search)   
