@@ -1,7 +1,9 @@
+require('dotenv').config()
+
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const routesMain = require("./routes/main.routes");
 const routesProducts = require("./routes/products.routes");
 const routesUsers = require("./routes/users.routes");
@@ -37,5 +39,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(port, () => {
-  console.log("Servidor funcionando");
+  console.log(`Servidor funcionando en el puerto ${port}`);
 });

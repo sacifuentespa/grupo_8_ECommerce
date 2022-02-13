@@ -1,24 +1,24 @@
 module.exports = {
   "development": {
-    "username": "franAdmin",
-    "password": "Adrian12234..",
-    "database": "truequeOnline",
-    "host": "45.79.201.214",
+    "username": process.env.DBUSER,
+    "password": process.env.DBPASS,
+    "database": process.env.DBNAME,
+    "host": process.env.DBHOST,
     "dialect": "mysql",
     "port": "3306"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": process.env.DBUSER,
+    "password": process.env.DBPASS,
+    "database": process.env.DBNAME,
+    "host": process.env.DBHOST,
     "dialect": "mysql"
   },
   "production": {
-    "username": "franAdmin",
-    "password": "Adrian12234..",
-    "database": "truequeOnline",
-    "host": "45.79.201.214",
+    "username": process.env.DBUSER,
+    "password": process.env.DBPASS,
+    "database": process.env.DBNAME,
+    "host": process.env.DBHOST,
     "dialect": "mysql",
     "port": "3306"
   }
