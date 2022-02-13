@@ -106,7 +106,7 @@ const controller = {
     } else
       try {
         await productsModel.updateProduct(req.body, req.files);
-        res.redirect(`product/${req.body.id}`);
+        res.redirect(`/products/${req.body.id}`);
       } catch (error) {
         console.error(error);
       }
@@ -115,7 +115,7 @@ const controller = {
   deleteProduct: async (req, res) => {
     try {
       await productsModel.deleteProduct(req.params.id);
-      res.redirect("/admin/products/314"); 
+      res.redirect("/products/admin/314"); 
     } catch (err) {
       console.log(err)
     }

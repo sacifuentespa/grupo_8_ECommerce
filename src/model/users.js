@@ -84,13 +84,14 @@ const usersModel = {
   },
   updateUser: async function (user, file) {
     try {
-      let userToEdit = await this.getUser(user.id);
+      let userToEdit = await dbUsers.findByPk(user.id);
 
       let fileAvatar = userToEdit.avatar;
 
       if (file) {
         fileAvatar = file.filename;
         if (userToEdit.avatar != "default.png") {
+          
           this.deleteFileImage(userToEdit.avatar);
         }
       }
@@ -115,15 +116,20 @@ const usersModel = {
   },
   delete: async (id) => {
     try {
-      await dbCart.destroy({
-        where: { users_id: id },
-      });
-      await dbUsers.destroy({
-        where: { id: id },
-      });
-      let user = await this.getUser(id);
-      this.deleteFileImage(user.avatar)
-      return true;
+      let user = await dbUsers.findByPk(id);
+      
+      if (user.dataValues.avatar != "default.png") {
+        fs.rmSync(usersFileImagesPath + "/" + user.dataValues.avatar);
+      }
+       await dbCart.destroy({
+           where: { users_id: id },
+         });
+         await dbUsers.destroy({
+           where: { id: id },
+         });
+
+        
+        return true;
     } catch (err) {
       console.log(err);
     }

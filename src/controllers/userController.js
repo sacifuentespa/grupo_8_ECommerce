@@ -31,7 +31,7 @@ const controller = {
   },
   getUpdateUser: async (req, res) => {
     try {
-      let user = await usersModel.getUser(req.session.userLogged.dataValues.id)
+      let user = await usersModel.getUser(req.session.userLogged.id)
 
         res.render("users/userEdit", {
           title: "Actualizar usuario",
@@ -116,9 +116,8 @@ const controller = {
     try {
       res.clearCookie("remindMe");
       req.session.destroy();
-      res.redirect("/");
       await usersModel.delete(req.params.id);
-      res.redirect("/admin/users/271");
+      res.redirect("/users/admin/271");
     } catch (err) {
       console.log(err);
     }
