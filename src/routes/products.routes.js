@@ -17,9 +17,12 @@ router.get("/", productsController.getProducts)
 router.get("/upload", comprobationGuest, productsController.getNewProduct);
 router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
 
+<<<<<<< HEAD
 //productPage
 router.get("/details/:id", productsController.getProduct);
 
+=======
+>>>>>>> bf6f84d05a37f9389dde03a06871bf35273eea7e
 //searchProduct
 router.post("/search", productsController.search)   
 
@@ -34,5 +37,8 @@ router.delete("/delete/:id", productsController.deleteProduct)
 
 //adminRoute
 router.get("/admin/:password", adminController.getAllProducts)
+
+//productPage
+router.get("/:id", productsController.getProduct);
 
 module.exports = router;
