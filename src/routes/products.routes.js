@@ -17,16 +17,8 @@ router.get("/", productsController.getProducts)
 router.get("/upload", comprobationGuest, productsController.getNewProduct);
 router.post("/upload", cpUploadProduct, validations, productsController.uploadNewProduct);
 
-<<<<<<< HEAD
-//productPage
-router.get("/details/:id", productsController.getProduct);
-
-=======
->>>>>>> bf6f84d05a37f9389dde03a06871bf35273eea7e
 //searchProduct
 router.post("/search", productsController.search)   
-
-
 
 //productEdition
 router.get("/edit/:id", productsController.getUpdateProduct);
