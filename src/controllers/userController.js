@@ -106,6 +106,16 @@ const controller = {
       console.log(err);
     }
   },
+  isEmailAvaible: async (req, res) => {
+    try {
+      let userToLoggin = await usersModel.findByEmail(req.body.email);
+      if (userToLoggin) res.json({ isAvaible: false });
+      else res.json({ isAvaible: true });
+      
+    } catch (err) {
+      console.log(err);
+    }
+  },
   logOut: function (req, res){
     //destroy the cookie
     res.clearCookie("remindMe");

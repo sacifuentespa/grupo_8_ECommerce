@@ -55,7 +55,7 @@
                         <div class="contentForm">
                             <label class="addImgProfile">Agrega una imagen de
                                 perfil</label>
-                            <input class="addAvatar" type="file" name="avatar">
+                            <input class="addAvatar" type="file" accept="image/png, image/jpg, image/jpeg, image/gif" name="avatar">
                         </div>
                         <% if(locals.errors && errors.avatar){ %>
                             <div class="validationError">
@@ -75,6 +75,13 @@
             </main>
             <!-- footer -->
             <%- include('../partials/partialsUsers/footerUsers') %>
+            <script type="text/javascript" src="/js/libraries/validator.js"></script>
+            <script type="text/javascript" src="/js/libraries/sweetalert.js"></script>
+
+            <script type="text/javascript" src="/js/globals.js"></script>
+
+            
+            <script type="text/javascript" src="/js/front-validations/userRegisterValidator.js"></script>
     </body>
 
 </html>

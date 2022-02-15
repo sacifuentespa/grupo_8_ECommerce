@@ -59,7 +59,7 @@
 
                     <div class="mainImageUpload">
                         <label>Imagen principal</label>
-                        <input type="file" name="mainImageUpload">
+                        <input type="file" name="mainImageUpload" accept="image/png, image/jpg, image/jpeg, image/gif">
                         <% if(locals.errors && errors.mainImageUpload){ %>
                             <div class= "validationError">
                                 <%= errors.mainImageUpload.msg %>
@@ -69,7 +69,7 @@
 
                     <div class="imagesUpload">
                         <label>Imagenes del producto</label>
-                        <input type="file" name="imagesUpload" multiple>
+                        <input type="file" name="imagesUpload" accept="image/png, image/jpg, image/jpeg, image/gif" multiple>
                         <% if(locals.errors && errors.imagesUpload){ %>
                             <div class= "validationError">
                                 <%= errors.imagesUpload.msg %>
@@ -113,8 +113,17 @@
                 </form>
 
             </main>
+            
             <!-- footer -->
             <%- include('../partials/partialsProducts/footerProducts') %>
+
+            <script type="text/javascript" src="/js/libraries/validator.js"></script>
+            <script type="text/javascript" src="/js/libraries/sweetalert.js"></script>
+
+            <script type="text/javascript" src="/js/globals.js"></script>
+
+            
+            <script type="text/javascript" src="/js/front-validations/productsValidator.js"></script>
     </body>
 
 </html>
