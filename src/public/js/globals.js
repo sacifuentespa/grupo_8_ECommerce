@@ -1,10 +1,10 @@
 function showError(errorMessage){
 
     Swal.fire({
-        title: 'Error!',
+        title: '¡Error!',
         text: errorMessage,
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Aceptar'
       })
 
 }

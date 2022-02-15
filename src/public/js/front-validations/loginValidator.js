@@ -5,7 +5,7 @@ form.onsubmit = async (e) => {
 
     let email = document.querySelector("input[name=email]").value;
     if(  !validator.isEmail(email) ){
-        showError("Debes ingresar un email válido");
+        showError("Debes ingresar un correo válido");
         return false;
     }
 

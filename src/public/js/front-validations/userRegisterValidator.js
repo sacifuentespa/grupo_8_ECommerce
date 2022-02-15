@@ -19,13 +19,13 @@ form.onsubmit = async (e) => {
 
     let email = document.querySelector("input[name=email]").value;
     if(  !validator.isEmail(email) ){
-        showError("Debes ingresar un email válido");
+        showError("Debes ingresar un correo válido");
         return false;
     }
 
     let canUseEmail = await isEmailAvaible(email);
     if(!canUseEmail){
-        showError("Este email ya ha sido registrado");
+        showError("Este correo ya ha sido registrado");
         return false;
     }
 
@@ -37,7 +37,7 @@ form.onsubmit = async (e) => {
 
     let confirmPassword = document.querySelector("input[name=confirmPassword]").value;
     if( confirmPassword !=  password ){
-        showError("La contraseña no coincide, vuelve a escribirlas");
+        showError("Las contraseñas no coinciden");
         return false;
     }
 
