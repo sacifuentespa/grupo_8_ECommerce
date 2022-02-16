@@ -11,28 +11,30 @@
 
                 <form action="/products/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<%= product.id %>">
-
+                    <div>
                     <div class="productNameUpload">
                         <label>Nombre del producto</label>
                         <input type="text" name="productName" value="<%= product.productName %>" >
-
-                        <% if(locals.errors && errors.productName){ %>
-                            <div class= "validationError">
-                                <%= errors.productName.msg %>
-                            </div>
-                        <% } %>
                     </div>
-
+                    
                     <div class="productPriceUpload">
                         <label>Precio del producto</label>
-                        <input type="number" name="productPrice" value="<%= product.productPrice %>" placeholder="Precio2">
-                        <% if(locals.errors && errors.productPrice){ %>
-                            <div class= "validationError">
-                                <%= errors.productPrice.msg %>
-                            </div>
-                        <% } %>       
+                        <input type="number" name="productPrice" value="<%= product.productPrice %>" placeholder="Precio2">      
                     </div>
+                </div>
 
+                    <% if(locals.errors && errors.productName){ %>
+                        <div class= "validationError">
+                            <%= errors.productName.msg %>
+                        </div>
+                    <% } %>
+
+                    <% if(locals.errors && errors.productPrice){ %>
+                        <div class= "validationError">
+                            <%= errors.productPrice.msg %>
+                        </div>
+                    <% } %> 
+                    <div>
                     <div class="listCategoriesProductUpload">
                         <label>Categoría del producto</label>
                         <select name="listCategoriesProduct">
@@ -46,53 +48,9 @@
                             <option value="libros"  <%= product.listCategoriesProduct == 'libros' ? 'selected' : ''%>>Libros, revistas y comics</option>
                         </select>
                     </div>
-
-                    <div class="productDescriptionUpload">
-                        <label>Descripición del producto</label>
-                        <textarea name="productDescriptionUpload"><%= product.productDescriptionUpload %></textarea>
-                        <% if(locals.errors && errors.productDescriptionUpload){ %>
-                            <div class= "validationError">
-                                <%= errors.productDescriptionUpload.msg %>
-                            </div>
-                        <% } %> 
-                    </div>
-
-                    <div class="mainImageUpload">
-                        <label>Imagen principal</label>
-                        <input type="file" name="mainImageUpload" accept="image/png, image/jpg, image/jpeg, image/gif">
-                        <% if(locals.errors && errors.mainImageUpload){ %>
-                            <div class= "validationError">
-                                <%= errors.mainImageUpload.msg %>
-                            </div>
-                        <% } %> 
-                    </div>
-
-                    <div class="imagesUpload">
-                        <label>Imagenes del producto</label>
-                        <input type="file" name="imagesUpload" accept="image/png, image/jpg, image/jpeg, image/gif" multiple>
-                        <% if(locals.errors && errors.imagesUpload){ %>
-                            <div class= "validationError">
-                                <%= errors.imagesUpload.msg %>
-                            </div>
-                        <% } %> 
-                    </div>
-
-                    <div class="aimUpload">
-                        <label>¿Qué quieres hacer con el producto?</label>
-
-                        <label><input type="radio" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
-                        <label><input type="radio" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>
-                        
-                        <% if(locals.errors && errors.aimUpload){ %>
-                            <div class= "validationError">
-                                <%= errors.aimUpload.msg %>
-                            </div>
-                        <% } %> 
                     
-                    </div>
-
                     <div class="questionExchange">
-                        <label>¿Por qué tipo de producto aceptarías un cambio?</label>
+                        <label>Categoría para intercambio</label>
                         <select name="categoryExchange">
                             <option value="vehiculos" <%= product.categoryExchange== 'vehiculos' ? 'selected' : ''%>>Vehiculos</option>
                             <option value="hogar"  <%= product.categoryExchange== 'hogar' ? 'selected' : ''%>>Hogar y muebles</option>
@@ -104,6 +62,56 @@
                             <option value="libros"  <%= product.categoryExchange== 'libros' ? 'selected' : ''%>>Libros, revistas y comics</option>
                         </select>
                     </div>
+                    </div>
+                    <div class="productDescriptionUpload">
+                        <label>Descripición del producto</label>
+                        <textarea name="productDescriptionUpload"><%= product.productDescriptionUpload %></textarea>
+                        
+                    </div>
+                    <% if(locals.errors && errors.productDescriptionUpload){ %>
+                        <div class= "validationError">
+                            <%= errors.productDescriptionUpload.msg %>
+                        </div>
+                    <% } %> 
+                    
+                    <div>
+                    <div class="mainImageUpload">
+                        <label>Imagen principal</label>
+                        <input type="file" name="mainImageUpload" accept="image/png, image/jpg, image/jpeg, image/gif, image/webp">
+                        
+                    </div>
+                    
+
+                    <div class="imagesUpload">
+                        <label>Imagenes del producto</label>
+                        <input type="file" name="imagesUpload" accept="image/png, image/jpg, image/jpeg, image/gif, image/webp" multiple>
+                       
+                    </div>
+                    </div>
+                    <% if(locals.errors && errors.mainImageUpload){ %>
+                    <div class= "validationError">
+                        <%= errors.mainImageUpload.msg %>
+                    </div>
+                    <% } %> 
+                    <% if(locals.errors && errors.imagesUpload){ %>
+                        <div class= "validationError">
+                            <%= errors.imagesUpload.msg %>
+                        </div>
+                    <% } %> 
+
+                    <div class="aimUpload">
+                        <label>¿Qué quieres hacer con el producto?</label>
+
+                        <label><input type="radio" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
+                        <label><input type="radio" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>                    
+                    </div>
+                    <% if(locals.errors && errors.aimUpload){ %>
+                        <div class= "validationError">
+                            <%= errors.aimUpload.msg %>
+                        </div>
+                    <% } %> 
+
+                    
 
                     <div class="buttonsUpload">
                         <button type="submit">Subir</button>

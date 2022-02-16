@@ -969,26 +969,59 @@ main.mainLogin section{
 
 /* main.mainProductUpload */
 /* mainProductUpload start */
+
 main.mainProductUpload {
+  width: 100%;
+  height: 65vh;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 main.mainProductUpload form {
+  background-color: #b6b6b656;
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
   align-content: space-around;
 }
 
 main.mainProductUpload form div {
-  margin: 10px;
+  margin: 5px;
+}
+
+main.mainProductUpload form div.productNameUpload {
+  display: inline-block;
+}
+
+main.mainProductUpload form div.productPriceUpload {
+  display: inline-block;
+}
+
+main.mainProductUpload form div.listCategoriesProductUpload {
+  display: inline-block;
+}
+
+main.mainProductUpload form div.questionExchange {
+  display: inline-block;
+}
+
+main.mainProductUpload form div.mainImageUpload {
+  display: inline-block;
+}
+
+main.mainProductUpload form div.imagesUpload {
+  display: inline-block;
 }
 
 main.mainProductUpload select {
   height: 4vh;
-  width: 10%;
+  width: 35%;
   border-radius: 5px;
   border: none;
   background: #11aea9;
@@ -1012,9 +1045,12 @@ main.mainProductUpload form button:hover {
   background: blue;
 }
 
+main.mainProductUpload form div.productDescriptionUpload{
+  width:inherit;
+}
 main.mainProductUpload form textarea {
-  width: 40%;
-  height: 40px;
+  width: 80%;
+  height: inherit;
   resize: none;
 }
 /* main.mainProductUpload FINAL*/
@@ -1110,7 +1146,8 @@ main.mainAdmin{
 
 /* productUpload errors */
 div.validationError {
-  color: red
+  color: red;
+  display: inline-block
 }
 
 /* final productUpload errors*/
