@@ -5,10 +5,10 @@ let acceptedFormats = ['.jpg', '.png', '.webp', '.jpeg', '.jfif']
 
 const validations = [
     body('productName').notEmpty().withMessage('El producto debe tener un nombre').bail()
-    .isLength({min:3}).withMessage('El nombre debe tener por lo menos 5 caracteres'), 
+    .isLength({min:3}).withMessage('El nombre debe tener por lo menos 3 caracteres'), 
     body('productPrice').notEmpty().withMessage('El producto debe tener un precio'),
     body('productDescriptionUpload').notEmpty().withMessage('El producto debe tener una descripción')
-    .isLength({min:15}).withMessage('La descripción debe tener por lo menos 15 caracteres').isLength({max:1500})
+    .isLength({min:20}).withMessage('La descripción debe tener por lo menos 15 caracteres').isLength({max:1500})
     .withMessage('La descripción debe tener menos de 1500 caracteres'),  
     check('mainImageUpload').custom((value, {req})=>{
         if(req.files["mainImageUpload"]){
