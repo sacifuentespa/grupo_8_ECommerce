@@ -8,134 +8,95 @@
         <%- include('../partials/partialsProducts/headerProducts') %>
 
             <main class="mainProduct">
-                <section class="productImages">
-                    <section class="carouselProduct">
+                <h1><%= product.productName %></h1>
+                <section class="content">
+                    <section class="imagesList">
+                        <% product.images.forEach(image => { %>
+                            <img src="/img/imgProducts/<%= image.path %>" alt="Imagen" class="product_img">
+                        <% }) %>
+                    </section>
 
-                        <% for(let i = 1; i<5; i++){ %>
+                    <section class="medSection">
+                        <img src="/img/imgProducts/<%= product.images[0].path %>" alt="<%= product.productName %>">
+                        <div class="buttonOptions">
+                            <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>
+                            <button class="offerExchangeButton" name="offerExchangeButton">Ofrecer cambio</button>
+                        </div>
+                    </section>
 
-                        <% if(product.images[i] !=undefined){ %>
-                            <article>
-                                <img src="/img/imgProducts/<%= product.images[i].path %>" alt="Imagen" class="product_img">
-                            </article>
-                        <%} else {%>
-                            <article>
-                            <img src="/img/imgProducts/default-image.png" alt="Imagen" " class="product_img">
+                    <section class="detailsProduct">
+                        <article class="contentProduct">
+                            <div class="supDetail">
+                                <h3>Precio</h3>
+                                <h4 class="priceProduct"> <%= product.productPrice %></h4>
+                            </div>
                         </article>
-                            <%}%>
-                        <%}%>
                         
-                    </section>
-                    <section class="listSectionCategoriesProduct">
-                        <h4>Imágenes del producto</h4>
-                    </section>
-                </section>
-
-                <section class="currentProduct">
-                    <section class="productSectionImageAndButtons">
-                        <section>
-                            <h2><%= product.productName %></h2>
-                            <div class="currentProductImage">
-                                <img src="/img/imgProducts/<%= product.images[0].path %>" alt="<%= product.productName %>" class="product_img">
+                        <article class="contentDescription">
+                            <div class="supDetail">
+                                <h3>Descripción</h3>
+                                <i class="fas fa-chevron-down"></i>
                             </div>
-                            <section class="productButtonsDesktop">
-                                <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>
-                                <button class="offerExchangeButton" name="offerExchangeButton">Ofrecer cambio</button>
-                            </section>
-                        </section>
-                    </section>
-                </section>
-
-                </section>
-                
-
-                <section class="productButtons">
-                    <button class="addToCartButton" name="addToCartButton">Añadir al carrito</button>
-                    <button class="offerExchangeButton" name="offerExchangeButton">Ofrecer cambio</button>
-                </section>
-
-                <section class="optionsProducts">
-                    <article class="priceProduct">
-                        <h3>Precio</h3>
-                        <p class="priceProduct"> <%= product.productPrice %>
-                        </p>
-                    </article>
-                    <article class="productDescription">
-
-                        <h3>Descripción</h3>
-                        <p class="descriptionParagraph">
-                            <%= product.productDescriptionUpload %>
-                        </p>
-                    </article>
-                    <article class="returnPolicy">
-                        <h3>Política de devolución</h3>
-                        <p class="returnPolicyParagraph">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem culpa harum quasi,
-                            beatae
-                            ratione quia iusto, modi commodi cum aspernatur? Soluta, nesciunt atque. Voluptates error
-                            repellendus consectetur suscipit sapiente.
-                            Accusantium ab quod quaerat? Et, fuga voluptatibus veritatis amet officiis dignissimos
-                            voluptatem
-                            beatae similique odit ipsum porro soluta ipsa ea autem. Aliquam cupiditate nemo unde aut
-                            quae, quam
-                            in voluptatem.
-                            Sint ab laborum, corporis fugiat quidem tenetur repudiandae perferendis quaerat, ex repellat
-                            voluptatibus atque quo maiores soluta amet totam? Molestias fuga at provident, excepturi
-                            quisquam
-                            nulla obcaecati? Quis, sed porro!
-                        </p>
-                    </article>
-                    <article class="score">
-                        <h3>Calificación</h3>
-                        <p class="scoreParagraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sint obcaecati inventore
-                            magni
-                            molestias repellendus eligendi, consequuntur deleniti. Nostrum dolor, iure optio dolore
-                            dignissimos
-                            voluptatibus mollitia neque dolorem similique et?
-                        </p>
-                    </article>
-                    <article class="reviews">
-                        <h3>Reseñas</h3>
-                        <p class="reviewsParagraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia magni minima
-                            voluptatibus,
-                            officiis nemo delectus ipsa quia laudantium alias, molestiae sint iure inventore reiciendis
-                            modi qui
-                            vel quas iste.
-                            Vero sapiente ipsam excepturi minima maiores voluptatibus voluptates asperiores. Reiciendis
-                            odio aut
-                            atque esse obcaecati ipsam repellat nam debitis facere. Modi odit nam et quaerat, inventore
-                            reiciendis enim voluptates officia.
-                        </p>
-                    </article>
-                </section>
-
-                <section class="carouselSimilarProducts">
-                    <h3 class="similarProducts">Productos similares</h3>
-                    <section>
-                        <article>
-                            <img src="/img/motorolag30.jfif" alt="Cafetera" class="product_img">
-                            <div class="text-card-product">
-                                <h4>Motorola G30</h4>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="/img/img-macbook-pro-2019.jpg" alt="MacBook" class="product_img">
-                            <div class="text-card-product">
-                                <h4>MacBook Pro 2019</h4>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="/img/img-samsung-galaxy-s10.jpg" alt="Teléfono Móvil Samsung Galaxy"
-                                class="product_img">
-                            <div class="text-card-product">
-                                <h4>Teléfono móvil Samsung Galaxy S10</h4>
-                            </div>
+                            <p>
+                                <%= product.productDescriptionUpload %>
+                            </p>
                         </article>
 
+                        <article class="contentPolitic">
+                            <div class="supDetail">
+                                <h3>Política de devolución</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem culpa harum quasi,
+                                beatae
+                                ratione quia iusto, modi commodi cum aspernatur? Soluta, nesciunt atque. Voluptates error
+                                repellendus consectetur suscipit sapiente.
+                                Accusantium ab quod quaerat? Et, fuga voluptatibus veritatis amet officiis dignissimos
+                                voluptatem
+                                beatae similique odit ipsum porro soluta ipsa ea autem. Aliquam cupiditate nemo unde aut
+                                quae, quam
+                                in voluptatem.
+                                Sint ab laborum, corporis fugiat quidem tenetur repudiandae perferendis quaerat, ex repellat
+                                voluptatibus atque quo maiores soluta amet totam? Molestias fuga at provident, excepturi
+                                quisquam
+                                nulla obcaecati? Quis, sed porro!
+                            </p>
+                        </article>
+                        
+                        <article class="contentQualification">
+                            <div class="supDetail">
+                                <h3>Calificación</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sint obcaecati inventore
+                                magni
+                                molestias repellendus eligendi, consequuntur deleniti. Nostrum dolor, iure optio dolore
+                                dignissimos
+                                voluptatibus mollitia neque dolorem similique et?
+                            </p>
+                        </article>
+
+                        <article class="contentReviews">
+                            <div class="supDetail">
+                                <h3>Reseñas</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam mollitia magni minima
+                                voluptatibus,
+                                officiis nemo delectus ipsa quia laudantium alias, molestiae sint iure inventore reiciendis
+                                modi qui
+                                vel quas iste.
+                                Vero sapiente ipsam excepturi minima maiores voluptatibus voluptates asperiores. Reiciendis
+                                odio aut
+                                atque esse obcaecati ipsam repellat nam debitis facere. Modi odit nam et quaerat, inventore
+                                reiciendis enim voluptates officia.
+                            </p>
+                        </article>
                     </section>
                 </section>
-
             </main>
             <!-- footer -->
             <%- include('../partials/partialsProducts/footerProducts') %>

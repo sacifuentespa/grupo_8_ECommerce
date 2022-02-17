@@ -1,18 +1,17 @@
 window.addEventListener("load", () => {
-    let footerContent = document.querySelector(".footerContent")
-    let btnFooter = document.querySelector(".btnMoreInfo")
+    //add animation header
     let avatarUser = document.querySelector(".iconNav img")
     let iconDropdown = document.querySelector(".iconNav i")
-
-    //add animation header
     let navUser = document.querySelector("#navUser")
     let navDropdown = document.querySelector("#navProducts")
+
     avatarUser.addEventListener("click", () => {
         navUser.classList.toggle("visibleHeader")
         if(navDropdown.classList.contains("visibleHeader")){
             navDropdown.classList.remove("visibleHeader")
         }
     })
+
     iconDropdown.addEventListener("click", () => {
         navDropdown.classList.toggle("visibleHeader")
 
@@ -22,12 +21,13 @@ window.addEventListener("load", () => {
     })
     
     //add animation footer
+    let footerContent = document.querySelector(".footerContent")
+    let btnFooter = document.querySelector(".btnMoreInfo")
+
     btnFooter.addEventListener("click", () => {
         footerContent.classList.toggle("visibleFooter")
         let arrowFooter = document.querySelector(".btnMoreInfo i")
         arrowFooter.style.transition = "all 0.5s"
-
-        console.log(arrowFooter)
 
         if(footerContent.classList.contains("visibleFooter")){
             arrowFooter.style.transform = "rotate(180deg)"
@@ -35,4 +35,24 @@ window.addEventListener("load", () => {
             arrowFooter.style.transform = "rotate(0deg)"
         }
     })
+
+    //ad animation productDetails
+    let textDetailsProduct = document.querySelectorAll(".detailsProduct p")
+    let detailsProductArrow = document.querySelectorAll(".detailsProduct i")
+    let contentProduct = document.querySelectorAll(".detailsProduct article")
+    console.log(contentProduct[1])
+
+    detailsProductArrow.forEach((arrow, i) => {
+        arrow.addEventListener("click", () => {
+            textDetailsProduct[i].classList.toggle("visibleText")
+    
+            if(textDetailsProduct[i].classList.contains("visibleText")){
+                contentProduct[i+1].style.background = "rgb(236, 236, 236)"
+                arrow.style.transform = "rotate(180deg)"
+            }else{
+                contentProduct[i+1].style.background = "white"
+                arrow.style.transform = "rotate(0deg)"
+            }
+        })
+    });
 })
