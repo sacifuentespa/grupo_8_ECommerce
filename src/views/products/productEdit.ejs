@@ -101,9 +101,12 @@
 
                     <div class="aimUpload">
                         <label>¿Qué quieres hacer con el producto?</label>
-
-                        <label><input type="radio" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>>Vender</label>
-                        <label><input type="radio" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>>Cambiar</label>                    
+                        <div class="radioInputs">
+                        <input type="radio" name="aimUpload" value="vender"  <%= product.aimUpload== 'vender' ? 'checked' : 'true'%>><label>Vender</label>
+                        </div>
+                        <div class="radioInputs">
+                        <input type="radio" name="aimUpload" value="cambiar"  <%= product.aimUpload== 'cambiar' ? 'checked' : 'true'%>><label>Cambiar</label>                    
+                        </div>
                     </div>
                     <% if(locals.errors && errors.aimUpload){ %>
                         <div class= "validationError">

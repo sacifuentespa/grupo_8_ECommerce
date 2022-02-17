@@ -104,8 +104,12 @@
                 </div>
                 <div class="aimUpload">
                     <label>¿Qué quieres hacer con el producto?</label>
-                    <label><input type="radio" name="aimUpload" value="vender">Vender</label>
-                    <label><input type="radio" name="aimUpload" value="cambiar">Cambiar</label>
+                    <div class="radioInputs">
+                    <input type="radio" name="aimUpload" value="vender"><label>Vender</label> 
+                    </div>
+                    <div class="radioInputs">
+                    <input type="radio" name="aimUpload" value="cambiar"> <label>Cambiar</label>
+                    </div>
                 </div>
                 <% if(locals.errors && errors.aimUpload){ %>
                     <div class= "validationError">
