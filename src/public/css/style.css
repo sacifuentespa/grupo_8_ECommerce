@@ -836,7 +836,6 @@ main.mainLogin section{
   width: 20%;
   height: 4vh;
   background-color: #3483fa;
-  border-radius: 10px;
   cursor: pointer;
   color: white;
   margin: 1%;
@@ -952,27 +951,46 @@ main.mainProductUpload form div.imagesUpload {
   display: inline-block;
 }
 
+
+main.mainProductUpload form div.buttonsUpload {
+  display: flex;
+}
+
 main.mainProductUpload select {
   height: 4vh;
   width: 35%;
   border-radius: 5px;
   border: none;
-  background: #11aea9;
+  background: #3483fa;;
   color: white;
 }
 
 main.mainProductUpload form button {
-  display: flex;
+  display: inline-block;
   margin: auto;
-  font-size: 15px;
   padding: 7px;
   background-color: #3483fa;
   border-radius: 5px;
   color: white;
-  border: 2px solid;
+  margin: 1%;
+  font-size: 1.3em;
+  border: none;
   cursor: pointer;
   font-weight: bold;
 }
+
+main.mainProductUpload form input{
+  border-radius: 5px;
+  border: none;
+  height: 3.5vh;
+  outline-color: #11aea9;
+}
+
+main.mainProductUpload form input:focus{
+  box-shadow: 0px 0px 10px rgba(103, 223, 241, 0.646);
+}
+
+
 
 main.mainProductUpload form button:hover {
   background: blue;
@@ -983,9 +1001,26 @@ main.mainProductUpload form div.productDescriptionUpload{
 }
 main.mainProductUpload form textarea {
   width: 80%;
+  border-radius: 5px;
+  border: none;
+  outline-color: #11aea9;
   height: inherit;
   resize: none;
 }
+
+main.mainProductUpload form div.aimUpload{
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main.mainProductUpload form div.aimUpload div.radioInputs{
+  display: flex;
+  align-items: center;
+}
+
+
 /* main.mainProductUpload FINAL*/
 /* mainProductUpload FINAL */
 
