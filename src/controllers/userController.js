@@ -89,7 +89,7 @@ const controller = {
           let userNoPassword = Object.assign({}, userToLoggin);
           delete userNoPassword.dataValues.password;
           req.session.userLogged = userNoPassword.dataValues;
-          console.log(req.session.userLogged)
+          
           if (req.body.remindMe) {
             res.cookie("remindMe", userToLoggin.email, { maxAge: 3600000 });
           }
