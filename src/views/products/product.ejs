@@ -97,6 +97,13 @@
                         </article>
                     </section>
                 </section>
+                <section class="moreProducts">
+                    <button class="carruselBtn"><i class="fas fa-chevron-left"></i></button>
+                    <% for(let i=0; i<4; i++){ %>
+                        <%- include('../partials/partialsProducts/cardProduct', {product: products[i]}) %> 
+                    <% } %>
+                    <button class="carruselBtn"><i class="fas fa-chevron-right"></i></button>
+                </section>
             </main>
             <!-- footer -->
             <%- include('../partials/partialsProducts/footerProducts') %>

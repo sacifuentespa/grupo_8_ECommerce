@@ -1,24 +1,26 @@
 window.addEventListener("load", () => {
     //add animation header
-    let avatarUser = document.querySelector(".iconNav img")
-    let iconDropdown = document.querySelector(".iconNav i")
-    let navUser = document.querySelector("#navUser")
-    let navDropdown = document.querySelector("#navProducts")
-
-    avatarUser.addEventListener("click", () => {
-        navUser.classList.toggle("visibleHeader")
-        if(navDropdown.classList.contains("visibleHeader")){
-            navDropdown.classList.remove("visibleHeader")
-        }
-    })
-
-    iconDropdown.addEventListener("click", () => {
-        navDropdown.classList.toggle("visibleHeader")
-
-        if(navUser.classList.contains("visibleHeader")){
-            navUser.classList.remove("visibleHeader")
-        }
-    })
+    if(document.querySelector(".iconNav")){
+        let avatarUser = document.querySelector(".iconNav img")
+        let iconDropdown = document.querySelector(".iconNav i")
+        let navUser = document.querySelector("#navUser")
+        let navDropdown = document.querySelector("#navProducts")
+    
+        avatarUser.addEventListener("click", () => {
+            navUser.classList.toggle("visibleHeader")
+            if(navDropdown.classList.contains("visibleHeader")){
+                navDropdown.classList.remove("visibleHeader")
+            }
+        })
+    
+        iconDropdown.addEventListener("click", () => {
+            navDropdown.classList.toggle("visibleHeader")
+    
+            if(navUser.classList.contains("visibleHeader")){
+                navUser.classList.remove("visibleHeader")
+            }
+        })
+    }
     
     //add animation footer
     let footerContent = document.querySelector(".footerContent")
@@ -40,7 +42,6 @@ window.addEventListener("load", () => {
     let textDetailsProduct = document.querySelectorAll(".detailsProduct p")
     let detailsProductArrow = document.querySelectorAll(".detailsProduct i")
     let contentProduct = document.querySelectorAll(".detailsProduct article")
-    console.log(contentProduct[1])
 
     detailsProductArrow.forEach((arrow, i) => {
         arrow.addEventListener("click", () => {
@@ -53,6 +54,16 @@ window.addEventListener("load", () => {
                 contentProduct[i+1].style.background = "white"
                 arrow.style.transform = "rotate(0deg)"
             }
+        })
+    });
+    
+    let imagesProduct = document.querySelectorAll(".imagesList img")
+    let imagePrincipal = document.querySelector(".medSection img")
+
+    imagesProduct.forEach(image => {
+        image.addEventListener("click", () => {
+            let srcImage = image.getAttribute("src")
+            imagePrincipal.setAttribute("src", srcImage)
         })
     });
 })

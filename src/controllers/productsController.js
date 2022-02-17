@@ -11,10 +11,12 @@ const controller = {
   getProduct: async (req, res) => {
     try {
       let product = await productsModel.searchProduct(req.params.id);
+      let products = await productsModel.getProducts()
       if (product) {
         res.render("products/product", {
           title: product.productName,
           product: product,
+          products:products
         });
       } else {
         res.render("notFound", { tittle: "Error 404" });
