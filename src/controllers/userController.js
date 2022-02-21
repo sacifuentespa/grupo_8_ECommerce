@@ -9,7 +9,6 @@ const controller = {
   uploadNewUser: async (req, res) => {
     let errors = validationResult(req);
     
-
     try {
       if (errors.isEmpty()) {
         await usersModel.newUser(req.body, req.file);
