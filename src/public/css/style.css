@@ -36,10 +36,12 @@ header.headerLong a {
 
 header img.logoPc {
   width: 100%;
+  overflow: hidden;
 }
 
 header img.logoPhone {
   display: none;
+  overflow: hidden;
 }
 
 header form {
