@@ -125,6 +125,8 @@ const productsModel = {
         where: { id: idProduct }
       }
       )
+      console.log(originalMainImage)
+      console.log(mainImage)
 
       // si los nombres difieren con los originales se eliminan los archivos originales y se agregan los nuevos
       if (originalMainImage != mainImage) {
