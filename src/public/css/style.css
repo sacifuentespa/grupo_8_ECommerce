@@ -12,8 +12,9 @@ body {
 }
 
 main {
-  min-height: 73.7vh;
+  min-height: 72.3vh;
 }
+
 /* HEADER */
 header {
   display: flex;
@@ -28,6 +29,10 @@ header {
 
 header.headerShort {
   justify-content: center;
+}
+
+header.headerShort a{
+  overflow: hidden;
 }
 
 header.headerLong a {
@@ -169,7 +174,6 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   background: white;
-  margin-top: 3%;
   border: none;
   background-color: #ebebeb;
 }
@@ -212,11 +216,12 @@ footer section.visibleFooter {
 
 section.footerContent article {
   width: 30%;
+  height: auto;
   border: none;
 }
 
 section.footerContent article ul li {
-  margin: 1%;
+  margin-top: 1%;
 }
 
 footer section.footerContent ul {
@@ -232,13 +237,13 @@ footer section.footerContent ul a {
 
 footer h4 {
   width: 100%;
-  height: 3.5vh;
+  height: 1.5vh;
   font-size: 1.4em;
   font-weight: bold;
   color: #fff;
   text-align: center;
   background-color: #11aea9;
-  padding: 1.5% 0%;
+  padding-bottom: 1.5%;
   border: none;
 }
 /* FOOTER FINAL */
@@ -277,7 +282,6 @@ main.mainHome section .carruselBtn {
   background-color: rgba(255, 255, 255, 0.741);
   color: #11aea9;
   border-radius: 50%;
-  border-style: double;
 }
 
 main.mainHome section.container .contentAllProducts{
@@ -547,7 +551,7 @@ main.mainProduct .content{
 
 .mainProduct .moreProducts button{
   border-radius: 50%;
-  border: 1px white solid;
+  border: none;
   width: 3%;
   height: 5vh;
   color: #11aea9;
@@ -784,10 +788,16 @@ section.cartArticles div.text-card-product h4 {
 
 main.mainLogin {
   width: 100%;
-  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.mainLogin .inputForm{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
  
 main.mainLogin section{
@@ -812,54 +822,79 @@ main.mainLogin section{
   justify-content: center;
   align-items: center;
 }
- 
-.mainLogin form.formLogin div{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+
+.mainLogin span, input{
+  font: 1.2rem/1.2rem Verdana;
+  padding: 0;
 }
- 
-.mainLogin form.formLogin div.contentForm{
-  width: 80%;
-  justify-content: space-between;
-  margin: 1%;
-}
- 
-.mainLogin form input {
-  width: 80%;
-  margin: 2%;
-  height: 3.5vh;
+
+.inputForm label {
+  display: block;
+  width: 65%;
+  height: 4vh;
+  margin-bottom: 2%;
+  border: 2px black solid;
+  padding: 8px 10px;
+  position: relative;
+  box-sizing: border-box;
   border-radius: 5px;
-  font-size: 1.3em;
-  padding: 1.5%;
+  transition: 0.25s all;
+}
+
+.mainLogin label input{
+  display: block;
+  width: 100%;
+  /* height: 100%; */
   border: none;
-  outline-color: #11aea9;
+  background: transparent;
+  outline: none;
 }
- 
-.mainLogin form input.inputMed{
-  width: 47%;
-  display: inline-block;
-  margin: 0%;
+
+.mainLogin label span{
+  color: black;
+  position: absolute;
+  top: 8px;
+  top: 10px;
+  transition: 0.25s all;
 }
+
+/* focus */
+.inputForm label.focus {
+  border-color: #11aea9;
+}
+
+.mainLogin label span.top{
+  color: black;
+  left: 4px;
+  top: -10px;
+  font-size: 1rem;
+  background: #D9D9D9;
+  padding: 0 1%;
+}
+
  
-.mainLogin form label{
+.mainLogin form.formLogin div.contentRemindMe{
+  align-self: center;
+  display: flex;
+  width: 10%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainLogin form label.remindMe{
   font-size: 1.1em;
 }
  
 .mainLogin form input.remind{
   display: inline-block;
-  width: 2.5vh;
-}
- 
-.mainLogin form input.remind{
-  display: inline-block;
+  transform: scale(1.7);
+  padding-right: 1%;
 }
  
 .mainLogin form button {
   width: 20%;
   height: 4vh;
-  background-color: #3483fa;
+  background: #25c9c3;
   cursor: pointer;
   color: white;
   margin: 1%;
@@ -876,25 +911,65 @@ main.mainLogin section{
 }
  
 .mainLogin a:hover{
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: bold;
 }
  
 .mainLogin form button:hover {
-  background-color: blue;
+  transform: scale(1.05);
+  background: #02706d;
+  transition: all 0.5s;
 }
- 
-.mainLogin form input:focus{
-  border: none;
-  box-shadow: 0px 0px 10px rgba(103, 223, 241, 0.646);
+
+.formRegister .inputForm{
+  justify-content: space-between;
+  padding: 0 3%;
 }
- 
-.mainLogin form input.remind:focus{
-  box-shadow: none;
+
+.formRegister .inputForm.small{
+  justify-content: flex-start;
 }
- 
-.mainLogin form input:focus{
-  box-shadow: 5px 5px 10px rgba(103, 223, 241, 0.646);
+
+.mainLogin form label.inputMed{
+  width: 47%;
+  display: inline-block;
+}
+
+.mainLogin form label.inputSmall{
+  width: 100%;
+  display: inline-block;
+}
+
+.formRegister .contentForm {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+
+.formRegister .contentForm input{
+  display: none;
+  cursor: pointer;
+}
+
+.formRegister .contentCheckbox{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+#accept{
+  margin-right: 2%;
+}
+
+.mainLogin div label.addImgProfile {
+  font-size: 1.3rem;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #1129ae;
+  padding: 1%;
+  cursor: pointer;
 }
 
 .mainLogin .textDanger p{
@@ -908,17 +983,11 @@ main.mainLogin section{
   margin-top: 0.5%;
 }
 
-.mainLogin div label.addImgProfile {
-  margin: 2% ;
-  font-size: 1.3rem;
-  color:#666;
-  justify-content: center;
-}
-
-.mainLogin div .addAvatar {
-  padding: 3px;
-  font-size: 1.3rem;
-  color:#666;
+.mainLogin .errorsFront{
+  width: 100%;
+  margin: 1% 0;
+  color: rgb(245, 68, 68);
+  text-align: center;
 }
 
 /*FINAL REGISTER Y LOGIN*/

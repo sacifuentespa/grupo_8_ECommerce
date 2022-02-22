@@ -9,36 +9,34 @@
             <main class="mainLogin">
                 <section>
                     <h1>Iniciar sesión</h1>
-                    <form class="formLogin" action="/users/login" method="post">
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
-                        <input type="password" name="password" placeholder="Contraseña" required>
-                        <% if (locals.errors) { %>
-                            <div class="textDanger">
-                                <p><%= errors.msg %></p>
+                        <form class="formLogin" action="/users/login" method="post">
+                            <div class="inputForm">
+                                <label class="email">
+                                    <span>Correo Electronico</span>
+                                    <input type="email" name="email" required>
+                                </label>
+                                <label class="password">
+                                    <span>Contraseña</span>
+                                    <input type="password" name="password" required>
+                                </label>                        
+                                <% if (locals.errors) { %>
+                                    <div class="textDanger">
+                                        <p><%= errors.msg %></p>
+                                    </div>
+                                <% } %>
                             </div>
-                        <% } %>
-                        <div>
-                            <input type="checkbox" name="remindMe" id="remindMe" class="remind">
-                            <label for="remindMe">Recuérdame</label>
-                        </div>
-                        <button class="buttoncontinuar" type="submit">Continuar</button>
-                    </form>
+                            <div class="contentRemindMe">
+                                <input type="checkbox" name="remindMe" id="remindMe" class="remind">
+                                <label for="remindMe" class="remindMe">Recuérdame</label>
+                            </div>
+                            <button class="buttoncontinuar" type="submit">Continuar</button>
+                        </form>
                     <a href="/users/register">¿Aún no tienes cuenta?</a>
                     <a href="#">¿Has olvidado tu contraseña?</a>
                 </section>
             </main>
             <!-- footer -->
             <%- include('../partials/partialsUsers/footerUsers') %>
-
-
-            <script type="text/javascript" src="/js/libraries/validator.js"></script>
-            <script type="text/javascript" src="/js/libraries/sweetalert.js"></script>
-
-            <script type="text/javascript" src="/js/globals.js"></script>
-
-            
-            <script type="text/javascript" src="/js/front-validations/loginValidator.js"></script>
-
     </body>
 
 </html>
