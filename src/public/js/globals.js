@@ -11,7 +11,7 @@ function showError(errorMessage){
 
 async function isEmailAvaible( email ){
   
-  const response = await fetch('http://localhost:3000/is-email-avaible', {
+  const response = await fetch('/is-email-avaible', {
     method: 'POST',
     body: JSON.stringify({email}),
     headers: {
