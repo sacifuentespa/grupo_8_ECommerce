@@ -27,8 +27,15 @@ router.put("/edit", cpUploadProduct, validationsEdit, productsController.uploadU
 //deleteProduct
 router.delete("/delete/:id", productsController.deleteProduct)
 
+//api to get all products
+router.get("/api", productsController.apiProducts)
+
+//api to get all products
+router.get("/api/:id", productsController.apiDetailProduct)
+
 //adminRoute
 router.get("/admin/:password", adminController.getAllProducts)
+
 
 //productPage
 router.get("/:id", productsController.getProduct);

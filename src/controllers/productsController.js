@@ -4,6 +4,7 @@ const db = require("../database/models");
 const { searchProduct } = require("../model/products");
 const Op = db.Sequelize.Op;
 
+
 const controller = {
   getNewProduct: (req, res) => {
     res.render("products/productUpload", { title: "Publicar Producto" });
@@ -25,6 +26,36 @@ const controller = {
       console.error(error);
     }
   },
+  apiProducts: async function (req, res) {
+    try {
+      let items = await productsModel.getProducts();
+      let newItems = items.map(item=> item.dataValues)
+      newItems.forEach (item => item.detail = '/products/'+item.id )
+      return res.json({
+        count: newItems.length, 
+        products: newItems
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  ,
+  apiDetailProduct: async function (req, res) {
+    try {
+      let item = await productsModel.searchProduct(req.params.id);
+      let newItem = item.dataValues
+      let image = '/img/imgProducts/'+newItem.images[0].dataValues.path
+
+
+      return res.json({
+        product:item,
+        image:image
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  ,
   getProducts: async (req, res) => {
     try {
       let products = await productsModel.getProducts();

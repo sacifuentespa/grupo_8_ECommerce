@@ -6,11 +6,7 @@ const path = require("path");
 const db = require("../database/models")
 
 const dbProducts = db.Product
-const dbUsers = db.User
-const dbDetails = db.Detail
-const dbCart = db.Cart
 const dbusers_has_products = db.users_has_products
-const dbcart_has_products = db.cart_has_products
 const dbImages = db.Image
 const Op = db.Sequelize.Op
 
@@ -22,7 +18,7 @@ const productsFileImagesPath = path.resolve(__dirname, '../public/img/imgProduct
 const productsModel = {
   // async function, needed async treatment when called
 
-  getProducts: async () => {
+  getProducts: async function () {
     try {
       let result = await dbProducts.findAll({
         include: [{ association: "images" }],
@@ -32,6 +28,7 @@ const productsModel = {
       console.error(error);
     }
   },
+  
 
   // async function, needed async treatment when called
 
