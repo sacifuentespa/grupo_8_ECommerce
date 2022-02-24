@@ -51,11 +51,7 @@
                             <td><%=user.lastName %></td>
                             <td><%=user.email %></td>
                             <td>
-                                <form action="/users/edit/<%= user.id %>" method="get">
-                                    <input type="hidden" name="id" value="<%= user.id %>">
-                                    <button type="submit"><i class="fas fa-edit"></i></i></button>
-                                </form>
-                                <form method="post" action="/users/delete/<%= user.id %>?_method=DELETE">
+                                                                <form method="post" action="/users/delete/<%= user.id %>?_method=DELETE">
                                     <button type="submit"><i class="far fa-trash-alt"></i></button>
                                 </form>
                             </td>

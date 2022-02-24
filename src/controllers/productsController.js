@@ -46,7 +46,6 @@ const controller = {
       let newItem = item.dataValues
       let image = '/img/imgProducts/'+newItem.images[0].dataValues.path
 
-
       return res.json({
         product:item,
         image:image
