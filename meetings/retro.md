@@ -150,3 +150,29 @@ Usamos el "método estrella de mar", el cual consiste en usar un diagrama con fo
 - **Comenzar a hacer:**
 	-No encontramos prácticas que debamos empezar a hacer por el momento. 
 
+## **Sprint 7:**
+
+## **Resultados:**
+
+- **Continuar haciendo:**
+	-Usar WhatsApp y Discord como canal de comuicación.
+	-Reunirnos una vez por semana (Weekly) o las veces que sean necesarias. 
+	-Seguir estableciendo fechas de entreha internas para cumplir con las entregas y tener tiempo de hacer correcciones.
+
+- **Menos de:**
+	-No encontramos prácticas que debamos hacer menos por el momento. 
+
+- **Mas de:**
+    -Hacer más testeos a la página.
+	-Usar más el canal de discord.
+	-Mejorar la comunicación
+	-Mejoras en el Backend.
+	-Mejoras en el Frontend.
+	
+
+- **Dejar de hacer:**
+    -No encontramos prácticas que debamos dejar de hacer por el momento. 
+
+- **Comenzar a hacer:**
+	-No encontramos prácticas que debamos empezar a hacer por el momento. 
+
