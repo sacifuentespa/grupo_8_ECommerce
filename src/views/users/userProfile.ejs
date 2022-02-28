@@ -7,46 +7,47 @@
         <!-- header -->
         <%- include('../partials/partialsUsers/headerUsers') %>
 
-            <main class="mainProduct">
-
-                <section class="currentProduct">
-                    <section class="productSectionImageAndButtons">
+            <main id="mainUserProfile">
+                <div class="container-profile"> 
+                    <section>
                         <section>
-                            <h2>
-                               Hola <%= user.name %>!
-                            </h2>
-                            <div class="currentProductImage">
-                                <img src="/img/imgUsers/<%= user.avatar %>" class="product_img">
-                            </div>
-                            <section class="productButtonsDesktop">
-                                <a href="/users/edit">Editar Perfil</a>
+                            <section>
+                                <h2>
+                                    Hola <%= user.name%>!!!
+                                </h2>
+                                <div>
+                                    <img src="/img/imgUsers/<%= user.avatar %>" class="profile">
+                                </div>
                             </section>
                         </section>
                     </section>
-                </section>
 
-                </section>
+                    </section>
 
-                <section class="optionsProducts">
-                    <article class="priceProduct">
-                        <h3>Nombre(s)</h3>
-                        <p class="priceProduct">
-                            <%= user.name %>
-                        </p>
-                    </article>
-                    <article class="priceProduct">
-                        <h3>Apellido(s)</h3>
-                        <p class="priceProduct">
-                            <%= user.lastName %>
-                        </p>
-                    </article>
-                    <article class="priceProduct">
-                        <h3>Email</h3>
-                        <p class="priceProduct">
-                            <%= user.email %>
-                        </p>
-                    </article>
-                </section>
+                    <section>
+                        <article>
+                            <h3>Nombre(s):</h3>
+                            <p>
+                                <%= user.name %>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>Apellido(s):</h3>
+                            <p>
+                                <%= user.lastName %>
+                            </p>
+                        </article>
+                        <article>
+                            <h3>Correo electrónico:</h3>
+                            <p>
+                                <%= user.email %>
+                            </p>
+                        </article>
+                    </section>
+                    <section>
+                        <a href="/users/edit">Editar perfil</a>
+                    </section>
+                </div>
 
             </main>
             <!-- footer -->

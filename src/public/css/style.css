@@ -875,7 +875,7 @@ main.mainLogin section{
   margin: 1%;
 }
  
-.mainLogin a:hover{
+.mainLogin a:hover{ 
   text-decoration: underline;
   font-weight: bold;
 }
@@ -1054,11 +1054,10 @@ main.mainProductUpload form div.aimUpload div.radioInputs{
   background: #11aea9;
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
-}
- 
+} 
 #bodyError404 .container-404 {
   text-align: center;
   width: 40%;
@@ -1098,8 +1097,68 @@ main.mainProductUpload form div.aimUpload div.radioInputs{
   height: 60%;
 }
 
-
 /* Final 404 */
+
+/* User Profile */
+
+#mainUserProfile { 
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+} 
+
+#mainUserProfile .container-profile {
+  text-align: center;
+  width: 70%;
+  padding: 20px;
+  border-radius: 5px;
+  line-height: 2;
+  background-color: white;
+  margin-top: 10px;
+
+}
+#mainUserProfile h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color:#666;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mainUserProfile h3 {
+  font-size: 1.4em;
+  margin-top: 5px;
+  color: #02706d;
+}
+#mainUserProfile p {
+  font-size: 1.4em;
+}
+#mainUserProfile a {
+  font-size: 1.4em;
+  display: inline-block;
+  text-decoration: none;
+  background: #3483fa;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+ 
+#mainUserProfile a:hover {
+  background: blue;
+}
+
+.profile {
+  width: 47%;
+  height: 47%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(103, 223, 241, 0.646);
+}
+
+/* Final User Profile */
 
 /* LIST PRODUCTS */
 main.mainListProducts{
