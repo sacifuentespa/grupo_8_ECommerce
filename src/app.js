@@ -12,6 +12,13 @@ const session = require("express-session")
 const cookieParser = require ('cookie-parser')
 const autUser = require("./middleware/authUser")
 
+//check heroku headers has been blocked by CORS policy: No 'Access-Control-Allow-Origin'
+app.all('*', function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
 
 //configuration
 app.use(session({
