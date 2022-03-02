@@ -45,4 +45,7 @@ router.get("/api", usersController.apiUsers)
 //api to get one user
 router.get("/api/:id", usersController.apiDetailUser)
 
+// view user
+router.get("/:id", usersController.getProfile)
+
 module.exports = router;

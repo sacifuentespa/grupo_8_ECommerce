@@ -2,12 +2,10 @@ const usersModel = require("../model/users.js");
 const bycrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
-// 
+//
 const db = require("../database/models");
 const { searchUser } = require("../model/users");
 const Op = db.Sequelize.Op;
-
-// 
 
 const controller = {
   getRegister: (req, res) => {
@@ -20,8 +18,7 @@ const controller = {
       if (errors.isEmpty()) {
         await usersModel.newUser(req.body, req.file);
         res.redirect("/users/login");
-      }
-      else {
+      } else {
         if (req.file) {
           usersModel.deleteFileImage(req.file.filename);
         }
@@ -35,32 +32,38 @@ const controller = {
       console.log(err);
     }
   },
-
-  //
   apiUsers: async function (req, res) {
     try {
       let items = await usersModel.getUsers();
-      let newItems = items.map(item => {
-        delete item.dataValues.password
-        item.dataValues.avatar = "https://trueque-online.herokuapp.com/img/imgUsers/" + item.dataValues.avatar
-        return item.dataValues
-      })
-      newItems.forEach(item => item.detail = 'https://trueque-online.herokuapp.com/users/' + item.id)
+      let newItems = items.map((item) => {
+        delete item.dataValues.password;
+        item.dataValues.avatar =
+          "https://trueque-online.herokuapp.com/img/imgUsers/" +
+          item.dataValues.avatar;
+        return item.dataValues;
+      });
+      newItems.forEach(
+        (item) =>
+          (item.detail =
+            "https://trueque-online.herokuapp.com/users/" + item.id)
+      );
       return res.json({
         count: newItems.length,
-        users: newItems
+        users: newItems,
       });
     } catch (error) {
       console.error(error);
     }
-  }
-  ,
+  },
   apiDetailUser: async function (req, res) {
     try {
       let item = await usersModel.getUser(req.params.id);
-      delete item.dataValues.password
-      item.dataValues.avatar = 'https://trueque-online.herokuapp.com/img/imgUsers/' + item.dataValues.avatar
-      item.dataValues.detail = 'https://trueque-online.herokuapp.com/users/' + item.dataValues.id
+      delete item.dataValues.password;
+      item.dataValues.avatar =
+        "https://trueque-online.herokuapp.com/img/imgUsers/" +
+        item.dataValues.avatar;
+      item.dataValues.detail =
+        "https://trueque-online.herokuapp.com/users/" + item.dataValues.id;
       return res.json({
         user: item.dataValues,
       });
@@ -68,22 +71,20 @@ const controller = {
       console.error(error);
     }
   },
-
-  //
   getUpdateUser: async (req, res) => {
     try {
-      let user = await usersModel.getUser(req.session.userLogged.id)
+      let user = await usersModel.getUser(req.session.userLogged.id);
 
       res.render("users/userEdit", {
         title: "Actualizar usuario",
         user: user,
-      })
+      });
     } catch (error) {
       console.error(error);
     }
   },
   updateUser: async function (req, res) {
-    let errors = validationResult(req)
+    let errors = validationResult(req);
 
     if (errors.errors.length > 0) {
       if (req.file) {
@@ -93,27 +94,25 @@ const controller = {
         title: "Edición Usuario",
         errors: errors.mapped(),
         user: req.session.userLogged,
-      })
+      });
     } else
       try {
-        await usersModel.updateUser(req.body, req.file)
+        await usersModel.updateUser(req.body, req.file);
         res.clearCookie("remindMe");
         req.session.destroy();
         res.redirect("/");
-      }
-      catch (error) {
+      } catch (error) {
         console.error(error);
       }
-  }
-  ,
+  },
   getLogin: (req, res) => {
     res.render("users/login", { title: "Iniciar Sesión" });
   },
   getProfile: async (req, res) => {
+    let id = req.params.id ? req.params.id: req.session.userLogged.id;
     try {
-
-      let user = await usersModel.getUser(req.session.userLogged.id)
-      res.render("users/userProfile", { title: "Iniciada Sesión", user: user });
+      let user = await usersModel.getUser(id);
+      res.render("users/userProfile", { title: "Iniciada Sesión", userData: user });
     } catch (err) {
       console.log(err);
     }
@@ -144,8 +143,6 @@ const controller = {
           });
         }
       }
-
-
     } catch (err) {
       console.log(err);
     }
@@ -155,7 +152,6 @@ const controller = {
       let userToLoggin = await usersModel.findByEmail(req.body.email);
       if (userToLoggin) res.json({ isAvaible: false });
       else res.json({ isAvaible: true });
-
     } catch (err) {
       console.log(err);
     }

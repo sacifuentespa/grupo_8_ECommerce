@@ -11,12 +11,16 @@
                 <div class="container-profile"> 
                     <section>
                         <section>
-                            <section>
+                            <section>                                
                                 <h2>
-                                    Hola <%= user.name%>!!!
+                                    <% if (locals.user) { %>
+                                        <% if (locals.user.email == userData.email) { %>
+                                            Hola <%= userData.name%>!!!
+                                        <% } %>
+                                    <% } %>
                                 </h2>
                                 <div>
-                                    <img src="/img/imgUsers/<%= user.avatar %>" class="profile">
+                                    <img src="/img/imgUsers/<%= userData.avatar %>" class="profile">
                                 </div>
                             </section>
                         </section>
@@ -28,24 +32,28 @@
                         <article>
                             <h3>Nombre(s):</h3>
                             <p>
-                                <%= user.name %>
+                                <%= userData.name %>
                             </p>
                         </article>
                         <article>
                             <h3>Apellido(s):</h3>
                             <p>
-                                <%= user.lastName %>
+                                <%= userData.lastName %>
                             </p>
                         </article>
                         <article>
                             <h3>Correo electrónico:</h3>
                             <p>
-                                <%= user.email %>
+                                <%= userData.email %>
                             </p>
                         </article>
                     </section>
                     <section>
-                        <a href="/users/edit">Editar perfil</a>
+                        <% if (locals.user) { %>
+                            <% if (locals.user.email == userData.email) { %>
+                                <a href="/users/edit">Editar perfil</a>
+                            <% } %>
+                        <% } %>
                     </section>
                 </div>
 
