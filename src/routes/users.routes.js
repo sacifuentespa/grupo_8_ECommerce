@@ -39,4 +39,10 @@ router.delete("/delete/:id", usersController.deleteUser)
 //adminRoute
 router.get("/admin/:password", adminController.getAllUsers)
 
+//api to get all users
+router.get("/api", usersController.apiUsers)
+
+//api to get one user
+router.get("/api/:id", usersController.apiDetailUser)
+
 module.exports = router;
