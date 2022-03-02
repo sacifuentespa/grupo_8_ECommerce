@@ -30,7 +30,7 @@ const controller = {
     try {
       let items = await productsModel.getProducts();
       let newItems = items.map(item=> item.dataValues)
-      newItems.forEach (item => item.detail = '/products/'+item.id )
+      newItems.forEach (item => item.detail = 'https://trueque-online.herokuapp.com/products/'+item.id )
       let categories ={
         hogar: 0,
         vehiculos: 0,
@@ -84,7 +84,7 @@ const controller = {
     try {
       let item = await productsModel.searchProduct(req.params.id);
       let newItem = item.dataValues
-      let image = '/img/imgProducts/'+newItem.images[0].dataValues.path
+      let image = 'https://trueque-online.herokuapp.com/img/imgProducts/'+newItem.images[0].dataValues.path
 
       return res.json({
         product:item,
