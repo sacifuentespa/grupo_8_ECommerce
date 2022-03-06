@@ -157,6 +157,8 @@ header ul li:hover {
 
 header div.notLogged a:hover {
   text-decoration: underline;
+  transition: all 0.5s;
+  transform: scale(1.05);
 }
 
 /* HEADER FINAL */
@@ -178,7 +180,7 @@ footer .btnMoreInfo {
   background-color: #11aea9;
   border: none;
   width: 10%;
-  font-size: 1.1em;
+  font-size: 1.2em;
   text-align: center;
   color: #fff;
   padding: 0.7%;
@@ -193,7 +195,7 @@ footer .btnMoreInfo {
   font-size: 1.1em;
   color: #fff;
   margin: 1%; 
-  margin-left: 10%;
+  margin-left: 2%;
 }
 
 footer section.footerContent {
@@ -375,6 +377,7 @@ main.mainHome section.container .contentAllProducts i{
 .articleProduct:hover {
   box-shadow: 0px 0px 10px rgb(103, 223, 241);
   transform: scale(1.07);
+  transition: all 0.5s;
 }
 
 main.mainHome .categories {
@@ -423,6 +426,7 @@ main.mainProduct {
   width: 100%;
   text-align: center;
   font-size: 2.5em;
+  color: #666;
 }
 
 main.mainProduct .content{
@@ -470,7 +474,7 @@ main.mainProduct .content{
   height: 225%;
   border: none;
   border-radius: 5px;
-  background: #25c9c3;
+  background: #3483fa;
   font-size: 1.3em;
   color: white;
   cursor: pointer;
@@ -497,6 +501,7 @@ main.mainProduct .content{
 
 .mainProduct .detailsProduct article h3{
   font-size: 1.7rem;
+  color: #02706d
 }
 
 .mainProduct .detailsProduct article .supDetail{
@@ -515,7 +520,7 @@ main.mainProduct .content{
 .mainProduct .detailsProduct article .supDetail i{
   font-size: 1.2rem;
   margin-right: 1%;
-  color: #11aea9;
+  color: #02706d;
   cursor: pointer;
   transition: all 0.8s;
 
@@ -533,7 +538,7 @@ main.mainProduct .content{
 
 .mainProduct .medSection .buttonOptions button:hover{
   transform: scale(1.05);
-  background: #02706d;
+  background: blue;
   transition: all 0.5s;
 }
 
@@ -550,7 +555,7 @@ main.mainProduct .content{
   border: 1px white solid;
   width: 3%;
   height: 5vh;
-  color: #11aea9;
+  /* color: #11aea9; */
   font-size:xx-small;
   cursor: pointer;
 }
@@ -882,6 +887,9 @@ main.mainLogin section{
  
 .mainLogin form button:hover {
   background-color: blue;
+  transition: all 0.5s;
+  transform: scale(1.05);
+
 }
  
 .mainLogin form input:focus{
@@ -1086,10 +1094,13 @@ main.mainProductUpload form div.aimUpload div.radioInputs{
   color: white;
   padding: 10px;
   border-radius: 5px;
+  font-size: 1.3em;
 }
  
 .botonvolvererror:hover {
   background: blue;
+  transition: all 0.5s;
+  transform: scale(1.05);
 }
  
 .error_404 {
@@ -1111,7 +1122,7 @@ main.mainProductUpload form div.aimUpload div.radioInputs{
 
 #mainUserProfile .container-profile {
   text-align: center;
-  width: 70%;
+  width: 65%;
   padding: 20px;
   border-radius: 5px;
   line-height: 2;
@@ -1136,7 +1147,7 @@ main.mainProductUpload form div.aimUpload div.radioInputs{
   font-size: 1.4em;
 }
 #mainUserProfile a {
-  font-size: 1.4em;
+  font-size: 1.3em;
   display: inline-block;
   text-decoration: none;
   background: #3483fa;
@@ -1149,11 +1160,13 @@ main.mainProductUpload form div.aimUpload div.radioInputs{
  
 #mainUserProfile a:hover {
   background: blue;
+  transition: all 0.5s;
+  transform: scale(1.05);
 }
 
 .profile {
-  width: 47%;
-  height: 47%;
+  width: 15%;
+  height: 15%;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(103, 223, 241, 0.646);
 }
@@ -1441,6 +1454,7 @@ div.validationError {
   }
   /*REGISTER Y LOGIN final*/
 }
+
 
 /* Tablets and larger phones */
 @media (min-width: 481px) and (max-width: 768px) {
