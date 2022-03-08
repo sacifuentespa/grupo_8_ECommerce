@@ -30,9 +30,18 @@
                         <% } %>
                         <input type="email" name="email" placeholder="Correo electrónico"
                             value="<%= locals.old ? old.email : '' %>">
-                        <% if(locals.errors && errors.email){ %>
-                            <div class="validationError">
-                                <%= errors.email.msg %>
+                            <% if(locals.errors=="Correo electrónico ya registrado"){ %>
+                                <div class="validationError">
+                                <%= errors%>
+                                </div>
+                                <% } %>
+                            
+                            <% if(locals.errors && errors.email){ %>
+                            
+                            <div class="validationError">        
+                            <%= errors.email.msg %>                                 
+                                    
+
                             </div>
                         <% } %>
                         <div class="contentForm">
