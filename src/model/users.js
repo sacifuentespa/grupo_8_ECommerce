@@ -118,7 +118,7 @@ const usersModel = {
     try {
       let user = await dbUsers.findByPk(id);
       
-      if (user.dataValues.avatar != "default.png") {
+      if (user.dataValues.avatar != "default.png" && fs.existsSync(usersFileImagesPath + "/" + user.dataValues.avatar)) {
         fs.rmSync(usersFileImagesPath + "/" + user.dataValues.avatar);
       }
        await dbCart.destroy({
