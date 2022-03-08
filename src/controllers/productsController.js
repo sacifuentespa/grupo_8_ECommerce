@@ -46,9 +46,14 @@ const controller = {
   apiCategories: async function (req, res) {
     try {
       let categories = await productsModel.getCategories();
+      let response = {}
+
+      categories.forEach(oneCategory => {
+        response[oneCategory.dataValues.listCategoriesProduct] = oneCategory.dataValues.Count
+      })
       return res.json({
-        categories,
-        });
+        categories: response,
+      });
     } catch (error) {
       console.error(error);
     }

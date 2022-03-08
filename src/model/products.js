@@ -57,7 +57,9 @@ const productsModel = {
 
   deleteFileImage: function (imageName) {
     //Funcion para eliminar imagenes de una ruta
-    fs.rmSync(productsFileImagesPath + "/" + imageName);
+    if (fs.existsSync(productsFileImagesPath + "/" + imageName)) {
+      fs.rmSync(productsFileImagesPath + "/" + imageName);
+    }
   },
   newProduct: async function (product, files) {
     try {
