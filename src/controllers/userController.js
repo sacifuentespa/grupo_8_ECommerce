@@ -13,8 +13,10 @@ const controller = {
   },
   uploadNewUser: async (req, res) => {
     let errors = validationResult(req);
-
+    
     try {
+      let condition = await usersModel.findByEmail(req.body.email);
+      if(condition==null){
       if (errors.isEmpty()) {
         await usersModel.newUser(req.body, req.file);
         res.redirect("/users/login");
@@ -28,6 +30,12 @@ const controller = {
           old: req.body,
         });
       }
+    }else{res.render("users/register", {
+      title: "Registro Usuario",
+      errors: "Correo electrónico ya registrado",
+      old: req.body,
+    });}
+
     } catch (err) {
       console.log(err);
     }
