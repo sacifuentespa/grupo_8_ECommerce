@@ -79,7 +79,7 @@ header form button {
 }
 
 .iconNav i{
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: rgba(251, 251, 251, 0.75);
   margin-right: 5%;
   padding: 10%;
@@ -117,7 +117,7 @@ header .modalNav{
   position: absolute;
   right: 3vw;
   top: 10vh;
-  width: 10vw;
+  width: auto;
   height: auto;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -1458,30 +1458,30 @@ div.validationError {
 
 /* Tablets and larger phones */
 @media (min-width: 481px) and (max-width: 768px) {
-  main.mainHome section {
+  /* main.mainHome section {
     justify-content: flex-start;
   }
 
   main.mainHome section article {
     width: 25%;
-  }
+  } */
 
   /* CART */
   /* main.maincart */
 
-  main.mainCart section.cartArticles img {
+  /* main.mainCart section.cartArticles img {
     display: none;
   }
 
   main.mainCart section.titlesCart article div.imageCartTitle {
     display: none;
-  }
+  } */
 
   /* main.maincart */
   /* CART Final */
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
 
   main.mainCart section.cartArticles article div h4 {
     display: block;
@@ -1506,4 +1506,4 @@ div.validationError {
     background-color: white;
     height: 45%;
   }
-}
+} */
