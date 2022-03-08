@@ -9,7 +9,7 @@ const dbProducts = db.Product
 const dbusers_has_products = db.users_has_products
 const dbImages = db.Image
 const Op = db.Sequelize.Op
-
+const Sequelize = require('sequelize')
 
 //ruta imagenes; para usar función deleteFileImage más facilmente
 const productsFileImagesPath = path.resolve(__dirname, '../public/img/imgProducts')
@@ -22,6 +22,18 @@ const productsModel = {
     try {
       let result = await dbProducts.findAll({
         include: [{ association: "images" }],
+      });
+      return result;
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  getCategories: async function(){
+    try {
+      let result = await dbProducts.findAll({
+        group: 'listCategoriesProduct',
+        attributes:['listCategoriesProduct',
+        [Sequelize.fn('COUNT',Sequelize.col('*')),'Count']]
       });
       return result;
     } catch (error) {
@@ -171,7 +183,6 @@ const productsModel = {
     if (images.length >= 1) {
       for (let i = 0; i < images.length; i++) {
         this.deleteFileImage(images[i])
-        console.log(images[i])
         await dbImages.destroy({where : {path : images[i]}})
       }
     }

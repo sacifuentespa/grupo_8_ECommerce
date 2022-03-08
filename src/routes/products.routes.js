@@ -31,6 +31,9 @@ router.delete("/delete/:id", productsController.deleteProduct)
 router.get("/api", productsController.apiProducts)
 
 //api to get all products
+router.get("/categories/api", productsController.apiCategories)
+
+//api to get a product
 router.get("/api/:id", productsController.apiDetailProduct)
 
 //adminRoute

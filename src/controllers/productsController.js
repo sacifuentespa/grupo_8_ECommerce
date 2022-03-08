@@ -31,49 +31,23 @@ const controller = {
       let items = await productsModel.getProducts();
       let newItems = items.map(item=> item.dataValues)
       newItems.forEach (item => item.detail = 'https://trueque-online.herokuapp.com/products/'+item.id )
-      let categories ={
-        hogar: 0,
-        vehiculos: 0,
-        electrodomesticos: 0,
-        inmobiliaria: 0,
-        electronica:0,
-        ropa:0,
-        deportes:0,
-        libros:0
-      }
-      newItems.forEach(function(item){
-        switch(item.listCategoriesProduct){
-          case 'vehiculos':
-            categories.vehiculos += 1;
-            break;
-          case 'hogar':
-            categories.hogar += 1;
-            break;
-          case 'electrodomesticos':
-            categories.electrodomesticos += 1;
-            break;
-          case 'inmobiliaria':
-            categories.inmobiliaria += 1;
-            break;
-          case 'electronica':
-            categories.electronica += 1;
-            break;
-          case 'ropa':
-            categories.ropa += 1;
-            break;
-          case 'deportes':
-            categories.deportes += 1;
-            break;
-          case 'libros':
-            categories.libros += 1;
-            break;
-         }
-      }) 
+      let categories = await productsModel.getCategories()
       
       return res.json({
         count: newItems.length, 
         categories: categories,
         products: newItems
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  ,
+  apiCategories: async function (req, res) {
+    try {
+      let categories = await productsModel.getCategories();
+      return res.json({
+        categories,
         });
     } catch (error) {
       console.error(error);
@@ -132,10 +106,7 @@ const controller = {
           newProduct.dataValues.id
         );
 
-        res.render("products/product", {
-          title: product.productName,
-          product: product,
-        });
+        res.redirect(newProduct.dataValues.id);
       } catch (error) {
         console.error(error);
       }
